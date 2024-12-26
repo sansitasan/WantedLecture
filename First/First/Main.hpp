@@ -13,17 +13,6 @@
 
 using namespace std;
 
-void solutionOne();
-void solutionTwo();
-void solutionThree();
-void swap(int&, int&);
-void solutionFour();
-void PrintReverse(const char*, int);
-void solutionFive();
-void ToLower(char&);
-void ToUpper(char&);
-void solutionSix();
-bool HasSameCharacter(const char*, int);
 //링커가 함수 정의됐는지 확인할 때 모든 파일 전수조사를 함
 //파일 수가 늘어날수록 컴파일타임이 올라간다
 

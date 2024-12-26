@@ -1,0 +1,9 @@
+﻿  calculator.cpp
+  main.cpp
+  코드를 생성하고 있습니다...
+main.obj : error LNK2019: "public: double __cdecl Calculator::Add(double,double)" (?Add@Calculator@@QEAANNN@Z)main 함수에서 참조되는 확인할 수 없는 외부 기호
+main.obj : error LNK2019: "public: double __cdecl Calculator::Divide(double,double)" (?Divide@Calculator@@QEAANNN@Z)main 함수에서 참조되는 확인할 수 없는 외부 기호
+main.obj : error LNK2019: "public: double __cdecl Calculator::Substract(double,double)" (?Substract@Calculator@@QEAANNN@Z)main 함수에서 참조되는 확인할 수 없는 외부 기호
+main.obj : error LNK2019: "public: double __cdecl Calculator::Multiply(double,double)" (?Multiply@Calculator@@QEAANNN@Z)main 함수에서 참조되는 확인할 수 없는 외부 기호
+main.obj : error LNK2019: "public: void __cdecl Calculator::ShowOperationCount(void)" (?ShowOperationCount@Calculator@@QEAAXXZ)main 함수에서 참조되는 확인할 수 없는 외부 기호
+C:\Users\user\OneDrive\바탕 화면\San\Lecture\WantedLecture\Second\x64\Debug\3.Calculator.exe : fatal error LNK1120: 5개의 확인할 수 없는 외부 참조입니다.

@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\First\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{99E3309C-DB0C-47F5-BE29-3781F536F913}|First\\First.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\First\\First\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{99E3309C-DB0C-47F5-BE29-3781F536F913}|First\\First.vcxproj|solutionrelative:First\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{99E3309C-DB0C-47F5-BE29-3781F536F913}|First\\First.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\First\\First\\Main.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{99E3309C-DB0C-47F5-BE29-3781F536F913}|First\\First.vcxproj|solutionrelative:First\\Main.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99E3309C-DB0C-47F5-BE29-3781F536F913}|First\\First.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\First\\First\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{99E3309C-DB0C-47F5-BE29-3781F536F913}|First\\First.vcxproj|solutionrelative:First\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99E3309C-DB0C-47F5-BE29-3781F536F913}|First\\First.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\First\\First\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
@@ -54,8 +54,7 @@
               "RelativeToolTip": "First\\Monster.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-24T06:08:51.188Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-24T06:08:51.188Z"
             },
             {
               "$type": "Document",
@@ -67,8 +66,7 @@
               "RelativeToolTip": "First\\Creature.hpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-24T06:07:39.422Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-24T06:07:39.422Z"
             },
             {
               "$type": "Document",
@@ -80,8 +78,7 @@
               "RelativeToolTip": "First\\Player.hpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-24T06:07:29.462Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-24T06:07:29.462Z"
             },
             {
               "$type": "Document",
@@ -93,18 +90,17 @@
               "RelativeToolTip": "First\\Monster.hpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-24T06:07:11.216Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-24T06:07:11.216Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Main.cpp",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\First\\First\\Main.cpp",
               "RelativeDocumentMoniker": "First\\Main.cpp",
               "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\First\\First\\Main.cpp",
               "RelativeToolTip": "First\\Main.cpp",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAABQAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-24T05:14:41.242Z",
               "EditorCaption": ""
@@ -119,18 +115,17 @@
               "RelativeToolTip": "First\\Creature.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-24T06:08:29.017Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-24T06:08:29.017Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Main.hpp",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\First\\First\\Main.hpp",
               "RelativeDocumentMoniker": "First\\Main.hpp",
               "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\First\\First\\Main.hpp",
               "RelativeToolTip": "First\\Main.hpp",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAABIAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-12-24T05:14:44.959Z",
               "EditorCaption": ""
@@ -145,8 +140,7 @@
               "RelativeToolTip": "First\\Player.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-24T06:08:56.474Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-24T06:08:56.474Z"
             }
           ]
         }
