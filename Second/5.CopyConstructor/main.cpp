@@ -24,14 +24,14 @@ public:
 		std::cout << "Player(int number) called\n";
 	}
 
-	Player(const Player& other)
-		: x(other.x), y(other.y) {
-
-		size_t length = strlen(other.name) + 1;
-		this->name = new char[length];
-		strcpy_s(this->name, length, other.name);
-		std::cout << "Player(const Player& other) called\n";
-	}
+	//Player(const Player& other)
+	//	: x(other.x), y(other.y) {
+	//
+	//	size_t length = strlen(other.name) + 1;
+	//	this->name = new char[length];
+	//	strcpy_s(this->name, length, other.name);
+	//	std::cout << "Player(const Player& other) called\n";
+	//}
 
 	void Print() {
 		std::cout << "name: " << name << "x: " << x << ", y: " << y << '\n';
@@ -48,8 +48,8 @@ private:
 };
 
 int main() {
-	Player p2 = Player("Player2", 10, 12);
-	Player p3 = Player(p2);
+	Player p2("Player2", 10, 12);
+	Player p3(p2);
 
 	p2.Print();
 	p3.Print();
