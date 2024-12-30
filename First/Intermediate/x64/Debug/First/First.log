@@ -1,3 +1,0 @@
-﻿  Main.cpp
-C:\Users\user\OneDrive\바탕 화면\San\Lecture\WantedLecture\First\First\Main.cpp(97,35): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  First.vcxproj -> C:\Users\user\OneDrive\바탕 화면\San\Lecture\WantedLecture\First\Bin\x64\Debug\First\First.exe
