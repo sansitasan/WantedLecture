@@ -42,13 +42,13 @@ class Variants
 public:
     Variants() {}
 
-    Variants(const Types&... arg) : ValueCount(sizeof...(arg)) {
+    Variants(const Types&... arg) {
         GetTotalSize(0, arg...);
         ConstructItems(0, 0, arg...);
     }
 
     ~Variants() {
-        for (int i = 0; i < ValueCount; ++i) {
+        for (int i = 0; i < sizeof...(Types); ++i) {
             Items[i]->~IVariantItem();
         }
         free(Values);
@@ -56,7 +56,7 @@ public:
 
     template<typename T>
     T GetValue() const {
-        for (int i = 0; i < ValueCount; ++i) {
+        for (int i = 0; i < sizeof...(Types); ++i) {
             if (Items[i]->GetType() == typeid(T)) return *static_cast<T*>(Items[i]->GetItem());
         }
 
@@ -90,8 +90,6 @@ private:
     void ConstructItems(unsigned int index, unsigned int prevSize) {}
 
     char* Values = nullptr;
-
-    int ValueCount = 0;
 
     IVariantItem* Items[sizeof...(Types)] = {};
 };

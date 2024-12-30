@@ -5,7 +5,7 @@ String::String()
 
 String::String(const char* string)
 {
-	length = string == nullptr ? 1 : static_cast<int>(strlen(string));
+	length = string == nullptr ? 0 : static_cast<int>(strlen(string));
 	data = new char[length + 1];
 	if (string != nullptr) {
 		strcpy_s(data, length + 1, string);
