@@ -9,6 +9,9 @@ Bank::EAccountType GetAccountType(char input) {
 	else if (input == 'D' || input == 'd') {
 		return Bank::EAccountType::Donation;
 	}
+
+	else
+		return Bank::EAccountType::Normal;
 }
 
 int main() {

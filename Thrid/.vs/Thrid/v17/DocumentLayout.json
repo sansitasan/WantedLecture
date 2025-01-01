@@ -1,58 +1,58 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\",
+  "WorkspaceRootPath": "C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9D4D8655-D90C-438F-959A-8C5CD18E75FA}|StringClass\\StringClass.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\StringClass\\String.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9D4D8655-D90C-438F-959A-8C5CD18E75FA}|StringClass\\StringClass.vcxproj|solutionrelative:StringClass\\String.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\OperatorOverloading\\Vector2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:OperatorOverloading\\Vector2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D4D8655-D90C-438F-959A-8C5CD18E75FA}|StringClass\\StringClass.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\StringClass\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9D4D8655-D90C-438F-959A-8C5CD18E75FA}|StringClass\\StringClass.vcxproj|solutionrelative:StringClass\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\StringClass\\String.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:StringClass\\String.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D52D8E30-621F-4269-87E9-D2BB73600FB8}|OperatorOverloading\\OperatorOverloading.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\OperatorOverloading\\Vector2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D52D8E30-621F-4269-87E9-D2BB73600FB8}|OperatorOverloading\\OperatorOverloading.vcxproj|solutionrelative:OperatorOverloading\\Vector2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\StringClass\\String.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:StringClass\\String.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D4D8655-D90C-438F-959A-8C5CD18E75FA}|StringClass\\StringClass.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\StringClass\\String.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9D4D8655-D90C-438F-959A-8C5CD18E75FA}|StringClass\\StringClass.vcxproj|solutionrelative:StringClass\\String.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\StringClass\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:StringClass\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D52D8E30-621F-4269-87E9-D2BB73600FB8}|OperatorOverloading\\OperatorOverloading.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\OperatorOverloading\\Vector2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D52D8E30-621F-4269-87E9-D2BB73600FB8}|OperatorOverloading\\OperatorOverloading.vcxproj|solutionrelative:OperatorOverloading\\Vector2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\OperatorOverloading\\Vector2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:OperatorOverloading\\Vector2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D52D8E30-621F-4269-87E9-D2BB73600FB8}|OperatorOverloading\\OperatorOverloading.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\OperatorOverloading\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D52D8E30-621F-4269-87E9-D2BB73600FB8}|OperatorOverloading\\OperatorOverloading.vcxproj|solutionrelative:OperatorOverloading\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\OperatorOverloading\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:OperatorOverloading\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BFBBA59-8A6E-4ABE-B284-370EC0F284DF}|VirtualFunction\\VirtualFunction.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\VirtualFunction\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9BFBBA59-8A6E-4ABE-B284-370EC0F284DF}|VirtualFunction\\VirtualFunction.vcxproj|solutionrelative:VirtualFunction\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\VirtualFunction\\Entity\\IMovable.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:VirtualFunction\\Entity\\IMovable.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BFBBA59-8A6E-4ABE-B284-370EC0F284DF}|VirtualFunction\\VirtualFunction.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\VirtualFunction\\Entity\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9BFBBA59-8A6E-4ABE-B284-370EC0F284DF}|VirtualFunction\\VirtualFunction.vcxproj|solutionrelative:VirtualFunction\\Entity\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\VirtualFunction\\Entity\\Entity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:VirtualFunction\\Entity\\Entity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BFBBA59-8A6E-4ABE-B284-370EC0F284DF}|VirtualFunction\\VirtualFunction.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\VirtualFunction\\Entity\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9BFBBA59-8A6E-4ABE-B284-370EC0F284DF}|VirtualFunction\\VirtualFunction.vcxproj|solutionrelative:VirtualFunction\\Entity\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\VirtualFunction\\Entity\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:VirtualFunction\\Entity\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BFBBA59-8A6E-4ABE-B284-370EC0F284DF}|VirtualFunction\\VirtualFunction.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\VirtualFunction\\Entity\\IMovable.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9BFBBA59-8A6E-4ABE-B284-370EC0F284DF}|VirtualFunction\\VirtualFunction.vcxproj|solutionrelative:VirtualFunction\\Entity\\IMovable.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\VirtualFunction\\Entity\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:VirtualFunction\\Entity\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BFBBA59-8A6E-4ABE-B284-370EC0F284DF}|VirtualFunction\\VirtualFunction.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\VirtualFunction\\Entity\\Entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9BFBBA59-8A6E-4ABE-B284-370EC0F284DF}|VirtualFunction\\VirtualFunction.vcxproj|solutionrelative:VirtualFunction\\Entity\\Entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\VirtualFunction\\Entity\\Entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:VirtualFunction\\Entity\\Entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BFBBA59-8A6E-4ABE-B284-370EC0F284DF}|VirtualFunction\\VirtualFunction.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\VirtualFunction\\Entity\\Entity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9BFBBA59-8A6E-4ABE-B284-370EC0F284DF}|VirtualFunction\\VirtualFunction.vcxproj|solutionrelative:VirtualFunction\\Entity\\Entity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\VirtualFunction\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:VirtualFunction\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E12E80D-5FD6-4DC7-A9BB-745EC7ECDA90}|inheritance\\inheritance.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\inheritance\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9E12E80D-5FD6-4DC7-A9BB-745EC7ECDA90}|inheritance\\inheritance.vcxproj|solutionrelative:inheritance\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\inheritance\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:inheritance\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,65 +62,70 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cf577b8c-4134-11d2-83e5-00c04f9902c1}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "String.cpp",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\StringClass\\String.cpp",
+              "DocumentMoniker": "C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\StringClass\\String.cpp",
               "RelativeDocumentMoniker": "StringClass\\String.cpp",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\StringClass\\String.cpp",
+              "ToolTip": "C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\StringClass\\String.cpp",
               "RelativeToolTip": "StringClass\\String.cpp",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAACQAAAAAAAAAAAAIwDwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-27T07:23:33.766Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "String.h",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\StringClass\\String.h",
-              "RelativeDocumentMoniker": "StringClass\\String.h",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\StringClass\\String.h",
-              "RelativeToolTip": "StringClass\\String.h",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-27T07:22:35.577Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\StringClass\\main.cpp",
-              "RelativeDocumentMoniker": "StringClass\\main.cpp",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\StringClass\\main.cpp",
-              "RelativeToolTip": "StringClass\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-27T07:22:06.478Z",
+              "Title": "String.h",
+              "DocumentMoniker": "C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\StringClass\\String.h",
+              "RelativeDocumentMoniker": "StringClass\\String.h",
+              "ToolTip": "C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\StringClass\\String.h",
+              "RelativeToolTip": "StringClass\\String.h",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAIwCYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-27T07:22:35.577Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Vector2.cpp",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\OperatorOverloading\\Vector2.cpp",
-              "RelativeDocumentMoniker": "OperatorOverloading\\Vector2.cpp",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\OperatorOverloading\\Vector2.cpp",
-              "RelativeToolTip": "OperatorOverloading\\Vector2.cpp",
-              "ViewState": "AgIAAA8AAAAAAAAAAAApwB4AAAABAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\StringClass\\main.cpp",
+              "RelativeDocumentMoniker": "StringClass\\main.cpp",
+              "ToolTip": "C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\StringClass\\main.cpp",
+              "RelativeToolTip": "StringClass\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-27T06:18:42.495Z"
+              "WhenOpened": "2024-12-27T07:22:06.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Vector2.cpp",
+              "DocumentMoniker": "C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\OperatorOverloading\\Vector2.cpp",
+              "RelativeDocumentMoniker": "OperatorOverloading\\Vector2.cpp",
+              "ToolTip": "C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\OperatorOverloading\\Vector2.cpp",
+              "RelativeToolTip": "OperatorOverloading\\Vector2.cpp",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-27T06:18:42.495Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Vector2.h",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\OperatorOverloading\\Vector2.h",
+              "DocumentMoniker": "C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\OperatorOverloading\\Vector2.h",
               "RelativeDocumentMoniker": "OperatorOverloading\\Vector2.h",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\OperatorOverloading\\Vector2.h",
+              "ToolTip": "C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\OperatorOverloading\\Vector2.h",
               "RelativeToolTip": "OperatorOverloading\\Vector2.h",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
@@ -130,9 +135,9 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\OperatorOverloading\\main.cpp",
+              "DocumentMoniker": "C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\OperatorOverloading\\main.cpp",
               "RelativeDocumentMoniker": "OperatorOverloading\\main.cpp",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\OperatorOverloading\\main.cpp",
+              "ToolTip": "C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\OperatorOverloading\\main.cpp",
               "RelativeToolTip": "OperatorOverloading\\main.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -140,11 +145,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 6,
               "Title": "IMovable.h",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\VirtualFunction\\Entity\\IMovable.h",
+              "DocumentMoniker": "C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\VirtualFunction\\Entity\\IMovable.h",
               "RelativeDocumentMoniker": "VirtualFunction\\Entity\\IMovable.h",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\VirtualFunction\\Entity\\IMovable.h",
+              "ToolTip": "C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\VirtualFunction\\Entity\\IMovable.h",
               "RelativeToolTip": "VirtualFunction\\Entity\\IMovable.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
@@ -152,11 +157,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 7,
               "Title": "Entity.cpp",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\VirtualFunction\\Entity\\Entity.cpp",
+              "DocumentMoniker": "C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\VirtualFunction\\Entity\\Entity.cpp",
               "RelativeDocumentMoniker": "VirtualFunction\\Entity\\Entity.cpp",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\VirtualFunction\\Entity\\Entity.cpp",
+              "ToolTip": "C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\VirtualFunction\\Entity\\Entity.cpp",
               "RelativeToolTip": "VirtualFunction\\Entity\\Entity.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -166,9 +171,9 @@
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "Player.h",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\VirtualFunction\\Entity\\Player.h",
+              "DocumentMoniker": "C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\VirtualFunction\\Entity\\Player.h",
               "RelativeDocumentMoniker": "VirtualFunction\\Entity\\Player.h",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\VirtualFunction\\Entity\\Player.h",
+              "ToolTip": "C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\VirtualFunction\\Entity\\Player.h",
               "RelativeToolTip": "VirtualFunction\\Entity\\Player.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
@@ -176,11 +181,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Player.cpp",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\VirtualFunction\\Entity\\Player.cpp",
+              "DocumentMoniker": "C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\VirtualFunction\\Entity\\Player.cpp",
               "RelativeDocumentMoniker": "VirtualFunction\\Entity\\Player.cpp",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\VirtualFunction\\Entity\\Player.cpp",
+              "ToolTip": "C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\VirtualFunction\\Entity\\Player.cpp",
               "RelativeToolTip": "VirtualFunction\\Entity\\Player.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -190,9 +195,9 @@
               "$type": "Document",
               "DocumentIndex": 10,
               "Title": "Entity.h",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\VirtualFunction\\Entity\\Entity.h",
+              "DocumentMoniker": "C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\VirtualFunction\\Entity\\Entity.h",
               "RelativeDocumentMoniker": "VirtualFunction\\Entity\\Entity.h",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\VirtualFunction\\Entity\\Entity.h",
+              "ToolTip": "C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\VirtualFunction\\Entity\\Entity.h",
               "RelativeToolTip": "VirtualFunction\\Entity\\Entity.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
@@ -200,11 +205,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\VirtualFunction\\main.cpp",
+              "DocumentMoniker": "C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\VirtualFunction\\main.cpp",
               "RelativeDocumentMoniker": "VirtualFunction\\main.cpp",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\VirtualFunction\\main.cpp",
+              "ToolTip": "C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\VirtualFunction\\main.cpp",
               "RelativeToolTip": "VirtualFunction\\main.cpp",
               "ViewState": "AgIAAA0AAAAAAAAAAAAAwCIAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -214,9 +219,9 @@
               "$type": "Document",
               "DocumentIndex": 12,
               "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\inheritance\\main.cpp",
+              "DocumentMoniker": "C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\inheritance\\main.cpp",
               "RelativeDocumentMoniker": "inheritance\\main.cpp",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Thrid\\inheritance\\main.cpp",
+              "ToolTip": "C:\\Users\\82105\\Desktop\\portfolio\\Wanted\\Thrid\\inheritance\\main.cpp",
               "RelativeToolTip": "inheritance\\main.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
