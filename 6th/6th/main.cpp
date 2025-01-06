@@ -14,12 +14,16 @@ void check2(float (*f)(float)) {
 	cout << f(12) << '\n';
 }
 
+bool Function() {
+	return true;
+}
+
 int main() {
 	int a = 17;
 	auto func = [&a](float number) { return number + a; };
 	//auto test = [a] { ++a; };
 	check(func);
 
-	void (*funcPointer)() = []() { };
+	bool (*FunctionPointer)() = Function;
 	return 0;
 }

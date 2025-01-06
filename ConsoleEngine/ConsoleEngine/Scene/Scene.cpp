@@ -1,7 +1,6 @@
 #include "PreCompiledHeader.h"
 #include "Scene.h"
 #include "Entity/Entity.h"
-#include <iostream>
 
 Scene::Scene()
 	: SceneEntityList(nullptr), capacity(4), count(0)

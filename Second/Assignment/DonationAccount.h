@@ -6,6 +6,7 @@ class DonationAccount : public Account
 public:
 	DonationAccount(int id, const char* name, int balance)
 		: Account(id, name, balance), donation(0.01 * balance) {
+		accountType = EAccountType::Donation;
 		this->balance *= 0.99;
 	}
 
@@ -23,7 +24,10 @@ public:
 		cout << "기부된 총 금액은 " << donation << "원 입니다.\n";
 	}
 
+	int GetDonation() const {
+		return donation;
+	}
+
 private:
 	int donation;
 };
-

@@ -1,15 +1,10 @@
 #pragma once
+#include "AccountEnum.h"
+
 class Account;
 
 class Bank {
 public:
-	enum EAccountType {
-		None,
-		Normal,
-		Credit,
-		Donation
-	};
-
 	Bank() {
 
 	}
@@ -30,8 +25,12 @@ public:
 
 	void Inquire();
 
+	int GetCustomerCount() const { return customerCount; }
+
+	Account* GetCustomer(int idx) const { return customers[idx]; }
+
 private:
 	int customerCount = 0;
-	Account* customers[MAX] = {};
+	Account* customers[100] = {};
 };
 

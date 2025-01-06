@@ -10,7 +10,11 @@ Engine* Engine::instance = nullptr;
 
 Engine::Engine() :quit(false), mainScene(nullptr)
 {
+	memset(delegateKey, 0, sizeof(int) * KEYCOUNT);
+	memset(delegateKeyDown, 0, sizeof(int) * KEYCOUNT);
+	memset(delegateKeyUp, 0, sizeof(int) * KEYCOUNT);
 	instance = this;
+	//SubscribeGetKeyDown(, VK_ESCAPE);
 }
 
 Engine::~Engine()
@@ -81,6 +85,36 @@ bool Engine::GetKeyUp(int key)
 void Engine::QuitEngine()
 {
 	quit = true;
+}
+
+void Engine::SubscribeGetKey(void (*delegate)(), int key)
+{
+	delegateKey[key] = delegate;
+}
+
+void Engine::SubscribeGetKeyDown(void(*delegate)(), int key)
+{
+	delegateKeyDown[key] = delegate;
+}
+
+void Engine::SubscribeGetKeyUp(void(*delegate)(), int key)
+{
+	delegateKeyUp[key] = delegate;
+}
+
+void Engine::UnSubscribeGetKey(void(*delegate)(), int key)
+{
+	delegateKey[key] = nullptr;
+}
+
+void Engine::UnSubscribeGetKeyDown(void(*delegate)(), int key)
+{
+	delegateKeyDown[key] = nullptr;
+}
+
+void Engine::UnSubscribeGetKeyUp(void(*delegate)(), int key)
+{
+	delegateKeyUp[key] = nullptr;
 }
 
 void Engine::ProcessInput()

@@ -1,6 +1,7 @@
 #include "PreCompiledHeader.h"
+#include "Core.h"
 #include "Engine/Engine.h"
-//#include "Entity/Entity.h"
+#include "Vector/Vector2.h"
 
 using namespace std;
 
@@ -12,8 +13,6 @@ int main() {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 	Engine engine;
 	engine.Run();
-
 	_CrtDumpMemoryLeaks();
-
 	return 0;
 }

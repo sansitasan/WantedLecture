@@ -1,17 +1,18 @@
+#pragma once
 #include "Account.h"
 #include "Bank.h"
 
-Bank::EAccountType GetAccountType(char input) {
+EAccountType GetAccountType(char input) {
 	if (input == 'C' || input == 'c') {
-		return Bank::EAccountType::Credit;
+		return EAccountType::Credit;
 	}
 
 	else if (input == 'D' || input == 'd') {
-		return Bank::EAccountType::Donation;
+		return EAccountType::Donation;
 	}
 
 	else
-		return Bank::EAccountType::Normal;
+		return EAccountType::Normal;
 }
 
 int main() {
