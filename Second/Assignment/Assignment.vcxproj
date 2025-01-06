@@ -144,13 +144,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Bank.cpp" />
-    <ClCompile Include="CreditAccount.cpp" />
-    <ClCompile Include="DonationAccount.cpp" />
+    <ClCompile Include="BankDataManager.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Account.h" />
+    <ClInclude Include="AccountEnum.h" />
     <ClInclude Include="Bank.h" />
+    <ClInclude Include="BankDataManager.h" />
     <ClInclude Include="CreditAccount.h" />
     <ClInclude Include="DonationAccount.h" />
   </ItemGroup>

@@ -6,6 +6,7 @@ class CreditAccount : public Account
 public:
 	CreditAccount(int id, const char* name, int balance)
 		: Account(id, name, balance) {
+		accountType = EAccountType::Credit;
 		this->balance *= 1.01f;
 	}
 

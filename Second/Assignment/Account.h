@@ -1,23 +1,30 @@
 #pragma once
+#include "AccountEnum.h"
 #include <iostream>
 #define MAX 100
 
 using namespace std;
+class Bank;
 
 class Account {
 public:
 	Account(int id, const char* name, int balance)
-		: id(id), balance(balance) {
+		: accountType(EAccountType::Normal), id(id), balance(balance) {
 		this->name = new char[strlen(name) + 1];
 		strcpy_s(this->name, strlen(name) + 1, name);
 	}
 
 	Account(const Account& account) {
+		this->accountType = account.accountType;
 		this->id = account.id;
 		this->balance = account.balance;
 		size_t len = strlen(account.name) + 1;
 		this->name = new char[len];
 		strcpy_s(this->name, len, account.name);
+	}
+
+	EAccountType GetType() const {
+		return accountType;
 	}
 
 	int GetID() const {
@@ -60,6 +67,7 @@ public:
 	}
 
 protected:
+	EAccountType accountType;
 	int id;
 	char* name;
 	int balance;

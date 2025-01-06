@@ -21,10 +21,7 @@
     <ClCompile Include="Bank.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="CreditAccount.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="DonationAccount.cpp">
+    <ClCompile Include="BankDataManager.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -39,6 +36,12 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="DonationAccount.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="BankDataManager.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="AccountEnum.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
