@@ -13,7 +13,7 @@ public:
 
 	~Bank();
 
-	const Account* CreateAccount(int id, const char* name, int balance, EAccountType type);
+	const Account* CreateAccount(int id, const char* name, int nameLength, int balance, EAccountType type);
 
 	void Deposit(int id, int value);
 

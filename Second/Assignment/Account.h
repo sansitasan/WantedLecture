@@ -8,19 +8,20 @@ class Bank;
 
 class Account {
 public:
-	Account(int id, const char* name, int balance)
-		: accountType(EAccountType::Normal), id(id), balance(balance) {
+	Account(int id, const char* name, int nameLength, int balance)
+		: accountType(EAccountType::Normal), id(id), balance(balance), nameLength(nameLength) {
 		this->name = new char[strlen(name) + 1];
 		strcpy_s(this->name, strlen(name) + 1, name);
 	}
 
 	Account(const Account& account) {
-		this->accountType = account.accountType;
-		this->id = account.id;
-		this->balance = account.balance;
+		accountType = account.accountType;
+		id = account.id;
+		balance = account.balance;
 		size_t len = strlen(account.name) + 1;
-		this->name = new char[len];
-		strcpy_s(this->name, len, account.name);
+		name = new char[len];
+		nameLength = len;
+		strcpy_s(name, len, account.name);
 	}
 
 	EAccountType GetType() const {
@@ -37,6 +38,10 @@ public:
 
 	int GetBalance() const {
 		return balance;
+	}
+
+	int GetnameLength() const {
+		return nameLength;
 	}
 
 	virtual void Inquire() const {
@@ -70,5 +75,6 @@ protected:
 	EAccountType accountType;
 	int id;
 	char* name;
+	int nameLength;
 	int balance;
 };
