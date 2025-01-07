@@ -1,0 +1,19 @@
+type: 2
+id: 1004
+balance: 103030096
+nameLength: 2
+name: ks
+
+type: 3
+id: 1000
+balance: 9908910
+donation: 100090
+nameLength: 2
+name: sk
+
+type: 1
+id: 55
+balance: 50000
+nameLength: 2
+name: qq
+

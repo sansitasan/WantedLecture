@@ -1,6 +1,7 @@
 #pragma once
 #include "Account.h"
 #include "Bank.h"
+#include "BankDataManager.h"
 
 EAccountType GetAccountType(char input) {
 	if (input == 'C' || input == 'c') {
@@ -21,6 +22,9 @@ int main() {
 	int id, balance;
 	char name[MAX];
 
+	BankDataManager dataManager;
+	dataManager.LoadData(*bank);
+
 	while (true) {
 		cout << "\n명령어를 입력해주세요.\nC: 계좌 개설\nD: 입금\nW: 출금\nI: 전체 고객 잔액 조회\nQ: 종료\n\n";
 		cin >> userInput;
@@ -28,7 +32,7 @@ int main() {
 		if (userInput[0] == 'Q' || userInput[0] == 'q') break;
 		
 		else if (userInput[0] == 'C' || userInput[0] == 'c') {
-			cout << "계좌 개설을 선택하셨습니다. 계좌 정보를 입력해주세요. \n C: 신용 계좌\nD: 기부 계좌\n N: 일반 계좌\n";
+			cout << "계좌 개설을 선택하셨습니다. 계좌 정보를 입력해주세요. \nC: 신용 계좌\nD: 기부 계좌\nN: 일반 계좌\n";
 			cin >> userInput;
 
 			cout << "\n계좌번호: ";
@@ -39,7 +43,7 @@ int main() {
 			cin >> balance;
 			cout << "\n\n";
 
-			const Account* account = bank->CreateAccount(id, name, balance, GetAccountType(userInput[0]));
+			const Account* account = bank->CreateAccount(id, name, balance, strlen(name), GetAccountType(userInput[0]));
 
 			if (!account) continue;
 			account->Inquire();
@@ -71,6 +75,8 @@ int main() {
 		}
 
 	}
+
+	dataManager.SaveData(*bank);
 
 	cout << "프로그램을 종료합니다.\n";
 	delete bank;

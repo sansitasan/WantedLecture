@@ -20,7 +20,7 @@ Bank::~Bank()
 	}
 }
 
-const Account* Bank::CreateAccount(int id, const char* name, int balance, EAccountType type)
+const Account* Bank::CreateAccount(int id, const char* name, int nameLength, int balance, EAccountType type)
 {
 	if (customerCount >= MAX) {
 		cout << "고객 정보의 수가 최대치입니다!\n";
@@ -29,15 +29,15 @@ const Account* Bank::CreateAccount(int id, const char* name, int balance, EAccou
 	Account* newCustomer = nullptr;
 	switch (type) {
 		case EAccountType::Credit:
-			newCustomer = new CreditAccount(id, name, balance);
+			newCustomer = new CreditAccount(id, name, nameLength, balance);
 			break;
 
 		case EAccountType::Donation:
-			newCustomer = new DonationAccount(id, name, balance);
+			newCustomer = new DonationAccount(id, name, nameLength, balance);
 			break;
 
 		default:
-			newCustomer = new Account(id, name, balance);
+			newCustomer = new Account(id, name, nameLength, balance);
 			break;
 	}
 
