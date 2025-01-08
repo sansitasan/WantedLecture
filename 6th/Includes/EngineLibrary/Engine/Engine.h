@@ -1,8 +1,9 @@
 #pragma once
-#include "PreCompiledHeader.h"
+#include "Core.h"
+
 #define KEYCOUNT 255
 
-struct ENGINE_API KeyState {
+struct KeyState {
 	//둘 다 있어야 키가 유지중인지 확인이 가능하다
 	bool isKeyDown = false;
 	bool wasKeyDown = false;
@@ -22,6 +23,11 @@ public:
 
 	void LoadScene(Scene* newScene);
 
+	void SetCursorPosition(const struct Vector2& position);
+	void SetCursorPosition(int x, int y);
+
+	void SetTargetFrameRate(float targetFrameRate);
+
 	//현재 눌렸는지 확인
 	bool GetKey(int key);
 	bool GetKeyDown(int key);
@@ -29,15 +35,30 @@ public:
 
 	void QuitEngine();
 
+	void SubscribeGetKey(void(*delegate)(), int key);
+	void SubscribeGetKeyDown(void(*delegate)(), int key);
+	void SubscribeGetKeyUp(void(*delegate)(), int key);
+
+	void UnSubscribeGetKey(void(*delegate)(), int key);
+	void UnSubscribeGetKeyDown(void(*delegate)(), int key);
+	void UnSubscribeGetKeyUp(void(*delegate)(), int key);
+
 protected:
 	void ProcessInput();
-	void Update(double deltaTime);
+	void Update(float deltaTime);
 	void Draw();
 
 protected:
+	//타겟 프레임 변수
+	float targetFrameRate;
+	float targetOneFrameTime;
 	bool quit = false;
 
 	KeyState keyState[KEYCOUNT];
+
+	void (*delegateKeyDown[KEYCOUNT])();
+	void (*delegateKey[KEYCOUNT])();
+	void (*delegateKeyUp[KEYCOUNT])();
 
 	static Engine* instance;
 

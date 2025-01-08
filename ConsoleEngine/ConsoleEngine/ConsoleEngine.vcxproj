@@ -105,7 +105,7 @@
       </AdditionalLibraryDirectories>
     </Link>
     <PreBuildEvent>
-      <Command>xcopy "$(ProjectDir)\*.h" "$(SolutionDir)\Includes\" /e /y</Command>
+      <Command>xcopy "$(ProjectDir)\*.h" "$(SolutionDir)\Includes\EngineLibrary\" /e /y</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>xcopy "$(OutDir)\*.dll" "$(SolutionDir)\Lib\" /e /y
@@ -134,7 +134,7 @@ xcopy "$(OutDir)\*.lib" "$(SolutionDir)\Lib\" /e /y</Command>
       </AdditionalLibraryDirectories>
     </Link>
     <PreBuildEvent>
-      <Command>xcopy "$(ProjectDir)\*.h" "$(SolutionDir)\Includes\" /e /y</Command>
+      <Command>xcopy "$(ProjectDir)\*.h" "$(SolutionDir)\Includes\EngineLibrary\" /e /y</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>xcopy "$(OutDir)\*.dll" "$(SolutionDir)\Lib\" /e /y
@@ -159,7 +159,7 @@ xcopy "$(OutDir)\*.lib" "$(SolutionDir)\Lib\" /e /y</Command>
       </AdditionalLibraryDirectories>
     </Link>
     <PreBuildEvent>
-      <Command>xcopy "$(ProjectDir)\*.h" "$(SolutionDir)\Includes\" /e /y</Command>
+      <Command>xcopy "$(ProjectDir)\*.h" "$(SolutionDir)\Includes\EngineLibrary\" /e /y</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>xcopy "$(OutDir)\*.dll" "$(SolutionDir)\Lib\" /e /y
@@ -188,7 +188,7 @@ xcopy "$(OutDir)\*.lib" "$(SolutionDir)\Lib\" /e /y</Command>
       </AdditionalLibraryDirectories>
     </Link>
     <PreBuildEvent>
-      <Command>xcopy "$(ProjectDir)\*.h" "$(SolutionDir)\Includes\" /e /y</Command>
+      <Command>xcopy "$(ProjectDir)\*.h" "$(SolutionDir)\Includes\EngineLibrary\" /e /y</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>xcopy "$(OutDir)\*.dll" "$(SolutionDir)\Lib\" /e /y
@@ -196,8 +196,10 @@ xcopy "$(OutDir)\*.lib" "$(SolutionDir)\Lib\" /e /y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Entity\DrawableEntity.cpp" />
     <ClCompile Include="Engine\Engine.cpp" />
     <ClCompile Include="Entity\Entity.cpp" />
+    <ClCompile Include="Math\Vector\Vector2.cpp" />
     <ClCompile Include="PreCompiledHeader\PrecompiledHeader.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -208,14 +210,16 @@ xcopy "$(OutDir)\*.lib" "$(SolutionDir)\Lib\" /e /y</Command>
     <ClCompile Include="Scene\Scene.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Container\List.h" />
+    <ClInclude Include="Entity\DrawableEntity.h" />
     <ClInclude Include="Engine\Engine.h" />
     <ClInclude Include="Entity\Entity.h" />
     <ClInclude Include="PreCompiledHeader\PreCompiledHeader.h" />
     <ClInclude Include="Scene\Scene.h" />
     <ClInclude Include="Core.h" />
     <ClInclude Include="RTTI.h" />
-    <ClInclude Include="Vector\Vector2.h" />
-    <ClInclude Include="Vector\Vector3.h" />
+    <ClInclude Include="Math\Vector\Vector2.h" />
+    <ClInclude Include="Math\Vector\Vector3.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

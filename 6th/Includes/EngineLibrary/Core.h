@@ -30,7 +30,7 @@ void SafeDelete(T* pointer) {
 template<typename... Args>
 void Log(const char* format, Args&&... args) {
 	char buffer[1024];
-	snprintf(buffer, 1024, format, args);
+	snprintf(buffer, 1024, format, args ...);
 	std::cout << buffer << '\n';
 }
 

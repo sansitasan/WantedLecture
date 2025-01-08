@@ -9,6 +9,12 @@ struct KeyState {
 	bool wasKeyDown = false;
 };
 
+enum class ECursorType {
+	NoCursor,
+	SolidCursor,
+	NormalCursor
+};
+
 class Scene;
 
 class ENGINE_API Engine
@@ -22,6 +28,12 @@ public:
 	void Run();
 
 	void LoadScene(Scene* newScene);
+
+	void SetCursorType(ECursorType type);
+	void SetCursorPosition(const struct Vector2& position);
+	void SetCursorPosition(int x, int y);
+
+	void SetTargetFrameRate(float targetFrameRate);
 
 	//현재 눌렸는지 확인
 	bool GetKey(int key);
@@ -40,10 +52,13 @@ public:
 
 protected:
 	void ProcessInput();
-	void Update(double deltaTime);
+	void Update(float deltaTime);
 	void Draw();
 
 protected:
+	//타겟 프레임 변수
+	float targetFrameRate;
+	float targetOneFrameTime;
 	bool quit = false;
 
 	KeyState keyState[KEYCOUNT];

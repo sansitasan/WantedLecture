@@ -1,6 +1,8 @@
 #pragma once
 #include "Core.h"
 
+#pragma warning (disable : 4172)
+
 // 상속 관계에 있는 클래스 간의
 // 동적(실행중에) 형변환을 빠르게 하기 위해 사용하는 클래스.
 // RunTime-Type-Information.
@@ -54,6 +56,6 @@ public:																					\
 		}																				\
 		else																			\
 		{																				\
-			return Super::Is(id);													\
+			return Super::Is(id);														\
 		}																				\
 	}

@@ -1,14 +1,15 @@
 #include "PreCompiledHeader.h"
-#include "Engine.h"
 #include "Scene/Scene.h"
+#include "Math/Vector/Vector2.h"
 #include <Windows.h>
 #include <iostream>
+#include "Engine.h"
 
 using namespace std;
 
 Engine* Engine::instance = nullptr;
 
-Engine::Engine() :quit(false), mainScene(nullptr)
+Engine::Engine() :quit(false), mainScene(nullptr), targetFrameRate(60), targetOneFrameTime(1 / 60)
 {
 	memset(delegateKey, 0, sizeof(int) * KEYCOUNT);
 	memset(delegateKeyDown, 0, sizeof(int) * KEYCOUNT);
@@ -36,9 +37,9 @@ void Engine::Run()
 	QueryPerformanceCounter(&time);
 
 	int64_t currentTime = time.QuadPart, previousTime = 0;
-	double deltaTime;
+	float deltaTime;
 
-	double targetFrameRate = 60.0f, targetOneFrameTime = 1 / targetFrameRate;
+	targetOneFrameTime = 1 / targetFrameRate;
 	//Loop
 	while (true) {
 
@@ -46,8 +47,8 @@ void Engine::Run()
 		QueryPerformanceCounter(&time);
 		currentTime = time.QuadPart;
 
-		deltaTime = static_cast<double>(currentTime - previousTime) / 
-			static_cast<double>(frequency.QuadPart);
+		deltaTime = static_cast<float>(currentTime - previousTime) /
+			static_cast<float>(frequency.QuadPart);
 
 		if (deltaTime < targetOneFrameTime) continue;
 
@@ -65,6 +66,48 @@ void Engine::Run()
 void Engine::LoadScene(Scene* newScene)
 {
 	mainScene = newScene;
+}
+
+void Engine::SetCursorType(ECursorType type)
+{
+	CONSOLE_CURSOR_INFO info = {};
+
+	switch (type) {
+		case ECursorType::NoCursor :
+			info.dwSize = 1;
+			info.bVisible = FALSE;
+			break;
+
+		case ECursorType::NormalCursor:
+			info.dwSize = 20;
+			info.bVisible = TRUE;
+			break;
+
+		case ECursorType::SolidCursor:
+			info.dwSize = 100;
+			info.bVisible = TRUE;
+			break;
+	}
+
+	SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &info);
+}
+
+void Engine::SetCursorPosition(const Vector2& position)
+{
+	SetCursorPosition(position.GetX(), position.GetY());
+}
+
+void Engine::SetCursorPosition(int x, int y)
+{
+	static HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
+	COORD coord = { static_cast<short>(x), static_cast<short>(y) };
+	SetConsoleCursorPosition(handle, coord);
+}
+
+void Engine::SetTargetFrameRate(float targetFrameRate)
+{
+	this->targetFrameRate = targetFrameRate;
+	targetOneFrameTime = 1 / targetFrameRate;
 }
 
 bool Engine::GetKey(int key)
@@ -125,9 +168,8 @@ void Engine::ProcessInput()
 	}
 }
 
-void Engine::Update(double deltaTime)
+void Engine::Update(float deltaTime)
 {
-	if (GetKeyDown(VK_ESCAPE)) QuitEngine();
 	if (!mainScene) return;
 
 	mainScene->Update(deltaTime);
