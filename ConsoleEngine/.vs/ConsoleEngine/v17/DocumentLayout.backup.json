@@ -74,8 +74,7 @@
               "RelativeToolTip": "ConsoleEngine\\RTTI.h",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-06T07:37:35.449Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-06T07:37:35.449Z"
             },
             {
               "$type": "Document",
@@ -87,8 +86,7 @@
               "RelativeToolTip": "ConsoleEngine\\Vector\\Vector3.h",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAADAAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-06T07:35:21.876Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-06T07:35:21.876Z"
             },
             {
               "$type": "Document",
@@ -100,8 +98,7 @@
               "RelativeToolTip": "ConsoleEngine\\Core.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-06T07:24:42.961Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-06T07:24:42.961Z"
             },
             {
               "$type": "Document",
@@ -113,8 +110,7 @@
               "RelativeToolTip": "ConsoleEngine\\main.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-02T06:29:40.535Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T06:29:40.535Z"
             },
             {
               "$type": "Document",
@@ -124,7 +120,7 @@
               "RelativeDocumentMoniker": "ConsoleEngine\\Vector\\Vector2.h",
               "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Vector\\Vector2.h",
               "RelativeToolTip": "ConsoleEngine\\Vector\\Vector2.h",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAAACkAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAG0AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-01-05T23:49:34.024Z",
               "EditorCaption": ""
@@ -139,8 +135,7 @@
               "RelativeToolTip": "ConsoleEngine\\Scene\\Scene.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-03T03:39:01.355Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T03:39:01.355Z"
             },
             {
               "$type": "Document",
@@ -152,8 +147,7 @@
               "RelativeToolTip": "ConsoleEngine\\Scene\\Scene.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-03T03:39:00.22Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T03:39:00.22Z"
             },
             {
               "$type": "Document",
@@ -165,8 +159,7 @@
               "RelativeToolTip": "ConsoleEngine\\PreCompiledHeader\\PreCompiledHeader.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-03T06:14:44.425Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T06:14:44.425Z"
             },
             {
               "$type": "Document",
@@ -178,8 +171,7 @@
               "RelativeToolTip": "ConsoleEngine\\Entity\\Entity.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-03T03:34:58.876Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T03:34:58.876Z"
             },
             {
               "$type": "Document",
@@ -191,8 +183,7 @@
               "RelativeToolTip": "ConsoleEngine\\Entity\\Entity.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-03T03:32:25.322Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T03:32:25.322Z"
             },
             {
               "$type": "Document",
@@ -204,8 +195,7 @@
               "RelativeToolTip": "ConsoleEngine\\Engine\\Engine.cpp",
               "ViewState": "AgIAAAEAAAAAAAAAAADwvxAAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-02T07:13:05.9Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T07:13:05.9Z"
             },
             {
               "$type": "Document",
@@ -217,8 +207,7 @@
               "RelativeToolTip": "ConsoleEngine\\Engine\\Engine.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-02T07:12:42.343Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T07:12:42.343Z"
             },
             {
               "$type": "Document",
@@ -230,8 +219,7 @@
               "RelativeToolTip": "ConsoleEngine\\PreCompiledHeader\\PrecompiledHeader.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-03T06:19:36.979Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T06:19:36.979Z"
             }
           ]
         }
