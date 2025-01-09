@@ -24,7 +24,7 @@ public:
 	{
 		if (size == capacity)
 		{
-			ReAllocate(capacity * 2);
+			ReAllocate(capacity << 1);
 		}
 
 		data[size] = value;
@@ -35,7 +35,7 @@ public:
 	{
 		if (size <= capacity)
 		{
-			ReAllocate(capacity * 2);
+			ReAllocate(capacity << 1);
 		}
 
 		data[size] = std::move(value);
@@ -80,13 +80,20 @@ public:
 		return data + size;
 	}
 
+	void Erase(int index) {
+		if (index < 0 || index >= size) {
+			__debugbreak();
+		}
+
+		size -= 1;
+		if ((size + 1) == index) return;
+		//TODO: memmove to memcpy
+		memmove(data + index, data + index + 1, sizeof(T) * (size - index));
+	}
+
 private:
 	void ReAllocate(int newCapacity)
 	{
-		// 1. allocate a new block of memory.
-		// 2. copy/move old elements into new block.
-		// 3. delete.
-
 		T* newBlock = new T[newCapacity];
 		memset(newBlock, 0, sizeof(T) * newCapacity);
 
@@ -95,12 +102,8 @@ private:
 			size = newCapacity;
 		}
 
-		memcpy(newBlock, data, sizeof(T) * capacity);
-		//for (int ix = 0; ix < size; ++ix)
-		//{
-		//	// newBlock[ix] = data[ix];
-		//	newBlock[ix] = std::move(data[ix]);
-		//}
+		//TODO: memmove to memcpy
+		memmove(newBlock, data, sizeof(T) * capacity);
 
 		delete[] data;
 		data = newBlock;

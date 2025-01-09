@@ -24,12 +24,15 @@
     <ClCompile Include="PreCompiledHeader\PCH.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Solution\Solution.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PreCompiledHeader\PCH.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Solution\ISolution.h">
+    <ClInclude Include="Solution\Solution.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Solution\2473.h">

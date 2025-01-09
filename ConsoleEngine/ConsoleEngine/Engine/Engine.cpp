@@ -3,6 +3,7 @@
 #include "Math/Vector/Vector2.h"
 #include <Windows.h>
 #include <iostream>
+#include "Entity/Entity.h"
 #include "Engine.h"
 
 using namespace std;
@@ -54,10 +55,20 @@ void Engine::Run()
 
 		//입력상태 확인
 		ProcessInput();
-		Update(deltaTime);
-		Draw();
+
+		//업데이트 가능한 상태에서만 업데이트를 처리해야 한다.
+		if (shouldUpdate) {
+			Update(deltaTime);
+			Draw();
+		}
 
 		previousTime = currentTime;
+
+		if (mainScene) {
+			mainScene->DestroyEntity();
+		}
+
+		shouldUpdate = true;
 
 		//Sleep(10);
 	}
@@ -68,12 +79,28 @@ void Engine::LoadScene(Scene* newScene)
 	mainScene = newScene;
 }
 
+void Engine::AddEntity(Entity* entity)
+{
+	if (!mainScene) return;
+
+	shouldUpdate = false;
+	mainScene->AddEntity(entity);
+}
+
+void Engine::DestroyEntity(Entity* entity)
+{
+	if (!mainScene) return;
+
+	shouldUpdate = false;
+	entity->Destroy();
+}
+
 void Engine::SetCursorType(ECursorType type)
 {
 	CONSOLE_CURSOR_INFO info = {};
 
 	switch (type) {
-		case ECursorType::NoCursor :
+		case ECursorType::NoCursor:
 			info.dwSize = 1;
 			info.bVisible = FALSE;
 			break;
@@ -137,6 +164,7 @@ void Engine::SubscribeGetKey(void (*delegate)(), int key)
 
 void Engine::SubscribeGetKeyDown(void(*delegate)(), int key)
 {
+	(this->*QuitEngine)();
 	delegateKeyDown[key] = delegate;
 }
 
@@ -173,11 +201,22 @@ void Engine::Update(float deltaTime)
 	if (!mainScene) return;
 
 	mainScene->Update(deltaTime);
-	//cout << "DeltaTime: " << deltaTime << ", FPS: " << (1.0f / deltaTime) << '\n';
 }
 
 void Engine::Draw()
 {
+	Clear();
+
 	if (!mainScene) return;
 	mainScene->Draw();
+}
+
+void Engine::Clear()
+{
+	SetCursorPosition(0, 0);
+	int height = 25;
+	for (int i = 0; i < height; ++i) {
+		Log("                              \n");
+	}
+	SetCursorPosition(0, 0);
 }

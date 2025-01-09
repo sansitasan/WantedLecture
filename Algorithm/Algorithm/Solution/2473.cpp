@@ -6,6 +6,7 @@ void Sol2473::BinarySearch() {
 }
 
 void Sol2473::Answer() {
+	Solution::Answer();
 	int N;
 	cin >> N;
 

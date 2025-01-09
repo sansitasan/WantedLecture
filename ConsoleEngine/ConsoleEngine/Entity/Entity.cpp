@@ -11,6 +11,7 @@ Entity::~Entity()
 
 void Entity::Update(float deltaTime)
 {
+
 }
 
 void Entity::Draw()

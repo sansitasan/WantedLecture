@@ -16,6 +16,7 @@ enum class ECursorType {
 };
 
 class Scene;
+class Entity;
 
 class ENGINE_API Engine
 {
@@ -28,6 +29,9 @@ public:
 	void Run();
 
 	void LoadScene(Scene* newScene);
+
+	void AddEntity(Entity* entity);
+	void DestroyEntity(Entity* entity);
 
 	void SetCursorType(ECursorType type);
 	void SetCursorPosition(const struct Vector2& position);
@@ -54,12 +58,14 @@ protected:
 	void ProcessInput();
 	void Update(float deltaTime);
 	void Draw();
+	void Clear();
 
 protected:
 	//타겟 프레임 변수
 	float targetFrameRate;
 	float targetOneFrameTime;
 	bool quit = false;
+	bool shouldUpdate = true;
 
 	KeyState keyState[KEYCOUNT];
 

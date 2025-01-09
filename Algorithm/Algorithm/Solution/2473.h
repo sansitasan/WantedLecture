@@ -1,7 +1,7 @@
 #pragma once
-#include "ISolution.h"
+#include "Solution.h"
 
-class Sol2473 : public ISolution {
+class Sol2473 : public Solution {
 public:
 	virtual void Answer() override;
 
