@@ -12,11 +12,10 @@ Engine* Engine::instance = nullptr;
 
 Engine::Engine() :quit(false), mainScene(nullptr), targetFrameRate(60), targetOneFrameTime(1 / 60)
 {
-	memset(delegateKey, 0, sizeof(int) * KEYCOUNT);
-	memset(delegateKeyDown, 0, sizeof(int) * KEYCOUNT);
-	memset(delegateKeyUp, 0, sizeof(int) * KEYCOUNT);
+	delegateKeyDown = std::vector<std::vector<std::function<void()>>>(KEYCOUNT, std::vector<std::function<void()>>());
+	delegateKey = std::vector<std::vector<std::function<void()>>>(KEYCOUNT, std::vector<std::function<void()>>());
+	delegateKeyUp = std::vector<std::vector<std::function<void()>>>(KEYCOUNT, std::vector<std::function<void()>>());
 	instance = this;
-	//SubscribeGetKeyDown(, VK_ESCAPE);
 }
 
 Engine::~Engine()
@@ -121,7 +120,7 @@ void Engine::SetCursorType(ECursorType type)
 
 void Engine::SetCursorPosition(const Vector2& position)
 {
-	SetCursorPosition(position.GetX(), position.GetY());
+	SetCursorPosition(static_cast<int>(position.GetX()), static_cast<int>(position.GetY()));
 }
 
 void Engine::SetCursorPosition(int x, int y)
@@ -157,35 +156,55 @@ void Engine::QuitEngine()
 	quit = true;
 }
 
-void Engine::SubscribeGetKey(void (*delegate)(), int key)
+void Engine::SubscribeGetKey(std::function<void()> delegate, int key)
 {
-	delegateKey[key] = delegate;
+	delegateKey[key].push_back(delegate);
 }
 
-void Engine::SubscribeGetKeyDown(void(*delegate)(), int key)
+void Engine::SubscribeGetKeyDown(std::function<void()> delegate, int key)
 {
-	(this->*QuitEngine)();
-	delegateKeyDown[key] = delegate;
+	delegateKeyDown[key].push_back(delegate);
 }
 
-void Engine::SubscribeGetKeyUp(void(*delegate)(), int key)
+void Engine::SubscribeGetKeyUp(std::function<void()> delegate, int key)
 {
-	delegateKeyUp[key] = delegate;
+	delegateKeyUp[key].push_back(delegate);
 }
 
-void Engine::UnSubscribeGetKey(void(*delegate)(), int key)
+void Engine::UnSubscribeGetKey(std::function<void()> delegate, int key)
 {
-	delegateKey[key] = nullptr;
+	auto& list = delegateKey[key];
+	const auto& it = std::find_if(list.begin(), list.end(), [&](const std::function<void()>& item) {
+		return item.target<void()>() == delegate.target<void()>();
+		});
+
+	if (it == list.end()) return;
+
+	list.erase(it);
 }
 
-void Engine::UnSubscribeGetKeyDown(void(*delegate)(), int key)
+void Engine::UnSubscribeGetKeyDown(std::function<void()> delegate, int key)
 {
-	delegateKeyDown[key] = nullptr;
+	auto& list = delegateKeyDown[key];
+	const auto& it = std::find_if(list.begin(), list.end(), [&](const std::function<void()>& item) {
+		return item.target<void()>() == delegate.target<void()>();
+		});
+
+	if (it == list.end()) return;
+
+	list.erase(it);
 }
 
-void Engine::UnSubscribeGetKeyUp(void(*delegate)(), int key)
+void Engine::UnSubscribeGetKeyUp(std::function<void()> delegate, int key)
 {
-	delegateKeyUp[key] = nullptr;
+	auto& list = delegateKeyUp[key];
+	const auto& it = std::find_if(list.begin(), list.end(), [&](const std::function<void()>& item) {
+		return item.target<void()>() == delegate.target<void()>();
+		});
+
+	if (it == list.end()) return;
+
+	list.erase(it);
 }
 
 void Engine::ProcessInput()
@@ -193,6 +212,23 @@ void Engine::ProcessInput()
 	for (int i = 0; i < KEYCOUNT; ++i) {
 		keyState[i].wasKeyDown = keyState[i].isKeyDown;
 		keyState[i].isKeyDown = (GetAsyncKeyState(i) & 0x8000) ? true : false;
+		if (GetKeyDown(i)) {
+			for (int j = 0; j < delegateKeyDown[i].size(); ++j) {
+				delegateKeyDown[i][j]();
+			}
+		}
+
+		if (GetKey(i)) {
+			for (int j = 0; j < delegateKey[i].size(); ++j) {
+				delegateKey[i][j]();
+			}
+		}
+
+		if (GetKeyUp(i)) {
+			for (int j = 0; j < delegateKeyUp[i].size(); ++j) {
+				delegateKeyUp[i][j]();
+			}
+		}
 	}
 }
 

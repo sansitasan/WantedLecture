@@ -8,8 +8,10 @@ class List
 {
 public:
 	List()
+		:capacity(2)
 	{
-		ReAllocate(2);
+		data = new T[capacity];
+		memset(data, 0, sizeof(T) * capacity);
 	}
 
 	~List()
@@ -27,8 +29,7 @@ public:
 			ReAllocate(capacity << 1);
 		}
 
-		data[size] = value;
-		size++;
+		data[size++] = value;
 	}
 
 	void PushBack(T&& value)
@@ -38,8 +39,7 @@ public:
 			ReAllocate(capacity << 1);
 		}
 
-		data[size] = std::move(value);
-		size++;
+		data[size++] = std::move(value);
 	}
 
 	int Size() const
@@ -85,10 +85,8 @@ public:
 			__debugbreak();
 		}
 
-		size -= 1;
-		if ((size + 1) == index) return;
-		//TODO: memmove to memcpy
-		memmove(data + index, data + index + 1, sizeof(T) * (size - index));
+		if (size-- != index) return;
+		data[index] = std::move(data[size]);
 	}
 
 private:
@@ -102,8 +100,7 @@ private:
 			size = newCapacity;
 		}
 
-		//TODO: memmove to memcpy
-		memmove(newBlock, data, sizeof(T) * capacity);
+		memcpy(newBlock, data, sizeof(T) * capacity);
 
 		delete[] data;
 		data = newBlock;

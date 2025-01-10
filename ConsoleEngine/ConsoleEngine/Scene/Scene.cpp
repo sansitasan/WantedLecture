@@ -2,7 +2,8 @@
 #include "Scene.h"
 #include "Entity/Entity.h"
 
-Scene::Scene() {}
+Scene::Scene() {
+}
 
 Scene::~Scene()
 {
@@ -19,9 +20,12 @@ void Scene::AddEntity(Entity* newEntity)
 
 void Scene::DestroyEntity()
 {
-	//TODO: memmove to memcpy - index Á¶Á¤
-	for (int i = 0; i < SceneEntityList.Size(); ++i) {
-		if (!SceneEntityList[i]->IsExpired()) continue;
+	for (int i = 0; i < SceneEntityList.Size();) {
+		if (!SceneEntityList[i]->IsExpired()) {
+			++i;
+			continue;
+		}
+
 		delete SceneEntityList[i];
 		SceneEntityList[i] = nullptr;
 		SceneEntityList.Erase(i);

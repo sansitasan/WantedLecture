@@ -1,4 +1,6 @@
 #pragma once
+#include <functional>
+#include <vector>
 #include "Core.h"
 
 #define KEYCOUNT 255
@@ -16,6 +18,7 @@ enum class ECursorType {
 };
 
 class Scene;
+class Entity;
 
 class ENGINE_API Engine
 {
@@ -28,6 +31,9 @@ public:
 	void Run();
 
 	void LoadScene(Scene* newScene);
+
+	void AddEntity(Entity* entity);
+	void DestroyEntity(Entity* entity);
 
 	void SetCursorType(ECursorType type);
 	void SetCursorPosition(const struct Vector2& position);
@@ -42,30 +48,32 @@ public:
 
 	void QuitEngine();
 
-	void SubscribeGetKey(void(*delegate)(), int key);
-	void SubscribeGetKeyDown(void(*delegate)(), int key);
-	void SubscribeGetKeyUp(void(*delegate)(), int key);
+	void SubscribeGetKey(std::function<void()>, int key);
+	void SubscribeGetKeyDown(std::function<void()>, int key);
+	void SubscribeGetKeyUp(std::function<void()>, int key);
 
-	void UnSubscribeGetKey(void(*delegate)(), int key);
-	void UnSubscribeGetKeyDown(void(*delegate)(), int key);
-	void UnSubscribeGetKeyUp(void(*delegate)(), int key);
+	void UnSubscribeGetKey(std::function<void()>, int key);
+	void UnSubscribeGetKeyDown(std::function<void()>, int key);
+	void UnSubscribeGetKeyUp(std::function<void()>, int key);
 
 protected:
 	void ProcessInput();
 	void Update(float deltaTime);
 	void Draw();
+	void Clear();
 
 protected:
 	//타겟 프레임 변수
 	float targetFrameRate;
 	float targetOneFrameTime;
 	bool quit = false;
+	bool shouldUpdate = true;
 
 	KeyState keyState[KEYCOUNT];
 
-	void (*delegateKeyDown[KEYCOUNT])();
-	void (*delegateKey[KEYCOUNT])();
-	void (*delegateKeyUp[KEYCOUNT])();
+	std::vector<std::vector<std::function<void()>>> delegateKeyDown;
+	std::vector<std::vector<std::function<void()>>> delegateKey;
+	std::vector<std::vector<std::function<void()>>> delegateKeyUp;
 
 	static Engine* instance;
 

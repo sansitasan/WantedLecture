@@ -19,7 +19,7 @@ public:
 
 	bool IsActive() const { return isActive; }
 	void SetActive(bool active) { isActive = active; }
-	void Destroy() { isExpired = true; }
+	virtual void Destroy() { isExpired = true; }
 	bool IsExpired() const { return isExpired; }
 
 protected:

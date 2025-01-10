@@ -15,6 +15,7 @@ public:
 	virtual ~Scene();
 
 	void AddEntity(Entity* newEntity);
+	void DestroyEntity();
 
 	virtual void Update(float deltaTime);
 	virtual void Draw();

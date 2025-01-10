@@ -7,7 +7,13 @@ class Player : public DrawableEntity
 
 public:
 	Player(char image = 'P');
-
+	
 	virtual void Update(float deltaTime) override;
+	
+	virtual void Destroy() override;
+	void MoveUp();
+	void MoveDown();
+	void MoveLeft();
+	void MoveRight();
 };
 

@@ -32,7 +32,7 @@ public:
 			else {
 				capacity <<= 1;
 				T* temp = new T[capacity];
-				memmove(temp, data, sizeof(T) * rear);
+				memcpy(temp, data, sizeof(T) * rear);
 				delete[] data;
 				data = temp;
 			}
