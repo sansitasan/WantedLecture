@@ -7,12 +7,12 @@ public:
 	RTTI_DECLARATIONS(DrawableEntity, Entity)
 
 public:
-	DrawableEntity(char image = ' ');
-	virtual ~DrawableEntity() = default;
+	DrawableEntity(const char* image);
+	virtual ~DrawableEntity();
 
 	virtual void Draw() override;
 	virtual void SetPosition(const Vector2& newPosition) override;
 protected:
-	char image;
+	char* image;
 };
 

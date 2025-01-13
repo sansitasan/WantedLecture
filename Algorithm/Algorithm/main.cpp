@@ -1,6 +1,6 @@
 #include "PCH.h"
 #include <string>
-#include "Solution/2473.h"
+#include "Solution/Sol2206.h"
 #include <chrono>
 #include <windows.h>
 
@@ -252,27 +252,9 @@ class C : public B
 };
 
 int main() {
-	A a = C();
-
-	a.Test();
-	string str;
-	int ans = 0;
-
-	for (int i = 0; i < 3; ++i) {
-		cin >> str;
-		if (str[0] < 48) continue;
-		if (str[0] > 57) continue;
-		ans = stoi(str) + 3 - i;
-	}
-
-	if (ans % 3 && ans % 5) cout << ans;
-	else if (ans % 3) cout << "Buzz";
-	else if (ans % 5) cout << "Fizz";
-	else cout << "FizzBuzz";
-
-	//Solution s = Sol2473();
-	//
-	//s.Answer();
+	Solution* s = new Sol2206();
+	
+	s->Answer();
 	//SetThreadAffinityMask(GetCurrentThread(), 1);
 	//
 	//for (int i = 0; i < 10; ++i) {

@@ -2,12 +2,13 @@
 #include "Player.h"
 #include "Math/Vector/Vector2.h"
 
-Player::Player(char image) : Super(image)
+Player::Player(const char* image) : Super(image)
 {
-	Engine::Get().SubscribeGetKeyDown(BINDFUNCTION(Player::MoveUp, Player), VK_UP);
-	Engine::Get().SubscribeGetKeyDown(BINDFUNCTION(Player::MoveDown, Player), VK_DOWN);
-	Engine::Get().SubscribeGetKeyDown(BINDFUNCTION(Player::MoveRight, Player), VK_RIGHT);
-	Engine::Get().SubscribeGetKeyDown(BINDFUNCTION(Player::MoveLeft, Player), VK_LEFT);
+	position = Vector2(0, 18);
+	KEYBIND(MoveUp, Player, VK_UP);
+	KEYBIND(MoveDown, Player, VK_DOWN);
+	KEYBIND(MoveRight, Player, VK_RIGHT);
+	KEYBIND(MoveLeft, Player, VK_LEFT);
 }
 
 void Player::Update(float deltaTime)
@@ -18,10 +19,10 @@ void Player::Update(float deltaTime)
 void Player::Destroy()
 {
 	Super::Destroy();
-	Engine::Get().UnSubscribeGetKeyDown(BINDFUNCTION(Player::MoveUp, Player), VK_UP);
-	Engine::Get().UnSubscribeGetKeyDown(BINDFUNCTION(Player::MoveDown, Player), VK_DOWN);
-	Engine::Get().UnSubscribeGetKeyDown(BINDFUNCTION(Player::MoveRight, Player), VK_RIGHT);
-	Engine::Get().UnSubscribeGetKeyDown(BINDFUNCTION(Player::MoveLeft, Player), VK_LEFT);
+	KEYUNBIND(MoveUp, Player, VK_UP);
+	KEYUNBIND(MoveDown, Player, VK_DOWN);
+	KEYUNBIND(MoveRight, Player, VK_RIGHT);
+	KEYUNBIND(MoveLeft, Player, VK_LEFT);
 }
 
 void Player::MoveUp()
@@ -61,8 +62,8 @@ void Player::MoveRight()
 {
 	Vector2 newPosition = position;
 	newPosition += Vector2(1, 0);
-	if (newPosition.GetX() > 40) {
-		newPosition = Vector2(0, newPosition.GetY());
+	if (newPosition.GetX() > 29) {
+		newPosition = Vector2(29, newPosition.GetY());
 	}
 
 	SetPosition(newPosition);

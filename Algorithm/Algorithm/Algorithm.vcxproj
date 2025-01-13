@@ -95,6 +95,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>PCH.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>$(ProjectDir)\PreCompiledHeader\;$(ProjectDir)\Solution\</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -112,6 +113,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>PCH.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>$(ProjectDir)\PreCompiledHeader\;$(ProjectDir)\Solution\</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -129,6 +131,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>PCH.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>$(ProjectDir)\PreCompiledHeader\;$(ProjectDir)\Solution\</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -146,6 +149,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>PCH.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>$(ProjectDir)\PreCompiledHeader\;$(ProjectDir)\Solution\</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -155,6 +159,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Solution\Sol2206.cpp" />
     <ClCompile Include="Solution\2473.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PreCompiledHeader\PCH.cpp">
@@ -166,6 +171,7 @@
     <ClCompile Include="Solution\Solution.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Solution\Sol2206.h" />
     <ClInclude Include="Solution\2473.h" />
     <ClInclude Include="PreCompiledHeader\PCH.h" />
     <ClInclude Include="Solution\Solution.h" />

@@ -6,7 +6,7 @@ class Player : public DrawableEntity
 	RTTI_DECLARATIONS(Player, DrawableEntity)
 
 public:
-	Player(char image = 'P');
+	Player(const char* image);
 	
 	virtual void Update(float deltaTime) override;
 	

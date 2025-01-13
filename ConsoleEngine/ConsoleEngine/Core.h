@@ -8,6 +8,17 @@
 #define BINDFUNCTION(function, type)\
 std::bind(&type::function, this)
 
+#define KEYBIND(function, type, key) \
+	Engine::Get().SubscribeGetKeyDown(BINDFUNCTION(function, type), key)
+//	if(keyType == 1) \
+//		Engine::Get().SubscribeGetKey(BINDFUNCTION(function, type), key) \
+//	if(keyType == 2) \
+//		Engine::Get().SubscribeGetKeyUp(BINDFUNCTION(function, type), key) \
+//	else \
+
+#define KEYUNBIND(function, type, key) \
+    Engine::Get().SubscribeGetKeyDown(BINDFUNCTION(function, type), key)
+
 #ifdef _DEBUG
 #define new new ( _NORMAL_BLOCK , __FILE__ , __LINE__ )
 // Replace _NORMAL_BLOCK with _CLIENT_BLOCK if you want the

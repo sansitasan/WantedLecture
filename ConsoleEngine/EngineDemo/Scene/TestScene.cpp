@@ -6,7 +6,7 @@
 
 TestScene::TestScene()
 {
-	AddEntity(new Player('a'));
+	AddEntity(new Player("P"));
 }
 
 TestScene::~TestScene()

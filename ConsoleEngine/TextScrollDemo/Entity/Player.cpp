@@ -2,7 +2,7 @@
 #include "Player.h"
 #include "Math/Vector/Vector2.h"
 
-Player::Player(char image) : Super(image)
+Player::Player(const char* image) : Super(image)
 {
 }
 

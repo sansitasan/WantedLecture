@@ -7,79 +7,132 @@
       "RelativeMoniker": "D:0:0:{7469FCA4-D6E4-4907-AAB6-0D1D7F1D1207}|EngineDemo\\EngineDemo.vcxproj|solutionrelative:EngineDemo\\Entity\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Scene\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Scene\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\DrawableEntity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Entity\\DrawableEntity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Core.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Core.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Scene\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Scene\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{F4DFC077-C7DE-4C4F-B5D4-33844D734A61}|FlightShootingGame\\FlightShootingGame.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Entity\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F4DFC077-C7DE-4C4F-B5D4-33844D734A61}|FlightShootingGame\\FlightShootingGame.vcxproj|solutionrelative:FlightShootingGame\\Entity\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7469FCA4-D6E4-4907-AAB6-0D1D7F1D1207}|EngineDemo\\EngineDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7469FCA4-D6E4-4907-AAB6-0D1D7F1D1207}|EngineDemo\\EngineDemo.vcxproj|solutionrelative:EngineDemo\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\Entity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Entity\\Entity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7469FCA4-D6E4-4907-AAB6-0D1D7F1D1207}|EngineDemo\\EngineDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Game\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7469FCA4-D6E4-4907-AAB6-0D1D7F1D1207}|EngineDemo\\EngineDemo.vcxproj|solutionrelative:EngineDemo\\Game\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7469FCA4-D6E4-4907-AAB6-0D1D7F1D1207}|EngineDemo\\EngineDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Game\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7469FCA4-D6E4-4907-AAB6-0D1D7F1D1207}|EngineDemo\\EngineDemo.vcxproj|solutionrelative:EngineDemo\\Game\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{F4DFC077-C7DE-4C4F-B5D4-33844D734A61}|FlightShootingGame\\FlightShootingGame.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Entity\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F4DFC077-C7DE-4C4F-B5D4-33844D734A61}|FlightShootingGame\\FlightShootingGame.vcxproj|solutionrelative:FlightShootingGame\\Entity\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Engine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Engine\\Engine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Game\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|solutionrelative:TextScrollDemo\\Game\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\Entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Entity\\Entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\USERS\\USER\\ONEDRIVE\\\uBC14\uD0D5 \uD654\uBA74\\SAN\\LECTURE\\WANTEDLECTURE\\CONSOLEENGINE\\INCLUDES\\ENGINELIBRARY\\ENTITY\\ENTITY.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|solutionrelative:INCLUDES\\ENGINELIBRARY\\ENTITY\\ENTITY.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7469FCA4-D6E4-4907-AAB6-0D1D7F1D1207}|EngineDemo\\EngineDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Entity\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7469FCA4-D6E4-4907-AAB6-0D1D7F1D1207}|EngineDemo\\EngineDemo.vcxproj|solutionrelative:EngineDemo\\Entity\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\USERS\\USER\\ONEDRIVE\\\uBC14\uD0D5 \uD654\uBA74\\SAN\\LECTURE\\WANTEDLECTURE\\CONSOLEENGINE\\INCLUDES\\ENGINELIBRARY\\ENGINE\\ENGINE.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|solutionrelative:INCLUDES\\ENGINELIBRARY\\ENGINE\\ENGINE.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Engine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Engine\\Engine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\RTTI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\RTTI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Entity\\TextScrollEntity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|solutionrelative:TextScrollDemo\\Entity\\TextScrollEntity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Game\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|solutionrelative:TextScrollDemo\\Game\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Entity\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|solutionrelative:TextScrollDemo\\Entity\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\PROGRAM FILES\\MICROSOFT VISUAL STUDIO\\2022\\COMMUNITY\\VC\\TOOLS\\MSVC\\14.42.34433\\INCLUDE\\XMEMORY||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\Entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Entity\\Entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Scene\\TestScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|solutionrelative:TextScrollDemo\\Scene\\TestScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{F4DFC077-C7DE-4C4F-B5D4-33844D734A61}|FlightShootingGame\\FlightShootingGame.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Scene\\TestScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F4DFC077-C7DE-4C4F-B5D4-33844D734A61}|FlightShootingGame\\FlightShootingGame.vcxproj|solutionrelative:FlightShootingGame\\Scene\\TestScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\DrawableEntity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Entity\\DrawableEntity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7469FCA4-D6E4-4907-AAB6-0D1D7F1D1207}|EngineDemo\\EngineDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Entity\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7469FCA4-D6E4-4907-AAB6-0D1D7F1D1207}|EngineDemo\\EngineDemo.vcxproj|solutionrelative:EngineDemo\\Entity\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Entity\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|solutionrelative:TextScrollDemo\\Entity\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7469FCA4-D6E4-4907-AAB6-0D1D7F1D1207}|EngineDemo\\EngineDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Scene\\TestScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7469FCA4-D6E4-4907-AAB6-0D1D7F1D1207}|EngineDemo\\EngineDemo.vcxproj|solutionrelative:EngineDemo\\Scene\\TestScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4DFC077-C7DE-4C4F-B5D4-33844D734A61}|FlightShootingGame\\FlightShootingGame.vcxproj|C:\\USERS\\USER\\ONEDRIVE\\\uBC14\uD0D5 \uD654\uBA74\\SAN\\LECTURE\\WANTEDLECTURE\\CONSOLEENGINE\\INCLUDES\\ENGINELIBRARY\\ENTITY\\PLAYER.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F4DFC077-C7DE-4C4F-B5D4-33844D734A61}|FlightShootingGame\\FlightShootingGame.vcxproj|solutionrelative:INCLUDES\\ENGINELIBRARY\\ENTITY\\PLAYER.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\RTTI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\RTTI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\USERS\\USER\\ONEDRIVE\\\uBC14\uD0D5 \uD654\uBA74\\SAN\\LECTURE\\WANTEDLECTURE\\CONSOLEENGINE\\INCLUDES\\ENGINELIBRARY\\ENTITY\\DRAWABLEENTITY.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|solutionrelative:INCLUDES\\ENGINELIBRARY\\ENTITY\\DRAWABLEENTITY.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4DFC077-C7DE-4C4F-B5D4-33844D734A61}|FlightShootingGame\\FlightShootingGame.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Game\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F4DFC077-C7DE-4C4F-B5D4-33844D734A61}|FlightShootingGame\\FlightShootingGame.vcxproj|solutionrelative:FlightShootingGame\\Game\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4DFC077-C7DE-4C4F-B5D4-33844D734A61}|FlightShootingGame\\FlightShootingGame.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F4DFC077-C7DE-4C4F-B5D4-33844D734A61}|FlightShootingGame\\FlightShootingGame.vcxproj|solutionrelative:FlightShootingGame\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7469FCA4-D6E4-4907-AAB6-0D1D7F1D1207}|EngineDemo\\EngineDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Game\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7469FCA4-D6E4-4907-AAB6-0D1D7F1D1207}|EngineDemo\\EngineDemo.vcxproj|solutionrelative:EngineDemo\\Game\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Entity\\TextScrollEntity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|solutionrelative:TextScrollDemo\\Entity\\TextScrollEntity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7469FCA4-D6E4-4907-AAB6-0D1D7F1D1207}|EngineDemo\\EngineDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Game\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7469FCA4-D6E4-4907-AAB6-0D1D7F1D1207}|EngineDemo\\EngineDemo.vcxproj|solutionrelative:EngineDemo\\Game\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7469FCA4-D6E4-4907-AAB6-0D1D7F1D1207}|EngineDemo\\EngineDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7469FCA4-D6E4-4907-AAB6-0D1D7F1D1207}|EngineDemo\\EngineDemo.vcxproj|solutionrelative:EngineDemo\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Scene\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Scene\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Scene\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Scene\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Container\\List.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Container\\List.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\Engine\\Engine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Includes\\EngineLibrary\\Engine\\Engine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Game\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|solutionrelative:TextScrollDemo\\Game\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Game\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|solutionrelative:TextScrollDemo\\Game\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Scene\\TestScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|solutionrelative:TextScrollDemo\\Scene\\TestScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -90,24 +143,23 @@
       "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\PreCompiledHeader\\PreCompiledHeader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\Entity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Entity\\Entity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Container\\List.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Container\\List.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Math\\Vector\\Vector2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Math\\Vector\\Vector2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Core.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Core.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\PreCompiledHeader\\PrecompiledHeader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\PreCompiledHeader\\PrecompiledHeader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\Entity\\Entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Includes\\EngineLibrary\\Entity\\Entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xmemory||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\Core.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Includes\\EngineLibrary\\Core.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -117,323 +169,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Game.cpp",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Game\\Game.cpp",
-              "RelativeDocumentMoniker": "EngineDemo\\Game\\Game.cpp",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Game\\Game.cpp",
-              "RelativeToolTip": "EngineDemo\\Game\\Game.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-10T08:24:15.4Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Game.h",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Game\\Game.h",
-              "RelativeDocumentMoniker": "EngineDemo\\Game\\Game.h",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Game\\Game.h",
-              "RelativeToolTip": "EngineDemo\\Game\\Game.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-10T08:24:13.309Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Game.h",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Game\\Game.h",
-              "RelativeDocumentMoniker": "TextScrollDemo\\Game\\Game.h",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Game\\Game.h",
-              "RelativeToolTip": "TextScrollDemo\\Game\\Game.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-10T08:24:08.691Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\main.cpp",
-              "RelativeDocumentMoniker": "EngineDemo\\main.cpp",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\main.cpp",
-              "RelativeToolTip": "EngineDemo\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-10T08:24:03.158Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Engine.h",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\Engine\\Engine.h",
-              "RelativeDocumentMoniker": "Includes\\EngineLibrary\\Engine\\Engine.h",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\Engine\\Engine.h",
-              "RelativeToolTip": "Includes\\EngineLibrary\\Engine\\Engine.h",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADcAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-10T08:18:11.362Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Entity.h",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\Entity\\Entity.h",
-              "RelativeDocumentMoniker": "Includes\\EngineLibrary\\Entity\\Entity.h",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\Entity\\Entity.h",
-              "RelativeToolTip": "Includes\\EngineLibrary\\Entity\\Entity.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-10T08:16:51.302Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Player.cpp",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Entity\\Player.cpp",
-              "RelativeDocumentMoniker": "EngineDemo\\Entity\\Player.cpp",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Entity\\Player.cpp",
-              "RelativeToolTip": "EngineDemo\\Entity\\Player.cpp",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAkwBMAAAANAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Entity\\Player.cpp",
+              "RelativeDocumentMoniker": "FlightShootingGame\\Entity\\Player.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Entity\\Player.cpp",
+              "RelativeToolTip": "FlightShootingGame\\Entity\\Player.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-10T08:10:53.602Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Player.h",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Entity\\Player.h",
-              "RelativeDocumentMoniker": "EngineDemo\\Entity\\Player.h",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Entity\\Player.h",
-              "RelativeToolTip": "EngineDemo\\Entity\\Player.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-10T08:11:04.842Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Game.cpp",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Game\\Game.cpp",
-              "RelativeDocumentMoniker": "TextScrollDemo\\Game\\Game.cpp",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Game\\Game.cpp",
-              "RelativeToolTip": "TextScrollDemo\\Game\\Game.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-10T07:52:20.053Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "xmemory",
-              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xmemory",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xmemory",
-              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xmemory",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xmemory",
-              "ViewState": "AgIAAIYIAAAAAAAAAAAvwJMIAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-01-10T07:50:08.541Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "TestScene.cpp",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Scene\\TestScene.cpp",
-              "RelativeDocumentMoniker": "TextScrollDemo\\Scene\\TestScene.cpp",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Scene\\TestScene.cpp",
-              "RelativeToolTip": "TextScrollDemo\\Scene\\TestScene.cpp",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-10T07:48:26.001Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "TextScrollEntity.cpp",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Entity\\TextScrollEntity.cpp",
-              "RelativeDocumentMoniker": "TextScrollDemo\\Entity\\TextScrollEntity.cpp",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Entity\\TextScrollEntity.cpp",
-              "RelativeToolTip": "TextScrollDemo\\Entity\\TextScrollEntity.cpp",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACMAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-10T07:37:48.16Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "TextScrollEntity.h",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Entity\\TextScrollEntity.h",
-              "RelativeDocumentMoniker": "TextScrollDemo\\Entity\\TextScrollEntity.h",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Entity\\TextScrollEntity.h",
-              "RelativeToolTip": "TextScrollDemo\\Entity\\TextScrollEntity.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-10T07:35:20.164Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\main.cpp",
-              "RelativeDocumentMoniker": "TextScrollDemo\\main.cpp",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\main.cpp",
-              "RelativeToolTip": "TextScrollDemo\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-10T07:33:30.091Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "RTTI.h",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\RTTI.h",
-              "RelativeDocumentMoniker": "ConsoleEngine\\RTTI.h",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\RTTI.h",
-              "RelativeToolTip": "ConsoleEngine\\RTTI.h",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAACwAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-10T03:27:36.308Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Vector2.cpp",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Math\\Vector\\Vector2.cpp",
-              "RelativeDocumentMoniker": "ConsoleEngine\\Math\\Vector\\Vector2.cpp",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Math\\Vector\\Vector2.cpp",
-              "RelativeToolTip": "ConsoleEngine\\Math\\Vector\\Vector2.cpp",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAswGoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-10T00:50:08.585Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "List.h",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Container\\List.h",
-              "RelativeDocumentMoniker": "ConsoleEngine\\Container\\List.h",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Container\\List.h",
-              "RelativeToolTip": "ConsoleEngine\\Container\\List.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-09T07:20:12.811Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\main.cpp",
-              "RelativeDocumentMoniker": "ConsoleEngine\\main.cpp",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\main.cpp",
-              "RelativeToolTip": "ConsoleEngine\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-02T06:29:40.535Z",
+              "WhenOpened": "2025-01-13T07:39:11.071Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Scene.cpp",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Scene\\Scene.cpp",
-              "RelativeDocumentMoniker": "ConsoleEngine\\Scene\\Scene.cpp",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Scene\\Scene.cpp",
-              "RelativeToolTip": "ConsoleEngine\\Scene\\Scene.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAQAAAAAAAAAA==",
+              "Title": "DrawableEntity.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\DrawableEntity.cpp",
+              "RelativeDocumentMoniker": "ConsoleEngine\\Entity\\DrawableEntity.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\DrawableEntity.cpp",
+              "RelativeToolTip": "ConsoleEngine\\Entity\\DrawableEntity.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-03T03:39:01.355Z",
+              "WhenOpened": "2025-01-13T07:39:33.159Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Scene.h",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Scene\\Scene.h",
-              "RelativeDocumentMoniker": "ConsoleEngine\\Scene\\Scene.h",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Scene\\Scene.h",
-              "RelativeToolTip": "ConsoleEngine\\Scene\\Scene.h",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-03T03:39:00.22Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "PreCompiledHeader.h",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\PreCompiledHeader\\PreCompiledHeader.h",
-              "RelativeDocumentMoniker": "ConsoleEngine\\PreCompiledHeader\\PreCompiledHeader.h",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\PreCompiledHeader\\PreCompiledHeader.h",
-              "RelativeToolTip": "ConsoleEngine\\PreCompiledHeader\\PreCompiledHeader.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-03T06:14:44.425Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 4,
               "Title": "Entity.cpp",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\Entity.cpp",
               "RelativeDocumentMoniker": "ConsoleEngine\\Entity\\Entity.cpp",
               "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\Entity.cpp",
               "RelativeToolTip": "ConsoleEngine\\Entity\\Entity.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-03T03:34:58.876Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Entity.h",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\Entity.h",
-              "RelativeDocumentMoniker": "ConsoleEngine\\Entity\\Entity.h",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\Entity.h",
-              "RelativeToolTip": "ConsoleEngine\\Entity\\Entity.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAoAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Player.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Entity\\Player.h",
+              "RelativeDocumentMoniker": "FlightShootingGame\\Entity\\Player.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Entity\\Player.h",
+              "RelativeToolTip": "FlightShootingGame\\Entity\\Player.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-03T03:32:25.322Z",
+              "WhenOpened": "2025-01-13T07:46:22.883Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
+              "Title": "Core.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Core.h",
+              "RelativeDocumentMoniker": "ConsoleEngine\\Core.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Core.h",
+              "RelativeToolTip": "ConsoleEngine\\Core.h",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAlwCwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-13T07:28:02.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Engine.cpp",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Engine.cpp",
               "RelativeDocumentMoniker": "ConsoleEngine\\Engine\\Engine.cpp",
               "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Engine.cpp",
               "RelativeToolTip": "ConsoleEngine\\Engine\\Engine.cpp",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAIwB4AAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAANsAAAAAAAAAAAAlwDcAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-02T07:13:05.9Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 7,
               "Title": "Engine.h",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Engine.h",
               "RelativeDocumentMoniker": "ConsoleEngine\\Engine\\Engine.h",
@@ -446,7 +264,410 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Player.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Entity\\Player.cpp",
+              "RelativeDocumentMoniker": "EngineDemo\\Entity\\Player.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Entity\\Player.cpp",
+              "RelativeToolTip": "EngineDemo\\Entity\\Player.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-10T08:10:53.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\main.cpp",
+              "RelativeDocumentMoniker": "ConsoleEngine\\main.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\main.cpp",
+              "RelativeToolTip": "ConsoleEngine\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-02T06:29:40.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TextScrollEntity.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Entity\\TextScrollEntity.cpp",
+              "RelativeDocumentMoniker": "TextScrollDemo\\Entity\\TextScrollEntity.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Entity\\TextScrollEntity.cpp",
+              "RelativeToolTip": "TextScrollDemo\\Entity\\TextScrollEntity.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-10T07:37:48.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Player.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Entity\\Player.cpp",
+              "RelativeDocumentMoniker": "TextScrollDemo\\Entity\\Player.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Entity\\Player.cpp",
+              "RelativeToolTip": "TextScrollDemo\\Entity\\Player.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-13T07:22:31.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Player.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Entity\\Player.h",
+              "RelativeDocumentMoniker": "EngineDemo\\Entity\\Player.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Entity\\Player.h",
+              "RelativeToolTip": "EngineDemo\\Entity\\Player.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-10T08:11:04.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Entity.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\Entity.h",
+              "RelativeDocumentMoniker": "ConsoleEngine\\Entity\\Entity.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\Entity.h",
+              "RelativeToolTip": "ConsoleEngine\\Entity\\Entity.h",
+              "ViewState": "AgIAABAAAAAAAAAAAAAvwB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-03T03:32:25.322Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DrawableEntity.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\DrawableEntity.h",
+              "RelativeDocumentMoniker": "ConsoleEngine\\Entity\\DrawableEntity.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\DrawableEntity.h",
+              "RelativeToolTip": "ConsoleEngine\\Entity\\DrawableEntity.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-13T07:39:58.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Player.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Entity\\Player.h",
+              "RelativeDocumentMoniker": "TextScrollDemo\\Entity\\Player.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Entity\\Player.h",
+              "RelativeToolTip": "TextScrollDemo\\Entity\\Player.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-13T07:12:17.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TestScene.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Scene\\TestScene.cpp",
+              "RelativeDocumentMoniker": "FlightShootingGame\\Scene\\TestScene.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Scene\\TestScene.cpp",
+              "RelativeToolTip": "FlightShootingGame\\Scene\\TestScene.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-13T07:48:12.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TestScene.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Scene\\TestScene.cpp",
+              "RelativeDocumentMoniker": "EngineDemo\\Scene\\TestScene.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Scene\\TestScene.cpp",
+              "RelativeToolTip": "EngineDemo\\Scene\\TestScene.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-13T07:09:13.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Player.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\Entity\\Player.h",
+              "RelativeDocumentMoniker": "Includes\\EngineLibrary\\Entity\\Player.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\Entity\\Player.h",
+              "RelativeToolTip": "Includes\\EngineLibrary\\Entity\\Player.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-13T07:48:57.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "RTTI.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\RTTI.h",
+              "RelativeDocumentMoniker": "ConsoleEngine\\RTTI.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\RTTI.h",
+              "RelativeToolTip": "ConsoleEngine\\RTTI.h",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAACwAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-10T03:27:36.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "DrawableEntity.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\Entity\\DrawableEntity.h",
+              "RelativeDocumentMoniker": "Includes\\EngineLibrary\\Entity\\DrawableEntity.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\Entity\\DrawableEntity.h",
+              "RelativeToolTip": "Includes\\EngineLibrary\\Entity\\DrawableEntity.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-13T07:40:47.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Game.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Game\\Game.cpp",
+              "RelativeDocumentMoniker": "FlightShootingGame\\Game\\Game.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Game\\Game.cpp",
+              "RelativeToolTip": "FlightShootingGame\\Game\\Game.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-13T07:39:07.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\main.cpp",
+              "RelativeDocumentMoniker": "FlightShootingGame\\main.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\main.cpp",
+              "RelativeToolTip": "FlightShootingGame\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-13T07:33:56.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "TextScrollEntity.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Entity\\TextScrollEntity.h",
+              "RelativeDocumentMoniker": "TextScrollDemo\\Entity\\TextScrollEntity.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Entity\\TextScrollEntity.h",
+              "RelativeToolTip": "TextScrollDemo\\Entity\\TextScrollEntity.h",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-10T07:35:20.164Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Core.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\Core.h",
+              "RelativeDocumentMoniker": "Includes\\EngineLibrary\\Core.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\Core.h",
+              "RelativeToolTip": "Includes\\EngineLibrary\\Core.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-13T07:26:16.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Game.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Game\\Game.h",
+              "RelativeDocumentMoniker": "EngineDemo\\Game\\Game.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Game\\Game.h",
+              "RelativeToolTip": "EngineDemo\\Game\\Game.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-10T08:24:13.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Game.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Game\\Game.cpp",
+              "RelativeDocumentMoniker": "EngineDemo\\Game\\Game.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Game\\Game.cpp",
+              "RelativeToolTip": "EngineDemo\\Game\\Game.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-10T08:24:15.4Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 26,
+              "Title": "Scene.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Scene\\Scene.cpp",
+              "RelativeDocumentMoniker": "ConsoleEngine\\Scene\\Scene.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Scene\\Scene.cpp",
+              "RelativeToolTip": "ConsoleEngine\\Scene\\Scene.cpp",
+              "ViewState": "AgIAABMAAAAAAAAAAAAEwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-03T03:39:01.355Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Scene.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Scene\\Scene.h",
+              "RelativeDocumentMoniker": "ConsoleEngine\\Scene\\Scene.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Scene\\Scene.h",
+              "RelativeToolTip": "ConsoleEngine\\Scene\\Scene.h",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-03T03:39:00.22Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "List.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Container\\List.h",
+              "RelativeDocumentMoniker": "ConsoleEngine\\Container\\List.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Container\\List.h",
+              "RelativeToolTip": "ConsoleEngine\\Container\\List.h",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAEwFIAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-09T07:20:12.811Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Engine.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\Engine\\Engine.h",
+              "RelativeDocumentMoniker": "Includes\\EngineLibrary\\Engine\\Engine.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\Engine\\Engine.h",
+              "RelativeToolTip": "Includes\\EngineLibrary\\Engine\\Engine.h",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADcAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-10T08:18:11.362Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\main.cpp",
+              "RelativeDocumentMoniker": "EngineDemo\\main.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\main.cpp",
+              "RelativeToolTip": "EngineDemo\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-10T08:24:03.158Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Entity.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\Entity\\Entity.h",
+              "RelativeDocumentMoniker": "Includes\\EngineLibrary\\Entity\\Entity.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\Entity\\Entity.h",
+              "RelativeToolTip": "Includes\\EngineLibrary\\Entity\\Entity.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-10T08:16:51.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Game.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Game\\Game.h",
+              "RelativeDocumentMoniker": "TextScrollDemo\\Game\\Game.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Game\\Game.h",
+              "RelativeToolTip": "TextScrollDemo\\Game\\Game.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-10T08:24:08.691Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Game.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Game\\Game.cpp",
+              "RelativeDocumentMoniker": "TextScrollDemo\\Game\\Game.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Game\\Game.cpp",
+              "RelativeToolTip": "TextScrollDemo\\Game\\Game.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-10T07:52:20.053Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "xmemory",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xmemory",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xmemory",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xmemory",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xmemory",
+              "ViewState": "AgIAAIYIAAAAAAAAAAAvwJMIAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-01-10T07:50:08.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "TestScene.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Scene\\TestScene.cpp",
+              "RelativeDocumentMoniker": "TextScrollDemo\\Scene\\TestScene.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Scene\\TestScene.cpp",
+              "RelativeToolTip": "TextScrollDemo\\Scene\\TestScene.cpp",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-10T07:48:26.001Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\main.cpp",
+              "RelativeDocumentMoniker": "TextScrollDemo\\main.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\main.cpp",
+              "RelativeToolTip": "TextScrollDemo\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-10T07:33:30.091Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Vector2.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Math\\Vector\\Vector2.cpp",
+              "RelativeDocumentMoniker": "ConsoleEngine\\Math\\Vector\\Vector2.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Math\\Vector\\Vector2.cpp",
+              "RelativeToolTip": "ConsoleEngine\\Math\\Vector\\Vector2.cpp",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAswGoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-10T00:50:08.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "PreCompiledHeader.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\PreCompiledHeader\\PreCompiledHeader.h",
+              "RelativeDocumentMoniker": "ConsoleEngine\\PreCompiledHeader\\PreCompiledHeader.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\PreCompiledHeader\\PreCompiledHeader.h",
+              "RelativeToolTip": "ConsoleEngine\\PreCompiledHeader\\PreCompiledHeader.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-03T06:14:44.425Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
               "Title": "PrecompiledHeader.cpp",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\PreCompiledHeader\\PrecompiledHeader.cpp",
               "RelativeDocumentMoniker": "ConsoleEngine\\PreCompiledHeader\\PrecompiledHeader.cpp",
@@ -455,19 +676,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-03T06:19:36.979Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Core.h",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Core.h",
-              "RelativeDocumentMoniker": "ConsoleEngine\\Core.h",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Core.h",
-              "RelativeToolTip": "ConsoleEngine\\Core.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-06T07:24:42.961Z",
-              "EditorCaption": ""
             }
           ]
         }

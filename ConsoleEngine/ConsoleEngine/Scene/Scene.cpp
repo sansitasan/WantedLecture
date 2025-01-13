@@ -15,10 +15,11 @@ Scene::~Scene()
 
 void Scene::AddEntity(Entity* newEntity)
 {
-	SceneEntityList.PushBack(newEntity);
+	//SceneEntityList.PushBack(newEntity);
+	addRequestedEntity = newEntity;
 }
 
-void Scene::DestroyEntity()
+void Scene::ProcessAddedAndDestroyedEntity()
 {
 	for (int i = 0; i < SceneEntityList.Size();) {
 		if (!SceneEntityList[i]->IsExpired()) {
@@ -29,6 +30,11 @@ void Scene::DestroyEntity()
 		delete SceneEntityList[i];
 		SceneEntityList[i] = nullptr;
 		SceneEntityList.Erase(i);
+	}
+
+	if (addRequestedEntity) {
+		SceneEntityList.PushBack(addRequestedEntity);
+		addRequestedEntity = nullptr;
 	}
 }
 

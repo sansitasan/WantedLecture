@@ -15,12 +15,16 @@ public:
 	virtual ~Scene();
 
 	void AddEntity(Entity* newEntity);
-	void DestroyEntity();
+	//void DestroyEntity();
+
+	void ProcessAddedAndDestroyedEntity();
 
 	virtual void Update(float deltaTime);
 	virtual void Draw();
 
 protected:
 	List<Entity*> SceneEntityList;
+
+	Entity* addRequestedEntity = nullptr;
 };
 

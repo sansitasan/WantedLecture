@@ -64,12 +64,11 @@ void Engine::Run()
 		previousTime = currentTime;
 
 		if (mainScene) {
-			mainScene->DestroyEntity();
+			mainScene->ProcessAddedAndDestroyedEntity();
 		}
 
 		shouldUpdate = true;
 
-		//Sleep(10);
 	}
 }
 
@@ -252,7 +251,7 @@ void Engine::Clear()
 	SetCursorPosition(0, 0);
 	int height = 25;
 	for (int i = 0; i < height; ++i) {
-		Log("                              \n");
+		Log("                                       \n");
 	}
 	SetCursorPosition(0, 0);
 }
