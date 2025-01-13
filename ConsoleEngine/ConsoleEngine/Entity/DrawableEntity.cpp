@@ -2,8 +2,8 @@
 #include "Engine/Engine.h"
 #include "DrawableEntity.h"
 
-DrawableEntity::DrawableEntity(const char* image)
-	: Entity()
+DrawableEntity::DrawableEntity(const char* image, unsigned int drawOrder)
+	: Entity(), drawOrder(drawOrder)
 {
 	size_t length = strlen(image) + 1;
 	this->image = new char[length];

@@ -4,11 +4,11 @@
 
 Player::Player(const char* image) : Super(image)
 {
-	position = Vector2(0, 18);
-	KEYBIND(MoveUp, Player, VK_UP);
-	KEYBIND(MoveDown, Player, VK_DOWN);
-	KEYBIND(MoveRight, Player, VK_RIGHT);
-	KEYBIND(MoveLeft, Player, VK_LEFT);
+	position = Vector2(MAXX, MAXY);
+	KEYBIND(MoveUp, Player, VK_UP, KEYDOWN);
+	KEYBIND(MoveDown, Player, VK_DOWN, KEYDOWN);
+	KEYBIND(MoveRight, Player, VK_RIGHT, KEYDOWN);
+	KEYBIND(MoveLeft, Player, VK_LEFT, KEYDOWN);
 }
 
 void Player::Update(float deltaTime)
@@ -19,10 +19,10 @@ void Player::Update(float deltaTime)
 void Player::Destroy()
 {
 	Super::Destroy();
-	KEYUNBIND(MoveUp, Player, VK_UP);
-	KEYUNBIND(MoveDown, Player, VK_DOWN);
-	KEYUNBIND(MoveRight, Player, VK_RIGHT);
-	KEYUNBIND(MoveLeft, Player, VK_LEFT);
+	KEYUNBIND(MoveUp, Player, VK_UP, KEYDOWN);
+	KEYUNBIND(MoveDown, Player, VK_DOWN, KEYDOWN);
+	KEYUNBIND(MoveRight, Player, VK_RIGHT, KEYDOWN);
+	KEYUNBIND(MoveLeft, Player, VK_LEFT, KEYDOWN);
 }
 
 void Player::MoveUp()
@@ -40,8 +40,8 @@ void Player::MoveDown()
 {
 	Vector2 newPosition = position;
 	newPosition += Vector2(0, 1);
-	if (newPosition.GetY() > 20) {
-		newPosition = Vector2(newPosition.GetX(), 20);
+	if (newPosition.GetY() > MAXY) {
+		newPosition = Vector2(newPosition.GetX(), MAXY);
 	}
 
 	SetPosition(newPosition);
@@ -62,8 +62,8 @@ void Player::MoveRight()
 {
 	Vector2 newPosition = position;
 	newPosition += Vector2(1, 0);
-	if (newPosition.GetX() > 29) {
-		newPosition = Vector2(29, newPosition.GetY());
+	if (newPosition.GetX() > MAXX) {
+		newPosition = Vector2(MAXX, newPosition.GetY());
 	}
 
 	SetPosition(newPosition);

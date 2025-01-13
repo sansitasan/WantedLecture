@@ -5,19 +5,30 @@
 #include <stdlib.h>
 #include <crtdbg.h>
 
+#define KEYDOWN 0
+#define KEY 1
+#define KEYUP 2
+#define MAXX 119
+#define MAXY 29
+
 #define BINDFUNCTION(function, type)\
 std::bind(&type::function, this)
 
-#define KEYBIND(function, type, key) \
-	Engine::Get().SubscribeGetKeyDown(BINDFUNCTION(function, type), key)
-//	if(keyType == 1) \
-//		Engine::Get().SubscribeGetKey(BINDFUNCTION(function, type), key) \
-//	if(keyType == 2) \
-//		Engine::Get().SubscribeGetKeyUp(BINDFUNCTION(function, type), key) \
-//	else \
+#define KEYBIND(function, type, key, keyType) \
+	if(keyType == 1) \
+		Engine::Get().SubscribeGetKey(BINDFUNCTION(function, type), key); \
+	else if(keyType == 2) \
+		Engine::Get().SubscribeGetKeyUp(BINDFUNCTION(function, type), key); \
+	else \
+		Engine::Get().SubscribeGetKeyDown(BINDFUNCTION(function, type), key);
 
-#define KEYUNBIND(function, type, key) \
-    Engine::Get().SubscribeGetKeyDown(BINDFUNCTION(function, type), key)
+#define KEYUNBIND(function, type, key, keyType) \
+    if(keyType == 1) \
+		Engine::Get().UnSubscribeGetKey(BINDFUNCTION(function, type), key); \
+	else if(keyType == 2) \
+		Engine::Get().UnSubscribeGetKeyUp(BINDFUNCTION(function, type), key); \
+	else \
+		Engine::Get().UnSubscribeGetKeyDown(BINDFUNCTION(function, type), key);
 
 #ifdef _DEBUG
 #define new new ( _NORMAL_BLOCK , __FILE__ , __LINE__ )

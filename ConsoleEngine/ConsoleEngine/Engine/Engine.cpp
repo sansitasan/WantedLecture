@@ -12,6 +12,9 @@ Engine* Engine::instance = nullptr;
 
 Engine::Engine() :quit(false), mainScene(nullptr), targetFrameRate(60), targetOneFrameTime(1 / 60)
 {
+	SetConsoleOutputCP(CP_UTF8);
+	SetConsoleCP(CP_UTF8);
+	memset(clearArr, ' ', (MAXX - 1) * sizeof(char));
 	delegateKeyDown = std::vector<std::vector<std::function<void()>>>(KEYCOUNT, std::vector<std::function<void()>>());
 	delegateKey = std::vector<std::vector<std::function<void()>>>(KEYCOUNT, std::vector<std::function<void()>>());
 	delegateKeyUp = std::vector<std::vector<std::function<void()>>>(KEYCOUNT, std::vector<std::function<void()>>());
@@ -249,9 +252,9 @@ void Engine::Draw()
 void Engine::Clear()
 {
 	SetCursorPosition(0, 0);
-	int height = 25;
-	for (int i = 0; i < height; ++i) {
-		Log("                                       \n");
+	for (int i = 0; i < MAXY; ++i) {
+		Log("                                                                                                                        \n");
 	}
+	Log("                                                                                                                        ");
 	SetCursorPosition(0, 0);
 }

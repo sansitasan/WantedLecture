@@ -79,5 +79,7 @@ protected:
 
 	//Scene이 여러개 올라와있을 수 있다
 	Scene* mainScene;
+
+	char clearArr[MAXX];
 };
 

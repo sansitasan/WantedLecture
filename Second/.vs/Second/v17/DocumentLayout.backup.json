@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{47020EB8-16B9-4464-89F9-0C2CC83489B7}|Assignment\\Assignment.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\CreditAccount.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{47020EB8-16B9-4464-89F9-0C2CC83489B7}|Assignment\\Assignment.vcxproj|solutionrelative:Assignment\\CreditAccount.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47020EB8-16B9-4464-89F9-0C2CC83489B7}|Assignment\\Assignment.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\DonationAccount.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{47020EB8-16B9-4464-89F9-0C2CC83489B7}|Assignment\\Assignment.vcxproj|solutionrelative:Assignment\\DonationAccount.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{47020EB8-16B9-4464-89F9-0C2CC83489B7}|Assignment\\Assignment.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\AccountEnum.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{47020EB8-16B9-4464-89F9-0C2CC83489B7}|Assignment\\Assignment.vcxproj|solutionrelative:Assignment\\AccountEnum.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{47020EB8-16B9-4464-89F9-0C2CC83489B7}|Assignment\\Assignment.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\Account.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -27,16 +23,20 @@
       "RelativeMoniker": "D:0:0:{47020EB8-16B9-4464-89F9-0C2CC83489B7}|Assignment\\Assignment.vcxproj|solutionrelative:Assignment\\Bank.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47020EB8-16B9-4464-89F9-0C2CC83489B7}|Assignment\\Assignment.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{47020EB8-16B9-4464-89F9-0C2CC83489B7}|Assignment\\Assignment.vcxproj|solutionrelative:Assignment\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{47020EB8-16B9-4464-89F9-0C2CC83489B7}|Assignment\\Assignment.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\Bank.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{47020EB8-16B9-4464-89F9-0C2CC83489B7}|Assignment\\Assignment.vcxproj|solutionrelative:Assignment\\Bank.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{47020EB8-16B9-4464-89F9-0C2CC83489B7}|Assignment\\Assignment.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\AccountEnum.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{47020EB8-16B9-4464-89F9-0C2CC83489B7}|Assignment\\Assignment.vcxproj|solutionrelative:Assignment\\AccountEnum.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{47020EB8-16B9-4464-89F9-0C2CC83489B7}|Assignment\\Assignment.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\DonationAccount.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{47020EB8-16B9-4464-89F9-0C2CC83489B7}|Assignment\\Assignment.vcxproj|solutionrelative:Assignment\\DonationAccount.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47020EB8-16B9-4464-89F9-0C2CC83489B7}|Assignment\\Assignment.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\CreditAccount.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{47020EB8-16B9-4464-89F9-0C2CC83489B7}|Assignment\\Assignment.vcxproj|solutionrelative:Assignment\\CreditAccount.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47020EB8-16B9-4464-89F9-0C2CC83489B7}|Assignment\\Assignment.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{47020EB8-16B9-4464-89F9-0C2CC83489B7}|Assignment\\Assignment.vcxproj|solutionrelative:Assignment\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,115 +46,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Bank.cpp",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\Bank.cpp",
-              "RelativeDocumentMoniker": "Assignment\\Bank.cpp",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\Bank.cpp",
-              "RelativeToolTip": "Assignment\\Bank.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-27T08:23:41.46Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\main.cpp",
-              "RelativeDocumentMoniker": "Assignment\\main.cpp",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\main.cpp",
-              "RelativeToolTip": "Assignment\\main.cpp",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAswBcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-26T06:18:12.554Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BankDataManager.h",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\BankDataManager.h",
-              "RelativeDocumentMoniker": "Assignment\\BankDataManager.h",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\BankDataManager.h",
-              "RelativeToolTip": "Assignment\\BankDataManager.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-03T04:57:56.364Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BankDataManager.cpp",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\BankDataManager.cpp",
-              "RelativeDocumentMoniker": "Assignment\\BankDataManager.cpp",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\BankDataManager.cpp",
-              "RelativeToolTip": "Assignment\\BankDataManager.cpp",
-              "ViewState": "AgIAAAEAAAAAAAAAAADwvwsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-06T06:04:07.338Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DonationAccount.h",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\DonationAccount.h",
-              "RelativeDocumentMoniker": "Assignment\\DonationAccount.h",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\DonationAccount.h",
-              "RelativeToolTip": "Assignment\\DonationAccount.h",
-              "ViewState": "AgIAAAQAAAAAAAAAAADwvxIAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-27T08:34:34.933Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "CreditAccount.h",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\CreditAccount.h",
               "RelativeDocumentMoniker": "Assignment\\CreditAccount.h",
               "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\CreditAccount.h",
               "RelativeToolTip": "Assignment\\CreditAccount.h",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAwA8AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-06T07:13:17.573Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-06T07:13:17.573Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Account.h",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\Account.h",
-              "RelativeDocumentMoniker": "Assignment\\Account.h",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\Account.h",
-              "RelativeToolTip": "Assignment\\Account.h",
-              "ViewState": "AgIAABsAAAAAAAAAAADwvzMAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-27T08:23:24.421Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Bank.h",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\Bank.h",
-              "RelativeDocumentMoniker": "Assignment\\Bank.h",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\Bank.h",
-              "RelativeToolTip": "Assignment\\Bank.h",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-06T08:39:28.586Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "AccountEnum.h",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\AccountEnum.h",
               "RelativeDocumentMoniker": "Assignment\\AccountEnum.h",
@@ -164,6 +72,92 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-01-06T08:40:13.129Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Bank.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\Bank.cpp",
+              "RelativeDocumentMoniker": "Assignment\\Bank.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\Bank.cpp",
+              "RelativeToolTip": "Assignment\\Bank.cpp",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAAwFsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-27T08:23:41.46Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Bank.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\Bank.h",
+              "RelativeDocumentMoniker": "Assignment\\Bank.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\Bank.h",
+              "RelativeToolTip": "Assignment\\Bank.h",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-06T08:39:28.586Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BankDataManager.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\BankDataManager.h",
+              "RelativeDocumentMoniker": "Assignment\\BankDataManager.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\BankDataManager.h",
+              "RelativeToolTip": "Assignment\\BankDataManager.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-03T04:57:56.364Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BankDataManager.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\BankDataManager.cpp",
+              "RelativeDocumentMoniker": "Assignment\\BankDataManager.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\BankDataManager.cpp",
+              "RelativeToolTip": "Assignment\\BankDataManager.cpp",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAwEUAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-06T06:04:07.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Account.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\Account.h",
+              "RelativeDocumentMoniker": "Assignment\\Account.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\Account.h",
+              "RelativeToolTip": "Assignment\\Account.h",
+              "ViewState": "AgIAADcAAAAAAAAAAAAAwEcAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-27T08:23:24.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DonationAccount.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\DonationAccount.h",
+              "RelativeDocumentMoniker": "Assignment\\DonationAccount.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\DonationAccount.h",
+              "RelativeToolTip": "Assignment\\DonationAccount.h",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAwBwAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-27T08:34:34.933Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\main.cpp",
+              "RelativeDocumentMoniker": "Assignment\\main.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\Second\\Assignment\\main.cpp",
+              "RelativeToolTip": "Assignment\\main.cpp",
+              "ViewState": "AgIAADsAAAAAAAAAAAAAwEcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-26T06:18:12.554Z"
             }
           ]
         }

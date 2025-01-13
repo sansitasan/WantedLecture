@@ -1,8 +1,9 @@
 #include "Game.h"
 
-Game::Game()
+Game::Game() : Engine()
 {
 	SetCursorType(ECursorType::NoCursor);
+	SetTargetFrameRate(24);
 }
 
 Game::~Game()
