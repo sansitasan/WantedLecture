@@ -30,6 +30,9 @@
     <ClCompile Include="Solution\Sol2206.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Solution\Sol1991.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PreCompiledHeader\PCH.h">
@@ -42,6 +45,9 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Solution\Sol2206.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution\Sol1991.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

@@ -34,7 +34,7 @@ public:
 
 	void PushBack(T&& value)
 	{
-		if (size <= capacity)
+		if (size == capacity)
 		{
 			ReAllocate(capacity << 1);
 		}
@@ -85,7 +85,7 @@ public:
 			__debugbreak();
 		}
 
-		if (size-- != index) return;
+		if (size-- == index) return;
 		data[index] = std::move(data[size]);
 	}
 

@@ -159,6 +159,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Solution\Sol1991.cpp" />
     <ClCompile Include="Solution\Sol2206.cpp" />
     <ClCompile Include="Solution\2473.cpp" />
     <ClCompile Include="main.cpp" />
@@ -171,6 +172,7 @@
     <ClCompile Include="Solution\Solution.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Solution\Sol1991.h" />
     <ClInclude Include="Solution\Sol2206.h" />
     <ClInclude Include="Solution\2473.h" />
     <ClInclude Include="PreCompiledHeader\PCH.h" />

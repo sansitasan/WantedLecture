@@ -8,12 +8,14 @@ TextScrollEntity::TextScrollEntity(const char* message)
 	str = new char[length + 1];
 	strcpy_s(str, length + 1, message);
 	Engine::Get().SetCursorType(ECursorType::NoCursor);
-	KEYBIND(MoveRight, TextScrollEntity, VK_RIGHT);
-	KEYBIND(MoveLeft, TextScrollEntity, VK_LEFT);
+	KEYBIND(MoveRight, TextScrollEntity, VK_RIGHT, KEYDOWN);
+	KEYBIND(MoveLeft, TextScrollEntity, VK_LEFT, KEYDOWN);
 }
 
 TextScrollEntity::~TextScrollEntity()
 {
+	KEYUNBIND(MoveRight, TextScrollEntity, VK_RIGHT, KEYDOWN);
+	KEYUNBIND(MoveLeft, TextScrollEntity, VK_LEFT, KEYDOWN);
 	delete[] str;
 }
 
@@ -55,13 +57,14 @@ void TextScrollEntity::Draw()
 
 	temp[printWidth] = '\0';
 	Log(temp);
-	//Engine::Get().SetCursorPosition(0, 0);
 }
 
 void TextScrollEntity::MoveLeft()
 {
+	direction = Direction::Left;
 }
 
 void TextScrollEntity::MoveRight()
 {
+	direction = Direction::Right;
 }

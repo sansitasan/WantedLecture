@@ -1,13 +1,16 @@
 #include "Engine/Engine.h"
 #include "Player.h"
 #include "Math/Vector/Vector2.h"
+#include "PlayerBullet.h"
 
 Player::Player(const char* image) : Super(image)
 {
-	KEYBIND(MoveUp, Player, VK_UP);
-	KEYBIND(MoveDown, Player, VK_DOWN);
-	KEYBIND(MoveRight, Player, VK_RIGHT);
-	KEYBIND(MoveLeft, Player, VK_LEFT);
+	position = Vector2(0, 20);
+	KEYBIND(MoveUp, Player, VK_UP, KEYDOWN);
+	KEYBIND(MoveDown, Player, VK_DOWN, KEYDOWN);
+	KEYBIND(MoveRight, Player, VK_RIGHT, KEYDOWN);
+	KEYBIND(MoveLeft, Player, VK_LEFT, KEYDOWN);
+	KEYBIND(ShootBullet, Player, VK_SPACE, KEY);
 }
 
 void Player::Update(float deltaTime)
@@ -18,10 +21,11 @@ void Player::Update(float deltaTime)
 void Player::Destroy()
 {
 	Super::Destroy();
-	KEYUNBIND(MoveUp, Player, VK_UP);
-	KEYUNBIND(MoveDown, Player, VK_DOWN);
-	KEYUNBIND(MoveRight, Player, VK_RIGHT);
-	KEYUNBIND(MoveLeft, Player, VK_LEFT);
+	KEYUNBIND(MoveUp, Player, VK_UP, KEYDOWN);
+	KEYUNBIND(MoveDown, Player, VK_DOWN, KEYDOWN);
+	KEYUNBIND(MoveRight, Player, VK_RIGHT, KEYDOWN);
+	KEYUNBIND(MoveLeft, Player, VK_LEFT, KEYDOWN);
+	KEYUNBIND(ShootBullet, Player, VK_SPACE, KEY);
 }
 
 void Player::MoveUp()
@@ -61,9 +65,14 @@ void Player::MoveRight()
 {
 	Vector2 newPosition = position;
 	newPosition += Vector2(1, 0);
-	if (newPosition.GetX() > 29) {
-		newPosition = Vector2(29, newPosition.GetY());
+	if (newPosition.GetX() > Engine::Get().GetScreenSize().GetX() - width) {
+		newPosition = Vector2(Engine::Get().GetScreenSize().GetX() - width, newPosition.GetY());
 	}
 
 	SetPosition(newPosition);
+}
+
+void Player::ShootBullet()
+{
+	Engine::Get().AddEntity(new PlayerBullet(position + Vector2(width >> 1, 0)));
 }

@@ -3,8 +3,6 @@
 
 template<typename T>
 struct Node {
-
-	friend struct Node<T>;
 	template<typename T>
 	friend class Tree;
 

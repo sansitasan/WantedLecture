@@ -85,7 +85,7 @@ public:
 			__debugbreak();
 		}
 
-		if (size-- != index) return;
+		if (size-- == index) return;
 		data[index] = std::move(data[size]);
 	}
 

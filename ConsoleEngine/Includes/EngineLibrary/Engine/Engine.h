@@ -2,6 +2,7 @@
 #include <functional>
 #include <vector>
 #include "Core.h"
+#include "Math/Vector/Vector2.h"
 
 #define KEYCOUNT 255
 
@@ -19,6 +20,7 @@ enum class ECursorType {
 
 class Scene;
 class Entity;
+struct Vector2;
 
 class ENGINE_API Engine
 {
@@ -38,6 +40,8 @@ public:
 	void SetCursorType(ECursorType type);
 	void SetCursorPosition(const struct Vector2& position);
 	void SetCursorPosition(int x, int y);
+
+	inline Vector2 GetScreenSize() const { return screenSize; }
 
 	void SetTargetFrameRate(float targetFrameRate);
 
@@ -80,6 +84,10 @@ protected:
 	//Scene이 여러개 올라와있을 수 있다
 	Scene* mainScene;
 
-	char clearArr[MAXX];
+	Vector2 screenSize;
+
+	char* emptyStringBuffer = nullptr;
+
+	//DX에서는 버퍼를 Buffer/Blob 두 가지 용어를 쓰는데 Blob = 덩어리라는 뜻
 };
 

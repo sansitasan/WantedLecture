@@ -59,6 +59,16 @@ void Log(const char* format, Args&&... args) {
 	std::cout << buffer;
 }
 
+inline int Random(int min, int max) {
+	int diff = (max - min) + 1;
+	return ((diff * rand()) / (RAND_MAX + 1)) + min;
+}
+
+inline float RandomPercent(float min = 0, float max = 1) {
+	float random = (float)(rand() / (float)RAND_MAX);
+	return random * (max - min) + min;
+}
+
 #pragma region VK
 /*
  * Virtual Keys, Standard Set

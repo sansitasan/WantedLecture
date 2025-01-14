@@ -4,26 +4,44 @@
 #include <Windows.h>
 #include <iostream>
 #include "Entity/Entity.h"
+#include <time.h>
 #include "Engine.h"
 
 using namespace std;
 
 Engine* Engine::instance = nullptr;
 
-Engine::Engine() :quit(false), mainScene(nullptr), targetFrameRate(60), targetOneFrameTime(1 / 60)
+Engine::Engine() 
+	: quit(false), mainScene(nullptr), targetFrameRate(60), 
+	targetOneFrameTime(1 / 60), screenSize(40, 25)
 {
+	srand((unsigned int)time(nullptr));
 	SetConsoleOutputCP(CP_UTF8);
 	SetConsoleCP(CP_UTF8);
-	memset(clearArr, ' ', (MAXX - 1) * sizeof(char));
 	delegateKeyDown = std::vector<std::vector<std::function<void()>>>(KEYCOUNT, std::vector<std::function<void()>>());
 	delegateKey = std::vector<std::vector<std::function<void()>>>(KEYCOUNT, std::vector<std::function<void()>>());
 	delegateKeyUp = std::vector<std::vector<std::function<void()>>>(KEYCOUNT, std::vector<std::function<void()>>());
 	instance = this;
+	//개행 문자 추가를 위해 X + 1, 마지막 \0을 넣기 위해 + 1
+	int sizeX = screenSize.GetX();
+	int sizeY = screenSize.GetY();
+	emptyStringBuffer = new char[(sizeX + 1) * sizeY + 1];
+	memset(emptyStringBuffer, 0, (sizeX + 1) * sizeY + 1);
+
+	for (int i = 0; i < sizeY; ++i) {
+		for (int j = 0; j < sizeX; ++j) {
+			emptyStringBuffer[(i * (sizeX + 1)) + j] = ' ';
+		}
+		emptyStringBuffer[(i * (sizeX + 1)) + sizeX] = '\n';
+	}
+	emptyStringBuffer[(sizeX + 1) * sizeY] = '\0';
+	//SetConsoleScreenBufferSize();
 }
 
 Engine::~Engine()
 {
 	SafeDelete(mainScene);
+	delete[] emptyStringBuffer;
 }
 
 Engine& Engine::Get()
@@ -39,7 +57,7 @@ void Engine::Run()
 	LARGE_INTEGER time;
 	QueryPerformanceCounter(&time);
 
-	int64_t currentTime = time.QuadPart, previousTime = 0;
+	int64_t currentTime = time.QuadPart, previousTime = currentTime;
 	float deltaTime;
 
 	targetOneFrameTime = 1 / targetFrameRate;
@@ -252,9 +270,6 @@ void Engine::Draw()
 void Engine::Clear()
 {
 	SetCursorPosition(0, 0);
-	for (int i = 0; i < MAXY; ++i) {
-		Log("                                                                                                                        \n");
-	}
-	Log("                                                                                                                        ");
+	std::cout << emptyStringBuffer;
 	SetCursorPosition(0, 0);
 }

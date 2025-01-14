@@ -27,6 +27,12 @@
     <ClCompile Include="Entity\Player.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Entity\PlayerBullet.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity\Enemy.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game\Game.h">
@@ -36,6 +42,12 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Entity\Player.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity\PlayerBullet.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity\Enemy.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

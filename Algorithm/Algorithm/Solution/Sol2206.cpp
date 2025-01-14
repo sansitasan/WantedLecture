@@ -23,8 +23,7 @@ int Sol2206::BFS()
 	q.push({ 0, 0, false });
 	visit[0][0][0] = true;
 	int count = 1, size;
-	bool isBreak;
-	short x, y, nx, ny;
+	short nx, ny;
 
 	while (!q.empty()) {
 		size = q.size();

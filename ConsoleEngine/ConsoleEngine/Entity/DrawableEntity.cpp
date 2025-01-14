@@ -3,11 +3,10 @@
 #include "DrawableEntity.h"
 
 DrawableEntity::DrawableEntity(const char* image, unsigned int drawOrder)
-	: Entity(), drawOrder(drawOrder)
+	: Entity(), drawOrder(drawOrder), width((int)strlen(image))
 {
 	size_t length = strlen(image) + 1;
 	this->image = new char[length];
-	std::cout << length;
 	strcpy_s(this->image, length, image);
 }
 
@@ -21,7 +20,7 @@ void DrawableEntity::Draw()
 	Super::Draw();
 	Engine::Get().SetCursorPosition(position);
 
-	Log("%s", image);
+	Log(image);
 }
 
 void DrawableEntity::SetPosition(const Vector2& newPosition)

@@ -15,6 +15,9 @@ public:
 protected:
 	char* image;
 
+	//문자열 길이
+	int width;
+
 	unsigned int drawOrder = 0;
 };
 
