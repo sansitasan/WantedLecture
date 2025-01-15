@@ -12,12 +12,17 @@ public:
 
 	virtual void Draw() override;
 	virtual void SetPosition(const Vector2& newPosition) override;
+
+	virtual bool IsIntersect(const DrawableEntity& other);
+	inline int GetWidth() const { return width; }
+
 protected:
 	char* image;
 
 	//문자열 길이
 	int width;
 
+	Color entityColor = Color::White;
+
 	unsigned int drawOrder = 0;
 };
-

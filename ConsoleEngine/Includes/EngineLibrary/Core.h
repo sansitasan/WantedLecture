@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <Windows.h>
 
 #define _CRTDBG_MAP_ALLOC
 #include <stdlib.h>
@@ -68,6 +69,19 @@ inline float RandomPercent(float min = 0, float max = 1) {
 	float random = (float)(rand() / (float)RAND_MAX);
 	return random * (max - min) + min;
 }
+
+inline void CheckMemoryLeak()
+{
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+}
+
+enum class Color : unsigned short
+{
+	Red = FOREGROUND_RED,
+	Green = FOREGROUND_GREEN,
+	Blue = FOREGROUND_BLUE,
+	White = Red + Green + Blue,
+};
 
 #pragma region VK
 /*

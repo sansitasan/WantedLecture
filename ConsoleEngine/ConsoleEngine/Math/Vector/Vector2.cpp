@@ -1,11 +1,11 @@
 #include "PreCompiledHeader.h"
 #include "Vector2.h"
 
-const static Vector2 Up = Vector2(0, 1);
-const static Vector2 Down = Vector2(0, -1);
-const static Vector2 Right = Vector2(1, 0);
-const static Vector2 Left = Vector2(-1, 0);
-const static Vector2 Zero = Vector2(0, 0);
+const Vector2 Up = Vector2(0, 1);
+const Vector2 Down = Vector2(0, -1);
+const Vector2 Right = Vector2(1, 0);
+const Vector2 Left = Vector2(-1, 0);
+const Vector2 Zero = Vector2(0, 0);
 
 Vector2 Vector2::Add(const Vector2& other)
 {

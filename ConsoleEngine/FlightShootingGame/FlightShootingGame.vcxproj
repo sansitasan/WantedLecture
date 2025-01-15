@@ -167,6 +167,7 @@
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Entity\EnemyBullet.cpp" />
     <ClCompile Include="Entity\Enemy.cpp" />
     <ClCompile Include="Entity\PlayerBullet.cpp" />
     <ClCompile Include="Game\Game.cpp" />
@@ -175,6 +176,7 @@
     <ClCompile Include="Scene\TestScene.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Entity\EnemyBullet.h" />
     <ClInclude Include="Entity\Enemy.h" />
     <ClInclude Include="Entity\PlayerBullet.h" />
     <ClInclude Include="Game\Game.h" />

@@ -17,10 +17,10 @@ public:
 	inline Vector2 GetPosition() const;
 	virtual void SetPosition(const Vector2& newPosition);
 
-	bool IsActive() const { return isActive; }
-	void SetActive(bool active) { isActive = active; }
+	inline bool IsActive() const { return isActive && !isExpired; }
+	inline void SetActive(bool active) { isActive = active; }
 	virtual void Destroy() { isExpired = true; }
-	bool IsExpired() const { return isExpired; }
+	inline bool IsExpired() const { return isExpired; }
 
 protected:
 	//ID(해시), 이름, transform

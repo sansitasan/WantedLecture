@@ -10,5 +10,14 @@ public:
 	virtual ~TestScene() override;
 
 	virtual void Update(float deltaTime) override;
+
+private:
+	void SpawnEnemy(float deltaTime);
+
+	void ProcessCollisionPlayerBulletAndEnemy();
+	void ProcessCollisionEnemyBulletAndPlayer();
+
+private:
+	int score = 0;
 };
 

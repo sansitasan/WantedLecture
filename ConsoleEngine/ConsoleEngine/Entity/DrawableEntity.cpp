@@ -17,15 +17,26 @@ DrawableEntity::~DrawableEntity()
 
 void DrawableEntity::Draw()
 {
-	Super::Draw();
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), (WORD)entityColor);
 	Engine::Get().SetCursorPosition(position);
-
 	Log(image);
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), (WORD)Color::White);
 }
 
 void DrawableEntity::SetPosition(const Vector2& newPosition)
 {
-	//Engine::Get().SetCursorPosition(position);
-	//Log(" ");
 	Super::SetPosition(newPosition);
+}
+
+bool DrawableEntity::IsIntersect(const DrawableEntity& other)
+{
+	int min = (int)position.GetX();
+	int max = (int)position.GetX() + width;
+
+	int otherMin = (int)other.position.GetX();
+	int otherMax = (int)other.position.GetX() + other.width;
+
+	if (otherMin > max || otherMax < min) return false;
+
+	return (int)position.GetY() == (int)other.position.GetY();
 }

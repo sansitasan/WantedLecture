@@ -22,8 +22,10 @@ class Scene;
 class Entity;
 struct Vector2;
 
+
 class ENGINE_API Engine
 {
+	using Delegate = std::vector<std::vector<std::function<void()>>>;
 public:
 	Engine();
 	virtual ~Engine();
@@ -75,9 +77,9 @@ protected:
 
 	KeyState keyState[KEYCOUNT];
 
-	std::vector<std::vector<std::function<void()>>> delegateKeyDown;
-	std::vector<std::vector<std::function<void()>>> delegateKey;
-	std::vector<std::vector<std::function<void()>>> delegateKeyUp;
+	Delegate delegateKeyDown;
+	Delegate delegateKey;
+	Delegate delegateKeyUp;
 
 	static Engine* instance;
 

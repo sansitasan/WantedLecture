@@ -10,8 +10,8 @@ public:
 	PlayerBullet(const Vector2& position);
 
 	virtual void Update(float deltaTime) override;
-private:
 
+private:
 	float speed = 20.0f;
 
 	float yPosition = 0.f;

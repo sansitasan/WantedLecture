@@ -5,7 +5,7 @@
 
 Player::Player(const char* image) : Super(image)
 {
-	position = Vector2(0, 20);
+	position = Vector2(0, Engine::Get().GetScreenSize().GetY() - 1);
 	KEYBIND(MoveUp, Player, VK_UP, KEYDOWN);
 	KEYBIND(MoveDown, Player, VK_DOWN, KEYDOWN);
 	KEYBIND(MoveRight, Player, VK_RIGHT, KEYDOWN);
@@ -21,6 +21,15 @@ void Player::Update(float deltaTime)
 void Player::Destroy()
 {
 	Super::Destroy();
+	int y = Engine::Get().GetScreenSize().GetY();
+	Engine::Get().SetCursorPosition(position.GetX() - (width >> 1), y - 1);
+	Log("  .  ");
+	Engine::Get().SetCursorPosition(position.GetX() - (width >> 1), y);
+	Log(".:V:.");
+
+	Engine::Get().SetCursorPosition(position.GetX() - (width >> 1), y + 1);
+	Log("GameOver!\n");
+
 	KEYUNBIND(MoveUp, Player, VK_UP, KEYDOWN);
 	KEYUNBIND(MoveDown, Player, VK_DOWN, KEYDOWN);
 	KEYUNBIND(MoveRight, Player, VK_RIGHT, KEYDOWN);
@@ -43,8 +52,8 @@ void Player::MoveDown()
 {
 	Vector2 newPosition = position;
 	newPosition += Vector2(0, 1);
-	if (newPosition.GetY() > 20) {
-		newPosition = Vector2(newPosition.GetX(), 20);
+	if (newPosition.GetY() > Engine::Get().GetScreenSize().GetY() - 1) {
+		newPosition = Vector2(newPosition.GetX(), Engine::Get().GetScreenSize().GetY() - 1);
 	}
 
 	SetPosition(newPosition);

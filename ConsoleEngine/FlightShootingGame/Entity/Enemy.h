@@ -6,10 +6,17 @@ class Enemy : public DrawableEntity
 	RTTI_DECLARATIONS(Enemy, DrawableEntity)
 
 public:
-	Enemy(const char* image, int yPosition);
+	Enemy();
 
 	virtual void Update(float deltaTime) override;
+
+	void Move(float deltaTime);
+
 private:
+	void Shoot(float deltaTime);
+
+private:
+	static const char* enemyType[];
 	float speed = 5.0f;
 	float xPosition = 5.0f;
 

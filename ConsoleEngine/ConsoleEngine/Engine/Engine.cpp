@@ -23,8 +23,8 @@ Engine::Engine()
 	delegateKeyUp = std::vector<std::vector<std::function<void()>>>(KEYCOUNT, std::vector<std::function<void()>>());
 	instance = this;
 	//개행 문자 추가를 위해 X + 1, 마지막 \0을 넣기 위해 + 1
-	int sizeX = screenSize.GetX();
-	int sizeY = screenSize.GetY();
+	int sizeX = (int)screenSize.GetX();
+	int sizeY = (int)screenSize.GetY();
 	emptyStringBuffer = new char[(sizeX + 1) * sizeY + 1];
 	memset(emptyStringBuffer, 0, (sizeX + 1) * sizeY + 1);
 
@@ -261,7 +261,7 @@ void Engine::Update(float deltaTime)
 
 void Engine::Draw()
 {
-	Clear();
+	//Clear();
 
 	if (!mainScene) return;
 	mainScene->Draw();

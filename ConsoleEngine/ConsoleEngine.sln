@@ -17,10 +17,12 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TextScrollDemo", "TextScrol
 		{F7DD4025-46CA-465D-9AB6-FD32ADD4718B} = {F7DD4025-46CA-465D-9AB6-FD32ADD4718B}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FlightShootingGame", "FlightShootingGame\FlightShootingGame.vcxproj", "{F4DFC077-C7DE-4C4F-B5D4-33844D734A61}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SokobanGame", "SokobanGame\SokobanGame.vcxproj", "{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}"
 	ProjectSection(ProjectDependencies) = postProject
 		{F7DD4025-46CA-465D-9AB6-FD32ADD4718B} = {F7DD4025-46CA-465D-9AB6-FD32ADD4718B}
 	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FlightShootingGame", "FlightShootingGame\FlightShootingGame.vcxproj", "{F4DFC077-C7DE-4C4F-B5D4-33844D734A61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,6 +56,14 @@ Global
 		{42A4AE29-5450-4913-B6FB-93E304799B5D}.Release|x64.Build.0 = Release|x64
 		{42A4AE29-5450-4913-B6FB-93E304799B5D}.Release|x86.ActiveCfg = Release|Win32
 		{42A4AE29-5450-4913-B6FB-93E304799B5D}.Release|x86.Build.0 = Release|Win32
+		{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}.Debug|x64.ActiveCfg = Debug|x64
+		{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}.Debug|x64.Build.0 = Debug|x64
+		{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}.Debug|x86.ActiveCfg = Debug|Win32
+		{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}.Debug|x86.Build.0 = Debug|Win32
+		{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}.Release|x64.ActiveCfg = Release|x64
+		{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}.Release|x64.Build.0 = Release|x64
+		{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}.Release|x86.ActiveCfg = Release|Win32
+		{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}.Release|x86.Build.0 = Release|Win32
 		{F4DFC077-C7DE-4C4F-B5D4-33844D734A61}.Debug|x64.ActiveCfg = Debug|x64
 		{F4DFC077-C7DE-4C4F-B5D4-33844D734A61}.Debug|x64.Build.0 = Debug|x64
 		{F4DFC077-C7DE-4C4F-B5D4-33844D734A61}.Debug|x86.ActiveCfg = Debug|Win32
