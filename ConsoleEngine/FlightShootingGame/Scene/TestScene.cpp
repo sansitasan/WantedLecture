@@ -24,10 +24,10 @@ void TestScene::Update(float deltaTime)
 		Engine::Get().QuitEngine();
 	}
 
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),Color::Green);
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), (WORD)Color::Green);
 	Engine::Get().SetCursorPosition(0, Engine::Get().GetScreenSize().GetY() + 3);
 	Log("Score: %d", score);
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), Color::White);
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), (WORD)Color::White);
 
 	SpawnEnemy(deltaTime);
 

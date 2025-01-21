@@ -16,17 +16,25 @@
 std::bind(&type::function, this)
 
 #define KEYBIND(function, type, key, keyType) \
-	if(keyType == 1) \
-		Engine::Get().SubscribeGetKey(BINDFUNCTION(function, type), key); \
-	else if(keyType == 2) \
-		Engine::Get().SubscribeGetKeyUp(BINDFUNCTION(function, type), key); \
+	if (!this->As<Entity>()) {\
+		std::cout << "You can't Bind if it`s not an Entity class\n";\
+		__debugbreak();\
+	}\
+	if (keyType == 1) \
+		Engine::Get().SubscribeGetKey(BINDFUNCTION(function, type), this, key); \
+	else if (keyType == 2) \
+		Engine::Get().SubscribeGetKeyUp(BINDFUNCTION(function, type), this, key); \
 	else \
-		Engine::Get().SubscribeGetKeyDown(BINDFUNCTION(function, type), key);
+		Engine::Get().SubscribeGetKeyDown(BINDFUNCTION(function, type), this, key);
 
 #define KEYUNBIND(function, type, key, keyType) \
-    if(keyType == 1) \
+	if (!this->As<Entity>()) {\
+		std::cout << "You can't Bind if it`s not an Entity class\n";\
+		__debugbreak();\
+	}\
+    if (keyType == 1) \
 		Engine::Get().UnSubscribeGetKey(BINDFUNCTION(function, type), key); \
-	else if(keyType == 2) \
+	else if (keyType == 2) \
 		Engine::Get().UnSubscribeGetKeyUp(BINDFUNCTION(function, type), key); \
 	else \
 		Engine::Get().UnSubscribeGetKeyDown(BINDFUNCTION(function, type), key);

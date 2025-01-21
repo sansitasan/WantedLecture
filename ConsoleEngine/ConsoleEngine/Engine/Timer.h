@@ -8,16 +8,17 @@ class ENGINE_API Timer {
 public:
 	Timer() = delete;
 	Timer(Timer&&) = delete;
-	Timer(float time, Delegate delegate);
+	Timer(float time, Delegate delegate, bool isInterval);
 	~Timer();
 	bool UpdateTimer(float deltaTime);
-	bool ReUse(float time, Delegate delegate);
+	bool ReUse(float time, Delegate delegate, bool isInterval);
 
 private:
 	void Clear();
 
 private:
-	float decideTime;
-	float remainTime;
+	float targetTime;
+	float elapsedTime;
+	bool isInterval;
 	Delegate delegate;
 };

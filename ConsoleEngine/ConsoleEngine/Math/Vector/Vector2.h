@@ -14,6 +14,7 @@ public:
 	const static Vector2 Down;
 	const static Vector2 Left;
 	const static Vector2 Right;
+	const static Vector2 Zero;
 public:
 	Vector2() : x(0), y(0) {}
 	Vector2(float x, float y) : x(x), y(y) {}

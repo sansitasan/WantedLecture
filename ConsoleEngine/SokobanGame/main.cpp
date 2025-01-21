@@ -1,4 +1,4 @@
-#include "Game/Game.h"
+#include "Game/SGame.h"
 #include "Scene/GameScene.h"
 
 using namespace std;
@@ -6,8 +6,9 @@ using namespace std;
 int main() {
 	CheckMemoryLeak();
 
-	Engine engine;
-	engine.LoadScene(new GameScene());
+	SGame engine;
+	Scene* scene = new GameScene();
+	engine.LoadScene(scene);
 	engine.Run();
 	return 0;
 }

@@ -22,9 +22,11 @@ public:
 	bool CanPlayerMove(const Vector2& position);
 
 private:
+	bool IsGameClear();
 
 private:
 	int moveCount = 0;
+	bool isClear = false;
 
 	List<DrawableEntity*> map;
 	List<Box*> boxes;

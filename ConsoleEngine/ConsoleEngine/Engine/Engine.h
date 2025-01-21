@@ -22,10 +22,9 @@ class Scene;
 class Entity;
 struct Vector2;
 
-
 class ENGINE_API Engine
 {
-	using Delegate = std::vector<std::vector<std::function<void()>>>;
+	using Delegate = std::vector<std::vector<std::pair<Entity*, std::function<void()>>>>;
 public:
 	Engine();
 	virtual ~Engine();
@@ -47,22 +46,27 @@ public:
 
 	void SetTargetFrameRate(float targetFrameRate);
 
-	//현재 눌렸는지 확인
+	void QuitEngine();
+
+#pragma region Input Manage
+public:
+
 	bool GetKey(int key);
 	bool GetKeyDown(int key);
 	bool GetKeyUp(int key);
 
-	void QuitEngine();
-
-	void SubscribeGetKey(std::function<void()>, int key);
-	void SubscribeGetKeyDown(std::function<void()>, int key);
-	void SubscribeGetKeyUp(std::function<void()>, int key);
+	void SubscribeGetKey(std::function<void()>, Entity* entity, int key);
+	void SubscribeGetKeyDown(std::function<void()>, Entity* entity, int key);
+	void SubscribeGetKeyUp(std::function<void()>, Entity* entity, int key);
 
 	void UnSubscribeGetKey(std::function<void()>, int key);
 	void UnSubscribeGetKeyDown(std::function<void()>, int key);
 	void UnSubscribeGetKeyUp(std::function<void()>, int key);
+#pragma endregion
 
 protected:
+	void UnSubscribe(Delegate& delegateVector, std::function<void()> delegate, int key);
+	void DelegateInvoke(Delegate& delegateVector, int key);
 	void ProcessInput();
 	void Update(float deltaTime);
 	void Draw();

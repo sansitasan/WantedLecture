@@ -16,8 +16,6 @@ MenuScene::MenuScene()
 		}));
 
 	itemCount = (int)items.size();
-
-	
 }
 
 MenuScene::~MenuScene()

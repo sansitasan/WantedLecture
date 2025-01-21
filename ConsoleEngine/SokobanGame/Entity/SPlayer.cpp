@@ -18,7 +18,7 @@ void SPlayer::Update(float deltaTime)
 }
 
 void SPlayer::MoveUp() {
-	Vector2 newPosition = position - Vector2(0, 1);
+	Vector2 newPosition = position - Vector2::Up;
 	if (gameScene->CanPlayerMove(newPosition)) {
 		SetPosition(newPosition);
 	}
@@ -26,7 +26,7 @@ void SPlayer::MoveUp() {
 
 void SPlayer::MoveDown()
 {
-	Vector2 newPosition = position + Vector2(0, 1);
+	Vector2 newPosition = position + Vector2::Up;
 	if (gameScene->CanPlayerMove(newPosition)) {
 		SetPosition(newPosition);
 	}
@@ -34,7 +34,7 @@ void SPlayer::MoveDown()
 
 void SPlayer::MoveLeft()
 {
-	Vector2 newPosition = position - Vector2(1, 0);
+	Vector2 newPosition = position - Vector2::Right;
 	if (gameScene->CanPlayerMove(newPosition)) {
 		SetPosition(newPosition);
 	}
@@ -42,7 +42,7 @@ void SPlayer::MoveLeft()
 
 void SPlayer::MoveRight()
 {
-	Vector2 newPosition = position + Vector2(1, 0);
+	Vector2 newPosition = position + Vector2::Right;
 	if (gameScene->CanPlayerMove(newPosition)) {
 		SetPosition(newPosition);
 	}

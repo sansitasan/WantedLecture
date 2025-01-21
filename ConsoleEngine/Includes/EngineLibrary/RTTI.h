@@ -11,6 +11,10 @@ class ENGINE_API RTTI
 public:
 	virtual const size_t& TypeIdInstance() const = 0;
 
+	size_t GetUniqueID() const {
+		return reinterpret_cast<size_t>(this);
+	}
+
 	virtual bool Is(const size_t id) const
 	{
 		return false;
