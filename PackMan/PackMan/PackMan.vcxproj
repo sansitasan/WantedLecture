@@ -181,7 +181,7 @@ xcopy "Assets" "$(OutDir)..\Assets\" /y /e</Command>
     <ClCompile Include="Entity\Item.cpp" />
     <ClCompile Include="Manager\DataManager.cpp" />
     <ClCompile Include="States\Nodes\ChaseNode.cpp" />
-    <ClCompile Include="States\Nodes\CollisionNode.cpp" />
+    <ClCompile Include="States\Nodes\RunNode.cpp" />
     <ClCompile Include="States\Nodes\MoveNode.cpp" />
     <ClCompile Include="Scene\GameScene.cpp" />
     <ClCompile Include="main.cpp" />
@@ -190,6 +190,7 @@ xcopy "Assets" "$(OutDir)..\Assets\" /y /e</Command>
     <ClCompile Include="States\BT.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Algorithm\AStar.h" />
     <ClInclude Include="Entity\Enemy.h" />
     <ClInclude Include="Entity\Food.h" />
     <ClInclude Include="Entity\Item.h" />
@@ -197,7 +198,7 @@ xcopy "Assets" "$(OutDir)..\Assets\" /y /e</Command>
     <ClInclude Include="Engine\GameEngine.h" />
     <ClInclude Include="Entity\Wall.h" />
     <ClInclude Include="States\Nodes\ChaseNode.h" />
-    <ClInclude Include="States\Nodes\CollisionNode.h" />
+    <ClInclude Include="States\Nodes\RunNode.h" />
     <ClInclude Include="States\Nodes\MoveNode.h" />
     <ClInclude Include="Scene\GameScene.h" />
     <ClInclude Include="Entity\Player.h" />
@@ -206,6 +207,9 @@ xcopy "Assets" "$(OutDir)..\Assets\" /y /e</Command>
     <ClInclude Include="States\BT.h" />
     <ClInclude Include="States\Nodes\INode.h" />
     <ClInclude Include="States\IMoveable.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Assets\Maps\Map.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

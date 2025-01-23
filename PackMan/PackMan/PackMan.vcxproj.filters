@@ -51,7 +51,7 @@
     <ClCompile Include="States\Nodes\ChaseNode.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="States\Nodes\CollisionNode.cpp">
+    <ClCompile Include="States\Nodes\RunNode.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -101,8 +101,14 @@
     <ClInclude Include="States\Nodes\ChaseNode.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="States\Nodes\CollisionNode.h">
+    <ClInclude Include="States\Nodes\RunNode.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Algorithm\AStar.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Assets\Maps\Map.txt" />
   </ItemGroup>
 </Project>

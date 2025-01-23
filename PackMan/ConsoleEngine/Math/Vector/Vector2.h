@@ -46,6 +46,8 @@ public:
 
 	inline Vector2 operator/(const Vector2& other);
 
+	inline Vector2 GetIntVector2();
+
 	inline Vector2& operator+=(const Vector2& other);
 
 	inline Vector2& operator-=(const Vector2& other);

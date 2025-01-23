@@ -1,6 +1,6 @@
 #include "MoveNode.h"
 #include "States/BlackBoard.h"
-#include "Entity/Entity.h"
+#include "Entity/DrawableEntity.h"
 #include "Scene/GameScene.h"
 #include "Engine/Engine.h"
 #include "Core.h"
@@ -15,11 +15,25 @@ MoveNode::MoveNode(BlackBoard* blackBoard)
 
 MoveNode::~MoveNode()
 {
-    delete[] dir;
 }
 
 bool MoveNode::CheckCondition()
 {
+    nodeStates = ENodeStates::Run;
+
+    if (blackBoard->dir == Vector2::Up) {
+        currentDir = EDir::Up;
+    }
+    else if (blackBoard->dir == Vector2::Down) {
+        currentDir = EDir::Down;
+    }
+    else if (blackBoard->dir == Vector2::Right) {
+        currentDir = EDir::Right;
+    }
+    else {
+        currentDir = EDir::Left;
+    }
+
     return true;
 }
 
@@ -27,15 +41,22 @@ void MoveNode::Update(float deltaTime)
 {
     Vector2 originPos = blackBoard->entity->GetPosition();
 
-    if (nextPos != Vector2::Zero && ((int)originPos.GetX() != (int)nextPos.GetX() || (int)originPos.GetY() != (int)nextPos.GetY())) {
-        originPos += moveDir * deltaTime * speed;
+    //매 틱마다 방향을 랜덤으로 돌리니 아무리 직진 확률이 높아도 방향이 수시로 바뀜
+    //따라서 모퉁이마다 혹은 한 칸마다 방향을 랜덤으로 결정
+    if (nextPos != Vector2::Zero && !originPos.IntCompare(nextPos)) {
+        Vector2 tempx = originPos + blackBoard->dir;
+        blackBoard->scene->ChangeX(tempx);
+        if (!nextPos.IntCompare(tempx)) {
+            blackBoard->dir = (nextPos - originPos.GetIntVector2()).Normalize();
+        }
+        originPos += blackBoard->dir * deltaTime * blackBoard->speed;
         blackBoard->scene->ChangeX(originPos);
         blackBoard->entity->SetPosition(originPos);
         return;
     }
 
-    Vector2 tempPos = originPos + (moveDir * deltaTime * speed);
-    Vector2 t = originPos + moveDir;
+    Vector2 tempPos = originPos + (blackBoard->dir * deltaTime * blackBoard->speed);
+    Vector2 t = originPos + blackBoard->dir;
     bool canMove[4] = { 0, };
     Vector2 vec[4];
     int temp = (int)currentDir;
@@ -46,19 +67,23 @@ void MoveNode::Update(float deltaTime)
         vec[i] = t;
         temp = (dir[i] + temp) % 4;
         SetMoveDir(temp);
-        tempPos = originPos + (moveDir * deltaTime * speed);
-        t = originPos + moveDir;
+        tempPos = originPos + (blackBoard->dir * deltaTime * blackBoard->speed);
+        t = originPos + blackBoard->dir;
     }
 
-    if (canMove[1] || canMove[2]) {
-        idx = RandomDir(canMove);
-    }
+    idx = RandomDir(canMove);
     SetMoveDir((int)currentDir);
-    tempPos = originPos + moveDir * deltaTime * speed;
+    tempPos = originPos + blackBoard->dir * deltaTime * blackBoard->speed;
     blackBoard->scene->ChangeX(tempPos);
-    t = originPos + moveDir;
+    t = originPos + blackBoard->dir;
     nextPos = Vector2((int)vec[idx].GetX(), (int)vec[idx].GetY());
     blackBoard->entity->SetPosition(tempPos);
+}
+
+void MoveNode::Clear()
+{
+    nodeStates = ENodeStates::Stop;
+    nextPos = Vector2::Zero;
 }
 
 void MoveNode::SetDirRandomly()
@@ -86,16 +111,16 @@ void MoveNode::SetDirRandomly()
 void MoveNode::SetMoveDir(int num)
 {
     if (!num) {
-        moveDir = Vector2::Left;
+        blackBoard->dir = Vector2::Left;
     }
     else if (num == 1) {
-        moveDir = Vector2::Up;
+        blackBoard->dir = Vector2::Up;
     }
     else if (num == 2) {
-        moveDir = Vector2::Right;
+        blackBoard->dir = Vector2::Right;
     }
     else if (num == 3) {
-        moveDir = Vector2::Down;
+        blackBoard->dir = Vector2::Down;
     }
 }
 

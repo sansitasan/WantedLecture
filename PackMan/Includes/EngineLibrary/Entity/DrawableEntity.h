@@ -12,6 +12,7 @@ public:
 
 	virtual void Draw() override;
 	virtual void SetPosition(const Vector2& newPosition) override;
+	inline void SetColor(Color newColor) { entityColor = newColor; }
 
 	virtual bool IsIntersect(const DrawableEntity& other);
 	inline int GetWidth() const { return width; }

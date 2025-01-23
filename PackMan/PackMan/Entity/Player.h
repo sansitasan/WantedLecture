@@ -18,7 +18,7 @@ public:
 	virtual inline Vector2 GetPosition() const override;
 
 	void GetItem(class Item& item);
-	inline int GetSpeed() const { return currentSpeed; }
+	inline float GetSpeed() const { return currentSpeed; }
 private:
 	void MoveUp();
 	void MoveDown();
@@ -29,7 +29,7 @@ private:
 
 	int itemCount = 0;
 	int originSpeed;
-	int currentSpeed;
+	float currentSpeed;
 
 	GameScene* gameScene;
 	EState currentState;

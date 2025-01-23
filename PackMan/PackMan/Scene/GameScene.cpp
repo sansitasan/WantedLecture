@@ -34,10 +34,14 @@ GameScene::GameScene(const DataManager& dataManager)
         if (map[i] - '0' == (int)EEntitys::Player && !isPlayerGenerate) {
             player = TraceNew Player(Vector2(x, y), this);
             isPlayerGenerate = true;
+            AddEntity(player);
         }
 
         ++x;
     }
+
+    foodAndItemCounts = counts[(int)EEntitys::Food].size() + counts[(int)EEntitys::Item].size();
+    enemies = std::vector<Enemy*>(counts[(int)EEntitys::Enemy].size());
 
     for (int i = 1; i < 6; ++i) {
         for (int j = 0; j < counts[i].size(); ++j) {
@@ -54,7 +58,8 @@ GameScene::GameScene(const DataManager& dataManager)
                 break;
     
             case (int)EEntitys::Enemy:
-                entity = TraceNew Enemy(Vector2(x, y), this, player);
+                enemies[j] = TraceNew Enemy(Vector2(x, y), this, player);
+                entity = enemies[j];
                 break;
     
             case (int)EEntitys::Item:
@@ -62,7 +67,6 @@ GameScene::GameScene(const DataManager& dataManager)
                 break;
     
             case (int)EEntitys::Player:
-                entity = player;
                 map[x + width * y] = ' ';
                 break;
     
@@ -82,22 +86,37 @@ GameScene::~GameScene()
 {
     delete[] entityMap;
     entityMap = nullptr;
+    enemies.clear();
 }
 
 void GameScene::Update(float deltaTime)
 {
+    if (isClear) return;
+
     Super::Update(deltaTime);
+    CollisionEnemyAndPlayer();
 }
 
 void GameScene::Draw()
 {
+    if (isClear) {
+        Engine::Get().Draw(Vector2(width >> 1, height >> 1), scoreDisplay.c_str(), Color::BrightWhite);
+        Engine::Get().Draw(Vector2((width >> 1) + scoreDisplay.length(), height >> 1), std::to_string(score).c_str(), Color::BrightWhite);
+        return;
+    }
+
     Engine::Get().SetCursorPosition(0, 0);
     Super::Draw();
+
+    for (int i = 0; i < enemies.size(); ++i) {
+        enemies[i]->Draw();
+    }
 
     Engine::Get().Draw(Vector2(0, 0), scoreDisplay.c_str(), Color::BrightWhite);
     Engine::Get().Draw(Vector2(scoreDisplay.length(), 0), std::to_string(score).c_str(), Color::BrightWhite);
     Engine::Get().Draw(Vector2(scoreDisplay.length() + 5, 0), "FPS: ", Color::BrightWhite);
-    Engine::Get().Draw(Vector2(scoreDisplay.length() + 10, 0), std::to_string(Engine::Get().GetFPS()).c_str(), Color::BrightWhite);
+    float t = Engine::Get().GetFPS();
+    Engine::Get().Draw(Vector2(scoreDisplay.length() + 10, 0), std::to_string(t).c_str(), Color::BrightWhite);
 }
 
 void GameScene::ChangeX(Vector2& position) {
@@ -130,26 +149,58 @@ bool GameScene::CanMove(Vector2& position, Entity* entity)
     switch (t) {
         case (char)EEntitys::Food:
             map[(int)position.GetX() + width * (int)position.GetY()] = ' ';
-            entityMap[(int)position.GetX() + (width - 1) * (int)position.GetY()]->Destroy();
+            Engine::Get().DestroyEntity(entityMap[(int)position.GetX() + (width - 1) * (int)position.GetY()]);
             entityMap[(int)position.GetX() + (width - 1) * (int)position.GetY()] = nullptr;
             score += 10;
+            --foodAndItemCounts;
             break;
 
         case (char)EEntitys::Item: {
             map[(int)position.GetX() + width * (int)position.GetY()] = ' ';
             Item* item = entityMap[(int)position.GetX() + (width - 1) * (int)position.GetY()]->As<Item>();
             if (item) player->GetItem(*item);
-            entityMap[(int)position.GetX() + (width - 1) * (int)position.GetY()]->Destroy();
+            Engine::Get().DestroyEntity(entityMap[(int)position.GetX() + (width - 1) * (int)position.GetY()]);
             entityMap[(int)position.GetX() + (width - 1) * (int)position.GetY()] = nullptr;
             score += 50;
+            --foodAndItemCounts;
             break;
         }
     }
+
+    IsGameClear();
 
     return true;
 }
 
 bool GameScene::IsGameClear()
 {
-    return false;
+    if (!foodAndItemCounts || !player) {
+        isClear = true;
+        COROUTINE(EndGame, GameScene, 3, false);
+    }
+    return isClear;
+}
+
+void GameScene::EndGame()
+{
+    Engine::Get().QuitEngine();
+}
+
+void GameScene::CollisionEnemyAndPlayer()
+{
+    for (int i = 0; i < enemies.size(); ++i) {
+        if (enemies[i]->GetPosition().IntCompare(player->GetPosition())) {
+            if (player->GetState() == EState::Normal) {
+                Engine::Get().DestroyEntity(player);
+                player = nullptr;
+                IsGameClear();
+                break;
+            }
+
+            score += 200;
+            Engine::Get().DestroyEntity(enemies[i]);
+            enemies.erase(enemies.begin() + i);
+            --i;
+        }
+    }
 }

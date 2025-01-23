@@ -2,14 +2,14 @@
 #include "Core.h"
 
 class BlackBoard;
-class Entity;
+class DrawableEntity;
 class INode;
 class IMoveable;
 class GameScene;
 
 class BehaviorTree {
 public:
-	BehaviorTree(Entity* entity, IMoveable* target, GameScene* scene);
+	BehaviorTree(DrawableEntity* entity, IMoveable* target, GameScene* scene, float entitySpeed);
 	~BehaviorTree();
 	void AddNode(INode& node);
 	void Update(float deltaTime);

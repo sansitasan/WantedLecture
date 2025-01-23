@@ -37,6 +37,8 @@ public:
 	// 콘솔 버퍼에 전체 문자열 버퍼를 쓸 때 사용하는 함수.
 	void Draw(CHAR_INFO* buffer);
 
+	HANDLE* GetHandle() { return &buffer; }
+
 private:
 	// 콘솔 핸들.
 	HANDLE buffer;

@@ -23,13 +23,14 @@ public:
 	virtual void Update(float deltaTime) override;
 	virtual void Draw() override;
 
-	bool CanMove(Vector2& position, Entity* entity);
+	bool CanMove(Vector2& position, Entity* entity = nullptr);
 
 	void ChangeX(Vector2& position);
 
 private:
 	bool IsGameClear();
-
+	void EndGame();
+	void CollisionEnemyAndPlayer();
 private:
 	int moveCount = 0;
 	bool isClear = false;
@@ -37,8 +38,10 @@ private:
 	int width;
 	int height;
 	int score;
+	int foodAndItemCounts = 0;
 	DrawableEntity** entityMap;
 	class Player* player;
+	std::vector<class Enemy*> enemies;
 	std::string scoreDisplay;
 };
 

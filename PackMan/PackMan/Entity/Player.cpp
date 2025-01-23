@@ -16,9 +16,7 @@ Player::Player(const Vector2& position, GameScene* gameScene)
 
 void Player::Update(float deltaTime)
 {
-	Super::Update(deltaTime);
-
-	Vector2 newPos = position + moveDir * deltaTime * (float)currentSpeed;
+	Vector2 newPos = position + moveDir * deltaTime * currentSpeed;
 	if (gameScene->CanMove(newPos, this)) {
 		SetPosition(newPos);
 	}
@@ -27,10 +25,6 @@ void Player::Update(float deltaTime)
 void Player::Draw()
 {
 	Super::Draw();
-	Engine::Get().Draw(Vector2(0, 36), "itemCount: ", Color::BrightWhite);
-	Engine::Get().Draw(Vector2(0, 37), std::to_string(itemCount).c_str(), Color::BrightWhite);
-	Engine::Get().Draw(Vector2(11, 36), "speed: ", Color::BrightWhite);
-	Engine::Get().Draw(Vector2(11, 37), std::to_string(currentSpeed).c_str(), Color::BrightWhite);
 }
 
 void Player::Destroy()
@@ -40,7 +34,7 @@ void Player::Destroy()
 
 EState Player::GetState() const
 {
-	return EState();
+	return currentState;
 }
 
 Vector2 Player::GetPosition() const

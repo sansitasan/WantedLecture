@@ -4,9 +4,9 @@
 #include "Scene/GameScene.h"
 #include "IMoveable.h"
 
-BehaviorTree::BehaviorTree(Entity* entity, IMoveable* target, GameScene* scene)
+BehaviorTree::BehaviorTree(DrawableEntity* entity, IMoveable* target, GameScene* scene, float entitySpeed)
 {
-	blackBoard = new BlackBoard(entity, target, scene);
+	blackBoard = new BlackBoard(entity, target, scene, entitySpeed);
 }
 
 BehaviorTree::~BehaviorTree()
@@ -25,11 +25,18 @@ void BehaviorTree::AddNode(INode& node)
 
 void BehaviorTree::Update(float deltaTime)
 {
+	int idx = 1;
 	for (int i = 0; i < nodes.size(); ++i) {
 		if (nodes[i]->CheckCondition()) {
+			idx += i;
 			nodes[i]->Update(deltaTime);
 			break;
 		}
+	}
+
+	for (int i = idx; i < nodes.size(); ++i) {
+		if (nodes[i]->GetNodeState() != INode::ENodeStates::Run) continue;
+		nodes[i]->Clear();
 	}
 }
 

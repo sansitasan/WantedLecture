@@ -29,7 +29,7 @@ std::string DataManager::GetMap(int& outX, int& outY, int level) const
 
 	rewind(file);
 
-	char* buffer = new char[readSize + 1];
+	char* buffer = TraceNew char[readSize + 1];
 	memset(buffer, 0, readSize + 1);
 	size_t bytesRead = fread(buffer, 1, readSize, file);
 
@@ -62,5 +62,6 @@ std::string DataManager::GetMap(int& outX, int& outY, int level) const
 	outY = ny;
 
 	fclose(file);
+	delete[] buffer;
 	return temp;
 }

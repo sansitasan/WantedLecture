@@ -7,9 +7,10 @@ Scene::Scene() {
 
 Scene::~Scene()
 {
-	for (int i = 0; i < SceneEntityList.Size(); ++i) {
+	for (int i = 0; i < SceneEntityList.size();) {
 		if (!SceneEntityList[i]) continue;
 		SafeDelete(&SceneEntityList[i]);
+		SceneEntityList.erase(SceneEntityList.begin() + i);
 	}
 
 	while (!deleteRequestedEntityQueue.empty()) {
@@ -36,7 +37,7 @@ void Scene::ProcessAddedAndDestroyedEntity()
 	}
 
 	while (!addRequestedEntityQueue.empty()) {
-		SceneEntityList.PushBack(addRequestedEntityQueue.front());
+		SceneEntityList.push_back(addRequestedEntityQueue.front());
 		addRequestedEntityQueue.pop();
 	}
 }
@@ -61,13 +62,13 @@ void Scene::AddDeleteEntityQueue(Entity* expiredEntity)
 {
 	if (!expiredEntity->IsExpired()) return;
 	deleteRequestedEntityQueue.push(expiredEntity);
-	for (int i = 0; i < SceneEntityList.Size();) {
+	for (int i = 0; i < SceneEntityList.size();) {
 		if (SceneEntityList[i]->GetUniqueID() != expiredEntity->GetUniqueID()) {
 			++i;
 			continue;
 		}
 
-		SceneEntityList.Erase(i);
+		SceneEntityList.erase(SceneEntityList.begin() + i);
 	}
 }
 

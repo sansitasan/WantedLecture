@@ -230,6 +230,7 @@ xcopy "$(OutDir)\*.lib" "$(SolutionDir)\Lib\" /e /y</Command>
     <ClInclude Include="Entity\DrawableEntity.h" />
     <ClInclude Include="Engine\Engine.h" />
     <ClInclude Include="Entity\Entity.h" />
+    <ClInclude Include="Memory\MemoryPool.h" />
     <ClInclude Include="PreCompiledHeader\PreCompiledHeader.h" />
     <ClInclude Include="Render\ScreenBuffer.h" />
     <ClInclude Include="Scene\Scene.h" />

@@ -7,7 +7,7 @@ int main()
 
 	engine->LoadGameScene();
 	engine->Run();
+	delete engine;
 	_CrtDumpMemoryLeaks();
-	//engine.Run();
 	return 0;
 }

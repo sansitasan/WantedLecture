@@ -31,7 +31,7 @@ protected:
 	void ChangedActive(bool isActive);
 
 protected:
-	List<Entity*> SceneEntityList;
+	std::vector<Entity*> SceneEntityList;
 	//List<DrawableEntity*> drawableEntityList;
 
 	bool isActiveScene = true;

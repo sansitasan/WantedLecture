@@ -28,13 +28,15 @@ BOOL WINAPI MessageProcessor(DWORD message)
 
 Engine::Engine() 
 	: quit(false), mainScene(nullptr), targetFrameRate(60), 
-	targetOneFrameTime(1 / 60), screenSize(50, 50)
+	targetOneFrameTime(1 / 60), screenSize(35, 40)
 {
 	timerManager = new TimerManager();
 	srand((unsigned int)time(nullptr));
 	int sizeX = (int)screenSize.GetX();
 	int sizeY = (int)screenSize.GetY();
+
 	SetConsoleSizeAndLock(sizeX, sizeY);
+
 	SetConsoleOutputCP(CP_UTF8);
 	SetConsoleCP(CP_UTF8);
 	delegateKeyDown = Delegate(KEYCOUNT, std::vector<pair<Entity*, std::function<void()>>>());
@@ -45,7 +47,6 @@ Engine::Engine()
 	imageBuffer = new CHAR_INFO[(sizeX + 1) * sizeY + 1];
 
 	ClearImageBuffer();
-
 	
 	CONSOLE_FONT_INFOEX cfi;
 	cfi.cbSize = sizeof(cfi);
@@ -67,7 +68,6 @@ Engine::Engine()
 	COORD size = { (short)sizeX, (short)sizeY };
 	renderTargets[0] = new ScreenBuffer(GetStdHandle(STD_OUTPUT_HANDLE), size);
 	renderTargets[1] = new ScreenBuffer(size, cfi);
-
 	// 스왑 버퍼.
 	Present();
 
@@ -77,12 +77,21 @@ Engine::Engine()
 
 Engine::~Engine()
 {
-	SafeDelete(&mainScene);
 	delete timerManager;
+	SafeDelete(&mainScene);
 	delete[] imageBuffer;
 
 	delete renderTargets[0];
 	delete renderTargets[1];
+
+	for (int i = 0; i < KEYCOUNT; ++i) {
+		delegateKeyDown[i].clear();
+		delegateKeyUp[i].clear();
+		delegateKey[i].clear();
+	}
+	delegateKeyDown.clear();
+	delegateKeyUp.clear();
+	delegateKey.clear();
 }
 
 Engine& Engine::Get()
@@ -271,14 +280,14 @@ void Engine::SetConsoleSizeAndLock(int width, int height)
 	SMALL_RECT windowSize = { 0, 0, static_cast<SHORT>(width - 1), static_cast<SHORT>(height - 1) };
 	SetConsoleWindowInfo(hConsole, TRUE, &windowSize);
 
-	LONG style = GetWindowLong(hWndConsole, GWL_STYLE);
-	style &= ~WS_MAXIMIZEBOX;
-	style &= ~WS_SIZEBOX;
-	SetWindowLong(hWndConsole, GWL_STYLE, style);
+	//LONG style = GetWindowLong(hWndConsole, GWL_STYLE);
+	//style &= ~WS_MAXIMIZEBOX;
+	//style &= ~WS_SIZEBOX;
+	//SetWindowLong(hWndConsole, GWL_STYLE, style);
 
-	RECT rect;
-	GetWindowRect(hWndConsole, &rect);
-	MoveWindow(hWndConsole, rect.left, rect.top, width * 8, height * 16, TRUE);
+	//RECT rect;
+	//GetWindowRect(hWndConsole, &rect);
+	//MoveWindow(hWndConsole, rect.left, rect.top, width * 8, height * 16, TRUE);
 }
 
 void Engine::UnSubscribe(Delegate& delegateVector, std::function<void()> delegate, int key)
@@ -318,6 +327,7 @@ void Engine::ProcessInput()
 
 void Engine::Update(float deltaTime)
 {
+	if (GetKey(VK_ESCAPE)) QuitEngine();
 	if (!mainScene) return;
 
 	for (int i = 0; i < KEYCOUNT; ++i) {

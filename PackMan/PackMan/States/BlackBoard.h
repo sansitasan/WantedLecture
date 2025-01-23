@@ -1,13 +1,14 @@
 #pragma once
+#include <Math/Vector/Vector2.h>
 
-class Entity;
+class DrawableEntity;
 class IMoveable;
 class GameScene;
 
 class BlackBoard {
 public:
-	BlackBoard(Entity* entity, IMoveable* target, GameScene* scene)
-		: entity(entity), target(target), scene(scene) {}
+	BlackBoard(DrawableEntity* entity, IMoveable* target, GameScene* scene, float speed)
+		: entity(entity), target(target), scene(scene), dir(Vector2::Left), speed(speed) {}
 
 	~BlackBoard() {
 		entity = nullptr;
@@ -15,7 +16,9 @@ public:
 		scene = nullptr;
 	}
 
-	Entity* entity;
+	DrawableEntity* entity;
 	IMoveable* target;
 	GameScene* scene;
+	Vector2 dir;
+	float speed;
 };

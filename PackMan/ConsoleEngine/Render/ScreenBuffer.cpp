@@ -11,7 +11,7 @@ ScreenBuffer::ScreenBuffer(const COORD& size, CONSOLE_FONT_INFOEX& fontInfo)
 	}
 
 	SetConsoleScreenBufferSize(buffer, size);
-	SMALL_RECT rect = { 0, 0, size.X, size.Y };
+	SMALL_RECT rect = { 0, 0, size.X - 1, size.Y - 1 };
 	SetConsoleWindowInfo(buffer, true, &rect);
 
 	CONSOLE_CURSOR_INFO info{ 1, false };
@@ -26,10 +26,10 @@ ScreenBuffer::ScreenBuffer(HANDLE console, const COORD& size)
 	SetConsoleCursorInfo(buffer, &cursorInfo);
 
 	CONSOLE_SCREEN_BUFFER_INFOEX bufferInfo = {};
-	GetConsoleScreenBufferInfoEx(buffer, &bufferInfo);
-	bufferInfo.dwSize.X = size.X + 1;
-	bufferInfo.dwSize.Y = size.Y + 1;
-	SetConsoleScreenBufferInfoEx(buffer, &bufferInfo);
+	//GetConsoleScreenBufferInfoEx(buffer, &bufferInfo);
+	//bufferInfo.dwSize.X = size.X + 1;
+	//bufferInfo.dwSize.Y = size.Y + 1;
+	//SetConsoleScreenBufferInfoEx(buffer, &bufferInfo);
 }
 
 ScreenBuffer::~ScreenBuffer()

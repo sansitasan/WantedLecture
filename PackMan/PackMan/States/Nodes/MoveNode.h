@@ -14,10 +14,10 @@ private:
 	};
 
 	enum class ERand {
-		First = 33,
-		Second = 33,
-		Third = 33,
-		Fourth = 1
+		First = 60,
+		Second = 19,
+		Third = 19,
+		Fourth = 2
 	};
 
 public:
@@ -26,14 +26,13 @@ public:
 	virtual ~MoveNode();
 	virtual bool CheckCondition() override;
 	virtual void Update(float deltaTime) override;
+	virtual void Clear() override;
 
 private:
 	void SetDirRandomly();
 	void SetMoveDir(int num);
 	int RandomDir(const bool* canMove);
-	float speed = 5;
 	EDir currentDir;
-	Vector2 moveDir;
 	Vector2 nextPos;
 	short dir[4] = { 1, 2, 3, 2 };
 };

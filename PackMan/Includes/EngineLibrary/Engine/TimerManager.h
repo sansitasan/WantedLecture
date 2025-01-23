@@ -2,6 +2,7 @@
 #include <vector>
 #include <new>
 #include <map>
+#include <Memory/MemoryPool.h>
 #include "Timer.h"
 
 class TimerManager {
@@ -21,13 +22,5 @@ public:
 	void Update(float deltaTime);
 
 private:
-
-	void Swap(int i, int j);
-
-	void MemoryAllocate();
-
-private:
-	int count = 0;
-	int capacity = 4;
-	Timer* timerMemory;
+	MemoryPool<Timer> timerMemory;
 };

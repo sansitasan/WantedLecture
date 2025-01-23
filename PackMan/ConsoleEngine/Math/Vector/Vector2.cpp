@@ -76,6 +76,11 @@ Vector2 Vector2::operator/(const Vector2& other)
 	return Vector2(x / other.x, y / other.y);
 }
 
+inline Vector2 Vector2::GetIntVector2()
+{
+	return Vector2((int)x, (int)y);
+}
+
 Vector2& Vector2::operator+=(const Vector2& other)
 {
 	(*this) = (*this) + other;
