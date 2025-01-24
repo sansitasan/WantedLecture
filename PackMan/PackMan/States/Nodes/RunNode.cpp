@@ -33,7 +33,7 @@ void RunNode::Update(float deltaTime)
     Vector2 originPos = blackBoard->entity->GetPosition();
 
     if (nextPos != Vector2::Zero && !originPos.IntCompare(nextPos)) {
-        originPos += blackBoard->dir * 0.016f * blackBoard->speed;
+        originPos += blackBoard->dir * deltaTime * blackBoard->speed;
         blackBoard->scene->ChangeX(originPos);
         blackBoard->entity->SetPosition(originPos);
         return;

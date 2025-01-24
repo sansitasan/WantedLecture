@@ -23,7 +23,7 @@ bool ChaseNode::CheckCondition()
 
 void ChaseNode::Update(float deltaTime)
 {
-    Vector2 newPos = blackBoard->entity->GetPosition() + blackBoard->dir * 0.016f * blackBoard->speed;
+    Vector2 newPos = blackBoard->entity->GetPosition() + blackBoard->dir * deltaTime * blackBoard->speed;
     if (blackBoard->scene->CanMove(newPos)) {
         blackBoard->entity->SetPosition(newPos);
     }

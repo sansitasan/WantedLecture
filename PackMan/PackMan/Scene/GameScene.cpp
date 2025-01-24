@@ -155,7 +155,7 @@ bool GameScene::CanMove(Vector2& position, Entity* entity)
             --foodAndItemCounts;
             break;
 
-        case (char)EEntitys::Item: {
+        case (char)EEntitys::Item: 
             map[(int)position.GetX() + width * (int)position.GetY()] = ' ';
             Item* item = entityMap[(int)position.GetX() + (width - 1) * (int)position.GetY()]->As<Item>();
             if (item) player->GetItem(*item);
@@ -164,7 +164,6 @@ bool GameScene::CanMove(Vector2& position, Entity* entity)
             score += 50;
             --foodAndItemCounts;
             break;
-        }
     }
 
     IsGameClear();

@@ -150,7 +150,8 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Manifest Include="test.manifest" />
+    <ClInclude Include="BinarySearchTree.h" />
+    <ClInclude Include="LectureBST.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
