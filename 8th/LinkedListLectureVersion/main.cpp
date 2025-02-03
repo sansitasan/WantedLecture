@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 
 template<typename T>
@@ -213,6 +214,117 @@ int main() {
 
 	std::cout << "----------list Print-----------\n";
 	ll.Print();
+
+	return 0;
+}
+*/
+
+#include <iostream>
+#include <vector>
+#include <queue>
+#include <unordered_set>
+#include <string>
+
+using namespace std;
+
+vector<vector<int>> visit;
+vector<vector<short>> result;
+vector<int> regionType;
+
+short dx[4] = { 1, -1, 0 ,0 };
+short dy[4] = { 0, 0, 1, -1 };
+
+void BFS(const pair<short, short>& coord, short N, short M, int num) {
+	int count = 0;
+	queue<pair<short, short>> q;
+	q.push(coord);
+	pair<short, short> curCoord;
+
+	while (!q.empty()) {
+		++count;
+		curCoord = q.front();
+		q.pop();
+
+		visit[curCoord.first][curCoord.second] = num;
+		for (short i = 0; i < 4; ++i) {
+			if (curCoord.first + dx[i] < 0 || curCoord.first + dx[i] > N - 1) continue;
+			if (curCoord.second + dy[i] < 0 || curCoord.second + dy[i] > M - 1) continue;
+			if (visit[curCoord.first + dx[i]][curCoord.second + dy[i]]) continue;
+			q.push(make_pair(curCoord.first + dx[i], curCoord.second + dy[i]));
+		}
+	}
+
+	count %= 10;
+	regionType[num] = count;
+}
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cout.tie(NULL);
+	cin.tie(NULL);
+	short N, M, temp;
+	string str;
+
+	cin >> N >> M;
+	queue<pair<short, short>> wall;
+	queue<pair<short, short>> empty;
+	visit.assign(N, vector<int>(M, 0));
+	result.assign(N, vector<short>(M, 0));
+
+	pair<short, short> front;
+
+	for (short i = 0; i < N; ++i) {
+		cin >> str;
+		for (short j = 0; j < M; ++j) {
+			temp = str[j] - '0';
+			if (temp) {
+				wall.push(make_pair(i, j));
+				visit[i][j] = -1;
+				continue;
+			}
+
+			empty.push(make_pair(i, j));
+		}
+	}
+
+	temp = 1;
+
+	while (!empty.empty()) {
+		front = empty.front();
+		empty.pop();
+
+		if (visit[front.first][front.second]) continue;
+		regionType.push_back(0);
+		BFS(front, N, M, regionType.size());
+	}
+	vector<bool> check(regionType.size(), 0);
+	short x, y;
+
+	while (!wall.empty()) {
+		check.clear();
+		temp = 1;
+		front = wall.front();
+		wall.pop();
+		for (int i = 0; i < 4; ++i) {
+			x = front.first + dx[i];
+			y = front.second + dy[i];
+
+			if (x < 0 || x > N - 1) continue;
+			if (y < 0 || y > M - 1) continue;
+			if (check[visit[x][y]]) continue;
+			check[visit[x][y]] = 1;
+			temp += regionType[visit[x][y]];
+		}
+		result[front.first][front.second] = temp % 10;
+		check.clear();
+	}
+
+	for (short i = 0; i < N; ++i) {
+		for (short j = 0; j < M; ++j) {
+			cout << result[i][j];
+		}
+		cout << '\n';
+	}
 
 	return 0;
 }

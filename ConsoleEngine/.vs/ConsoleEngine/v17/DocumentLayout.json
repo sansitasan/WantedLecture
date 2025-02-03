@@ -3,44 +3,207 @@
   "WorkspaceRootPath": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Vector\\Vector2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Vector\\Vector2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Engine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Engine\\Engine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}|SokobanGame\\SokobanGame.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Scene\\GameScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}|SokobanGame\\SokobanGame.vcxproj|solutionrelative:SokobanGame\\Scene\\GameScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Core.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Core.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}|SokobanGame\\SokobanGame.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Scene\\GameScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}|SokobanGame\\SokobanGame.vcxproj|solutionrelative:SokobanGame\\Scene\\GameScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\Entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Entity\\Entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\AppData\\Local\\Temp\\7d203f61-4160-44e9-9786-38479f936acb_Engine.zip.acb\\Engine\\Engine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Vector\\Vector3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Vector\\Vector3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{F4DFC077-C7DE-4C4F-B5D4-33844D734A61}|FlightShootingGame\\FlightShootingGame.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Scene\\TestScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F4DFC077-C7DE-4C4F-B5D4-33844D734A61}|FlightShootingGame\\FlightShootingGame.vcxproj|solutionrelative:FlightShootingGame\\Scene\\TestScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4DFC077-C7DE-4C4F-B5D4-33844D734A61}|FlightShootingGame\\FlightShootingGame.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Entity\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F4DFC077-C7DE-4C4F-B5D4-33844D734A61}|FlightShootingGame\\FlightShootingGame.vcxproj|solutionrelative:FlightShootingGame\\Entity\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4DFC077-C7DE-4C4F-B5D4-33844D734A61}|FlightShootingGame\\FlightShootingGame.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Entity\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F4DFC077-C7DE-4C4F-B5D4-33844D734A61}|FlightShootingGame\\FlightShootingGame.vcxproj|solutionrelative:FlightShootingGame\\Entity\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}|SokobanGame\\SokobanGame.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Entity\\SPlayer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}|SokobanGame\\SokobanGame.vcxproj|solutionrelative:SokobanGame\\Entity\\SPlayer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}|SokobanGame\\SokobanGame.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Game\\SGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}|SokobanGame\\SokobanGame.vcxproj|solutionrelative:SokobanGame\\Game\\SGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\DrawableEntity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Entity\\DrawableEntity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}|SokobanGame\\SokobanGame.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Entity\\SPlayer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}|SokobanGame\\SokobanGame.vcxproj|solutionrelative:SokobanGame\\Entity\\SPlayer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}|SokobanGame\\SokobanGame.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Game\\SGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}|SokobanGame\\SokobanGame.vcxproj|solutionrelative:SokobanGame\\Game\\SGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}|SokobanGame\\SokobanGame.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}|SokobanGame\\SokobanGame.vcxproj|solutionrelative:SokobanGame\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\RTTI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\RTTI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Scene\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Scene\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{F4DFC077-C7DE-4C4F-B5D4-33844D734A61}|FlightShootingGame\\FlightShootingGame.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F4DFC077-C7DE-4C4F-B5D4-33844D734A61}|FlightShootingGame\\FlightShootingGame.vcxproj|solutionrelative:FlightShootingGame\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Scene\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Scene\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Core.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Core.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Scene\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Scene\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Engine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Engine\\Engine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\Entity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Entity\\Entity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}|SokobanGame\\SokobanGame.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Scene\\SMenuScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}|SokobanGame\\SokobanGame.vcxproj|solutionrelative:SokobanGame\\Scene\\SMenuScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Game\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|solutionrelative:TextScrollDemo\\Game\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Scene\\MenuScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|solutionrelative:TextScrollDemo\\Scene\\MenuScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Scene\\MenuScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|solutionrelative:TextScrollDemo\\Scene\\MenuScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\DrawableEntity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Entity\\DrawableEntity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Timer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Engine\\Timer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Math\\Vector\\Vector2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Math\\Vector\\Vector2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Scene\\TestScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|solutionrelative:TextScrollDemo\\Scene\\TestScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Math\\Vector\\Vector2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Math\\Vector\\Vector2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Timer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Engine\\Timer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4DFC077-C7DE-4C4F-B5D4-33844D734A61}|FlightShootingGame\\FlightShootingGame.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Entity\\EnemyBullet.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F4DFC077-C7DE-4C4F-B5D4-33844D734A61}|FlightShootingGame\\FlightShootingGame.vcxproj|solutionrelative:FlightShootingGame\\Entity\\EnemyBullet.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}|SokobanGame\\SokobanGame.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Scene\\SMenuScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}|SokobanGame\\SokobanGame.vcxproj|solutionrelative:SokobanGame\\Scene\\SMenuScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Game\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|solutionrelative:TextScrollDemo\\Game\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}|SokobanGame\\SokobanGame.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Entity\\Target.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}|SokobanGame\\SokobanGame.vcxproj|solutionrelative:SokobanGame\\Entity\\Target.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7469FCA4-D6E4-4907-AAB6-0D1D7F1D1207}|EngineDemo\\EngineDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Scene\\TestScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7469FCA4-D6E4-4907-AAB6-0D1D7F1D1207}|EngineDemo\\EngineDemo.vcxproj|solutionrelative:EngineDemo\\Scene\\TestScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4DFC077-C7DE-4C4F-B5D4-33844D734A61}|FlightShootingGame\\FlightShootingGame.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Entity\\Enemy.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F4DFC077-C7DE-4C4F-B5D4-33844D734A61}|FlightShootingGame\\FlightShootingGame.vcxproj|solutionrelative:FlightShootingGame\\Entity\\Enemy.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4DFC077-C7DE-4C4F-B5D4-33844D734A61}|FlightShootingGame\\FlightShootingGame.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Entity\\Enemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F4DFC077-C7DE-4C4F-B5D4-33844D734A61}|FlightShootingGame\\FlightShootingGame.vcxproj|solutionrelative:FlightShootingGame\\Entity\\Enemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\RTTI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Includes\\EngineLibrary\\RTTI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}|SokobanGame\\SokobanGame.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Entity\\Ground.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}|SokobanGame\\SokobanGame.vcxproj|solutionrelative:SokobanGame\\Entity\\Ground.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}|SokobanGame\\SokobanGame.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Entity\\Wall.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}|SokobanGame\\SokobanGame.vcxproj|solutionrelative:SokobanGame\\Entity\\Wall.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}|SokobanGame\\SokobanGame.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Entity\\Box.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}|SokobanGame\\SokobanGame.vcxproj|solutionrelative:SokobanGame\\Entity\\Box.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7469FCA4-D6E4-4907-AAB6-0D1D7F1D1207}|EngineDemo\\EngineDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Entity\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7469FCA4-D6E4-4907-AAB6-0D1D7F1D1207}|EngineDemo\\EngineDemo.vcxproj|solutionrelative:EngineDemo\\Entity\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}|SokobanGame\\SokobanGame.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Entity\\Ground.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}|SokobanGame\\SokobanGame.vcxproj|solutionrelative:SokobanGame\\Entity\\Ground.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}|SokobanGame\\SokobanGame.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Entity\\Wall.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3E2FC544-61CE-4F86-AEFA-57B08C6E0A0D}|SokobanGame\\SokobanGame.vcxproj|solutionrelative:SokobanGame\\Entity\\Wall.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\Entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Entity\\Entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Container\\List.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Container\\List.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Scene\\TestScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|solutionrelative:TextScrollDemo\\Scene\\TestScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Entity\\TextScrollEntity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|solutionrelative:TextScrollDemo\\Entity\\TextScrollEntity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Entity\\TextScrollEntity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|solutionrelative:TextScrollDemo\\Entity\\TextScrollEntity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7469FCA4-D6E4-4907-AAB6-0D1D7F1D1207}|EngineDemo\\EngineDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Game\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7469FCA4-D6E4-4907-AAB6-0D1D7F1D1207}|EngineDemo\\EngineDemo.vcxproj|solutionrelative:EngineDemo\\Game\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7469FCA4-D6E4-4907-AAB6-0D1D7F1D1207}|EngineDemo\\EngineDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7469FCA4-D6E4-4907-AAB6-0D1D7F1D1207}|EngineDemo\\EngineDemo.vcxproj|solutionrelative:EngineDemo\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7469FCA4-D6E4-4907-AAB6-0D1D7F1D1207}|EngineDemo\\EngineDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Entity\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7469FCA4-D6E4-4907-AAB6-0D1D7F1D1207}|EngineDemo\\EngineDemo.vcxproj|solutionrelative:EngineDemo\\Entity\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\PreCompiledHeader\\PreCompiledHeader.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -51,8 +214,49 @@
       "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\PreCompiledHeader\\PrecompiledHeader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Engine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Engine\\Engine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Entity\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|solutionrelative:TextScrollDemo\\Entity\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Entity\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|solutionrelative:TextScrollDemo\\Entity\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7469FCA4-D6E4-4907-AAB6-0D1D7F1D1207}|EngineDemo\\EngineDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Game\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7469FCA4-D6E4-4907-AAB6-0D1D7F1D1207}|EngineDemo\\EngineDemo.vcxproj|solutionrelative:EngineDemo\\Game\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{42A4AE29-5450-4913-B6FB-93E304799B5D}|TextScrollDemo\\TextScrollDemo.vcxproj|solutionrelative:TextScrollDemo\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xmemory||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\Entity\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Includes\\EngineLibrary\\Entity\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\Entity\\DrawableEntity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Includes\\EngineLibrary\\Entity\\DrawableEntity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\Entity\\Entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Includes\\EngineLibrary\\Entity\\Entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\vector||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\um\\minwinbase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\Core.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Includes\\EngineLibrary\\Core.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\Engine\\Engine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Includes\\EngineLibrary\\Engine\\Engine.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,96 +266,697 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
+              "Title": "GameScene.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Scene\\GameScene.cpp",
+              "RelativeDocumentMoniker": "SokobanGame\\Scene\\GameScene.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Scene\\GameScene.cpp",
+              "RelativeToolTip": "SokobanGame\\Scene\\GameScene.cpp",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAAwFIAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-15T05:25:06.872Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "RTTI.h",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\RTTI.h",
               "RelativeDocumentMoniker": "ConsoleEngine\\RTTI.h",
               "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\RTTI.h",
               "RelativeToolTip": "ConsoleEngine\\RTTI.h",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-06T07:37:35.449Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Vector3.h",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Vector\\Vector3.h",
-              "RelativeDocumentMoniker": "ConsoleEngine\\Vector\\Vector3.h",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Vector\\Vector3.h",
-              "RelativeToolTip": "ConsoleEngine\\Vector\\Vector3.h",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAADAAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-06T07:35:21.876Z"
+              "WhenOpened": "2025-01-10T03:27:36.308Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Core.h",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Core.h",
-              "RelativeDocumentMoniker": "ConsoleEngine\\Core.h",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Core.h",
-              "RelativeToolTip": "ConsoleEngine\\Core.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
+              "Title": "GameScene.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Scene\\GameScene.h",
+              "RelativeDocumentMoniker": "SokobanGame\\Scene\\GameScene.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Scene\\GameScene.h",
+              "RelativeToolTip": "SokobanGame\\Scene\\GameScene.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-06T07:24:42.961Z"
+              "WhenOpened": "2025-01-15T05:25:45.535Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\main.cpp",
-              "RelativeDocumentMoniker": "ConsoleEngine\\main.cpp",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\main.cpp",
-              "RelativeToolTip": "ConsoleEngine\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-02T06:29:40.535Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Vector2.h",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Vector\\Vector2.h",
-              "RelativeDocumentMoniker": "ConsoleEngine\\Vector\\Vector2.h",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Vector\\Vector2.h",
-              "RelativeToolTip": "ConsoleEngine\\Vector\\Vector2.h",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAAAG0AAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-05T23:49:34.024Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Scene.cpp",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Scene\\Scene.cpp",
-              "RelativeDocumentMoniker": "ConsoleEngine\\Scene\\Scene.cpp",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Scene\\Scene.cpp",
-              "RelativeToolTip": "ConsoleEngine\\Scene\\Scene.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-03T03:39:01.355Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 16,
               "Title": "Scene.h",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Scene\\Scene.h",
               "RelativeDocumentMoniker": "ConsoleEngine\\Scene\\Scene.h",
               "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Scene\\Scene.h",
               "RelativeToolTip": "ConsoleEngine\\Scene\\Scene.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-01-03T03:39:00.22Z"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SGame.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Game\\SGame.cpp",
+              "RelativeDocumentMoniker": "SokobanGame\\Game\\SGame.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Game\\SGame.cpp",
+              "RelativeToolTip": "SokobanGame\\Game\\SGame.cpp",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-15T05:25:01.413Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SPlayer.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Entity\\SPlayer.cpp",
+              "RelativeDocumentMoniker": "SokobanGame\\Entity\\SPlayer.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Entity\\SPlayer.cpp",
+              "RelativeToolTip": "SokobanGame\\Entity\\SPlayer.cpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAUAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-15T06:20:14.331Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Engine.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Engine.cpp",
+              "RelativeDocumentMoniker": "ConsoleEngine\\Engine\\Engine.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Engine.cpp",
+              "RelativeToolTip": "ConsoleEngine\\Engine\\Engine.cpp",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAAAAPUAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-02T07:13:05.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DrawableEntity.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\DrawableEntity.cpp",
+              "RelativeDocumentMoniker": "ConsoleEngine\\Entity\\DrawableEntity.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\DrawableEntity.cpp",
+              "RelativeToolTip": "ConsoleEngine\\Entity\\DrawableEntity.cpp",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwB4AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-15T10:05:55.794Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Player.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Entity\\Player.h",
+              "RelativeDocumentMoniker": "FlightShootingGame\\Entity\\Player.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Entity\\Player.h",
+              "RelativeToolTip": "FlightShootingGame\\Entity\\Player.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-20T06:31:10.722Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 10,
+              "Title": "SPlayer.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Entity\\SPlayer.h",
+              "RelativeDocumentMoniker": "SokobanGame\\Entity\\SPlayer.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Entity\\SPlayer.h",
+              "RelativeToolTip": "SokobanGame\\Entity\\SPlayer.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-15T06:19:22.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "SMenuScene.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Scene\\SMenuScene.cpp",
+              "RelativeDocumentMoniker": "SokobanGame\\Scene\\SMenuScene.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Scene\\SMenuScene.cpp",
+              "RelativeToolTip": "SokobanGame\\Scene\\SMenuScene.cpp",
+              "ViewState": "AgIAADMAAAAAAAAAAAAgwEMAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-16T01:31:10.725Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SGame.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Game\\SGame.h",
+              "RelativeDocumentMoniker": "SokobanGame\\Game\\SGame.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Game\\SGame.h",
+              "RelativeToolTip": "SokobanGame\\Game\\SGame.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-15T07:28:31.351Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "Engine.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\Engine\\Engine.h",
+              "RelativeDocumentMoniker": "Includes\\EngineLibrary\\Engine\\Engine.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\Engine\\Engine.h",
+              "RelativeToolTip": "Includes\\EngineLibrary\\Engine\\Engine.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-10T08:18:11.362Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TestScene.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Scene\\TestScene.cpp",
+              "RelativeDocumentMoniker": "FlightShootingGame\\Scene\\TestScene.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Scene\\TestScene.cpp",
+              "RelativeToolTip": "FlightShootingGame\\Scene\\TestScene.cpp",
+              "ViewState": "AgIAADkAAAAAAAAAAAAQwEsAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-15T06:49:22.813Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Engine.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\AppData\\Local\\Temp\\7d203f61-4160-44e9-9786-38479f936acb_Engine.zip.acb\\Engine\\Engine.cpp",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\7d203f61-4160-44e9-9786-38479f936acb_Engine.zip.acb\\Engine\\Engine.cpp",
+              "ToolTip": "C:\\Users\\user\\AppData\\Local\\Temp\\7d203f61-4160-44e9-9786-38479f936acb_Engine.zip.acb\\Engine\\Engine.cpp [\uC77D\uAE30 \uC804\uC6A9]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\7d203f61-4160-44e9-9786-38479f936acb_Engine.zip.acb\\Engine\\Engine.cpp [\uC77D\uAE30 \uC804\uC6A9]",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAwDMAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-20T08:56:55.094Z",
+              "EditorCaption": " [\uC77D\uAE30 \uC804\uC6A9]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Player.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Entity\\Player.cpp",
+              "RelativeDocumentMoniker": "FlightShootingGame\\Entity\\Player.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Entity\\Player.cpp",
+              "RelativeToolTip": "FlightShootingGame\\Entity\\Player.cpp",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACoAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-15T10:21:49.898Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "Core.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\Core.h",
+              "RelativeDocumentMoniker": "Includes\\EngineLibrary\\Core.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\Core.h",
+              "RelativeToolTip": "Includes\\EngineLibrary\\Core.h",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-15T10:14:16.418Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Core.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Core.h",
+              "RelativeDocumentMoniker": "ConsoleEngine\\Core.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Core.h",
+              "RelativeToolTip": "ConsoleEngine\\Core.h",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAowBoAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-14T01:42:56.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Game.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Game\\Game.cpp",
+              "RelativeDocumentMoniker": "TextScrollDemo\\Game\\Game.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Game\\Game.cpp",
+              "RelativeToolTip": "TextScrollDemo\\Game\\Game.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-10T07:52:20.053Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Engine.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Engine.h",
+              "RelativeDocumentMoniker": "ConsoleEngine\\Engine\\Engine.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Engine.h",
+              "RelativeToolTip": "ConsoleEngine\\Engine\\Engine.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-02T07:12:42.343Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\main.cpp",
+              "RelativeDocumentMoniker": "SokobanGame\\main.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\main.cpp",
+              "RelativeToolTip": "SokobanGame\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-15T03:16:04.777Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\main.cpp",
+              "RelativeDocumentMoniker": "FlightShootingGame\\main.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\main.cpp",
+              "RelativeToolTip": "FlightShootingGame\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-16T03:29:58.595Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "MenuScene.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Scene\\MenuScene.cpp",
+              "RelativeDocumentMoniker": "TextScrollDemo\\Scene\\MenuScene.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Scene\\MenuScene.cpp",
+              "RelativeToolTip": "TextScrollDemo\\Scene\\MenuScene.cpp",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-16T01:30:23.301Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "MenuScene.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Scene\\MenuScene.h",
+              "RelativeDocumentMoniker": "TextScrollDemo\\Scene\\MenuScene.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Scene\\MenuScene.h",
+              "RelativeToolTip": "TextScrollDemo\\Scene\\MenuScene.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-16T01:30:24.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "DrawableEntity.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\DrawableEntity.h",
+              "RelativeDocumentMoniker": "ConsoleEngine\\Entity\\DrawableEntity.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\DrawableEntity.h",
+              "RelativeToolTip": "ConsoleEngine\\Entity\\DrawableEntity.h",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAowBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-13T07:39:58.768Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Timer.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Timer.cpp",
+              "RelativeDocumentMoniker": "ConsoleEngine\\Engine\\Timer.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Timer.cpp",
+              "RelativeToolTip": "ConsoleEngine\\Engine\\Timer.cpp",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAsAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-15T10:45:39.352Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Vector2.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Math\\Vector\\Vector2.cpp",
+              "RelativeDocumentMoniker": "ConsoleEngine\\Math\\Vector\\Vector2.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Math\\Vector\\Vector2.cpp",
+              "RelativeToolTip": "ConsoleEngine\\Math\\Vector\\Vector2.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-10T00:50:08.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "TestScene.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Scene\\TestScene.cpp",
+              "RelativeDocumentMoniker": "TextScrollDemo\\Scene\\TestScene.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Scene\\TestScene.cpp",
+              "RelativeToolTip": "TextScrollDemo\\Scene\\TestScene.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-10T07:48:26.001Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Vector2.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Math\\Vector\\Vector2.h",
+              "RelativeDocumentMoniker": "ConsoleEngine\\Math\\Vector\\Vector2.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Math\\Vector\\Vector2.h",
+              "RelativeToolTip": "ConsoleEngine\\Math\\Vector\\Vector2.h",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-15T10:19:48.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Timer.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Timer.h",
+              "RelativeDocumentMoniker": "ConsoleEngine\\Engine\\Timer.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Timer.h",
+              "RelativeToolTip": "ConsoleEngine\\Engine\\Timer.h",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAcAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-15T10:17:56.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "EnemyBullet.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Entity\\EnemyBullet.cpp",
+              "RelativeDocumentMoniker": "FlightShootingGame\\Entity\\EnemyBullet.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Entity\\EnemyBullet.cpp",
+              "RelativeToolTip": "FlightShootingGame\\Entity\\EnemyBullet.cpp",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-15T10:13:15.509Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "SMenuScene.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Scene\\SMenuScene.h",
+              "RelativeDocumentMoniker": "SokobanGame\\Scene\\SMenuScene.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Scene\\SMenuScene.h",
+              "RelativeToolTip": "SokobanGame\\Scene\\SMenuScene.h",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-16T01:28:28.872Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Game.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Game\\Game.h",
+              "RelativeDocumentMoniker": "TextScrollDemo\\Game\\Game.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Game\\Game.h",
+              "RelativeToolTip": "TextScrollDemo\\Game\\Game.h",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-10T08:24:08.691Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Target.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Entity\\Target.cpp",
+              "RelativeDocumentMoniker": "SokobanGame\\Entity\\Target.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Entity\\Target.cpp",
+              "RelativeToolTip": "SokobanGame\\Entity\\Target.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-15T06:18:27.564Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "TestScene.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Scene\\TestScene.cpp",
+              "RelativeDocumentMoniker": "EngineDemo\\Scene\\TestScene.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Scene\\TestScene.cpp",
+              "RelativeToolTip": "EngineDemo\\Scene\\TestScene.cpp",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-13T07:09:13.885Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "vector",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\vector",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\vector",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\vector",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\vector",
+              "ViewState": "AgIAAKEBAAAAAAAAAAAowKwBAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-01-15T10:26:39.127Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Enemy.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Entity\\Enemy.h",
+              "RelativeDocumentMoniker": "FlightShootingGame\\Entity\\Enemy.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Entity\\Enemy.h",
+              "RelativeToolTip": "FlightShootingGame\\Entity\\Enemy.h",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-15T10:21:05.17Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Enemy.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Entity\\Enemy.cpp",
+              "RelativeDocumentMoniker": "FlightShootingGame\\Entity\\Enemy.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Entity\\Enemy.cpp",
+              "RelativeToolTip": "FlightShootingGame\\Entity\\Enemy.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-15T10:21:02.323Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "minwinbase.h",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\um\\minwinbase.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\um\\minwinbase.h",
+              "ToolTip": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\um\\minwinbase.h",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\um\\minwinbase.h",
+              "ViewState": "AgIAAHkBAAAAAAAAAAAQwIQBAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-15T10:16:50.538Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Wall.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Entity\\Wall.h",
+              "RelativeDocumentMoniker": "SokobanGame\\Entity\\Wall.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Entity\\Wall.h",
+              "RelativeToolTip": "SokobanGame\\Entity\\Wall.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-15T05:21:25.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Ground.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Entity\\Ground.h",
+              "RelativeDocumentMoniker": "SokobanGame\\Entity\\Ground.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Entity\\Ground.h",
+              "RelativeToolTip": "SokobanGame\\Entity\\Ground.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-15T06:07:18.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "RTTI.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\RTTI.h",
+              "RelativeDocumentMoniker": "Includes\\EngineLibrary\\RTTI.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\RTTI.h",
+              "RelativeToolTip": "Includes\\EngineLibrary\\RTTI.h",
+              "ViewState": "AgIAACAAAAAAAAAAAAAqwA0AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-15T07:40:21.354Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Box.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Entity\\Box.h",
+              "RelativeDocumentMoniker": "SokobanGame\\Entity\\Box.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Entity\\Box.h",
+              "RelativeToolTip": "SokobanGame\\Entity\\Box.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-15T06:14:12.362Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Player.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Entity\\Player.cpp",
+              "RelativeDocumentMoniker": "EngineDemo\\Entity\\Player.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Entity\\Player.cpp",
+              "RelativeToolTip": "EngineDemo\\Entity\\Player.cpp",
+              "ViewState": "AgIAABAAAAAAAAAAAAAowBsAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-10T08:10:53.602Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Ground.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Entity\\Ground.cpp",
+              "RelativeDocumentMoniker": "SokobanGame\\Entity\\Ground.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Entity\\Ground.cpp",
+              "RelativeToolTip": "SokobanGame\\Entity\\Ground.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-15T06:08:43.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Wall.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Entity\\Wall.cpp",
+              "RelativeDocumentMoniker": "SokobanGame\\Entity\\Wall.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Entity\\Wall.cpp",
+              "RelativeToolTip": "SokobanGame\\Entity\\Wall.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-15T05:23:32.907Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Entity.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\Entity.h",
+              "RelativeDocumentMoniker": "ConsoleEngine\\Entity\\Entity.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\Entity.h",
+              "RelativeToolTip": "ConsoleEngine\\Entity\\Entity.h",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAqwB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-03T03:32:25.322Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "DrawableEntity.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\Entity\\DrawableEntity.h",
+              "RelativeDocumentMoniker": "Includes\\EngineLibrary\\Entity\\DrawableEntity.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\Entity\\DrawableEntity.h",
+              "RelativeToolTip": "Includes\\EngineLibrary\\Entity\\DrawableEntity.h",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAEwBAAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-15T01:41:56.58Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "Entity.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\Entity\\Entity.h",
+              "RelativeDocumentMoniker": "Includes\\EngineLibrary\\Entity\\Entity.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\Entity\\Entity.h",
+              "RelativeToolTip": "Includes\\EngineLibrary\\Entity\\Entity.h",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAEwBoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-10T08:16:51.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "List.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Container\\List.h",
+              "RelativeDocumentMoniker": "ConsoleEngine\\Container\\List.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Container\\List.h",
+              "RelativeToolTip": "ConsoleEngine\\Container\\List.h",
+              "ViewState": "AgIAAA8AAAAAAAAAAAArwBoAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-14T01:37:37.329Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "TestScene.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Scene\\TestScene.h",
+              "RelativeDocumentMoniker": "TextScrollDemo\\Scene\\TestScene.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Scene\\TestScene.h",
+              "RelativeToolTip": "TextScrollDemo\\Scene\\TestScene.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-14T05:22:27.8Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "TextScrollEntity.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Entity\\TextScrollEntity.cpp",
+              "RelativeDocumentMoniker": "TextScrollDemo\\Entity\\TextScrollEntity.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Entity\\TextScrollEntity.cpp",
+              "RelativeToolTip": "TextScrollDemo\\Entity\\TextScrollEntity.cpp",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAAsAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-10T07:37:48.16Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "TextScrollEntity.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Entity\\TextScrollEntity.h",
+              "RelativeDocumentMoniker": "TextScrollDemo\\Entity\\TextScrollEntity.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Entity\\TextScrollEntity.h",
+              "RelativeToolTip": "TextScrollDemo\\Entity\\TextScrollEntity.h",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACIAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-10T07:35:20.164Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\main.cpp",
+              "RelativeDocumentMoniker": "ConsoleEngine\\main.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\main.cpp",
+              "RelativeToolTip": "ConsoleEngine\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-02T06:29:40.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\main.cpp",
+              "RelativeDocumentMoniker": "EngineDemo\\main.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\main.cpp",
+              "RelativeToolTip": "EngineDemo\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-10T08:24:03.158Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Game.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Game\\Game.cpp",
+              "RelativeDocumentMoniker": "EngineDemo\\Game\\Game.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Game\\Game.cpp",
+              "RelativeToolTip": "EngineDemo\\Game\\Game.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-10T08:24:15.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Player.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Entity\\Player.h",
+              "RelativeDocumentMoniker": "EngineDemo\\Entity\\Player.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Entity\\Player.h",
+              "RelativeToolTip": "EngineDemo\\Entity\\Player.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-10T08:11:04.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
               "Title": "PreCompiledHeader.h",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\PreCompiledHeader\\PreCompiledHeader.h",
               "RelativeDocumentMoniker": "ConsoleEngine\\PreCompiledHeader\\PreCompiledHeader.h",
@@ -163,55 +968,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Entity.cpp",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\Entity.cpp",
-              "RelativeDocumentMoniker": "ConsoleEngine\\Entity\\Entity.cpp",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\Entity.cpp",
-              "RelativeToolTip": "ConsoleEngine\\Entity\\Entity.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-03T03:34:58.876Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Entity.h",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\Entity.h",
-              "RelativeDocumentMoniker": "ConsoleEngine\\Entity\\Entity.h",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\Entity.h",
-              "RelativeToolTip": "ConsoleEngine\\Entity\\Entity.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-03T03:32:25.322Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Engine.cpp",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Engine.cpp",
-              "RelativeDocumentMoniker": "ConsoleEngine\\Engine\\Engine.cpp",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Engine.cpp",
-              "RelativeToolTip": "ConsoleEngine\\Engine\\Engine.cpp",
-              "ViewState": "AgIAAAEAAAAAAAAAAADwvxAAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-02T07:13:05.9Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Engine.h",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Engine.h",
-              "RelativeDocumentMoniker": "ConsoleEngine\\Engine\\Engine.h",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Engine.h",
-              "RelativeToolTip": "ConsoleEngine\\Engine\\Engine.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-02T07:12:42.343Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 52,
               "Title": "PrecompiledHeader.cpp",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\PreCompiledHeader\\PrecompiledHeader.cpp",
               "RelativeDocumentMoniker": "ConsoleEngine\\PreCompiledHeader\\PrecompiledHeader.cpp",
@@ -220,6 +977,78 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-03T06:19:36.979Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Player.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Entity\\Player.cpp",
+              "RelativeDocumentMoniker": "TextScrollDemo\\Entity\\Player.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Entity\\Player.cpp",
+              "RelativeToolTip": "TextScrollDemo\\Entity\\Player.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-13T07:22:31.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "Player.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Entity\\Player.h",
+              "RelativeDocumentMoniker": "TextScrollDemo\\Entity\\Player.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Entity\\Player.h",
+              "RelativeToolTip": "TextScrollDemo\\Entity\\Player.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-13T07:12:17.532Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "Player.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\Entity\\Player.h",
+              "RelativeDocumentMoniker": "Includes\\EngineLibrary\\Entity\\Player.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\Includes\\EngineLibrary\\Entity\\Player.h",
+              "RelativeToolTip": "Includes\\EngineLibrary\\Entity\\Player.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-13T07:48:57.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "Game.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Game\\Game.h",
+              "RelativeDocumentMoniker": "EngineDemo\\Game\\Game.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\EngineDemo\\Game\\Game.h",
+              "RelativeToolTip": "EngineDemo\\Game\\Game.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-10T08:24:13.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "xmemory",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xmemory",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xmemory",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xmemory",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\include\\xmemory",
+              "ViewState": "AgIAAIYIAAAAAAAAAAAvwJMIAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-01-10T07:50:08.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\main.cpp",
+              "RelativeDocumentMoniker": "TextScrollDemo\\main.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\main.cpp",
+              "RelativeToolTip": "TextScrollDemo\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-10T07:33:30.091Z"
             }
           ]
         }

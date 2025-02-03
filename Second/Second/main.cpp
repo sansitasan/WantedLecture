@@ -140,5 +140,10 @@ int main() {
 
     std::cout << "Success" << std::endl;
 
+    int* x = new int[4];
+    int** t = new int*[4];
+
+    t[0] = new(x) int(4);
+
     return 0;
 }
