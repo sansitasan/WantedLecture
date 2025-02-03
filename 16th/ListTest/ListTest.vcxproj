@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{3053c7fe-86da-4d0f-a45b-1f095d068fc3}</ProjectGuid>
-    <RootNamespace>Algorithm</RootNamespace>
+    <ProjectGuid>{14b2c0bd-0169-4636-800f-193e381d2e99}</ProjectGuid>
+    <RootNamespace>ListTest</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -92,10 +92,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>PCH.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir)\PreCompiledHeader\;$(ProjectDir)\Solution\</AdditionalIncludeDirectories>
-      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -110,10 +106,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>PCH.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir)\PreCompiledHeader\;$(ProjectDir)\Solution\</AdditionalIncludeDirectories>
-      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -128,10 +120,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>PCH.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir)\PreCompiledHeader\;$(ProjectDir)\Solution\</AdditionalIncludeDirectories>
-      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -146,10 +134,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PrecompiledHeaderFile>PCH.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir)\PreCompiledHeader\;$(ProjectDir)\Solution\</AdditionalIncludeDirectories>
-      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -159,28 +143,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Solution\Sol1806.cpp" />
-    <ClCompile Include="Solution\Sol2448.cpp" />
-    <ClCompile Include="Solution\Sol1991.cpp" />
-    <ClCompile Include="Solution\Sol2206.cpp" />
-    <ClCompile Include="Solution\2473.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="PreCompiledHeader\PCH.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="Solution\Solution.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Solution\Sol1806.h" />
-    <ClInclude Include="Solution\Sol2448.h" />
-    <ClInclude Include="Solution\Sol1991.h" />
-    <ClInclude Include="Solution\Sol2206.h" />
-    <ClInclude Include="Solution\2473.h" />
-    <ClInclude Include="PreCompiledHeader\PCH.h" />
-    <ClInclude Include="Solution\Solution.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
