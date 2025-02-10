@@ -6,8 +6,11 @@
 
    ## ⍩⃝팩맨 제작
    <p align="center">
+     ▼아래 팩맨을 클릭하시면 팩맨 소스코드로 들어갑니다!▼<br/>
+     <a href="https://github.com/sansitasan/WantedLecture/tree/main/PackMan" target="_blank">
      <img src="https://github.com/user-attachments/assets/65fe3afc-3162-4688-9570-559e36f6bad6" width="400px">
-   </p>
+     </p>
+     </a>
 
   > <details>
   >   <summary><h3>🛠 주요 작업</h3></summary>
