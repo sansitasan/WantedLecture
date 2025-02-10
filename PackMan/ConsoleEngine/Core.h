@@ -9,11 +9,11 @@
 #include <vector>
 #include <string>
 
+#define MAXX 119
+#define MAXY 29
 #define KEYDOWN 0
 #define KEY 1
 #define KEYUP 2
-#define MAXX 119
-#define MAXY 29
 
 #define BINDFUNCTION(function, type)\
 std::bind(&type::function, this)

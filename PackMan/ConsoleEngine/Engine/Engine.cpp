@@ -111,6 +111,8 @@ void Engine::Run()
 	deltaTime = 10.f;
 
 	targetOneFrameTime = 1 / targetFrameRate;
+
+	int count = 0;
 	//Loop
 
 	while (deltaTime > .1f) {
@@ -124,7 +126,6 @@ void Engine::Run()
 	}
 
 	while (true) {
-
 		if (quit) break;
 		QueryPerformanceCounter(&time);
 		currentTime = time.QuadPart;
@@ -144,7 +145,7 @@ void Engine::Run()
 		if (mainScene) {
 			mainScene->ProcessAddedAndDestroyedEntity();
 		}
-
+		++count;
 		shouldUpdate = true;
 	}
 }

@@ -25,4 +25,4 @@ protected:
 	ENodeStates nodeStates = ENodeStates::Stop;
 };
 
-inline INode::~INode() {}
+INode::~INode() {}
