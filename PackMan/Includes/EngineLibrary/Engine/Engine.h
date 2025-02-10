@@ -118,6 +118,7 @@ protected:
 	int currentRenderTargetIndex = 0;
 
 private:
+	using Delegate = std::vector<std::vector<std::pair<Entity*, std::function<void()>>>>;
 	Delegate delegateKeyDown;
 	Delegate delegateKey;
 	Delegate delegateKeyUp;

@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Timer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Engine\\Timer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Timer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Engine\\Timer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Engine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Engine\\Engine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -94,10 +102,6 @@
       "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Entity\\DrawableEntity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Timer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Engine\\Timer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Math\\Vector\\Vector2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Math\\Vector\\Vector2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -108,10 +112,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Math\\Vector\\Vector2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Math\\Vector\\Vector2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Timer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F7DD4025-46CA-465D-9AB6-FD32ADD4718B}|ConsoleEngine\\ConsoleEngine.vcxproj|solutionrelative:ConsoleEngine\\Engine\\Timer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F4DFC077-C7DE-4C4F-B5D4-33844D734A61}|FlightShootingGame\\FlightShootingGame.vcxproj|C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Entity\\EnemyBullet.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -270,19 +270,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GameScene.cpp",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Scene\\GameScene.cpp",
-              "RelativeDocumentMoniker": "SokobanGame\\Scene\\GameScene.cpp",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Scene\\GameScene.cpp",
-              "RelativeToolTip": "SokobanGame\\Scene\\GameScene.cpp",
-              "ViewState": "AgIAAJwAAAAAAAAAAAAAwFIAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-15T05:25:06.872Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "RTTI.h",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\RTTI.h",
               "RelativeDocumentMoniker": "ConsoleEngine\\RTTI.h",
@@ -294,7 +282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "GameScene.h",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Scene\\GameScene.h",
               "RelativeDocumentMoniker": "SokobanGame\\Scene\\GameScene.h",
@@ -306,7 +294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "Scene.h",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Scene\\Scene.h",
               "RelativeDocumentMoniker": "ConsoleEngine\\Scene\\Scene.h",
@@ -318,7 +306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "SGame.cpp",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Game\\SGame.cpp",
               "RelativeDocumentMoniker": "SokobanGame\\Game\\SGame.cpp",
@@ -330,7 +318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "SPlayer.cpp",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Entity\\SPlayer.cpp",
               "RelativeDocumentMoniker": "SokobanGame\\Entity\\SPlayer.cpp",
@@ -342,20 +330,58 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Engine.cpp",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Engine.cpp",
               "RelativeDocumentMoniker": "ConsoleEngine\\Engine\\Engine.cpp",
               "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Engine.cpp",
               "RelativeToolTip": "ConsoleEngine\\Engine\\Engine.cpp",
-              "ViewState": "AgIAAJ0AAAAAAAAAAAAAAPUAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAYwPUAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-02T07:13:05.9Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 0,
+              "Title": "Timer.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Timer.cpp",
+              "RelativeDocumentMoniker": "ConsoleEngine\\Engine\\Timer.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Timer.cpp",
+              "RelativeToolTip": "ConsoleEngine\\Engine\\Timer.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-15T10:45:39.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Timer.h",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Timer.h",
+              "RelativeDocumentMoniker": "ConsoleEngine\\Engine\\Timer.h",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Timer.h",
+              "RelativeToolTip": "ConsoleEngine\\Engine\\Timer.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-15T10:17:56.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GameScene.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Scene\\GameScene.cpp",
+              "RelativeDocumentMoniker": "SokobanGame\\Scene\\GameScene.cpp",
+              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Scene\\GameScene.cpp",
+              "RelativeToolTip": "SokobanGame\\Scene\\GameScene.cpp",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAAwFIAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-15T05:25:06.872Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "DrawableEntity.cpp",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\DrawableEntity.cpp",
               "RelativeDocumentMoniker": "ConsoleEngine\\Entity\\DrawableEntity.cpp",
@@ -367,7 +393,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Player.h",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Entity\\Player.h",
               "RelativeDocumentMoniker": "FlightShootingGame\\Entity\\Player.h",
@@ -379,7 +405,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "SPlayer.h",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Entity\\SPlayer.h",
               "RelativeDocumentMoniker": "SokobanGame\\Entity\\SPlayer.h",
@@ -391,7 +417,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "SMenuScene.cpp",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Scene\\SMenuScene.cpp",
               "RelativeDocumentMoniker": "SokobanGame\\Scene\\SMenuScene.cpp",
@@ -403,7 +429,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "SGame.h",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\Game\\SGame.h",
               "RelativeDocumentMoniker": "SokobanGame\\Game\\SGame.h",
@@ -427,7 +453,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "TestScene.cpp",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Scene\\TestScene.cpp",
               "RelativeDocumentMoniker": "FlightShootingGame\\Scene\\TestScene.cpp",
@@ -439,7 +465,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Engine.cpp",
               "DocumentMoniker": "C:\\Users\\user\\AppData\\Local\\Temp\\7d203f61-4160-44e9-9786-38479f936acb_Engine.zip.acb\\Engine\\Engine.cpp",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\7d203f61-4160-44e9-9786-38479f936acb_Engine.zip.acb\\Engine\\Engine.cpp",
@@ -452,7 +478,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Player.cpp",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\Entity\\Player.cpp",
               "RelativeDocumentMoniker": "FlightShootingGame\\Entity\\Player.cpp",
@@ -476,7 +502,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "Core.h",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Core.h",
               "RelativeDocumentMoniker": "ConsoleEngine\\Core.h",
@@ -488,7 +514,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "Game.cpp",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Game\\Game.cpp",
               "RelativeDocumentMoniker": "TextScrollDemo\\Game\\Game.cpp",
@@ -500,7 +526,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "Engine.h",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Engine.h",
               "RelativeDocumentMoniker": "ConsoleEngine\\Engine\\Engine.h",
@@ -512,7 +538,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\SokobanGame\\main.cpp",
               "RelativeDocumentMoniker": "SokobanGame\\main.cpp",
@@ -524,7 +550,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\FlightShootingGame\\main.cpp",
               "RelativeDocumentMoniker": "FlightShootingGame\\main.cpp",
@@ -536,7 +562,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "MenuScene.cpp",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Scene\\MenuScene.cpp",
               "RelativeDocumentMoniker": "TextScrollDemo\\Scene\\MenuScene.cpp",
@@ -548,7 +574,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "MenuScene.h",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Scene\\MenuScene.h",
               "RelativeDocumentMoniker": "TextScrollDemo\\Scene\\MenuScene.h",
@@ -560,7 +586,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "DrawableEntity.h",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Entity\\DrawableEntity.h",
               "RelativeDocumentMoniker": "ConsoleEngine\\Entity\\DrawableEntity.h",
@@ -572,19 +598,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Timer.cpp",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Timer.cpp",
-              "RelativeDocumentMoniker": "ConsoleEngine\\Engine\\Timer.cpp",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Timer.cpp",
-              "RelativeToolTip": "ConsoleEngine\\Engine\\Timer.cpp",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAAAsAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-15T10:45:39.352Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "Vector2.cpp",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Math\\Vector\\Vector2.cpp",
               "RelativeDocumentMoniker": "ConsoleEngine\\Math\\Vector\\Vector2.cpp",
@@ -596,7 +610,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "TestScene.cpp",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\TextScrollDemo\\Scene\\TestScene.cpp",
               "RelativeDocumentMoniker": "TextScrollDemo\\Scene\\TestScene.cpp",
@@ -608,7 +622,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "Vector2.h",
               "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Math\\Vector\\Vector2.h",
               "RelativeDocumentMoniker": "ConsoleEngine\\Math\\Vector\\Vector2.h",
@@ -617,18 +631,6 @@
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-01-15T10:19:48.228Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Timer.h",
-              "DocumentMoniker": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Timer.h",
-              "RelativeDocumentMoniker": "ConsoleEngine\\Engine\\Timer.h",
-              "ToolTip": "C:\\Users\\user\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\San\\Lecture\\WantedLecture\\ConsoleEngine\\ConsoleEngine\\Engine\\Timer.h",
-              "RelativeToolTip": "ConsoleEngine\\Engine\\Timer.h",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAcAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-15T10:17:56.706Z"
             },
             {
               "$type": "Document",
