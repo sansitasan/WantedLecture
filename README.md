@@ -4,7 +4,7 @@
 <details>
   <summary><h2 id="console"><b>1개월차 콘솔 프로그래밍</b></h2></summary>
 
-   ## 팩맨 제작
+   ## ⍩⃝팩맨 제작
    <p align="center">
      <img src="https://github.com/user-attachments/assets/65fe3afc-3162-4688-9570-559e36f6bad6" width="400px">
    </p>
