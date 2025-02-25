@@ -2,6 +2,9 @@
 #include "../Type.h"
 #include <d3d11.h>
 #include <dxgi.h>
+#include <memory>
+
+#include "Core.h"
 
 //렌더링 파이프라인
 //정점 쉐이더에서는 변환을 한다
@@ -11,6 +14,8 @@ namespace SanDX {
 	//그래픽카드에서 처리하는 일을 관리
 	//RHI - Render Hardware Interface
 	class Renderer {
+		friend class Engine;
+
 	public:
 		Renderer(uint32 width, uint32 helgiht, HWND window);
 		~Renderer();
@@ -19,17 +24,7 @@ namespace SanDX {
 		void Draw();
 
 	private:
-		// @Temp
-		//정점 버퍼 (정점 정보 전달)
-		ID3D11Buffer* vertexBuffer = nullptr;
-		//인덱스 버퍼 (정점 조립 시 정점 순서 전달)
-		ID3D11Buffer* indexBuffer = nullptr;
-
-		//입력 레이아웃
-		ID3D11InputLayout* inputLayout = nullptr;
-
-		ID3D11VertexShader* vertexShader = nullptr;
-		ID3D11VertexShader* fragmentShader = nullptr;
+		std::unique_ptr<class TriangleMesh> mesh;
 
 	private:
 		//장치류

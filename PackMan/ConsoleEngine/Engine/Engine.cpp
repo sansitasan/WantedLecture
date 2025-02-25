@@ -26,53 +26,68 @@ BOOL WINAPI MessageProcessor(DWORD message)
 	}
 }
 
-Engine::Engine() 
+Engine::Engine(int screenSizeX, int screenSizeY, int fontSizeX, int fontSizeY)
 	: quit(false), mainScene(nullptr), targetFrameRate(60), 
-	targetOneFrameTime(1 / 60), screenSize(35, 40)
+	targetOneFrameTime(1 / 60), deltaTime(0)
 {
+	if (!instance) {
+		instance = this;
+	}
+
+	memset(renderTargets, 0, sizeof(ScreenBuffer*) * 2);
+
 	timerManager = new TimerManager();
 	srand((unsigned int)time(nullptr));
-	int sizeX = (int)screenSize.GetX();
-	int sizeY = (int)screenSize.GetY();
 
-	SetConsoleSizeAndLock(sizeX, sizeY);
+	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+	CONSOLE_FONT_INFOEX cfi;
+	cfi.cbSize = sizeof(cfi);
+	if (!GetCurrentConsoleFontEx(hConsole, FALSE, &cfi)) {
+		std::cerr << "Failed to get current console font info." << std::endl;
+		return;
+	}
+	cfi.nFont = 0;
+	cfi.dwFontSize.X = fontSizeX;
+	cfi.dwFontSize.Y = fontSizeY;
+	cfi.FontFamily = FF_DONTCARE;
+	cfi.FontWeight = FW_NORMAL;
+	if (!SetCurrentConsoleFontEx(hConsole, FALSE, &cfi)) {
+		std::cerr << "Failed to set console font." << std::endl;
+		return;
+	}
+
+
+	COORD maxWindowSize;// = GetLargestConsoleWindowSize(hConsole);
+	maxWindowSize.X = screenSizeX;
+	maxWindowSize.Y = screenSizeY;
+
+	screenSize.SetX(--maxWindowSize.X);
+	screenSize.SetY(--maxWindowSize.Y);
+	SetWindowPos(GetConsoleWindow(), 0, 0, 0, maxWindowSize.X, maxWindowSize.Y, 0);
 
 	SetConsoleOutputCP(CP_UTF8);
 	SetConsoleCP(CP_UTF8);
 	delegateKeyDown = Delegate(KEYCOUNT, std::vector<pair<Entity*, std::function<void()>>>());
 	delegateKey = Delegate(KEYCOUNT, std::vector<pair<Entity*, std::function<void()>>>());
 	delegateKeyUp = Delegate(KEYCOUNT, std::vector<pair<Entity*, std::function<void()>>>());
-	instance = this;
 
-	imageBuffer = new CHAR_INFO[(sizeX + 1) * sizeY + 1];
+	imageBuffer = new CHAR_INFO[(screenSize.GetX() + 1) * screenSize.GetY() + 1];
 
 	ClearImageBuffer();
-	
-	CONSOLE_FONT_INFOEX cfi;
-	cfi.cbSize = sizeof(cfi);
-	if (!GetCurrentConsoleFontEx(GetStdHandle(STD_OUTPUT_HANDLE), FALSE, &cfi)) {
-		std::cerr << "Failed to get current console font info." << std::endl;
-		return;
-	}
-	cfi.nFont = 0;
-	cfi.dwFontSize.X = 18;
-	cfi.dwFontSize.Y = 18;
-	cfi.FontFamily = FF_DONTCARE;
-	cfi.FontWeight = FW_NORMAL;
-	wcscpy_s(cfi.FaceName, L"Consolas");
-	if (!SetCurrentConsoleFontEx(GetStdHandle(STD_OUTPUT_HANDLE), FALSE, &cfi)) {
-		std::cerr << "Failed to set console font." << std::endl;
-		return;
-	}
 
-	COORD size = { (short)sizeX, (short)sizeY };
-	renderTargets[0] = new ScreenBuffer(GetStdHandle(STD_OUTPUT_HANDLE), size);
-	renderTargets[1] = new ScreenBuffer(size, cfi);
+	renderTargets[0] = new ScreenBuffer(hConsole, maxWindowSize);
+	renderTargets[1] = new ScreenBuffer(maxWindowSize, cfi);
+
 	// 스왑 버퍼.
 	Present();
 
 	// 콘솔 창 이벤트 콜백 함수 등록.
 	SetConsoleCtrlHandler(MessageProcessor, true);
+
+	// 마우스/윈도우 이벤트 활성화.
+	HANDLE inputHandle = GetStdHandle(STD_INPUT_HANDLE);
+	int flag = ENABLE_WINDOW_INPUT | ENABLE_MOUSE_INPUT | ENABLE_PROCESSED_INPUT | ENABLE_EXTENDED_FLAGS;
+	SetConsoleMode(inputHandle, flag);
 }
 
 Engine::~Engine()
@@ -94,7 +109,7 @@ Engine::~Engine()
 	delegateKey.clear();
 }
 
-Engine& Engine::Get()
+Engine& Engine::Get(int screenSizeX, int screenSizeY, int fontSizeX, int fontSizeY)
 {
 	return *instance;
 }
@@ -112,7 +127,6 @@ void Engine::Run()
 
 	targetOneFrameTime = 1 / targetFrameRate;
 
-	int count = 0;
 	//Loop
 
 	while (deltaTime > .1f) {
@@ -145,7 +159,6 @@ void Engine::Run()
 		if (mainScene) {
 			mainScene->ProcessAddedAndDestroyedEntity();
 		}
-		++count;
 		shouldUpdate = true;
 	}
 }
@@ -270,10 +283,9 @@ void Engine::UnSubscribeGetKeyUp(std::function<void()> delegate, int key)
 	UnSubscribe(delegateKeyUp, delegate, key);
 }
 
-void Engine::SetConsoleSizeAndLock(int width, int height)
+void Engine::SetConsoleSizeAndLock(HANDLE hConsole, int width, int height)
 {
-	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-	HWND hWndConsole = GetConsoleWindow();
+	//HWND hWndConsole = GetConsoleWindow();
 
 	COORD bufferSize = { static_cast<SHORT>(width), static_cast<SHORT>(height) };
 	SetConsoleScreenBufferSize(hConsole, bufferSize);
@@ -320,10 +332,62 @@ void Engine::DelegateInvoke(Delegate& delegateVector, int key)
 
 void Engine::ProcessInput()
 {
-	for (int i = 0; i < KEYCOUNT; ++i) {
-		keyState[i].wasKeyDown = keyState[i].isKeyDown;
-		keyState[i].isKeyDown = (GetAsyncKeyState(i) & 0x8000) ? true : false;
+	INPUT_RECORD record;
+	DWORD events;
+	COORD previousWindowSize(screenSize.GetX(),screenSize.GetY());
+	if (ReadConsoleInput(GetStdHandle(STD_INPUT_HANDLE), &record, 1, &events))
+	{
+		switch (record.EventType)
+		{
+		case WINDOW_BUFFER_SIZE_EVENT:
+		{
+			COORD current(record.Event.WindowBufferSizeEvent.dwSize.X, record.Event.WindowBufferSizeEvent.dwSize.Y);
+			if (current.X != previousWindowSize.X || current.Y != previousWindowSize.Y)
+			{
+				HWND hConsole = GetConsoleWindow();
+
+				COORD bufferSize = { static_cast<SHORT>(previousWindowSize.X), static_cast<SHORT>(previousWindowSize.Y) };
+				SetConsoleScreenBufferSize(hConsole, bufferSize);
+
+				SMALL_RECT windowSize = { 0, 0, static_cast<SHORT>(previousWindowSize.X - 1), static_cast<SHORT>(previousWindowSize.Y - 1) };
+				SetConsoleWindowInfo(hConsole, TRUE, &windowSize);
+				//char buffer[100];
+				//sprintf_s(buffer, 100, "(%d,%d)",
+				//	//record.Event.WindowBufferSizeEvent.dwSize.X, record.Event.WindowBufferSizeEvent.dwSize.Y
+				//);
+
+				//MessageBoxA(nullptr, buffer, "Test", MB_OK);
+
+			}
+			
+		} break;
+
+		case KEY_EVENT:
+			if (record.Event.KeyEvent.bKeyDown)
+			{
+				keyState[record.Event.KeyEvent.wVirtualKeyCode].isKeyDown = true;
+			}
+			else
+			{
+				keyState[record.Event.KeyEvent.wVirtualKeyCode].isKeyDown = false;
+			}
+			break;
+
+		case MOUSE_EVENT:
+			if (record.Event.MouseEvent.dwButtonState == 1)
+			{
+				mousePosition.SetX(record.Event.MouseEvent.dwMousePosition.X);
+				mousePosition.SetY(record.Event.MouseEvent.dwMousePosition.Y);
+			}
+
+			break;
+		}
 	}
+
+	//for (int i = 0; i < KEYCOUNT; ++i) {
+	//	keyState[i].wasKeyDown = keyState[i].isKeyDown;
+	//	keyState[i].isKeyDown = (GetAsyncKeyState(i) & 0x8000) ? true : false;
+	//}
 }
 
 void Engine::Update(float deltaTime)

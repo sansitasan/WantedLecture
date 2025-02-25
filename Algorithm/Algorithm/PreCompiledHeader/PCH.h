@@ -8,5 +8,8 @@
 #include <deque>
 #include <algorithm>
 #include <cmath>
+#include <map>
+#include <set>
+#include <bitset>
 
 using namespace std;

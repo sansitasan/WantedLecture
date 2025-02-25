@@ -14,7 +14,7 @@ public:
 public:
 	INode() = default;
 	INode(BlackBoard* blackBoard) : blackBoard(blackBoard) {};
-	virtual ~INode() = 0;
+	virtual ~INode() {};
 	virtual bool CheckCondition() = 0;
 	virtual void Update(float deltaTime) = 0;
 	ENodeStates GetNodeState() const { return nodeStates; }
@@ -24,5 +24,3 @@ protected:
 	BlackBoard* blackBoard = nullptr;
 	ENodeStates nodeStates = ENodeStates::Stop;
 };
-
-INode::~INode() {}

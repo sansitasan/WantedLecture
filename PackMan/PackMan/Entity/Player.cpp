@@ -76,6 +76,6 @@ void Player::SetStateOrigin()
 {
 	--itemCount;
 	if (itemCount) return;
-	currentSpeed = originSpeed;
+	currentSpeed = static_cast<float>(originSpeed);
 	currentState = EState::Normal;
 }

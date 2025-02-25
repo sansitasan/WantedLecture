@@ -93,7 +93,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>ENGINE_BUILD_DLL;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)PreCompiledHeader\;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\ConsoleEngine\;$(SolutionDir)\ConsoleEngine\PreCompiledHeader\</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>PreCompiledHeader.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpp20</LanguageStandard>
@@ -108,7 +108,7 @@
       <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
     </Link>
     <PreBuildEvent>
-      <Command>xcopy "$(ProjectDir)\*.h" "$(SolutionDir)\Includes\EngineLibrary\" /e /y</Command>
+      <Command>xcopy "$(SolutionDir)\ConsoleEngine\*.h" "$(SolutionDir)\Includes\EngineLibrary\" /e /y</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>xcopy "$(OutDir)\*.dll" "$(SolutionDir)\Lib\" /e /y
@@ -123,7 +123,7 @@ xcopy "$(OutDir)\*.lib" "$(SolutionDir)\Lib\" /e /y</Command>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>ENGINE_BUILD_DLL;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)PreCompiledHeader\;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\ConsoleEngine\;$(SolutionDir)\ConsoleEngine\PreCompiledHeader\</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>PreCompiledHeader.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpp20</LanguageStandard>
@@ -140,7 +140,7 @@ xcopy "$(OutDir)\*.lib" "$(SolutionDir)\Lib\" /e /y</Command>
       <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
     </Link>
     <PreBuildEvent>
-      <Command>xcopy "$(ProjectDir)\*.h" "$(SolutionDir)\Includes\EngineLibrary\" /e /y</Command>
+      <Command>xcopy "$(SolutionDir)\ConsoleEngine\*.h" "$(SolutionDir)\Includes\EngineLibrary\" /e /y</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>xcopy "$(OutDir)\*.dll" "$(SolutionDir)\Lib\" /e /y
@@ -153,7 +153,7 @@ xcopy "$(OutDir)\*.lib" "$(SolutionDir)\Lib\" /e /y</Command>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>ENGINE_BUILD_DLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)PreCompiledHeader\;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\ConsoleEngine\;$(SolutionDir)\ConsoleEngine\PreCompiledHeader\</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>PreCompiledHeader.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpp20</LanguageStandard>
@@ -168,7 +168,7 @@ xcopy "$(OutDir)\*.lib" "$(SolutionDir)\Lib\" /e /y</Command>
       <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
     </Link>
     <PreBuildEvent>
-      <Command>xcopy "$(ProjectDir)\*.h" "$(SolutionDir)\Includes\EngineLibrary\" /e /y</Command>
+      <Command>xcopy "$(SolutionDir)\ConsoleEngine\*.h" "$(SolutionDir)\Includes\EngineLibrary\" /e /y</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>xcopy "$(OutDir)\*.dll" "$(SolutionDir)\Lib\" /e /y
@@ -183,7 +183,7 @@ xcopy "$(OutDir)\*.lib" "$(SolutionDir)\Lib\" /e /y</Command>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>ENGINE_BUILD_DLL;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)PreCompiledHeader\;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\ConsoleEngine\;$(SolutionDir)\ConsoleEngine\PreCompiledHeader\</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>PreCompiledHeader.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpp20</LanguageStandard>
@@ -200,7 +200,7 @@ xcopy "$(OutDir)\*.lib" "$(SolutionDir)\Lib\" /e /y</Command>
       <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
     </Link>
     <PreBuildEvent>
-      <Command>xcopy "$(ProjectDir)\*.h" "$(SolutionDir)\Includes\EngineLibrary\" /e /y</Command>
+      <Command>xcopy "$(SolutionDir)\ConsoleEngine\*.h" "$(SolutionDir)\Includes\EngineLibrary\" /e /y</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>xcopy "$(OutDir)\*.dll" "$(SolutionDir)\Lib\" /e /y

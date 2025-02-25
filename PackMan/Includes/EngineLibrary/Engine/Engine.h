@@ -5,6 +5,7 @@
 #include "Math/Vector/Vector2.h"
 
 #define KEYCOUNT 255
+#pragma warning( disable : 4251 )
 
 class TimerManager;
 
@@ -29,10 +30,9 @@ class ENGINE_API Engine
 {
 	using Delegate = std::vector<std::vector<std::pair<Entity*, std::function<void()>>>>;
 public:
-	Engine();
 	virtual ~Engine();
 
-	static Engine& Get();
+	static Engine& Get(int screenSizeX = 160, int screenSizeY = 90, int fontSizeX = 1, int fontSizeY = 1);
 
 	void Run();
 
@@ -77,7 +77,8 @@ public:
 #pragma endregion
 
 protected:
-	void SetConsoleSizeAndLock(int width, int height);
+	Engine(int screenSizeX, int screenSizeY, int fontSizeX, int fontSizeY);
+	void SetConsoleSizeAndLock(HANDLE handle, int width, int height);
 	void UnSubscribe(Delegate& delegateVector, std::function<void()> delegate, int key);
 	void DelegateInvoke(Delegate& delegateVector, int key);
 	void ProcessInput();
@@ -89,6 +90,7 @@ protected:
 	void ClearImageBuffer();
 
 protected:
+	Engine() = delete;
 	//타겟 프레임 변수
 	float targetFrameRate;
 	float targetOneFrameTime;
@@ -97,12 +99,13 @@ protected:
 
 	KeyState keyState[KEYCOUNT];
 
-	static Engine* instance;
-
 	//Scene이 여러개 올라와있을 수 있다
 	Scene* mainScene;
 
 	Vector2 screenSize;
+
+	// 마우스 좌표 위치.
+	Vector2 mousePosition;
 
 	char* emptyStringBuffer = nullptr;
 
@@ -118,7 +121,7 @@ protected:
 	int currentRenderTargetIndex = 0;
 
 private:
-	using Delegate = std::vector<std::vector<std::pair<Entity*, std::function<void()>>>>;
+	static Engine* instance;
 	Delegate delegateKeyDown;
 	Delegate delegateKey;
 	Delegate delegateKeyUp;

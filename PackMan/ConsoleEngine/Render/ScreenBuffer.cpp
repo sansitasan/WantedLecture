@@ -1,13 +1,18 @@
 #include "PreCompiledHeader.h"
 #include "ScreenBuffer.h"
 
-ScreenBuffer::ScreenBuffer(const COORD& size, CONSOLE_FONT_INFOEX& fontInfo)
+ScreenBuffer::ScreenBuffer(const COORD& size, CONSOLE_FONT_INFOEX& cfi)
 	: size(size)
 {
-	buffer = CreateConsoleScreenBuffer(GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, CONSOLE_TEXTMODE_BUFFER, NULL);
+	buffer = CreateConsoleScreenBuffer(GENERIC_WRITE | GENERIC_READ, FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, CONSOLE_TEXTMODE_BUFFER, NULL);
 	if (buffer == INVALID_HANDLE_VALUE)
 	{
 		__debugbreak();
+	}
+
+	if (!SetCurrentConsoleFontEx(buffer, FALSE, &cfi)) {
+		std::cerr << "Failed to set console font." << std::endl;
+		return;
 	}
 
 	SetConsoleScreenBufferSize(buffer, size);
@@ -16,20 +21,20 @@ ScreenBuffer::ScreenBuffer(const COORD& size, CONSOLE_FONT_INFOEX& fontInfo)
 
 	CONSOLE_CURSOR_INFO info{ 1, false };
 	SetConsoleCursorInfo(buffer, &info);
-	SetCurrentConsoleFontEx(buffer, FALSE, &fontInfo);
+
+	SetConsoleMode(buffer, ENABLE_MOUSE_INPUT | ENABLE_PROCESSED_INPUT | ENABLE_WINDOW_INPUT);
 }
 
 ScreenBuffer::ScreenBuffer(HANDLE console, const COORD& size)
 	: size(size), buffer(console)
 {
-	CONSOLE_CURSOR_INFO cursorInfo{ 1, false };
-	SetConsoleCursorInfo(buffer, &cursorInfo);
+	SetConsoleScreenBufferSize(buffer, size);
+	SMALL_RECT rect = { 0, 0, size.X - 1, size.Y - 1 };
+	SetConsoleWindowInfo(buffer, true, &rect);
 
-	CONSOLE_SCREEN_BUFFER_INFOEX bufferInfo = {};
-	//GetConsoleScreenBufferInfoEx(buffer, &bufferInfo);
-	//bufferInfo.dwSize.X = size.X + 1;
-	//bufferInfo.dwSize.Y = size.Y + 1;
-	//SetConsoleScreenBufferInfoEx(buffer, &bufferInfo);
+	CONSOLE_CURSOR_INFO info{ 1, false };
+	SetConsoleCursorInfo(buffer, &info);
+	SetConsoleMode(console, ENABLE_MOUSE_INPUT | ENABLE_PROCESSED_INPUT | ENABLE_WINDOW_INPUT);
 }
 
 ScreenBuffer::~ScreenBuffer()
