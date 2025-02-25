@@ -11,9 +11,9 @@ using namespace std;
 
 int main() {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
-	Engine* engine = new Engine();
-	engine->Run();
-	delete engine;
+	//Engine& engine = Engine::Get(35, 40, 16, 16);
+	//engine.Run();
+	//delete &engine;
 	_CrtDumpMemoryLeaks();
 
 	return 0;

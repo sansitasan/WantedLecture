@@ -67,7 +67,9 @@ public:
 	friend std::ostream& operator<<(std::ostream& os, const Vector2& vector);
 
 	inline float GetX() const { return x; }
+	void SetX(int x) { this->x = x; }
 	inline float GetY() const { return y; }
+	void SetY(int y) { this->y = y; }
 
 private:
 	float x;

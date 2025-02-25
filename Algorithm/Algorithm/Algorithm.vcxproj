@@ -159,7 +159,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Solution\Sol10775.cpp" />
+    <ClCompile Include="Solution\Sol1644.cpp" />
+    <ClCompile Include="Solution\Sol16724.cpp" />
+    <ClCompile Include="Solution\Sol1766.cpp" />
     <ClCompile Include="Solution\Sol1806.cpp" />
+    <ClCompile Include="Solution\Sol2143.cpp" />
+    <ClCompile Include="Solution\Sol2252.cpp" />
     <ClCompile Include="Solution\Sol2448.cpp" />
     <ClCompile Include="Solution\Sol1991.cpp" />
     <ClCompile Include="Solution\Sol2206.cpp" />
@@ -171,15 +177,25 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Solution\Sol9466.cpp" />
+    <ClCompile Include="Solution\Sol9527.cpp" />
     <ClCompile Include="Solution\Solution.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Solution\Sol1644.h" />
+    <ClInclude Include="Solution\Sol1766.h" />
+    <ClInclude Include="Solution\Sol2143.h" />
+    <ClInclude Include="Solution\Sol16724.h" />
+    <ClInclude Include="Solution\Sol10775.h" />
     <ClInclude Include="Solution\Sol1806.h" />
+    <ClInclude Include="Solution\Sol2252.h" />
     <ClInclude Include="Solution\Sol2448.h" />
     <ClInclude Include="Solution\Sol1991.h" />
     <ClInclude Include="Solution\Sol2206.h" />
     <ClInclude Include="Solution\2473.h" />
     <ClInclude Include="PreCompiledHeader\PCH.h" />
+    <ClInclude Include="Solution\Sol9466.h" />
+    <ClInclude Include="Solution\Sol9527.h" />
     <ClInclude Include="Solution\Solution.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -40,7 +40,7 @@ GameScene::GameScene(const DataManager& dataManager)
         ++x;
     }
 
-    foodAndItemCounts = counts[(int)EEntitys::Food].size() + counts[(int)EEntitys::Item].size();
+    foodAndItemCounts = (int)(counts[(int)EEntitys::Food].size() + counts[(int)EEntitys::Item].size());
     enemies = std::vector<Enemy*>(counts[(int)EEntitys::Enemy].size());
 
     for (int i = 1; i < 6; ++i) {
@@ -101,7 +101,7 @@ void GameScene::Draw()
 {
     if (isClear) {
         Engine::Get().Draw(Vector2(width >> 1, height >> 1), scoreDisplay.c_str(), Color::BrightWhite);
-        Engine::Get().Draw(Vector2((width >> 1) + scoreDisplay.length(), height >> 1), std::to_string(score).c_str(), Color::BrightWhite);
+        Engine::Get().Draw(Vector2((width >> 1) + (int)scoreDisplay.length(), height >> 1), std::to_string(score).c_str(), Color::BrightWhite);
         return;
     }
 
@@ -113,10 +113,10 @@ void GameScene::Draw()
     }
 
     Engine::Get().Draw(Vector2(0, 0), scoreDisplay.c_str(), Color::BrightWhite);
-    Engine::Get().Draw(Vector2(scoreDisplay.length(), 0), std::to_string(score).c_str(), Color::BrightWhite);
-    Engine::Get().Draw(Vector2(scoreDisplay.length() + 5, 0), "FPS: ", Color::BrightWhite);
+    Engine::Get().Draw(Vector2((int)scoreDisplay.length(), 0), std::to_string(score).c_str(), Color::BrightWhite);
+    Engine::Get().Draw(Vector2((int)scoreDisplay.length() + 5, 0), "FPS: ", Color::BrightWhite);
     float t = Engine::Get().GetFPS();
-    Engine::Get().Draw(Vector2(scoreDisplay.length() + 10, 0), std::to_string(t).c_str(), Color::BrightWhite);
+    Engine::Get().Draw(Vector2((int)scoreDisplay.length() + 10, 0), std::to_string(t).c_str(), Color::BrightWhite);
 }
 
 void GameScene::ChangeX(Vector2& position) {

@@ -1,13 +1,13 @@
 #include "Renderer.h"
 #include <vector>
 #include <d3dcompiler.h>
+#include "Math/Vector3.h"
+#include "QuadMesh.h"
+#include "TriangleMesh.h"
 
-#define RESULT(result, message)\
-if (FAILED(result))\
-{\
-	MessageBoxA(nullptr, message, "Error", MB_OK);\
-	DebugBreak();\
-}\
+//버텍스는 정점을 받고
+//프래그먼트는 픽셀을 받는다
+//따라서 같은 결과라면 정점에서 처리하는 편이 효율적일 것이다
 
 namespace SanDX {
 	Renderer::Renderer(uint32 width, uint32 height, HWND window)
@@ -66,11 +66,14 @@ namespace SanDX {
 		//할 일이 좀 적음
 		//첫 파라미터가 디바이스 정보를 주는 파라미터
 		//두번째는 하드웨어 타입
+		//세번재는 소프트웨어 래스터라이저가 있다면 포인터를 넘겨주면 된다. 자신있으면 넣자
 		//네번째는 장치 생성에 필요한 옵션값
 		//5는 배열값, 6은 배열 개수
-		//D3D11_SDK_VERSION는 고정, dx skd가 window와 통합되면서 고정됨
+		//배열에 있는 값은 DX버젼, 높은 버젼을 위에 둬서 사용할 수 있는 버젼 중 가장 높은 것을 가져오는 것이 바람직할 듯
+		//D3D11_SDK_VERSION는 고정, dx sdk가 window와 통합되면서 고정됨
 		//D3D_featureLevel이 nullptr인 이유는 채택된 버젼을 알려주는 것
 		//지금은 필요하지 않다. 버젼에 따라 지원하지 않는 버젼이 있을 수 있으니 ifdef로 나누는 용도
+		//이 정보를 토대로 바인딩
 		HRESULT result = D3D11CreateDeviceAndSwapChain(
 			nullptr,
 			D3D_DRIVER_TYPE_HARDWARE,
@@ -95,6 +98,9 @@ namespace SanDX {
 		//DX12 or VULKAN을 가서 스레드 동기화를 해야 알 수 있음
 
 		//렌더 타겟 뷰 생성
+		//메모리 공간을 두고 소통하는 창구로 쓰임
+		//뷰에 객체 하나의 크기, 총 개수 등을 넣고 GPU에게 보내면 GPU가 VRAM에 공간을 잡는다.
+		//CPU도 똑같이 공간을 잡는다.
 		ID3D11Texture2D* backBuffer = nullptr;
 		//둘은 같은 작업
 		//swapChain->GetBuffer(0, __uuidof(backBuffer), reinterpret_cast<void**>(&backBuffer));
@@ -109,100 +115,14 @@ namespace SanDX {
 		//OM = Output Merger
 		context->OMSetRenderTargets(1, &renderTargetView, nullptr);
 
-		ZeroMemory(&viewport, sizeof(viewport));
 		viewport.TopLeftX = 0;
 		viewport.TopLeftY = 0;
 		viewport.Width = (float)width;
 		viewport.Height = (float)height;
-		viewport.MaxDepth = .5f;
-		viewport.MinDepth = -.5f;
+		viewport.MaxDepth = 1.f;
+		viewport.MinDepth = .0f;
 
 		context->RSSetViewports(1, &viewport);
-
-		// @Temp: 임시 리소스 생성
-		//Buffer = 메모리 덩어리
-		D3D11_BUFFER_DESC vertexBufferDesc = {};
-		//x, y, z, 세 개 즉, 정점 세개
-		vertexBufferDesc.ByteWidth = sizeof(float) * 3 * 3;
-		vertexBufferDesc.BindFlags = D3D11_BIND_VERTEX_BUFFER;
-
-		D3D11_SUBRESOURCE_DATA vertexData = {};
-		
-		float vertices[] = {
-			0, .5f, .5f,
-			.5f, -.5f, .5f,
-			-.5f, -.5f, .5f,
-		};
-
-		vertexData.pSysMem = vertices;
-
-		result = device->CreateBuffer(&vertexBufferDesc, &vertexData, &vertexBuffer);
-		RESULT(result, "Failed to create vertex buffer");
-
-		//인덱스 버퍼 생성
-		int indices[] = { 0, 1, 2 };
-
-		D3D11_BUFFER_DESC indexBufferDesc = {};
-		indexBufferDesc.ByteWidth = sizeof(int) * 3;
-		indexBufferDesc.BindFlags = D3D11_BIND_INDEX_BUFFER;
-
-		D3D11_SUBRESOURCE_DATA indexData = {};
-
-		indexData.pSysMem = indices;
-
-		result = device->CreateBuffer(&indexBufferDesc, &indexData, &indexBuffer);
-		RESULT(result, "Failed to create index buffer");
-
-		ID3DBlob* vertexShaderBuffer = nullptr;
-		//두번째는 쉐이더 수치, 라이트 맵 등을 지정해주는 값
-		//세번째는 인클루드 파일 위치
-		//네번째는 시작 함수 이름
-		//다섯번째는 버전 정보
-		//id3dblob는 받아올 값
-		//마지막은 쉐이더 오류를 받아올 수 있는 것
-		result = D3DCompileFromFile(
-			TEXT("vertex.hlsl"),
-			nullptr,
-			nullptr,
-			"main",
-			"vs_5_0",
-			0,
-			0,
-			&vertexShaderBuffer,
-			nullptr
-		);
-		//D3DReadFileToBlob()
-		RESULT(result, "Failed to compile vertex shader");
-
-		result = device->CreateVertexShader(vertexShaderBuffer->GetBufferPointer(),
-			vertexShaderBuffer->GetBufferSize(),
-			nullptr,
-			&vertexShader);
-
-		RESULT(result, "Failed to create vertex shader");
-		
-		//첫번째는 hlsl의 시멘틱 이름
-		//두번째는 몇번째 시멘틱인지
-		//세번째는 어떤 데이터인지
-		//네번째는 slot
-		//다섯번째는 오프셋(바이트로 계산) 여기서 버텍스, uv 등의 오프셋을 계산한다
-		//버텍스는 처음부터니까 0, uv는 버텍스 이후의 바이트...이런 식
-		//여섯번째는 인스턴스로 할 것인지
-		//일곱번째는 인스턴스의 옵션
-		D3D11_INPUT_ELEMENT_DESC inputDesc[] = {
-			{ "POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 0, D3D11_INPUT_PER_VERTEX_DATA, 0 }
-		};
-		
-		//입력 레이아웃
-		//입력 레이아웃을 리플렉션할 수 있다?
-		//
-		result = device->CreateInputLayout(inputDesc, _countof(inputDesc),
-			vertexShaderBuffer->GetBufferPointer(),
-			vertexShaderBuffer->GetBufferSize(),
-			&inputLayout
-		);
-
-		RESULT(result, "Failed to create input layout");
 	}
 
 	Renderer::~Renderer()
@@ -211,11 +131,16 @@ namespace SanDX {
 
 	void Renderer::Draw()
 	{
+		if (mesh == nullptr)
+			mesh = std::make_unique<TriangleMesh>();
+
 		//그리기 전 (BeginScene)
 		//지우기 (Clear) = 한 색상으로 덮어쓰기 유사 memset
 		float color[] = { 1, 1, 1, 1 };
 		context->ClearRenderTargetView(renderTargetView, color);
+
 		//드로우 (Draw, Render)
+		mesh->Draw();
 
 		//버퍼 교환 (EndScene, Present)
 		//모니터 화면주사율 렌더 동기화를 할건지

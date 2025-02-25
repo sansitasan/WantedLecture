@@ -3,6 +3,7 @@
 #include <Windows.h>
 #include "Type.h"
 #include <string>
+#include <d3d11.h>
 
 namespace SanDX {
 	//리소스 담당, application 단계의 창고.
@@ -16,6 +17,8 @@ namespace SanDX {
 
 		//싱글톤 접근 함수
 		static Engine& Get();
+		ID3D11Device& Device() const;
+		ID3D11DeviceContext& Context() const;
 
 		void Run();
 

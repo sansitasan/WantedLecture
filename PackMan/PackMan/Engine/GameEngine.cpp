@@ -3,18 +3,12 @@
 #include "Scene/MenuScene.h"
 #include "Manager/DataManager.h"
 
-GameEngine* GameEngine::instance = nullptr;
 
-GameEngine::GameEngine()
+GameEngine::GameEngine(int screenSizeX, int screenSizeY, int fontSizeX, int fontSizeY)
+	: Engine(screenSizeX, screenSizeY, fontSizeX, fontSizeY)
 {
-	if (instance != nullptr) {
-		delete this;
-		return;
-	}
-
 	SetCursorType(ECursorType::NoCursor);
 	SetTargetFrameRate(60);
-	instance = this;
 	menuScene = TraceNew MenuScene();
 	showMenu = false;
 	dataManager = new DataManager();
@@ -48,6 +42,12 @@ void GameEngine::ToggleMenu()
 	}
 
 	mainScene = backScene;
+}
+
+GameEngine& GameEngine::Get(int screenSizeX, int screenSizeY, int fontSizeX, int fontSizeY)
+{
+	static GameEngine instance = GameEngine(screenSizeX, screenSizeY, fontSizeX, fontSizeY);
+	return instance;
 }
 
 void GameEngine::LoadGameScene()
