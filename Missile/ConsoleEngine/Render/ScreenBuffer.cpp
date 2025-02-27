@@ -4,7 +4,7 @@
 ScreenBuffer::ScreenBuffer(const COORD& size, CONSOLE_FONT_INFOEX& fontInfo)
 	: size(size)
 {
-	buffer = CreateConsoleScreenBuffer(GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, CONSOLE_TEXTMODE_BUFFER, NULL);
+	buffer = CreateConsoleScreenBuffer(GENERIC_READ | GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, CONSOLE_TEXTMODE_BUFFER, NULL);
 	if (buffer == INVALID_HANDLE_VALUE)
 	{
 		__debugbreak();
@@ -24,7 +24,7 @@ ScreenBuffer::ScreenBuffer(const COORD& size, CONSOLE_FONT_INFOEX& fontInfo)
 ScreenBuffer::ScreenBuffer(HANDLE console, const COORD& size)
 	: size(size), buffer(console)
 {
-	SetConsoleScreenBufferSize(buffer, size);
+    SetConsoleScreenBufferSize(buffer, size);
 	SMALL_RECT rect = { 0, 0, size.X - 1, size.Y - 1 };
 	SetConsoleWindowInfo(buffer, true, &rect);
 

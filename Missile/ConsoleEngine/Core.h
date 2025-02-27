@@ -89,6 +89,16 @@ inline void CheckMemoryLeak()
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 }
 
+enum class EExecuteLayer : unsigned short {
+    Defalut = 0,
+    QuadTree = 0x1,
+    QuadTreeDraw = 0x2,
+    QuadTreePositionDraw = 0x4,
+    AStarExecute = 0x8,
+    AStarDraw = 0x10,
+    BézierCurve = 0x20,
+};
+
 enum class Color : unsigned char
 {
 	Red = FOREGROUND_RED,

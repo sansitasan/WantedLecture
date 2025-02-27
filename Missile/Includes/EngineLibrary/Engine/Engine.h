@@ -32,7 +32,7 @@ class ENGINE_API Engine
 public:
 	virtual ~Engine();
 
-	static Engine& Get(int screenSizeX = 160, int screenSizeY = 90, int fontSizeX = 1, int fontSizeY = 1);
+	static Engine& Get();
 
 	void Run();
 
@@ -53,6 +53,7 @@ public:
 
 	void QuitEngine();
 
+    void Draw(int x, int y, const std::wstring& image, Color color);
 	void Draw(const Vector2& position, const std::wstring& image, Color color);
 
 	void CancelTimer(std::function<void()> delegate, size_t id);

@@ -28,7 +28,7 @@ BOOL WINAPI MessageProcessor(DWORD message)
 
 Engine::Engine(int screenSizeX, int screenSizeY, int fontSizeX, int fontSizeY)
 	: quit(false), mainScene(nullptr), targetFrameRate(60), 
-	targetOneFrameTime(1 / 60), deltaTime(0)
+	targetOneFrameTime(1 / 60), deltaTime(0), mousePosition(-1, -1)
 {
 	if (!instance) {
 		instance = this;
@@ -71,12 +71,12 @@ Engine::Engine(int screenSizeX, int screenSizeY, int fontSizeX, int fontSizeY)
 	delegateKey = Delegate(KEYCOUNT, std::vector<pair<Entity*, std::function<void()>>>());
 	delegateKeyUp = Delegate(KEYCOUNT, std::vector<pair<Entity*, std::function<void()>>>());
 
-	imageBuffer = new CHAR_INFO[((size_t)screenSize.GetX() + 1) * (size_t)screenSize.GetY() + 1];
+	imageBuffer = TraceNew CHAR_INFO[((size_t)screenSize.GetX() + 1) * (size_t)screenSize.GetY() + 1];
 
 	ClearImageBuffer();
 
-	renderTargets[0] = new ScreenBuffer(hConsole, maxWindowSize);
-	renderTargets[1] = new ScreenBuffer(maxWindowSize, cfi);
+	renderTargets[0] = TraceNew ScreenBuffer(hConsole, maxWindowSize);
+	renderTargets[1] = TraceNew ScreenBuffer(maxWindowSize, cfi);
 
 	// 스왑 버퍼.
 	Present();
@@ -109,7 +109,7 @@ Engine::~Engine()
 	delegateKey.clear();
 }
 
-Engine& Engine::Get(int screenSizeX, int screenSizeY, int fontSizeX, int fontSizeY)
+Engine& Engine::Get()
  {
 	return *instance;
 }
@@ -343,47 +343,52 @@ void Engine::DelegateInvoke(Delegate& delegateVector, int key)
 void Engine::ProcessInput()
 {
     static HANDLE hConsole = GetStdHandle(STD_INPUT_HANDLE);
-	INPUT_RECORD record;
+    INPUT_RECORD record = {};
 	DWORD events;
 	COORD previousWindowSize((SHORT)screenSize.GetX(), (SHORT)screenSize.GetY());
-	if (PeekConsoleInput(hConsole, &record, 1, &events))
-	{
+    
+    //char message[50] = {};
+    //sprintf_s(message, 50, "Event Count: %d | fps: %f \n", eventCount, 1.0f / deltaTime);
+    //OutputDebugStringA(message);
+
+    if (PeekConsoleInput(hConsole, &record, 1, &events))
+    {
         if (record.EventType == WINDOW_BUFFER_SIZE_EVENT) {
             FlushConsoleInputBuffer(hConsole);
         }
 
         ReadConsoleInput(hConsole, &record, 1, &events);
 
-		switch (record.EventType)
-		{
-		//case WINDOW_BUFFER_SIZE_EVENT:
-		//{
-		//	COORD current(record.Event.WindowBufferSizeEvent.dwSize.X, record.Event.WindowBufferSizeEvent.dwSize.Y);
-		//	if (current.X != previousWindowSize.X || current.Y != previousWindowSize.Y)
-		//	{
-		//		HWND hConsole = GetConsoleWindow();
-        //
-		//		COORD bufferSize = { static_cast<SHORT>(previousWindowSize.X), static_cast<SHORT>(previousWindowSize.Y) };
-		//		SetConsoleScreenBufferSize(hConsole, bufferSize);
-        //
-		//		SMALL_RECT windowSize = { 0, 0, static_cast<SHORT>(previousWindowSize.X - 1), static_cast<SHORT>(previousWindowSize.Y - 1) };
-		//		SetConsoleWindowInfo(hConsole, TRUE, &windowSize);
-		//		//char buffer[100];
-		//		//sprintf_s(buffer, 100, "(%d,%d)",
-		//		//	//record.Event.WindowBufferSizeEvent.dwSize.X, record.Event.WindowBufferSizeEvent.dwSize.Y
-		//		//);
-        //
-		//		//MessageBoxA(nullptr, buffer, "Test", MB_OK);
-        //
-		//	}
-		//	
-		//} break;
+        switch (record.EventType)
+        {
+            //case WINDOW_BUFFER_SIZE_EVENT:
+            //{
+            //	COORD current(record.Event.WindowBufferSizeEvent.dwSize.X, record.Event.WindowBufferSizeEvent.dwSize.Y);
+            //	if (current.X != previousWindowSize.X || current.Y != previousWindowSize.Y)
+            //	{
+            //		HWND hConsole = GetConsoleWindow();
+            //
+            //		COORD bufferSize = { static_cast<SHORT>(previousWindowSize.X), static_cast<SHORT>(previousWindowSize.Y) };
+            //		SetConsoleScreenBufferSize(hConsole, bufferSize);
+            //
+            //		SMALL_RECT windowSize = { 0, 0, static_cast<SHORT>(previousWindowSize.X - 1), static_cast<SHORT>(previousWindowSize.Y - 1) };
+            //		SetConsoleWindowInfo(hConsole, TRUE, &windowSize);
+            //		//char buffer[100];
+            //		//sprintf_s(buffer, 100, "(%d,%d)",
+            //		//	//record.Event.WindowBufferSizeEvent.dwSize.X, record.Event.WindowBufferSizeEvent.dwSize.Y
+            //		//);
+            //
+            //		//MessageBoxA(nullptr, buffer, "Test", MB_OK);
+            //
+            //	}
+            //	
+            //} break;
 
-		case KEY_EVENT:
+        case KEY_EVENT:
             keyState[record.Event.KeyEvent.wVirtualKeyCode].isKeyDown = record.Event.KeyEvent.bKeyDown;
-			break;
+            break;
 
-		case MOUSE_EVENT:
+        case MOUSE_EVENT:
             mousePosition.SetX(record.Event.MouseEvent.dwMousePosition.X);
             mousePosition.SetY(record.Event.MouseEvent.dwMousePosition.Y);
 
@@ -393,9 +398,9 @@ void Engine::ProcessInput()
             keyState[VK_RBUTTON].isKeyDown
                 = (record.Event.MouseEvent.dwButtonState & RIGHTMOST_BUTTON_PRESSED) != 0;
 
-			break;
-		}
-	}
+            break;
+        }
+    }
 }
 
 void Engine::Update(float deltaTime)
@@ -419,12 +424,21 @@ void Engine::Update(float deltaTime)
 	mainScene->Update(deltaTime);
 }
 
+void Engine::Draw(int x, int y, const std::wstring& image, Color color)
+{
+    for (int ix = 0; ix < (int)image.size(); ++ix)
+    {
+        int index = (y * (int)screenSize.GetX()) + x + ix;
+        imageBuffer[index].Char.UnicodeChar = image[ix];
+        imageBuffer[index].Attributes = (unsigned long)color;
+    }
+}
+
 void Engine::Draw(const Vector2& position, const std::wstring& image, Color color)
 {
-	Vector2 pos = position;
 	for (int ix = 0; ix < (int)image.size(); ++ix)
 	{
-		int index = ((int)pos.GetY() * (int)screenSize.GetX()) + (int)pos.GetX() + ix;
+		int index = ((int)position.GetY() * (int)screenSize.GetX()) + (int)position.GetX() + ix;
 		imageBuffer[index].Char.UnicodeChar = image[ix];
 		imageBuffer[index].Attributes = (unsigned long)color;
 	}

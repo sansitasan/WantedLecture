@@ -1,4 +1,4 @@
-#include "PreCompiledHeader.h"
+﻿#include "PreCompiledHeader.h"
 #include "Engine/Engine.h"
 #include "DrawableEntity.h"
 
@@ -13,7 +13,7 @@ DrawableEntity::~DrawableEntity()
 
 void DrawableEntity::Draw()
 {
-	Engine::Get().Draw(Vector2((int)position.GetX(), (int)position.GetY() + 1), image, entityColor);
+	Engine::Get().Draw(Vector2((int)position.GetX(), (int)position.GetY()), image, entityColor);
 }
 
 void DrawableEntity::SetPosition(const Vector2& newPosition)

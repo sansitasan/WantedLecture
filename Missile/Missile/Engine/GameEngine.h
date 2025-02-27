@@ -8,16 +8,17 @@ enum class ESceneType {
 
 class GameEngine : public Engine {
 public:
+    GameEngine(int screenSizeX = 160, int screenSizeY = 90, int fontSizeX = 8, int fontSizeY = 8);
 	virtual ~GameEngine() override;
 
 	void ToggleMenu();
 
-	static GameEngine& Get(int screenSizeX = 160, int screenSizeY = 90, int fontSizeX = 8, int fontSizeY = 8);
+	static GameEngine* Get();
 	void LoadScene(ESceneType sceneType = ESceneType::StartScene);
 
 private:
-	GameEngine(int screenSizeX = 160, int screenSizeY = 90, int fontSizeX = 4, int fontSizeY = 4);
 	bool showMenu = false;
+    static GameEngine* instance;
 
 	Scene* menuScene = nullptr;
 	Scene* backScene = nullptr;

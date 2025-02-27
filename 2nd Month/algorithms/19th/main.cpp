@@ -1,6 +1,6 @@
 #include <iostream>
 //#include "RedBlackTree.h"
-#include "AStar.h"
+//#include "AStar.h"
 #include <Windows.h>
 #include <xmmintrin.h>
 #include <intrin.h>
@@ -12,9 +12,10 @@
 #include "MemoryPool.h"
 #include <string>
 #include <chrono>
+#include <vector>
 
 using namespace std;
-using namespace San;
+//using namespace San;
 
 std::vector<std::vector<int>> grid =
 {
@@ -170,7 +171,7 @@ private:
 
 void CompareTest() {
 	unsigned long long avera = 0, averb = 0;
-	for (int j = 0; j < 100; ++j) {
+	for (int j = 0; j < 1; ++j) {
 		SIMDVec2 a(_mm_setzero_ps());
 		SIMDVec2 b(_mm_setzero_ps());
 		SIMDVec2 c;
@@ -202,14 +203,13 @@ void CompareTest() {
 }
 
 int main() {
-	//_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
-	//_CrtDumpMemoryLeaks();
-	//_CrtSetBreakAlloc(198);
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+	_CrtSetBreakAlloc(195);
 
-	__m128 a = _mm_set_ps(0.5f, 1.f, 0.3f, 7.f);
-	__m128 b = _mm_set_ps(0.5f, 4.f, 0.1f, 7.f);
-	__m128 cmp = _mm_cmpeq_ps(a, b);
-	int mask = _mm_movemask_ps(cmp);
+	//__m128 a = _mm_set_ps(0.5f, 1.f, 0.3f, 7.f);
+	//__m128 b = _mm_set_ps(0.5f, 4.f, 0.1f, 7.f);
+	//__m128 cmp = _mm_cmpeq_ps(a, b);
+	//int mask = _mm_movemask_ps(cmp);
 	//const std::string* a = x[0]->Get();
 	//a = new std::string();
 
@@ -265,5 +265,6 @@ int main() {
 	SafeDelete(aStar);
 	SafeDelete(goalNode);
 	*/
+	_CrtDumpMemoryLeaks();
 	return 0;
 }

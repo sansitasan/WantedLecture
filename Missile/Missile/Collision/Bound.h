@@ -8,6 +8,7 @@ public:
 
     inline const Vector2& LeftUp() const { return leftUp; }
     inline const Vector2& RightBottom() const { return rightBottom; }
+    inline Vector2 WidthAndHeight() const { return rightBottom - leftUp; }
 
     inline bool Intersects(const Vector2& other) const {
         if (other.GetX() > rightBottom.GetX()) return false;
