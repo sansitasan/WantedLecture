@@ -1,11 +1,13 @@
 ﻿#include "QuadNode.h"
 #include "QuadTree.h"
 #include "Core.h"
+#include <Engine/Engine.h>
 
-QuadNode::QuadNode(const Bound& bound, int depth, std::wstring image)
-    : bound(bound), depth(depth), Super(bound.LeftUp(), image)
+const std::wstring QuadNode::image = TEXT("#");
+
+QuadNode::QuadNode(const Bound& bound, int depth)
+    : bound(bound), depth(depth)
 {
-    SetColor(Color::BrightGreen);
 }
 
 QuadNode::~QuadNode()
@@ -33,6 +35,7 @@ void QuadNode::Remove()
 {
     if (!isInPlayer) return;
     playerPosition = nullptr;
+    isInPlayer = false;
     if (IsDivided()) {
         for (int i = 0; i < (int)EDir::Size; ++i) {
             child[i]->Remove();
@@ -53,11 +56,13 @@ bool QuadNode::IsMouseNear(const Vector2& other, Vector2& playerPosition)
         std::vector<ENodeIndex> quads = GetQuads(other);
 
         for (ENodeIndex& index : quads) {
-            if (child[(int)index]->IsMouseNear(other, playerPosition)) return true;
+            if (child[(int)index]->IsMouseNear(other, playerPosition)) {
+                if (playerPosition.GetX() == -1) __debugbreak();
+                return true;
+            }
         }
     }
 
-    __debugbreak();
     return false;
 }
 
@@ -74,8 +79,54 @@ void QuadNode::Clear()
     }
 }
 
-void QuadNode::Draw()
+void QuadNode::Draw(unsigned short executeLayer)
 {
+    const Vector2& leftUp = bound.LeftUp();
+    const Vector2& rightBottom = bound.RightBottom();
+    int end = (int)rightBottom.GetX();
+
+    for (int i = (int)leftUp.GetX(); i < end; ++i) {
+        Engine::Get().Draw(i, (int)leftUp.GetY(), image, color);
+        Engine::Get().Draw(i, (int)rightBottom.GetY() - 1, image, color);
+
+        if (i == 103) {
+            int x = 1;
+        }
+    }
+
+    end = (int)rightBottom.GetY();
+
+    for (int i = (int)leftUp.GetY() + 1; i < end; ++i) {
+        Engine::Get().Draw((int)leftUp.GetX(), i, image, color);
+        Engine::Get().Draw((int)rightBottom.GetX() - 1, i, image, color);
+    }
+
+    //if (_heapchk() != _HEAPOK)
+    //{
+    //    __debugbreak();
+    //}
+
+    if (IsDivided()) {
+        for (int i = 0; i < (int)EDir::Size; ++i) {
+            child[i]->Draw(executeLayer);
+        }
+    }
+
+    if (executeLayer & (unsigned short)EExecuteLayer::QuadTreePositionDraw) {
+
+        Vector2 vec = (bound.WidthAndHeight() * 0.5f) + leftUp;
+        vec -= Vector2::Up;
+
+        wchar_t buffer[255] = {};
+        _snwprintf_s(buffer, 255, L"%d, %d", (int)leftUp.GetX(), (int)leftUp.GetY());
+        Engine::Get().Draw(vec - Vector2(wcslen(buffer) * 0.5f, 0.f), buffer, color);
+        vec += Vector2::Up;
+        _snwprintf_s(buffer, 255, L"%d, %d", (int)vec.GetX(), (int)vec.GetY());
+        Engine::Get().Draw(vec - Vector2(wcslen(buffer) * 0.5f, 0.f), buffer, color);
+        vec += Vector2::Up;
+        _snwprintf_s(buffer, 255, L"%d, %d", (int)rightBottom.GetX(), (int)rightBottom.GetY());
+        Engine::Get().Draw(vec - Vector2(wcslen(buffer) * 0.5f, 0.f), buffer, color);
+    }
 }
 
 inline bool QuadNode::SubDivide()
@@ -85,11 +136,11 @@ inline bool QuadNode::SubDivide()
     if (!IsDivided()) {
         const Vector2& leftUp = bound.LeftUp();
         const Vector2& rightBottom = bound.RightBottom();
-        Vector2 halfVector = rightBottom * 0.5f;
+        Vector2 halfVector = (bound.WidthAndHeight() * 0.5f) + leftUp;
 
         child[(int)EDir::TopLeft] = new QuadNode(Bound(leftUp, halfVector), depth + 1);
-        child[(int)EDir::TopRight] = new QuadNode(Bound(Vector2(leftUp.GetX() + halfVector.GetX(), halfVector.GetY()), halfVector), depth + 1);
-        child[(int)EDir::BottomLeft] = new QuadNode(Bound(Vector2(leftUp.GetX(), leftUp.GetY() + halfVector.GetY()), Vector2(leftUp.GetX() + halfVector.GetX(), rightBottom.GetY())), depth + 1);
+        child[(int)EDir::TopRight] = new QuadNode(Bound(Vector2(halfVector.GetX(), leftUp.GetY()), Vector2(rightBottom.GetX(), halfVector.GetY())), depth + 1);
+        child[(int)EDir::BottomLeft] = new QuadNode(Bound(Vector2(leftUp.GetX(), halfVector.GetY()), Vector2(halfVector.GetX(), rightBottom.GetY())), depth + 1);
         child[(int)EDir::BottomRight] = new QuadNode(Bound(halfVector, rightBottom), depth + 1);
     }
     return true;
@@ -126,7 +177,7 @@ inline std::vector<ENodeIndex> QuadNode::GetQuads(const Vector2& player)
     //영역 계산에 필요한 변수
     const Vector2& leftUp = bound.LeftUp();
     const Vector2& rightBottom = bound.RightBottom();
-    Vector2 half = bound.RightBottom() * 0.5f;
+    Vector2 half = (bound.WidthAndHeight() * 0.5f) + leftUp;
 
     //영역 확인
     bool left = player.GetX() < half.GetX() && player.GetX() >= leftUp.GetX();

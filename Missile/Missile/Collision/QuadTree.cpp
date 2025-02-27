@@ -25,3 +25,8 @@ bool QuadTree::IsMouseNear(const Vector2& otherPosition, Vector2& playerPosition
 {
     return root->IsMouseNear(otherPosition, playerPosition);
 }
+
+void QuadTree::Draw(unsigned short executeLayer)
+{
+    root->Draw(executeLayer);
+}

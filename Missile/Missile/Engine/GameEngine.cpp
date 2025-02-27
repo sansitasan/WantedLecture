@@ -1,10 +1,17 @@
-#include "GameEngine.h"
+﻿#include "GameEngine.h"
 #include "Scene/StartScene.h"
 #include "Scene/GameScene.h"
+
+GameEngine* GameEngine::instance = nullptr;
 
 GameEngine::GameEngine(int screenSizeX, int screenSizeY, int fontSizeX, int fontSizeY)
 	: Engine(screenSizeX, screenSizeY, fontSizeX, fontSizeY)
 {
+    if (instance) {
+        delete this;
+        return;
+    }
+    instance = this;
 	SetCursorType(ECursorType::NoCursor);
 	SetTargetFrameRate(60);
 	showMenu = false;
@@ -39,9 +46,8 @@ void GameEngine::ToggleMenu()
 	mainScene = backScene;
 }
 
-GameEngine& GameEngine::Get(int screenSizeX, int screenSizeY, int fontSizeX, int fontSizeY)
+GameEngine* GameEngine::Get()
 {
-	static GameEngine instance = GameEngine(screenSizeX, screenSizeY, fontSizeX, fontSizeY);
 	return instance;
 }
 
@@ -52,11 +58,11 @@ void GameEngine::LoadScene(ESceneType sceneType)
     }
     switch (sceneType) {
     case ESceneType::StartScene:
-        mainScene = new StartScene();
+        mainScene = TraceNew StartScene();
         break;
 
     case ESceneType::GameScene:
-        mainScene = new GameScene();
+        mainScene = TraceNew GameScene();
         break;
     }
 }

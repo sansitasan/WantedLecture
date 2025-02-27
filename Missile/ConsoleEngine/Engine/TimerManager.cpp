@@ -1,11 +1,11 @@
-#include "PreCompiledHeader.h"
+﻿#include "PreCompiledHeader.h"
 #include "TimerManager.h"
 
 TimerManager::TimerManager() {
 }
 
 TimerManager::~TimerManager() {
-	timerMemory.Clear();
+	//timerMemory.Clear();
 }
 
 void TimerManager::AddTimer(const Delegate& delegate, float time, bool isInterval, size_t id) {

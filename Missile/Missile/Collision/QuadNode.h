@@ -19,10 +19,9 @@ enum class EDir {
     Size
 };
 
-class QuadNode : public DrawableEntity {
-    RTTI_DECLARATIONS(QuadNode, DrawableEntity)
+class QuadNode {
 public:
-    QuadNode(const Bound& bound, int depth = 0, std::wstring image = TEXT("#"));
+    QuadNode(const Bound& bound, int depth = 0);
     ~QuadNode();
 
     void Insert(const Vector2& player);
@@ -37,7 +36,7 @@ public:
 
     inline int Depth() const { return depth; }
 
-    virtual void Draw() override;
+    void Draw(unsigned short executeLayer);
 
 private:
     //영역 분할시 사용
@@ -59,6 +58,9 @@ private:
     QuadNode* child[4] = {};
     //현재 노드의 깊이
     int depth = 0;
+
+    static const std::wstring image;
+    static const Color color = Color::BrightGreen;
     
     bool isInPlayer = false;
     

@@ -15,7 +15,8 @@ public:
 		for (int i = 0; i < count; ++i) {
 			memoryPool[i].~T();
 		}
-		delete[] memoryPool;
+
+        free(memoryPool);
 		memoryPool = nullptr;
 	}
 
@@ -27,7 +28,7 @@ public:
             if (!temp) __debugbreak();
 			memset(temp, 0, sizeof(T) * capacity);
 			memcpy(temp, memoryPool, capacity >> 1);
-			delete[] memoryPool;
+			free(memoryPool);
 			memoryPool = temp;
 		}
 

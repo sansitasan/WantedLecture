@@ -1,4 +1,4 @@
-#include "StartScene.h"
+﻿#include "StartScene.h"
 #include "Engine/GameEngine.h"
 
 StartScene::StartScene()
@@ -23,7 +23,7 @@ StartScene::StartScene()
     items.emplace_back(TraceNew MenuItem(itemPos, std::move(start),
         []()
         {
-            GameEngine::Get().LoadScene(ESceneType::GameScene);
+            GameEngine::Get()->LoadScene(ESceneType::GameScene);
         }));
 
     std::vector<std::wstring> quit(5);
@@ -39,7 +39,7 @@ StartScene::StartScene()
     items.emplace_back(TraceNew MenuItem(itemPos, std::move(quit),
         []()
         {
-            GameEngine::Get().QuitEngine();
+            GameEngine::Get()->QuitEngine();
         }));
 
     itemCount = (int)items.size();
@@ -60,19 +60,19 @@ void StartScene::Update(float deltaTime)
 {
 	Super::Update(deltaTime);
 
-	if (GameEngine::Get().GetKey(VK_ESCAPE)) {
-		GameEngine::Get().ToggleMenu();
+	if (GameEngine::Get()->GetKey(VK_ESCAPE)) {
+		GameEngine::Get()->ToggleMenu();
 	}
 
-	if (GameEngine::Get().GetKey(VK_UP)) {
+	if (GameEngine::Get()->GetKey(VK_UP)) {
 		currentSelectedIndex = (currentSelectedIndex - 1 + itemCount) % itemCount;
 	}
 
-	if (GameEngine::Get().GetKey(VK_DOWN)) {
+	if (GameEngine::Get()->GetKey(VK_DOWN)) {
 		currentSelectedIndex = (currentSelectedIndex + 1) % itemCount;
 	}
 
-	if (GameEngine::Get().GetKey(VK_RETURN))
+	if (GameEngine::Get()->GetKey(VK_RETURN))
 	{
 		items[currentSelectedIndex]->onSelected();
 	}

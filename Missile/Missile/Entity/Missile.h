@@ -9,10 +9,13 @@ public:
 
     virtual void Update(float deltaTime) override;
     virtual void Draw() override;
+    void Shoot();
 
 private:
-    Vector2 mousePos;
     class GameScene* scene;
-    //float speed;
+    static const short speed = 5;
+    bool doShoot = false;
     std::vector<Vector2> pathList;
+    Vector2 tangentPoint0;
+    Vector2 tangentPoint3;
 };

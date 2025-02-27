@@ -8,11 +8,13 @@ using namespace std;
 
 int main() {
     _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
-	GameEngine& engine = GameEngine::Get();
+    _CrtSetBreakAlloc(155);
+	GameEngine* engine = TraceNew GameEngine();
 
-    engine.LoadScene();
+    engine->LoadScene();
 
-	engine.Run();
+	engine->Run();
+    delete engine;
     _CrtDumpMemoryLeaks();
 
 	return 0;

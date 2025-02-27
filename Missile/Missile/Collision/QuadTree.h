@@ -15,6 +15,8 @@ public:
 
     bool IsMouseNear(const Vector2& otherPosition, Vector2& playerPosition);
 
+    void Draw(unsigned short executeLayer);
+
 public:
     static const int maxDepth = 4;
 
