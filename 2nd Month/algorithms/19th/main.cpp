@@ -206,12 +206,8 @@ int main() {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 	_CrtSetBreakAlloc(195);
 
-	//__m128 a = _mm_set_ps(0.5f, 1.f, 0.3f, 7.f);
-	//__m128 b = _mm_set_ps(0.5f, 4.f, 0.1f, 7.f);
-	//__m128 cmp = _mm_cmpeq_ps(a, b);
-	//int mask = _mm_movemask_ps(cmp);
-	//const std::string* a = x[0]->Get();
-	//a = new std::string();
+
+
 
 	/*
 	Node* startNode = nullptr;
