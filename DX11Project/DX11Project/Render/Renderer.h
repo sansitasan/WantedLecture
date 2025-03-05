@@ -24,7 +24,7 @@ namespace SanDX {
 		void Draw();
 
 	private:
-		std::unique_ptr<class TriangleMesh> mesh;
+		std::unique_ptr<class QuadMesh> mesh;
 
 	private:
 		//ÀåÄ¡·ù

@@ -1,6 +1,8 @@
 #include "Engine.h"
 #include "Window.h"
 #include "Render/Renderer.h"
+#include "Resource/MaterialLoader.h"
+#include "Resource/TextureLoader.h"
 
 namespace SanDX {
 
@@ -11,6 +13,9 @@ namespace SanDX {
         if (Engine::instance) return;
         Engine::instance = this;
         window = std::make_shared<Window>(width, height, title, instance, WindowProc);
+
+        materialLoader = std::make_unique<MaterialLoader>();
+        textureLoader = std::make_unique<TextureLoader>();
 
         renderer = std::make_shared<Renderer>(width, height, window->Handle());
     }

@@ -44,7 +44,7 @@ namespace SanDX {
 		//
 		swapChainDesc.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
 		//백버퍼 개수. 1개면 더블 버퍼
-		swapChainDesc.BufferCount = 1;
+		swapChainDesc.BufferCount = 2;
 		//멀티 샘플링 개수, 수준(보통 count - 1 값) 1은 안 쓴다는 것 샘플이 하나니까
 		//안티앨리어싱 - 보통은 픽셀 뭉개기
 		//단점은 흐려짐
@@ -59,7 +59,7 @@ namespace SanDX {
 		//화면처리 할 때(프론트 <> 백버퍼) 어떻게 처리할 것인지
 		//예전에 화면처리하면 잔상이 남는 경우(하드웨어 문제)가 있어서 SEQUENTIAL이 있음
 		//한 번에 교체할건지 부드럽게 애니메이션을 줄 건지
-		swapChainDesc.SwapEffect = DXGI_SWAP_EFFECT_DISCARD;
+		swapChainDesc.SwapEffect = DXGI_SWAP_EFFECT_FLIP_DISCARD;
 
 		//할 일이 더 있음, 모니터 정보 등이 필요하다면 이걸 써야 함
 		//D3D11CreateDevice
@@ -88,7 +88,7 @@ namespace SanDX {
 			nullptr,
 			&context);
 
-		RESULT(result, "Failed to create devices.");
+		RESULT(result, TEXT("Failed to create devices."));
 		//GPU가 CPU의 메모리 공간 생김새를 본다
 		//메모리를 이만큼 쓸 테니 이 공간을 잡아둬라
 		//GPU의 메모리는 void*로 있다
@@ -105,12 +105,12 @@ namespace SanDX {
 		//둘은 같은 작업
 		//swapChain->GetBuffer(0, __uuidof(backBuffer), reinterpret_cast<void**>(&backBuffer));
 		result = swapChain->GetBuffer(0, IID_PPV_ARGS(&backBuffer));
-		RESULT(result, "Failed to get Back Buffer.");
+		RESULT(result, TEXT("Failed to get Back Buffer."));
 
 		if (!backBuffer) return;
 		//1, 2 파라미터 둘 중 하나만 골라서 넣어주면 된다
 		result = device->CreateRenderTargetView(backBuffer, nullptr, &renderTargetView);
-		RESULT(result, "Failed to create render target view.");
+		RESULT(result, TEXT("Failed to create render target view."));
 
 		//OM = Output Merger
 		context->OMSetRenderTargets(1, &renderTargetView, nullptr);
@@ -132,12 +132,16 @@ namespace SanDX {
 	void Renderer::Draw()
 	{
 		if (mesh == nullptr)
-			mesh = std::make_unique<TriangleMesh>();
+			mesh = std::make_unique<QuadMesh>();
 
+		//렌더 콜을 하면 지우기 때문에 렌더 타겟을 사용하겠다고 명시해줘야 한다.
+		context->OMSetRenderTargets(1, &renderTargetView, nullptr);
 		//그리기 전 (BeginScene)
 		//지우기 (Clear) = 한 색상으로 덮어쓰기 유사 memset
 		float color[] = { 1, 1, 1, 1 };
 		context->ClearRenderTargetView(renderTargetView, color);
+
+		mesh->Update(1.f / 60.f);
 
 		//드로우 (Draw, Render)
 		mesh->Draw();

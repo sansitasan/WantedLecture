@@ -31,5 +31,8 @@ namespace SanDX {
 
 		//ΩÃ±€≈Ê ∞¥√º
 		static Engine* instance;
+
+		std::unique_ptr<class MaterialLoader> materialLoader;
+		std::unique_ptr<class TextureLoader> textureLoader;
 	};
 }

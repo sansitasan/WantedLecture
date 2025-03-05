@@ -126,6 +126,15 @@ std::vector<std::vector<int>> grid =
 //	}
 //}
 
+void inline T() noexcept {
+
+}
+
+
+void Test() noexcept {
+	throw std::bad_alloc();
+}
+
 // alignas(16)
 //CPU 친화적
 //x86계열은 16바이트씩 읽을 수 있다.
@@ -136,6 +145,9 @@ public:
 	inline SIMDVec2(float x, float y) : value(MM128Union(x, y)) {}
 	inline SIMDVec2(int x, int y) : value(MM128Union(x, y)) {}
 	inline SIMDVec2(__m128 value) : value(value) {}
+	inline void SIMDT() const noexcept {
+
+	}
 
 	inline SIMDVec2 operator/(const float other) {
 		return SIMDVec2(_mm_div_ps(value.val, _mm_set_ps1(other)));
@@ -206,8 +218,12 @@ int main() {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 	_CrtSetBreakAlloc(195);
 
-
-
+	try {
+		Test();
+	}
+	catch (exception e) {
+		cout << e.what();
+	}
 
 	/*
 	Node* startNode = nullptr;

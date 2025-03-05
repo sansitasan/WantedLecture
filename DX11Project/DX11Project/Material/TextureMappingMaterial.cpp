@@ -1,9 +1,10 @@
 #include "TextureMappingMaterial.h"
 #include "Render/Texture.h"
+#include "Resource/TextureLoader.h"
 
 namespace SanDX {
 	TextureMappingMaterial::TextureMappingMaterial()
-		:Material(L"Default")
+		:Material(L"TextureMapping")
 	{
 
 	}
@@ -13,15 +14,16 @@ namespace SanDX {
 		const std::wstring& name)
 		: Material(name)
 	{
-		texture = std::make_unique<Texture>(textureName);
+
+		TextureLoader::Get().Load(textureName, texture);
 	}
 
 	void TextureMappingMaterial::Bind()
 	{
 		Material::Bind();
 
-		if (texture) {
-			texture->Bind();
+		if (texture.lock()) {
+			texture.lock()->Bind();
 		}
 	}
 }

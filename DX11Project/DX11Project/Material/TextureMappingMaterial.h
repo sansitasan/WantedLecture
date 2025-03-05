@@ -8,11 +8,12 @@ namespace SanDX {
 		TextureMappingMaterial();
 		TextureMappingMaterial(
 			const std::string& textureName,
-			const std::wstring& name = L"Default");
+			const std::wstring& name = L"TextureMapping");
 
 		virtual void Bind() override;
 
 	protected:
-		std::unique_ptr<class Texture> texture;
+		//std::unique_ptr<class Texture> texture;
+		std::weak_ptr<class Texture> texture;
 	};
 }

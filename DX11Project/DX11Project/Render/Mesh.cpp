@@ -10,24 +10,10 @@ namespace SanDX {
 	MeshData::MeshData(const std::vector<Vertex>& vertices, const std::vector<uint32> indices)
 		: vertices(vertices), indices(indices)
 	{
-		this->vertices.assign(vertices.begin(), vertices.end());
 		stride = Vertex::Stride();
-		this->indices.assign(indices.begin(), indices.end());
-
-		//Buffer = 메모리 덩어리
-		D3D11_BUFFER_DESC vertexBufferDesc = {};
-		//x, y, z, 세 개 즉, 정점 세개
-		vertexBufferDesc.ByteWidth = stride * (uint32)vertices.size();
-		vertexBufferDesc.BindFlags = D3D11_BIND_VERTEX_BUFFER;
-
-		D3D11_SUBRESOURCE_DATA vertexData = {};
-
-		vertexData.pSysMem = vertices.data();
+		UpdateVertexBuffer(vertices);
 
 		ID3D11Device& device = Engine::Get().Device();
-
-		HRESULT result = device.CreateBuffer(&vertexBufferDesc, &vertexData, &vertexBuffer);
-		RESULT(result, "Failed to create vertex buffer");
 
 		D3D11_BUFFER_DESC indexBufferDesc = {};
 		indexBufferDesc.ByteWidth = sizeof(uint32) * (uint32)indices.size();
@@ -37,8 +23,8 @@ namespace SanDX {
 
 		indexData.pSysMem = indices.data();
 
-		result = device.CreateBuffer(&indexBufferDesc, &indexData, &indexBuffer);
-		RESULT(result, "Failed to create index buffer");
+		HRESULT result = device.CreateBuffer(&indexBufferDesc, &indexData, &indexBuffer);
+		RESULT(result, TEXT("Failed to create index buffer"));
 	}
 
 	MeshData::~MeshData()
@@ -57,6 +43,31 @@ namespace SanDX {
 		context.IASetIndexBuffer(indexBuffer, DXGI_FORMAT_R32_UINT, 0);
 	}
 
+	void MeshData::UpdateVertexBuffer(const std::vector<Vertex>& vertices)
+	{
+		this->vertices.assign(vertices.begin(), vertices.end());
+
+		if (vertexBuffer) {
+			vertexBuffer->Release();
+			vertexBuffer = nullptr;
+		}
+
+		//Buffer = 메모리 덩어리
+		D3D11_BUFFER_DESC vertexBufferDesc = {};
+		//x, y, z, 세 개 즉, 정점 세개
+		vertexBufferDesc.ByteWidth = stride * (uint32)vertices.size();
+		vertexBufferDesc.BindFlags = D3D11_BIND_VERTEX_BUFFER;
+
+		D3D11_SUBRESOURCE_DATA vertexData = {};
+
+		vertexData.pSysMem = this->vertices.data();
+
+		ID3D11Device& device = Engine::Get().Device();
+
+		HRESULT result = device.CreateBuffer(&vertexBufferDesc, &vertexData, &vertexBuffer);
+		RESULT(result, TEXT("Failed to create vertex buffer"));
+	}
+
 	Mesh::Mesh()
 	{
 
@@ -67,8 +78,13 @@ namespace SanDX {
 		static ID3D11DeviceContext& context = Engine::Get().Context();
 
 		for (int32 i = 0; i < (int32)meshes.size(); ++i) {
+			std::shared_ptr<Material> shader = materials[i].lock();
+			if (!shader) {
+				continue;
+			}
 			meshes[i]->Bind();
-			materials[i]->Bind();
+
+			shader->Bind();
 			//드로우 콜
 			context.DrawIndexed(meshes[i]->IndexCount(), 0, 0);
 		}
