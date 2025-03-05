@@ -32,10 +32,10 @@ using namespace SanDX;
 
 
 int WINAPI main() {
-	//Engine engine(800, 600, TEXT("Engine Demo"), GetModuleHandle(nullptr));
-	//engine.Run();
+	Engine engine(800, 600, TEXT("Engine Demo"), GetModuleHandle(nullptr));
+	engine.Run();
 
-	Vector2 a = Vector2(3, 4);
-	Vector2 b = Vector2(2, 9);
-	a.Length();
+	//Vector2 a = Vector2(3, 4);
+	//Vector2 b = Vector2(2, 9);
+	//Vector2 x = a * 3.f;
 }

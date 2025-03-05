@@ -76,12 +76,12 @@ namespace SanDX {
 		textureDesc.Height = textureData->height;
 
 		HRESULT result = device.CreateTexture2D(&textureDesc, &data, &texture);
-		RESULT(result, "Error: Failed to create texture2d.\n");
+		RESULT(result, TEXT("Error: Failed to create texture2d."));
 
 		//지금 방법은 리소스 제작에 초기값을 제작하는 방법
 		//초기값 없이 제작할 때 필요한 방법이 Desc
 		result = device.CreateShaderResourceView(texture, nullptr, &textureData->shaderResourceView);
-		RESULT(result, "Error: Failed to create ShaderResourceView.\n");
+		RESULT(result, TEXT("Error: Failed to create ShaderResourceView."));
 
 		if (texture) {
 			texture->Release();
@@ -107,6 +107,6 @@ namespace SanDX {
 		samplerDesc.ComparisonFunc = D3D11_COMPARISON_ALWAYS;
 
 		result = device.CreateSamplerState(&samplerDesc, &textureData->samplerState);
-		RESULT(result, "Error: Failed to create ShaderResourceView.\n");
+		RESULT(result, TEXT("Error: Failed to create ShaderResourceView.\n"));
 	}
 }

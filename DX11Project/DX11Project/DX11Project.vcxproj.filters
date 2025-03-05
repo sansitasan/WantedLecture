@@ -51,6 +51,21 @@
     <ClCompile Include="Material\TextureMappingMaterial.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Resource\MaterialLoader.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\TextureLoader.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Material\DefaultMaterial.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Matrix4x4.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Transform.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Window.h">
@@ -101,9 +116,31 @@
     <ClInclude Include="Core.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Resource\MaterialLoader.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\TextureLoader.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Material\DefaultMaterial.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Matrix4x4.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Transform.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="HLSLShader\DefaultVertexShader.hlsl" />
     <FxCompile Include="HLSLShader\DefaultFragmentShader.hlsl" />
+    <FxCompile Include="HLSLShader\TextureMappingFragmentShader.hlsl" />
+    <FxCompile Include="HLSLShader\TextureMappingVertexShader.hlsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\MaterialLoader.inl">
+      <Filter>헤더 파일</Filter>
+    </None>
   </ItemGroup>
 </Project>

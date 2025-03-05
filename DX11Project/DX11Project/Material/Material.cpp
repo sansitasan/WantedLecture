@@ -33,7 +33,7 @@ namespace SanDX {
 
 		HRESULT result = D3DReadFileToBlob(path, &vertexShaderBuffer);
 
-		RESULT(result, "Failed to read vertex shader object file");
+		RESULT(result, TEXT("Failed to read vertex shader object file"));
 
 		result = device.CreateVertexShader(
 			vertexShaderBuffer->GetBufferPointer(),
@@ -41,7 +41,7 @@ namespace SanDX {
 			nullptr,
 			&vertexShader);
 
-		RESULT(result, "Failed to create vertex shader");
+		RESULT(result, TEXT("Failed to create vertex shader"));
 
 		//첫번째는 hlsl의 시멘틱 이름
 		//두번째는 몇번째 시멘틱인지
@@ -68,7 +68,7 @@ namespace SanDX {
 			&inputLayout
 		);
 
-		RESULT(result, "Failed to create input layout");
+		RESULT(result, TEXT("Failed to create input layout"));
 
 		//swprintf_s(path, 256, L"HLSLShader/%sFragmentShader.hlsl", name.c_str());
 		//
@@ -88,7 +88,7 @@ namespace SanDX {
 		swprintf_s(path, 256, L"../CompiledShader/%sFragmentShader.cso", name.c_str());
 		result = D3DReadFileToBlob(path, &fragmentShaderBuffer);
 
-		RESULT(result, "Failed to read fragment shader object file");
+		RESULT(result, TEXT("Failed to read fragment shader object file"));
 
 		result = device.CreatePixelShader(
 			fragmentShaderBuffer->GetBufferPointer(),
@@ -96,7 +96,7 @@ namespace SanDX {
 			nullptr,
 			&fragmentShader);
 
-		RESULT(result, "Failed to create fragment shader");
+		RESULT(result, TEXT("Failed to create fragment shader"));
 	}
 
 	Material::~Material()

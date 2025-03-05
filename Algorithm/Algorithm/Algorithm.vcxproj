@@ -160,6 +160,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Solution\Sol10775.cpp" />
+    <ClCompile Include="Solution\Sol14427.cpp" />
     <ClCompile Include="Solution\Sol1644.cpp" />
     <ClCompile Include="Solution\Sol16724.cpp" />
     <ClCompile Include="Solution\Sol1766.cpp" />
@@ -182,6 +183,7 @@
     <ClCompile Include="Solution\Solution.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Solution\Sol14427.h" />
     <ClInclude Include="Solution\Sol1644.h" />
     <ClInclude Include="Solution\Sol1766.h" />
     <ClInclude Include="Solution\Sol2143.h" />
