@@ -24,20 +24,46 @@ namespace SanDX {
 			D3D_FEATURE_LEVEL_11_0,
 		};
 
-		//스왑 체인 정보 구조체
-		//DXGI_MODE_DESC BufferDesc;
-		//DXGI_SAMPLE_DESC SampleDesc;
-		//DXGI_USAGE BufferUsage;
-		//UINT BufferCount;
-		//HWND OutputWindow;
-		//BOOL Windowed;
-		//DXGI_SWAP_EFFECT SwapEffect;
-		//UINT Flags;
+		//장치 생성
+		//첫번째 어댑터에서 모니터 정보도 얻어올 수 있다.
+		//nullptr은 기본 어댑터
+		//두번째는 드라이버 타입, 이를 소프트웨어로 만들었으면 핸들 값을 세번째에 넘겨준다
+		//4, 5, 6, 7은 밑과 동일
+		//device다음의 nullptr은 최종 확정된 그래픽 드라이버 버전을 가져오는 부분
+		//피쳐 레벨을 넘겨주고 나서 우리가 최종 확정된 버전을 알고 싶을 때 사용
+		//D3D_FEATURE_LEVEL을 포인터로 넘기기
+
+		//스왑 체인을 같이 만드느냐, 따로 만드느냐의 차이는
+		//장치 만들기 전에 
+
+		HRESULT result = D3D11CreateDevice(
+			nullptr,
+			D3D_DRIVER_TYPE_HARDWARE,
+			nullptr,
+			flag,
+			featureLevels,
+			_countof(featureLevels),
+			D3D11_SDK_VERSION,
+			&device,
+			nullptr,
+			&context
+		);
+
+		RESULT(result, TEXT("Failed to Create Device"));
+
+		//IDXGIFactory 리소스 생성
+		IDXGIFactory* factory = nullptr;
+
+		//__uuidof는 uuid를 가져온다.이 값은 IDXGIFactory 상단 매크로에 적힌 string
+		//MIDL_INTERFACE("7b7166ec-21c7-44ae-b21a-c9ae321ae369")
+		result =  CreateDXGIFactory(__uuidof(factory), reinterpret_cast<void**>(&factory));
+		//CreateDXGIFactory(IID_PPV_ARGS(&factory)); 위와 동일 매크로
+
+		RESULT(result, TEXT("Failed to Create dxgiFactory"));
 
 		//멀티 샘플링 지원 여부 확인
-		//은 나중에ㅋㅋ
 		DXGI_SWAP_CHAIN_DESC swapChainDesc = {};
-		//창모드?
+		//창모드
 		swapChainDesc.Windowed = true;
 		//타겟 창
 		swapChainDesc.OutputWindow = window;
@@ -61,6 +87,10 @@ namespace SanDX {
 		//한 번에 교체할건지 부드럽게 애니메이션을 줄 건지
 		swapChainDesc.SwapEffect = DXGI_SWAP_EFFECT_FLIP_DISCARD;
 
+		result = factory->CreateSwapChain(device, &swapChainDesc, &swapChain);
+
+		RESULT(result, TEXT("Failed to Create SwapChain"));
+
 		//할 일이 더 있음, 모니터 정보 등이 필요하다면 이걸 써야 함
 		//D3D11CreateDevice
 		//할 일이 좀 적음
@@ -74,21 +104,23 @@ namespace SanDX {
 		//D3D_featureLevel이 nullptr인 이유는 채택된 버젼을 알려주는 것
 		//지금은 필요하지 않다. 버젼에 따라 지원하지 않는 버젼이 있을 수 있으니 ifdef로 나누는 용도
 		//이 정보를 토대로 바인딩
-		HRESULT result = D3D11CreateDeviceAndSwapChain(
-			nullptr,
-			D3D_DRIVER_TYPE_HARDWARE,
-			nullptr,
-			flag,
-			featureLevels,
-			_countof(featureLevels),
-			D3D11_SDK_VERSION,
-			&swapChainDesc,
-			&swapChain,
-			&device,
-			nullptr,
-			&context);
+		//result = D3D11CreateDeviceAndSwapChain(
+		//	nullptr,
+		//	D3D_DRIVER_TYPE_HARDWARE,
+		//	nullptr,
+		//	flag,
+		//	featureLevels,
+		//	_countof(featureLevels),
+		//	D3D11_SDK_VERSION,
+		//	&swapChainDesc,
+		//	&swapChain,
+		//	&device,
+		//	nullptr,
+		//	&context);
+		//
+		//RESULT(result, TEXT("Failed to create devices."));
+		
 
-		RESULT(result, TEXT("Failed to create devices."));
 		//GPU가 CPU의 메모리 공간 생김새를 본다
 		//메모리를 이만큼 쓸 테니 이 공간을 잡아둬라
 		//GPU의 메모리는 void*로 있다
@@ -131,8 +163,17 @@ namespace SanDX {
 
 	void Renderer::Draw()
 	{
-		if (mesh == nullptr)
+		if (mesh == nullptr) {
 			mesh = std::make_unique<QuadMesh>();
+			mesh->transform.scale = Vector3::One * 0.5f;
+			mesh->transform.position.x = 0.5f;
+		}
+
+		if (mesh2 == nullptr) {
+			mesh2 = std::make_unique<QuadMesh>();
+			mesh2->transform.scale = Vector3::One * 0.5f;
+			mesh2->transform.position.x = -0.5f;
+		}
 
 		//렌더 콜을 하면 지우기 때문에 렌더 타겟을 사용하겠다고 명시해줘야 한다.
 		context->OMSetRenderTargets(1, &renderTargetView, nullptr);
@@ -142,9 +183,11 @@ namespace SanDX {
 		context->ClearRenderTargetView(renderTargetView, color);
 
 		mesh->Update(1.f / 60.f);
+		mesh2->Update(1.f / 60.f);
 
 		//드로우 (Draw, Render)
 		mesh->Draw();
+		mesh2->Draw();
 
 		//버퍼 교환 (EndScene, Present)
 		//모니터 화면주사율 렌더 동기화를 할건지

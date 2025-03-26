@@ -18,7 +18,6 @@ namespace SanDX {
 			return;
 		}
 
-
 		std::shared_ptr<Texture> newTexture = std::make_shared<Texture>(name);
 		textures.insert(std::make_pair(name, newTexture));
 		outTexture = newTexture;

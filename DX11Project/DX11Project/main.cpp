@@ -30,12 +30,10 @@ using namespace SanDX;
 //    return 0;
 //}
 
-
+//위보다 디버깅이 편하다
+//OutputDebugString - 출력 창에 메시지
 int WINAPI main() {
+	//nullptr을 넣으면 현재 실행되는 프로그램의 인스턴스를 가져와달라는 것
 	Engine engine(800, 600, TEXT("Engine Demo"), GetModuleHandle(nullptr));
 	engine.Run();
-
-	//Vector2 a = Vector2(3, 4);
-	//Vector2 b = Vector2(2, 9);
-	//Vector2 x = a * 3.f;
 }

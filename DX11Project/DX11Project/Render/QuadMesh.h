@@ -7,7 +7,5 @@ namespace SanDX {
 		QuadMesh();
 
 		void Update(float deltaTime);
-
-		void Rotate(float angle);
 	};
 }

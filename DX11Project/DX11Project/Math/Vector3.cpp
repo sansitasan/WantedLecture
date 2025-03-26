@@ -114,16 +114,6 @@ namespace SanDX {
 		return Vector3(left.x - right.x, left.y - right.y, left.z - right.z);
 	}
 
-	inline Vector3 operator*(const Vector3& vector, float scale)
-	{
-		return Vector3(vector.x * scale, vector.y * scale, vector.z * scale);
-	}
-
-	inline Vector3 operator*(float scale, const Vector3& vector)
-	{
-		return Vector3(vector.x * scale, vector.y * scale, vector.z * scale);
-	}
-
 	inline Vector3 operator/(const Vector3& vector, float scale)
 	{
 		assert(scale != 0);
