@@ -1,0 +1,29 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/Users/user/OneDrive/Desktop/San/Lecture/WantedLecture/3rd Month/Lecture/Content/StarterContent/Architecture/Floor_400x400.uasset",
+				"C:/Users/user/OneDrive/Desktop/San/Lecture/WantedLecture/3rd Month/Lecture/Content/Maps/GameSubLevel1.umap",
+				"C:/Users/user/OneDrive/Desktop/San/Lecture/WantedLecture/3rd Month/Lecture/Content/Maps/MainLevel.umap",
+				"C:/Users/user/OneDrive/Desktop/San/Lecture/WantedLecture/3rd Month/Lecture/Content/Maps/TopView.umap",
+				"C:/Users/user/OneDrive/Desktop/San/Lecture/WantedLecture/3rd Month/Lecture/Content/Blueprints/Warrior/BP_Player.uasset",
+				"C:/Users/user/OneDrive/Desktop/San/Lecture/WantedLecture/3rd Month/Lecture/Content/Blueprints/Warrior/BP_PlayerController.uasset",
+				"C:/Users/user/OneDrive/Desktop/San/Lecture/WantedLecture/3rd Month/Lecture/Content/Blueprints/Warrior/AM_Attack.uasset",
+				"C:/Users/user/OneDrive/Desktop/San/Lecture/WantedLecture/3rd Month/Lecture/Content/Blueprints/Warrior/ABP_Warrior.uasset",
+				"C:/Users/user/OneDrive/Desktop/San/Lecture/WantedLecture/3rd Month/Lecture/Content/UEContent/Architecture/Ruins/Materials/M_Plains_StoneWall.uasset",
+				"C:/Users/user/OneDrive/Desktop/San/Lecture/WantedLecture/3rd Month/Lecture/Content/UEContent/Architecture/Ruins/Materials/M_Plains_Pillars.uasset",
+				"C:/Users/user/OneDrive/Desktop/San/Lecture/WantedLecture/3rd Month/Lecture/Content/Blueprints/MapObjects/BP_LargeWallEdge.uasset",
+				"C:/Users/user/OneDrive/Desktop/San/Lecture/WantedLecture/3rd Month/Lecture/Content/Blueprints/Monster/BP_Monster.uasset",
+				"C:/Users/user/OneDrive/Desktop/San/Lecture/WantedLecture/3rd Month/Lecture/Content/Blueprints/Warrior/CBP_PlayerInputQueue.uasset",
+				"C:/Users/user/OneDrive/Desktop/San/Lecture/WantedLecture/3rd Month/Lecture/Content/Blueprints/Props/BP_Weapon.uasset",
+				"C:/Users/user/OneDrive/Desktop/San/Lecture/WantedLecture/3rd Month/Lecture/Content/UEContent/Architecture/Ruins/Materials/CustomDepth.uasset",
+				"C:/Users/user/OneDrive/Desktop/San/Lecture/WantedLecture/3rd Month/Lecture/Content/Maps/TopView1.umap",
+				"C:/Users/user/OneDrive/Desktop/San/Lecture/WantedLecture/3rd Month/Lecture/Content/Blueprints/UI/BP_WidgetComponent.uasset",
+				"C:/Users/user/OneDrive/Desktop/San/Lecture/WantedLecture/3rd Month/Lecture/Content/Blueprints/UI/WBP_Interact.uasset"
+			]
+		}
+	]
+}
