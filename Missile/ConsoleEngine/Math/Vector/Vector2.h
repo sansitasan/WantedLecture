@@ -2,6 +2,7 @@
 #include "Core.h"
 #include <cmath>
 #include <intrin.h>
+#include <cassert>
 
 
 //시야 판정은 단순하게 한다면 거리와 방향을 본다
@@ -44,11 +45,14 @@ public:
 
 	inline Vector2 Normalize() const {
 		float mag = Magnitude();
-		return Vector2(value.fval[0] / mag, value.fval[1] / mag);
+        assert(mag != 0);
+		return Vector2(_mm_div_ps(value.val, _mm_set_ps1(mag)));
 	}
 
 	inline void normalize() {
 		float mag = Magnitude();
+        assert(mag != 0);
+        value.val = _mm_div_ps(value.val, _mm_set_ps1(mag));
 		value.fval[0] /= mag;
 		value.fval[1] /= mag;
 	}
@@ -61,12 +65,16 @@ public:
 		return Vector2(_mm_sub_ps(value.val, other.value.val));
 	}
 
-	inline Vector2 operator*(const float other) const  {
-		return Vector2(_mm_mul_ps(value.val, _mm_set_ps1(other)));
+	inline ENGINE_API friend Vector2 operator*(const Vector2& vector, float other)  {
+		return Vector2(_mm_mul_ps(vector.value.val, _mm_set_ps1(other)));
 	}
 
-	inline Vector2 operator/(const float other) const {
-        if (other == 0) __debugbreak();
+    inline ENGINE_API friend Vector2 operator*(float other, const Vector2& vector) {
+        return Vector2(_mm_mul_ps(vector.value.val, _mm_set_ps1(other)));
+    }
+
+	inline Vector2 operator/(float other) const {
+        assert(other != 0);
 		return Vector2(_mm_div_ps(value.val, _mm_set_ps1(other)));
 	}
 

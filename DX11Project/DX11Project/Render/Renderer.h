@@ -25,6 +25,7 @@ namespace SanDX {
 
 	private:
 		std::unique_ptr<class QuadMesh> mesh;
+		std::unique_ptr<class QuadMesh> mesh2;
 
 	private:
 		//ÀåÄ¡·ù

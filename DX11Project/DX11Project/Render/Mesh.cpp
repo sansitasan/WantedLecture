@@ -69,6 +69,7 @@ namespace SanDX {
 	}
 
 	Mesh::Mesh()
+		: transform()
 	{
 
 	}
@@ -77,16 +78,19 @@ namespace SanDX {
 	{
 		static ID3D11DeviceContext& context = Engine::Get().Context();
 
-		for (int32 i = 0; i < (int32)meshes.size(); ++i) {
-			std::shared_ptr<Material> shader = materials[i].lock();
-			if (!shader) {
-				continue;
-			}
-			meshes[i]->Bind();
+		transform.Bind();
 
-			shader->Bind();
+		for (int32 i = 0; i < (int32)meshes.size(); ++i) {
+			std::shared_ptr<Material> material = materials[i].lock();
+			std::shared_ptr<MeshData> mesh = meshes[i].lock();
+
+			if (!mesh || !material) continue;
+
+			mesh->Bind();
+
+			material->Bind();
 			//드로우 콜
-			context.DrawIndexed(meshes[i]->IndexCount(), 0, 0);
+			context.DrawIndexed(mesh->IndexCount(), 0, 0);
 		}
 	}
 }

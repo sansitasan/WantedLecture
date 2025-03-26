@@ -14,15 +14,9 @@ namespace SanDX {
 		m00 = m11 = m22 = m33 = 1.f;
 	}
 
-	Matrix4x4::Matrix4x4(const Vector3& position, const Vector3& rotation, const Vector3& scale)
-	{
-		simd512 = _mm512_setzero_ps();
-	}
-
 	Matrix4x4::Matrix4x4(const Matrix4x4& other)
 	{
-		simd512 = other.simd512;
-		//memcpy(elements, other.elements, sizeof(float) * 16);
+		memcpy(elements, other.elements, sizeof(float) * 16);
 	}
 
 	void Matrix4x4::Translation(const Vector3& position, Matrix4x4& outValue)
@@ -32,7 +26,7 @@ namespace SanDX {
 
 	void Matrix4x4::Translation(float x, float y, float z, Matrix4x4& outValue)
 	{
-		outValue.simd512 = _mm512_setzero_ps();
+		memset(&outValue, 0, Matrix4x4::Stride());
 		outValue.m00 = 1.f;
 		outValue.m11 = 1.f;
 		outValue.m22 = 1.f;
@@ -62,19 +56,25 @@ namespace SanDX {
 
 	void Matrix4x4::RotationX(float angle, Matrix4x4& outValue)
 	{
-		//outValue.simd512 = _mm512_setzero_ps();
+		memset(&outValue, 0, sizeof(float) * 16);
 		float cosAngle = std::cos(angle * degreeToRadian);
 		float sinAngle = std::sin(angle * degreeToRadian);
+		outValue.m00 = 1.f;
+		outValue.m11 = cosAngle;	
+		outValue.m12 = sinAngle;
+		outValue.m21 = -sinAngle;	
+		outValue.m22 = cosAngle;
+		outValue.m33 = 1.f;
 
-		outValue.m00 = 1.f;		outValue.m01 = 0.f;			outValue.m02 = 0.f;			outValue.m03 = 0.f;
-		outValue.m10 = 0.f;		outValue.m11 = cosAngle;	outValue.m12 = sinAngle;	outValue.m13 = 0.f;
-		outValue.m20 = 0.f;		outValue.m21 = -sinAngle;	outValue.m22 = cosAngle;	outValue.m23 = 0.f;
-		outValue.m30 = 0.f;		outValue.m31 = 0.f;			outValue.m32 = 0.f;			outValue.m33 = 1.f;
+		//outValue.m00 = 1.f;		outValue.m01 = 0.f;			outValue.m02 = 0.f;			outValue.m03 = 0.f;
+		//outValue.m10 = 0.f;		outValue.m11 = cosAngle;	outValue.m12 = sinAngle;	outValue.m13 = 0.f;
+		//outValue.m20 = 0.f;		outValue.m21 = -sinAngle;	outValue.m22 = cosAngle;	outValue.m23 = 0.f;
+		//outValue.m30 = 0.f;		outValue.m31 = 0.f;			outValue.m32 = 0.f;			outValue.m33 = 1.f;
 	}
 
 	void Matrix4x4::RotationY(float angle, Matrix4x4& outValue)
 	{
-		//outValue.simd512 = _mm512_setzero_ps();
+		memset(&outValue, 0, sizeof(float) * 16);
 		float cosAngle = std::cos(angle * degreeToRadian);
 		float sinAngle = std::sin(angle * degreeToRadian);
 		outValue.m00 = cosAngle;
@@ -92,7 +92,7 @@ namespace SanDX {
 
 	void Matrix4x4::RotationZ(float angle, Matrix4x4& outValue)
 	{
-		//outValue.simd512 = _mm512_setzero_ps();
+		memset(&outValue, 0, sizeof(float) * 16);
 		float cosAngle = std::cos(angle * degreeToRadian);
 		float sinAngle = std::sin(angle * degreeToRadian);
 
@@ -114,7 +114,7 @@ namespace SanDX {
 
 	void Matrix4x4::Scale(float x, float y, float z, Matrix4x4& outValue)
 	{
-		//outValue.simd512 = _mm512_setzero_ps();
+		memset(&outValue, 0, sizeof(float) * 16);
 		outValue.m00 = x;
 		outValue.m11 = y;
 		outValue.m22 = z;
@@ -131,6 +131,16 @@ namespace SanDX {
 		Scale(scale, scale, scale, outValue);
 	}
 
+	void Matrix4x4::Transpose()
+	{
+		std::swap(m01, m10);
+		std::swap(m02, m20);
+		std::swap(m03, m30);
+		std::swap(m12, m21);
+		std::swap(m13, m31);
+		std::swap(m23, m32);
+	}
+
 	void Matrix4x4::Transpose(const Matrix4x4& target, Matrix4x4& outValue)
 	{
 		outValue = target;
@@ -145,23 +155,32 @@ namespace SanDX {
 
 	Matrix4x4& Matrix4x4::operator=(const Matrix4x4& other)
 	{
-		//memcpy(elements, other.elements, sizeof(float) * 16);
-		simd512 = other.simd512;
+		memcpy(elements, other.elements, sizeof(float) * 16);
 		return *this;
 	}
 
 	Matrix4x4 Matrix4x4::operator*(const Matrix4x4& other)
 	{
 		Matrix4x4 m;
-		__m128 temp;
-		for (__int8 i = 0; i < 4; ++i) {
-			for (__int8 j = 0; j < 4; ++j) {
-				temp = _mm_mul_ps(simd128[i], _mm_set_ps(other.elements[j], other.elements[j + 4], other.elements[j + 8], other.elements[j + 12]));
-				m.elements[(i << 2) + j] = temp.m128_f32[0] + temp.m128_f32[1] + temp.m128_f32[2] + temp.m128_f32[3];
-			}
-		}
-
-		return m;
+		m.m00 = m00 * other.m00 + m01 * other.m10 + m02 * other.m20 + m03 * other.m30;
+		m.m01 = m00 * other.m01 + m01 * other.m11 + m02 * other.m21 + m03 * other.m31;
+		m.m02 = m00 * other.m02 + m01 * other.m12 + m02 * other.m22 + m03 * other.m32;
+		m.m03 = m00 * other.m03 + m01 * other.m13 + m02 * other.m23 + m03 * other.m33;
+		
+		m.m10 = m10 * other.m00 + m11 * other.m10 + m12 * other.m20 + m13 * other.m30;
+		m.m11 = m10 * other.m01 + m11 * other.m11 + m12 * other.m21 + m13 * other.m31;
+		m.m12 = m10 * other.m02 + m11 * other.m12 + m12 * other.m22 + m13 * other.m32;
+		m.m13 = m10 * other.m03 + m11 * other.m13 + m12 * other.m23 + m13 * other.m33;
+		
+		m.m20 = m20 * other.m00 + m21 * other.m10 + m22 * other.m20 + m23 * other.m30;
+		m.m21 = m20 * other.m01 + m21 * other.m11 + m22 * other.m21 + m23 * other.m31;
+		m.m22 = m20 * other.m02 + m21 * other.m12 + m22 * other.m22 + m23 * other.m32;
+		m.m23 = m20 * other.m03 + m21 * other.m13 + m22 * other.m23 + m23 * other.m33;
+		
+		m.m30 = m30 * other.m00 + m31 * other.m10 + m32 * other.m20 + m33 * other.m30;
+		m.m31 = m30 * other.m01 + m31 * other.m11 + m32 * other.m21 + m33 * other.m31;
+		m.m32 = m30 * other.m02 + m31 * other.m12 + m32 * other.m22 + m33 * other.m32;
+		m.m33 = m30 * other.m03 + m31 * other.m13 + m32 * other.m23 + m33 * other.m33;
 	}
 
 	Matrix4x4& Matrix4x4::operator*=(const Matrix4x4& other)
@@ -178,12 +197,9 @@ namespace SanDX {
 	Vector3 operator*(const Vector3& vector, const Matrix4x4& matrix)
 	{
 		Vector3 result;
-		__m128 temp = _mm_mul_ps(_mm_set_ps(matrix.m00, matrix.m10, matrix.m20, 0), _mm_set_ps(vector.x, vector.y, vector.z, 0));
-		result.x = temp.m128_f32[1] + temp.m128_f32[2] + temp.m128_f32[3];
-		temp = _mm_mul_ps(_mm_set_ps(matrix.m01, matrix.m11, matrix.m21, 0), _mm_set_ps(vector.x, vector.y, vector.z, 0));
-		result.y = temp.m128_f32[1] + temp.m128_f32[2] + temp.m128_f32[3];
-		temp = _mm_mul_ps(_mm_set_ps(matrix.m02, matrix.m12, matrix.m22, 0), _mm_set_ps(vector.x, vector.y, vector.z, 0));
-		result.z = temp.m128_f32[1] + temp.m128_f32[2] + temp.m128_f32[3];
+		result.x = matrix.m00 * vector.x + matrix.m10 * vector.y + matrix.m20 * vector.z;
+		result.x = matrix.m01 * vector.x + matrix.m11 * vector.y + matrix.m21 * vector.z;
+		result.x = matrix.m02 * vector.x + matrix.m12 * vector.y + matrix.m22 * vector.z;
 		return result;
 	}
 }

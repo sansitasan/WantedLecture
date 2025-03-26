@@ -3,6 +3,7 @@
 #include "Render/Renderer.h"
 #include "Resource/MaterialLoader.h"
 #include "Resource/TextureLoader.h"
+#include "Resource/ModelLoader.h"
 
 namespace SanDX {
 
@@ -16,6 +17,7 @@ namespace SanDX {
 
         materialLoader = std::make_unique<MaterialLoader>();
         textureLoader = std::make_unique<TextureLoader>();
+        modelLoader = std::make_unique<ModelLoader>();
 
         renderer = std::make_shared<Renderer>(width, height, window->Handle());
     }

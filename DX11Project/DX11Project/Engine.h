@@ -34,5 +34,6 @@ namespace SanDX {
 
 		std::unique_ptr<class MaterialLoader> materialLoader;
 		std::unique_ptr<class TextureLoader> textureLoader;
+		std::unique_ptr<class ModelLoader> modelLoader;
 	};
 }

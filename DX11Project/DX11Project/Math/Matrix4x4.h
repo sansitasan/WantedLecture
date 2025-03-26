@@ -2,15 +2,11 @@
 
 #include "../Type.h"
 #include "Vector3.h"
-#include <xmmintrin.h>
-#include <immintrin.h>
-#include <zmmintrin.h>
 
 namespace SanDX {
 	class Matrix4x4 {
 	public:
 		Matrix4x4();
-		Matrix4x4(const Vector3& position, const Vector3& rotation, const Vector3& scale);
 		Matrix4x4(const Matrix4x4& other);
 		~Matrix4x4() = default;
 
@@ -32,6 +28,8 @@ namespace SanDX {
 		static void Scale(float x, float y, float z, Matrix4x4& outValue);
 		static void Scale(float scale, Matrix4x4& outValue);
 
+		void Transpose();
+
 		static void Transpose(const Matrix4x4& target, Matrix4x4& outValue);
 
 		Matrix4x4& operator=(const Matrix4x4& other);
@@ -51,8 +49,6 @@ namespace SanDX {
 
 	private:
 		union {
-			__m128 simd128[4];
-			__m512 simd512;
 			//이름이 없어 바로 접근할 수 있다.
 			//이렇게 나누는 이유는 그냥 시각적인 이유
 			struct {

@@ -6,6 +6,7 @@
 #include <memory>
 #include "Material/Material.h"
 #include "Core.h"
+#include "Math/Transform.h"
 
 namespace SanDX {
 	struct MeshData {
@@ -33,8 +34,11 @@ namespace SanDX {
 		virtual ~Mesh() = default;
 
 		virtual void Draw();
+
+		//@Temp: Æ®·£½ºÆû
+		Transform transform;
 	protected:
-		std::vector<std::shared_ptr<MeshData>> meshes;
+		std::vector<std::weak_ptr<MeshData>> meshes;
 		std::vector<std::weak_ptr<class Material>> materials;
 	};
 }
