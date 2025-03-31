@@ -200,7 +200,7 @@
    ## 🛠️하데스 기능
    <p align="center">
      ▼아래 움짤을 클릭하시면 기능 깃허브로 들어갑니다!▼<br/>
-     <a href="https://github.com/sansitasan/WantedLecture/tree/main/PackMan" target="_blank">
+     <a href="https://github.com/sansitasan/WantedLecture/tree/main/3rd%20Month/Lecture" target="_blank">
      <img src="https://github.com/user-attachments/assets/7fb6045c-a572-4de5-a171-351eb3a2073f" width="400px">
      </p>
      </a>
