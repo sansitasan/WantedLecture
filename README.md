@@ -1,6 +1,7 @@
 ## 📌 목차  
 - <a href="#console">[1. 콘솔 프로그래밍]</a>  <br/>
 - <a href="#console-algo">[2. 콘솔 알고리즘 프로그래밍]</a>  <br/>
+- <a href="#unreal-bp">[3. 언리얼 블루프린트 프로젝트]</a>  <br/>
 
 <details>
   <summary><h2 id="console"><b>1개월차 콘솔 프로그래밍</b></h2></summary>
@@ -178,7 +179,7 @@
   > >    <summary>MMX 문제</summary>
   > >    - __m64는 정수 연산을 위한 명령어 집합이며, FPU(부동소수점 연산을 위해 존재하는 하드웨어, 이제는 CPU 내부에 통합됨)와 일부 자원을 공유하므로 부동소수점 연산 불가<br/>  
   > >    - 또한 FPU와 공유하기 때문에 사용 이후에는 _mm_empty()함수로 FPU 상태를 복구해야 함<br/>  
- > >    - 따라서 메모리를 더 쓰지만 __m128을 사용<br/>
+  > >    - 따라서 메모리를 더 쓰지만 __m128을 사용<br/>
   > >  </details>
   >   
   > >  <details>
@@ -188,6 +189,87 @@
   > >    - 즉시 에러가 나오는 경우는 할당된 메모리 영역이 속한페이지를 벗어난 곳을 침범하는 경우<br/>
   > >    - 지연된 에러가 나오는 경우는 정상적인 동작 중에서 나오기도 하므로 새로 추가한 코드 주변에 힙 손상을 탐지하는 코드를 활용하여 손상의 원인을 탐지해야 함<br/>
   > >  </details>
+  >
+  > </details>
+  
+  </details><br/>
+  
+  <details>
+  <summary><h2 id="unreal-bp"><b>3개월차 언리얼 블루프린트</b></h2></summary>
+
+   ## 🛠️하데스 기능
+   <p align="center">
+     ▼아래 움짤을 클릭하시면 기능 깃허브로 들어갑니다!▼<br/>
+     <a href="https://github.com/sansitasan/WantedLecture/tree/main/PackMan" target="_blank">
+     <img src="https://github.com/user-attachments/assets/7fb6045c-a572-4de5-a171-351eb3a2073f" width="400px">
+     </p>
+     </a>
+
+  > <details>
+  >   <summary><h3>🛠 주요 작업</h3></summary>
+  >   
+  > >   <details>
+  > >    <summary>선입력 시스템 제작</summary>
+  > >    - 액션성이 강한 게임의 특성상 매끄러운 입력과 움직임이 필요<br/>  
+  > >    - 이를 위해 행동 중 사용자의 입력이 들어왔을 때, 적당한 시간 동안 입력을 보존<br/>  
+  > >    - 행동 종료 시 입력 큐에 입력이 있다면 바로 이어서 실행<br/>  
+  > >    <p align="center">
+  > >      <img src="https://github.com/user-attachments/assets/096139a8-6ccc-4fd6-b6b5-bf24df23f074" width="600px">
+  > >      <img src="https://github.com/user-attachments/assets/77e741b1-90a0-4fad-90a3-42d076c4d3a6" width="400px">
+  > >    </p>
+  > >  </details>
+  >   
+  > >  <details>
+  > >    <summary>쿨타임 머티리얼 제작</summary>
+  > >    - 극좌표를 활용하여 제작<br/>  
+  > >    - 적의 방향을 확률적으로 전환하며 AI 구현<br/>  
+  > >    - 플레이어가 근처에 있으면 방향 전환<br/>  
+  > >    - 아이템을 먹었다면, 플레이어와 먼 곳으로 도망<br/>  
+  > >    <p align="center">
+  > >      <img src="https://github.com/user-attachments/assets/e5f5789f-567a-4b89-a71e-61b382ef3a55" width="600px">
+  > >      <img src="https://github.com/user-attachments/assets/9a7bdb1b-985f-48a4-905f-7615d62edf65" width="400px">
+  > >    </p>
+  > >  </details>
+  >   
+  > >  <details>
+  > >    <summary>시야 방해 오브젝트 투명화</summary>
+  > >    - 플레이어와 카메라 사이에 충돌체를 놓고 여기에 오버랩되는 물체들이 스스로의 opacity값을 조절<br/>  
+  > >    - BlendMode가 Masked일 때, opacity값이 0 or 1만 가능하므로 부자연스러움<br/>  
+  > >    - 따라서 Translucent로 설정하고 opacity를 자연스럽게 조절<br/>  
+  > >    <p align="center">
+  > >      <img src="https://github.com/user-attachments/assets/9472ec74-f508-4bcc-8524-a0b7e01d0bcc" width="400px">
+  > >      <img src="https://github.com/user-attachments/assets/5196ce1a-0c84-4438-82a2-eb85c99fb116" width="400px">
+  > >    </p>
+  > >  </details>
+  >   
+  > </details>
+  > 
+  > <details>
+  >   <summary><h3>🚨 이슈/해결</h3></summary>
+  >   
+  > >  <details>
+  > >    <summary>적 AI가 같은 자리에서 계속 움직이는 현상</summary>
+  > >    - 매 프레임 랜덤 방향 결정으로 인해 발생<br/>  
+  > >    - 한 칸마다 방향을 결정하거나 갈림길에서 방향 결정하여 해결<br/>  
+  > >  </details>
+  >   
+  > >  <details>
+  > >    <summary>플레이어를 쫓거나 도망칠 때 프레임 드랍 발생</summary>
+  > >    - 매 프레임 A* 사용으로 과부하 발생<br/>  
+  > >    - 특정 범위 내에서 방향을 정하고 탐색하는 방식으로 해결<br/>  
+  > >  </details>
+  >   
+  > >  <details>
+  > >    <summary>Placement new 사용 시 컴파일 오류 발생</summary>
+  > >    - new를 memory leak 확인을 위해 매크로로 변경하여 발생<br/>  
+  > >    - 매크로에서 사용하는 이름을 전부 변경하여 해결<br/>  
+  > >  </details>
+  >   
+  > >  <details>
+  > >    <summary>Scene 전환 시에도 플레이어가 입력을 받는 문제</summary>
+  > >    - 함수 포인터 실행 시 active 여부 검사 누락<br/>  
+  > >    - 객체별 active 상태를 체크하는 bool 변수를 추가하여 해결<br/>  
+  > >  </details>
   >   
   > >  <details>
   > >    <summary>Switch 문 중간에 객체 정의 시 에러</summary>
@@ -196,5 +278,7 @@
   > >  </details>
   >   
   > </details>
+
+</details><br/>
 
 </details>
