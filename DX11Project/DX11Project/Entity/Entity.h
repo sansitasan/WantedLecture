@@ -1,9 +1,14 @@
 #pragma once
 #include <string>
 #include "Math/Transform.h"
+#include <memory>
+#include <vector>
 
 namespace SanDX {
 	class Entity {
+		friend class Renderer;
+		friend class Scene;
+
 	public:
 		Entity();
 		virtual ~Entity();
@@ -19,6 +24,13 @@ namespace SanDX {
 
 		FORCEINLINE void SetActive(bool newActive) { isActive = newActive; }
 
+		void AddComponent(std::shared_ptr<class Component> newComponent);
+
+		template<typename T>
+		bool TryGetComponent() {
+			return true;
+		}
+
 	public:
 		Transform transform;
 
@@ -27,7 +39,9 @@ namespace SanDX {
 		std::wstring name = TEXT("Entity");
 
 		bool hasInitialized = false;
-		bool isActive = false;
+		bool isActive = true;
 		bool hasDestroyed = false;
+
+		std::vector<std::shared_ptr<class Component>> components;
 	};
 }

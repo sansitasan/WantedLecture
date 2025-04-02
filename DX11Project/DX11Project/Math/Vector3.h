@@ -38,9 +38,12 @@ namespace SanDX {
 		inline friend Vector3 operator*(float scale, const Vector3& vector) {
 			return Vector3(vector.x * scale, vector.y * scale, vector.z * scale);
 		}
+
 		inline friend Vector3 operator/(const Vector3& vector, float scale);
 
-		inline Vector3 operator-() const;
+		inline Vector3 operator-() const {
+			return Vector3(-x, -y, -z);
+		}
 
 		inline bool operator==(const Vector3& other);
 		inline bool operator!=(const Vector3& other);

@@ -13,8 +13,8 @@ namespace SanDX {
 
 		std::vector<uint32> indices = { 0, 1, 2 };
 		meshes.emplace_back(std::make_shared<MeshData>(vertices, indices));
-		std::weak_ptr<DefaultMaterial> mat;
-		MaterialLoader::Get().Load<DefaultMaterial>(mat);
-		materials.emplace_back(mat);
+		//std::weak_ptr<DefaultMaterial> mat;
+		//MaterialLoader::Get().Load<DefaultMaterial>(mat);
+		//materials.emplace_back(mat);
 	}
 }

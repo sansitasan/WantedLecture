@@ -20,12 +20,7 @@ namespace SanDX {
 		Renderer(uint32 width, uint32 helgiht, HWND window);
 		~Renderer();
 
-		//TODO: Scene 정보 넘기기
-		void Draw();
-
-	private:
-		std::unique_ptr<class QuadMesh> mesh;
-		std::unique_ptr<class QuadMesh> mesh2;
+		void Draw(std::shared_ptr<class Scene> scene);
 
 	private:
 		//장치류

@@ -14,6 +14,11 @@ cbuffer Transform : register(b0)
     matrix worldMatrix;
 };
 
+cbuffer Camera : register(b1)
+{
+    matrix viewMatrix;
+};
+
 struct VertexOutput
 {
     float4 position : SV_Position;
@@ -27,6 +32,7 @@ VertexOutput main(VertexInput input)
     VertexOutput output;
     //output.position = float4(input.position, 1);
     output.position = mul(float4(input.position, 1), worldMatrix);
+    output.position = mul(output.position, viewMatrix);
     output.color = input.color;
     output.normal = input.normal;
     output.uv = input.uv;

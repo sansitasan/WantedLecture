@@ -19,6 +19,13 @@ namespace SanDX {
 		memcpy(elements, other.elements, sizeof(float) * 16);
 	}
 
+	Matrix4x4 Matrix4x4::Translation(const Vector3& position)
+	{
+		Matrix4x4 temp;
+		Translation(position.x, position.y, position.z, temp);
+		return temp;
+	}
+
 	void Matrix4x4::Translation(const Vector3& position, Matrix4x4& outValue)
 	{
 		Translation(position.x, position.y, position.z, outValue);
@@ -38,6 +45,13 @@ namespace SanDX {
 		//outValue.m10 = 0.f;		outValue.m11 = 1.f;		outValue.m12 = 0.f;		outValue.m13 = 0.f;
 		//outValue.m20 = 0.f;		outValue.m21 = 0.f;		outValue.m22 = 1.f;		outValue.m23 = 0.f;
 		//outValue.m30 = x;			outValue.m31 = y;		outValue.m32 = z;		outValue.m33 = 1.f;
+	}
+
+	Matrix4x4 Matrix4x4::Rotation(const Vector3& rotation)
+	{
+		Matrix4x4 temp;
+		Rotation(rotation.x, rotation.y, rotation.z, temp);
+		return temp;
 	}
 
 	void Matrix4x4::Rotation(const Vector3& rotation, Matrix4x4& outValue)
@@ -107,6 +121,13 @@ namespace SanDX {
 		//outValue.m30 = 0.f;			outValue.m31 = 0.f;			outValue.m32 = 0.f;		outValue.m33 = 1.f;
 	}
 
+	Matrix4x4 Matrix4x4::Scale(const Vector3& scale)
+	{
+		Matrix4x4 temp;
+		Scale(scale.x, scale.y, scale.z, temp);
+		return temp;
+	}
+
 	void Matrix4x4::Scale(const Vector3& scale, Matrix4x4& outValue)
 	{
 		Scale(scale.x, scale.y, scale.z, outValue);
@@ -139,6 +160,13 @@ namespace SanDX {
 		std::swap(m12, m21);
 		std::swap(m13, m31);
 		std::swap(m23, m32);
+	}
+
+	Matrix4x4 Matrix4x4::Transpose(const Matrix4x4& target)
+	{
+		Matrix4x4 temp = target;
+		temp.Transpose();
+		return temp;
 	}
 
 	void Matrix4x4::Transpose(const Matrix4x4& target, Matrix4x4& outValue)

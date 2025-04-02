@@ -69,28 +69,33 @@ namespace SanDX {
 	}
 
 	Mesh::Mesh()
-		: transform()
 	{
 
 	}
 
-	void Mesh::Draw()
+	std::weak_ptr<MeshData> Mesh::GetSubMesh(int index) const
 	{
-		static ID3D11DeviceContext& context = Engine::Get().Context();
-
-		transform.Bind();
-
-		for (int32 i = 0; i < (int32)meshes.size(); ++i) {
-			std::shared_ptr<Material> material = materials[i].lock();
-			std::shared_ptr<MeshData> mesh = meshes[i].lock();
-
-			if (!mesh || !material) continue;
-
-			mesh->Bind();
-
-			material->Bind();
-			//드로우 콜
-			context.DrawIndexed(mesh->IndexCount(), 0, 0);
-		}
+		if (index < 0 || index >= meshes.size()) return std::weak_ptr<MeshData>();
+		return meshes[index];
 	}
+
+	//void Mesh::Draw()
+	//{
+	//	static ID3D11DeviceContext& context = Engine::Get().Context();
+	//
+	//	transform.Bind();
+	//
+	//	for (int32 i = 0; i < (int32)meshes.size(); ++i) {
+	//		std::shared_ptr<Material> material = materials[i].lock();
+	//		std::shared_ptr<MeshData> mesh = meshes[i].lock();
+	//
+	//		if (!mesh || !material) continue;
+	//
+	//		mesh->Bind();
+	//
+	//		material->Bind();
+	//		//드로우 콜
+	//		context.DrawIndexed(mesh->IndexCount(), 0, 0);
+	//	}
+	//}
 }

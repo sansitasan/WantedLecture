@@ -1,7 +1,6 @@
 #pragma once
 #include "Engine.h"
-#include "Math/Vector2.h"
-#include "Math/Vector3.h"
+#include "Scene/DemoScene.h"
 #include <iostream>
 
 using namespace SanDX;
@@ -35,5 +34,6 @@ using namespace SanDX;
 int WINAPI main() {
 	//nullptr을 넣으면 현재 실행되는 프로그램의 인스턴스를 가져와달라는 것
 	Engine engine(800, 600, TEXT("Engine Demo"), GetModuleHandle(nullptr));
+	engine.SetScene(std::make_shared<DemoScene>());
 	engine.Run();
 }

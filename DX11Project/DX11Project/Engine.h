@@ -22,6 +22,8 @@ namespace SanDX {
 
 		void Run();
 
+		void SetScene(std::shared_ptr<class Scene> newScene);
+
 	protected:
 		//√¢ ∞¥√º
 		std::shared_ptr<class Window> window;
@@ -31,6 +33,8 @@ namespace SanDX {
 
 		//ΩÃ±€≈Ê ∞¥√º
 		static Engine* instance;
+
+		std::shared_ptr<class Scene> mainScene;
 
 		std::unique_ptr<class MaterialLoader> materialLoader;
 		std::unique_ptr<class TextureLoader> textureLoader;

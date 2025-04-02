@@ -6,7 +6,7 @@
 #include <memory>
 #include "Material/Material.h"
 #include "Core.h"
-#include "Math/Transform.h"
+//#include "Math/Transform.h"
 
 namespace SanDX {
 	struct MeshData {
@@ -33,12 +33,15 @@ namespace SanDX {
 		Mesh();
 		virtual ~Mesh() = default;
 
-		virtual void Draw();
+		uint32 SubMeshCount() const { return static_cast<uint32>(meshes.size()); }
+		std::weak_ptr<MeshData> GetSubMesh(int index) const;
+
+		//virtual void Draw();
 
 		//@Temp: Æ®·£½ºÆû
-		Transform transform;
+		//Transform transform;
 	protected:
 		std::vector<std::weak_ptr<MeshData>> meshes;
-		std::vector<std::weak_ptr<class Material>> materials;
+		//std::vector<std::weak_ptr<class Material>> materials;
 	};
 }

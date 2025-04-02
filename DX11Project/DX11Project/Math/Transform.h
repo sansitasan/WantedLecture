@@ -12,6 +12,7 @@ namespace SanDX {
 		Transform(const Vector3& position, const Vector3& rotation, const Vector3& scale);
 		~Transform();
 
+		void Update();
 		void Bind();
 
 	public:

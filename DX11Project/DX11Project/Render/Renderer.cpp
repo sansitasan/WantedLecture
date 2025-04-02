@@ -4,6 +4,8 @@
 #include "Math/Vector3.h"
 #include "QuadMesh.h"
 #include "TriangleMesh.h"
+#include "Scene/Scene.h"
+#include "Entity/Entity.h"
 
 //버텍스는 정점을 받고
 //프래그먼트는 픽셀을 받는다
@@ -161,20 +163,8 @@ namespace SanDX {
 	{
 	}
 
-	void Renderer::Draw()
+	void Renderer::Draw(std::shared_ptr<Scene> scene)
 	{
-		if (mesh == nullptr) {
-			mesh = std::make_unique<QuadMesh>();
-			mesh->transform.scale = Vector3::One * 0.5f;
-			mesh->transform.position.x = 0.5f;
-		}
-
-		if (mesh2 == nullptr) {
-			mesh2 = std::make_unique<QuadMesh>();
-			mesh2->transform.scale = Vector3::One * 0.5f;
-			mesh2->transform.position.x = -0.5f;
-		}
-
 		//렌더 콜을 하면 지우기 때문에 렌더 타겟을 사용하겠다고 명시해줘야 한다.
 		context->OMSetRenderTargets(1, &renderTargetView, nullptr);
 		//그리기 전 (BeginScene)
@@ -182,12 +172,15 @@ namespace SanDX {
 		float color[] = { 1, 1, 1, 1 };
 		context->ClearRenderTargetView(renderTargetView, color);
 
-		//mesh->Update(1.f / 60.f);
-		//mesh2->Update(1.f / 60.f);
+		if (scene->GetCamera()) scene->GetCamera()->Draw();
 
 		//드로우 (Draw, Render)
-		mesh->Draw();
-		mesh2->Draw();
+		uint32 count = scene->EntityCount();
+		for (uint32 i = 0; i < count; ++i) {
+			auto& entity = scene->GetEntity(i);
+			if (entity->IsActive()) entity->Draw();
+			//원래는 컴포넌트를 다 가져와서 드로우 가능한 애들은 렌더 스레드에 넘긴다.
+		}
 
 		//버퍼 교환 (EndScene, Present)
 		//모니터 화면주사율 렌더 동기화를 할건지

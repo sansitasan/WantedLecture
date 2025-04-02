@@ -13,10 +13,12 @@ namespace SanDX {
 		static uint32 Stride() noexcept { return sizeof(Matrix4x4); }
 
 		//Translate(T)
+		static Matrix4x4 Translation(const Vector3& position);
 		static void Translation(const Vector3& position, Matrix4x4& outValue);
 		static void Translation(float x, float y, float z, Matrix4x4& outValue);
 
 		//Rotate(R)
+		static Matrix4x4 Rotation(const Vector3& rotation);
 		static void Rotation(const Vector3& rotation, Matrix4x4& outValue);
 		static void Rotation(float x, float y, float z, Matrix4x4& outValue);
 		static void RotationX(float angle, Matrix4x4& outValue);
@@ -24,12 +26,14 @@ namespace SanDX {
 		static void RotationZ(float angle, Matrix4x4& outValue);
 
 		//Scale(S)
+		static Matrix4x4 Scale(const Vector3& scale);
 		static void Scale(const Vector3& scale, Matrix4x4& outValue);
 		static void Scale(float x, float y, float z, Matrix4x4& outValue);
 		static void Scale(float scale, Matrix4x4& outValue);
 
 		void Transpose();
 
+		static Matrix4x4 Transpose(const Matrix4x4& target);
 		static void Transpose(const Matrix4x4& target, Matrix4x4& outValue);
 
 		Matrix4x4& operator=(const Matrix4x4& other);

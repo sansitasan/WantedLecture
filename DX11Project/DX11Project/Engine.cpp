@@ -4,6 +4,9 @@
 #include "Resource/MaterialLoader.h"
 #include "Resource/TextureLoader.h"
 #include "Resource/ModelLoader.h"
+#include "Scene/Scene.h"
+
+#include <iostream>
 
 namespace SanDX {
 
@@ -59,6 +62,25 @@ namespace SanDX {
 
     void Engine::Run()
     {
+        //int64임
+        //이전에 64비트 지원하지 않을 때 사용한 것
+        //이제는 long long을 사용하면 되나, 아래 함수가 이를 사용하기 때문에...
+        //내부를 까보면 long long이 따로 있다.
+        LARGE_INTEGER currentTime;
+        LARGE_INTEGER previousTime;
+        LARGE_INTEGER frequency;
+
+        //하드웨어 타이머의 해상도 값(기준 단위)
+        QueryPerformanceFrequency(&frequency);
+
+        QueryPerformanceCounter(&currentTime);
+        previousTime = currentTime;
+
+        //프레임 계산에 사용할 변수
+        float targetFrameRate = 120.f;
+        //고정 프레임 속도를 사용하기 위한 변수
+        float oneFrameTime = 1.f / targetFrameRate;
+
         MSG msg = {};
         //네번째는 메시지 전달 후 삭제할것인지
         while (msg.message != WM_QUIT) {
@@ -71,9 +93,33 @@ namespace SanDX {
             }
 
             else {
-                //엔진 루프
-                renderer->Draw();
+                QueryPerformanceCounter(&currentTime);
+
+                float deltaTime = (float)(currentTime.QuadPart - previousTime.QuadPart)
+                    / (float)frequency.QuadPart;
+
+                //if (deltaTime < oneFrameTime) continue;
+
+                std::cout 
+                    << "deltaTime: " << deltaTime 
+                    << " | OneFrameTime: " << oneFrameTime 
+                    << " | FPS: " << (int)ceil(1.f / deltaTime) << '\n';
+
+                if (mainScene) {
+                    mainScene->BeginPlay();
+                    mainScene->Update(deltaTime);
+                    
+                }
+
+                renderer->Draw(mainScene);
+
+                previousTime = currentTime;
             }
         }
+    }
+
+    void Engine::SetScene(std::shared_ptr<class Scene> newScene)
+    {
+        mainScene = newScene;
     }
 }

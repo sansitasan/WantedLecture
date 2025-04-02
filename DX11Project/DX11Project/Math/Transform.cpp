@@ -80,10 +80,8 @@ namespace SanDX {
 		}
 	}
 
-	void Transform::Bind()
+	void Transform::Update()
 	{
-		static ID3D11DeviceContext& context = Engine::Get().Context();
-
 		Matrix4x4 s, r, t;
 		Matrix4x4::Scale(scale, s);
 		Matrix4x4::Rotation(rotation, r);
@@ -91,6 +89,11 @@ namespace SanDX {
 		transformMatrix = s * r * t;
 
 		transformMatrix.Transpose();
+	}
+
+	void Transform::Bind()
+	{
+		static ID3D11DeviceContext& context = Engine::Get().Context();
 
 		//2번째는 서브 리소스의 순번 다른 리소스와 메모리를 나눠 사용하면 인덱스를 줘야 할 것이다.
 		//3번째는 

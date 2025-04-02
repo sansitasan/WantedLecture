@@ -29,14 +29,9 @@ namespace SanDX {
 			meshes.emplace_back(mesh);
 		}
 
-		std::weak_ptr<TextureMappingMaterial> material;
-		if (MaterialLoader::Get().Load<TextureMappingMaterial>(material, "head_face_M_BC.png")) {
-			materials.emplace_back(material);
-		}
-	}
-	void QuadMesh::Update(float deltaTime)
-	{
-		float angle = 60.f * deltaTime;
-		transform.rotation.z += angle;
+		//std::weak_ptr<TextureMappingMaterial> material;
+		//if (MaterialLoader::Get().Load<TextureMappingMaterial>(material, "head_face_M_BC.png")) {
+		//	materials.emplace_back(material);
+		//}
 	}
 }
