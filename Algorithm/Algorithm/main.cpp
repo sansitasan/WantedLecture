@@ -160,7 +160,7 @@ public:
 template<typename Company>
 class LoggingMsgSender : public MsgSender<Company> {
 public:
-	void sendClearMsg(const MsgInfo& info) { sendClear(info); }
+	void sendClearMsg(const MsgInfo& info) { this->sendClear(info); }
 };
 
 template<typename T>
@@ -215,13 +215,6 @@ int main() {
 	//Solution* s = new Sol1976();
 	//
 	//s->Answer();
-
-	//B* d = new B();
-	//delete d;
-
-	//LoggingMsgSender<CompanyA> x;
-	//MsgInfo s;
-	//x.sendClearMsg(s);
 
 	cin.get();
 	//Matrix4x4 a;
