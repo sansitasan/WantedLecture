@@ -20,4 +20,6 @@ public:
 	UStaff();
 
 	virtual void DoLesson() override;
+
+	void GetNotification(const FString& InSchool, const FString& InNewCourseInfo);
 };

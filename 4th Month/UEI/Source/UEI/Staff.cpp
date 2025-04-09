@@ -14,3 +14,8 @@ void UStaff::DoLesson()
 {
 	UE_LOG(LogTemp, Log, TEXT("%s BIBI"), *Name);
 }
+
+void UStaff::GetNotification(const FString& InSchool, const FString& InNewCourseInfo)
+{
+	UE_LOG(LogTemp, Log, TEXT("[UStaff] %s: %s"), *InSchool, *InNewCourseInfo);
+}
