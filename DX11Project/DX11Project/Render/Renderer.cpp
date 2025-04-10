@@ -87,6 +87,7 @@ namespace SanDX {
 		//화면처리 할 때(프론트 <> 백버퍼) 어떻게 처리할 것인지
 		//예전에 화면처리하면 잔상이 남는 경우(하드웨어 문제)가 있어서 SEQUENTIAL이 있음
 		//한 번에 교체할건지 부드럽게 애니메이션을 줄 건지
+		//EFFECT_FLIP_DISCARD는 모니터 주사율로 알아서 맞춰준다
 		swapChainDesc.SwapEffect = DXGI_SWAP_EFFECT_FLIP_DISCARD;
 
 		result = factory->CreateSwapChain(device, &swapChainDesc, &swapChain);
@@ -146,6 +147,9 @@ namespace SanDX {
 		result = device->CreateRenderTargetView(backBuffer, nullptr, &renderTargetView);
 		RESULT(result, TEXT("Failed to create render target view."));
 
+		backBuffer->Release();
+		backBuffer = nullptr;
+
 		//OM = Output Merger
 		context->OMSetRenderTargets(1, &renderTargetView, nullptr);
 
@@ -161,10 +165,33 @@ namespace SanDX {
 
 	Renderer::~Renderer()
 	{
+		if (context)
+		{
+			context->Release();
+			context = nullptr;
+		}
+		if (swapChain)
+		{
+			swapChain->Release();
+			swapChain = nullptr;
+		}
+
+		if (renderTargetView)
+		{
+			renderTargetView->Release();
+			renderTargetView = nullptr;
+		}
+
+		if (device)
+		{
+			device->Release();
+			device = nullptr;
+		}
 	}
 
 	void Renderer::Draw(std::shared_ptr<Scene> scene)
 	{
+		if (isResizing) return;
 		//렌더 콜을 하면 지우기 때문에 렌더 타겟을 사용하겠다고 명시해줘야 한다.
 		context->OMSetRenderTargets(1, &renderTargetView, nullptr);
 		//그리기 전 (BeginScene)
@@ -186,5 +213,47 @@ namespace SanDX {
 		//모니터 화면주사율 렌더 동기화를 할건지
 		//3만 프레임 vs 60hz일 때 1이면 60hz로, 아니면 3만 프레임으로
 		swapChain->Present(1u, 0u);
+	}
+
+	void Renderer::OnResize(uint32 width, uint32 height)
+	{
+		if (!device || !context || !swapChain) return;
+
+		isResizing = true;
+
+		context->ClearState();
+		context->Flush();
+
+		if (renderTargetView) {
+			renderTargetView->Release();
+			renderTargetView = nullptr;
+		}
+
+		//ResizeBuffers에 0을 넣으면 현재 가지고 있는 개수를 자동으로 해준다
+		RESULT(swapChain->ResizeBuffers(0, width, height, DXGI_FORMAT_R8G8B8A8_UNORM, 0),
+			TEXT("Failed to resize swapchain buffer"));
+
+		ID3D11Texture2D* backBuffer = nullptr;
+		RESULT(swapChain->GetBuffer(0, IID_PPV_ARGS(&backBuffer)),
+			TEXT("Failed to get buffer from swapchain"));
+
+		RESULT(device->CreateRenderTargetView(backBuffer, nullptr, &renderTargetView),
+			TEXT("Failed to create render target view"));
+
+		backBuffer->Release();
+		backBuffer = nullptr;
+
+		context->OMSetRenderTargets(1, &renderTargetView, nullptr);
+
+		viewport.TopLeftX = 0;
+		viewport.TopLeftY = 0;
+		viewport.Width = (float)width;
+		viewport.Height = (float)height;
+		viewport.MaxDepth = 1.f;
+		viewport.MinDepth = .0f;
+
+		context->RSSetViewports(1, &viewport);
+
+		isResizing = false;
 	}
 }

@@ -7,6 +7,8 @@ namespace SanDX {
 	//카메라 버퍼 (상수 버퍼) 뷰 행렬을 넘겨줘야 함
 	struct CameraBuffer {
 		Matrix4x4 viewMatrix;
+
+		Matrix4x4 projectionMatrix;
 	};
 
 	class CameraComponent : public Component {
@@ -14,6 +16,7 @@ namespace SanDX {
 		CameraComponent();
 		~CameraComponent() = default;
 
+		virtual void Update(float deltaTime) override;
 		virtual void Draw() override;
 
 	private:

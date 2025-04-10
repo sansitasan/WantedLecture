@@ -164,6 +164,7 @@
     <ClCompile Include="Component\StaticMeshComponent.cpp" />
     <ClCompile Include="Entity\Entity.cpp" />
     <ClCompile Include="Entity\QuadEntity.cpp" />
+    <ClCompile Include="InputController.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Material\DefaultMaterial.cpp" />
@@ -193,6 +194,7 @@
     <ClInclude Include="Core.h" />
     <ClInclude Include="Entity\Entity.h" />
     <ClInclude Include="Entity\QuadEntity.h" />
+    <ClInclude Include="InputController.h" />
     <ClInclude Include="Material\DefaultMaterial.h" />
     <ClInclude Include="Material\Material.h" />
     <ClInclude Include="Material\TextureMappingMaterial.h" />

@@ -19,12 +19,18 @@ namespace SanDX {
 		static Engine& Get();
 		ID3D11Device& Device() const;
 		ID3D11DeviceContext& Context() const;
+		uint32 Width() const;
+		uint32 Height() const;
+
+		inline void Quit() { isQuit = true; }
 
 		void Run();
 
 		void SetScene(std::shared_ptr<class Scene> newScene);
 
 	protected:
+
+		bool isQuit = false;
 		//Ã¢ °´Ã¼
 		std::shared_ptr<class Window> window;
 
@@ -36,8 +42,12 @@ namespace SanDX {
 
 		std::shared_ptr<class Scene> mainScene;
 
+		std::unique_ptr<class InputController> inputController;
+
 		std::unique_ptr<class MaterialLoader> materialLoader;
 		std::unique_ptr<class TextureLoader> textureLoader;
 		std::unique_ptr<class ModelLoader> modelLoader;
+
+		void OnResize(uint32 width, uint32 height);
 	};
 }

@@ -36,6 +36,14 @@ namespace SanDX {
 		static Matrix4x4 Transpose(const Matrix4x4& target);
 		static void Transpose(const Matrix4x4& target, Matrix4x4& outValue);
 
+		static Matrix4x4 Perspective(
+			float fieldOfView,
+			float width,
+			float height,
+			float nearDistance,
+			float farDistance
+		);
+
 		Matrix4x4& operator=(const Matrix4x4& other);
 		Matrix4x4 operator*(const Matrix4x4& other);
 		Matrix4x4& operator*=(const Matrix4x4& other);

@@ -17,6 +17,7 @@ cbuffer Transform : register(b0)
 cbuffer Camera : register(b1)
 {
     matrix viewMatrix;
+    matrix projectionMatrix;
 };
 
 struct VertexOutput
@@ -30,11 +31,12 @@ struct VertexOutput
 VertexOutput main(VertexInput input)
 {
     VertexOutput output;
-    //output.position = float4(input.position, 1);
     output.position = mul(float4(input.position, 1), worldMatrix);
     output.position = mul(output.position, viewMatrix);
+    output.position = mul(output.position, projectionMatrix);
     output.color = input.color;
-    output.normal = input.normal;
+    //(float3x3)worldMatrix
+    output.normal = normalize(mul(input.normal, (float3x3) worldMatrix));
     output.uv = input.uv;
     return output;
 }

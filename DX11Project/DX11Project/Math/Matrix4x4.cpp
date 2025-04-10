@@ -181,6 +181,29 @@ namespace SanDX {
 		std::swap(outValue.m23, outValue.m32);
 	}
 
+	Matrix4x4 Matrix4x4::Perspective(float fieldOfView, float width, float height, float nearDistance, float farDistance)
+	{
+		Matrix4x4 m;
+		float aspectRatio = width / height;
+
+		float fov = fieldOfView * 0.5f * degreeToRadian;
+
+		float h = 1.f / std::tanf(fov);
+
+		float w = h / aspectRatio;
+
+		float a = (nearDistance + farDistance) / (farDistance - nearDistance);
+		float b = (-2.f * nearDistance * farDistance) / (farDistance - nearDistance);
+
+		m.m00 = w;
+		m.m11 = h;
+		m.m22 = a;
+		m.m32 = b;
+		m.m23 = 1.f;
+
+		return m;
+	}
+
 	Matrix4x4& Matrix4x4::operator=(const Matrix4x4& other)
 	{
 		memcpy(elements, other.elements, sizeof(float) * 16);

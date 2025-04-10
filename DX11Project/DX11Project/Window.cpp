@@ -75,10 +75,4 @@ namespace SanDX {
 	{
         UnregisterClass(className.c_str(), instance);
 	}
-
-	inline void Window::SetWidthHeight(uint32 width, uint32 height)
-	{
-		this->width = width;
-		this->height = height;
-	}
 }

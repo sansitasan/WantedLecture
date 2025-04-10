@@ -35,6 +35,7 @@ namespace SanDX {
 			CameraComponent* isCamera = dynamic_cast<CameraComponent*>(component.get());
 			if (isCamera) {
 				camera = newEntity;
+				return;
 			}
 		}
 		entities.emplace_back(newEntity);

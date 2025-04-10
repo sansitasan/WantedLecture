@@ -18,6 +18,16 @@ float4 main(FragmentInput input) : SV_TARGET
     //Sampling
     float4 texColor = diffuseMap.Sample(diffuseSampler, input.uv);
     
-    return texColor;
+    float3 lightDir = -float3(500.f, 500.f, -500.f);
+    lightDir = normalize(lightDir);
+    
+    float3 worldNormal = normalize(input.normal);
+    float lightIntensity = saturate(dot(-lightDir, worldNormal));
+    //Same this
+    //float lightIntensity = max(0, dot(worldNormal, -lightDir));
+    
+    float4 result = texColor * lightIntensity;
+    
+    return result;
     //return float4(input.uv, 0, 1);
 }

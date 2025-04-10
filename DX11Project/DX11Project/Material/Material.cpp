@@ -51,6 +51,8 @@ namespace SanDX {
 		//버텍스는 처음부터니까 0, uv는 버텍스 이후의 바이트...이런 식
 		//여섯번째는 인스턴스로 할 것인지
 		//일곱번째는 인스턴스의 옵션
+		//D3D11_APPEND_ALIGNED_ELEMENT이걸 stride대신 넣어주면 위치를 알아서 계산해준다.
+		//12, 24, 36을 굳이 쓸 필요 없었다!
 		D3D11_INPUT_ELEMENT_DESC inputDesc[] = {
 			{ "POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 0, D3D11_INPUT_PER_VERTEX_DATA, 0 },
 			{ "COLOR", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 12, D3D11_INPUT_PER_VERTEX_DATA, 0 },

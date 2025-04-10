@@ -22,7 +22,11 @@ namespace SanDX {
 
 		void Draw(std::shared_ptr<class Scene> scene);
 
+		void OnResize(uint32 width, uint32 height);
+
 	private:
+
+		bool isResizing = false;
 		//장치류
 		ID3D11Device* device = nullptr;
 		//실제 드로우 콜 담당

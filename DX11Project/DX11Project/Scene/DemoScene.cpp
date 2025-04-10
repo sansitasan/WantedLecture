@@ -23,7 +23,6 @@ namespace SanDX {
 
 		std::shared_ptr<Entity> cameraEntity = std::make_shared<Entity>();
 		cameraEntity->AddComponent(std::make_shared<CameraComponent>());
-		cameraEntity->transform.position.x = -1;
 
 		AddEntity(cameraEntity);
 	}
