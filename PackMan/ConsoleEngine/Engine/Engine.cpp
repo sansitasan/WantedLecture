@@ -27,8 +27,8 @@ BOOL WINAPI MessageProcessor(DWORD message)
 }
 
 Engine::Engine(int screenSizeX, int screenSizeY, int fontSizeX, int fontSizeY)
-	: quit(false), mainScene(nullptr), targetFrameRate(60), 
-	targetOneFrameTime(1 / 60), deltaTime(0)
+	: quit(false), mainScene(nullptr), targetFrameRate(120), 
+	targetOneFrameTime(1 / 120), deltaTime(0)
 {
 	if (!instance) {
 		instance = this;
@@ -79,7 +79,7 @@ Engine::Engine(int screenSizeX, int screenSizeY, int fontSizeX, int fontSizeY)
 	renderTargets[1] = new ScreenBuffer(maxWindowSize, cfi);
 
 	// 스왑 버퍼.
-	Present();
+	//Present();
 
 	// 콘솔 창 이벤트 콜백 함수 등록.
 	SetConsoleCtrlHandler(MessageProcessor, true);
@@ -335,52 +335,55 @@ void Engine::ProcessInput()
 	INPUT_RECORD record;
 	DWORD events;
 	COORD previousWindowSize(screenSize.GetX(),screenSize.GetY());
-	if (ReadConsoleInput(GetStdHandle(STD_INPUT_HANDLE), &record, 1, &events))
+	while (PeekConsoleInput(GetStdHandle(STD_INPUT_HANDLE), &record, 1, &events) && events > 0)
 	{
-		switch (record.EventType)
+		if (ReadConsoleInput(GetStdHandle(STD_INPUT_HANDLE), &record, 1, &events))
 		{
-		case WINDOW_BUFFER_SIZE_EVENT:
-		{
-			COORD current(record.Event.WindowBufferSizeEvent.dwSize.X, record.Event.WindowBufferSizeEvent.dwSize.Y);
-			if (current.X != previousWindowSize.X || current.Y != previousWindowSize.Y)
+			switch (record.EventType)
 			{
-				HWND hConsole = GetConsoleWindow();
-
-				COORD bufferSize = { static_cast<SHORT>(previousWindowSize.X), static_cast<SHORT>(previousWindowSize.Y) };
-				SetConsoleScreenBufferSize(hConsole, bufferSize);
-
-				SMALL_RECT windowSize = { 0, 0, static_cast<SHORT>(previousWindowSize.X - 1), static_cast<SHORT>(previousWindowSize.Y - 1) };
-				SetConsoleWindowInfo(hConsole, TRUE, &windowSize);
-				//char buffer[100];
-				//sprintf_s(buffer, 100, "(%d,%d)",
-				//	//record.Event.WindowBufferSizeEvent.dwSize.X, record.Event.WindowBufferSizeEvent.dwSize.Y
-				//);
-
-				//MessageBoxA(nullptr, buffer, "Test", MB_OK);
-
-			}
-			
-		} break;
-
-		case KEY_EVENT:
-			if (record.Event.KeyEvent.bKeyDown)
+			case WINDOW_BUFFER_SIZE_EVENT:
 			{
-				keyState[record.Event.KeyEvent.wVirtualKeyCode].isKeyDown = true;
-			}
-			else
-			{
-				keyState[record.Event.KeyEvent.wVirtualKeyCode].isKeyDown = false;
-			}
-			break;
+				COORD current(record.Event.WindowBufferSizeEvent.dwSize.X, record.Event.WindowBufferSizeEvent.dwSize.Y);
+				if (current.X != previousWindowSize.X || current.Y != previousWindowSize.Y)
+				{
+					HWND hConsole = GetConsoleWindow();
 
-		case MOUSE_EVENT:
-			if (record.Event.MouseEvent.dwButtonState == 1)
-			{
-				mousePosition.SetX(record.Event.MouseEvent.dwMousePosition.X);
-				mousePosition.SetY(record.Event.MouseEvent.dwMousePosition.Y);
-			}
+					COORD bufferSize = { static_cast<SHORT>(previousWindowSize.X), static_cast<SHORT>(previousWindowSize.Y) };
+					SetConsoleScreenBufferSize(hConsole, bufferSize);
 
-			break;
+					SMALL_RECT windowSize = { 0, 0, static_cast<SHORT>(previousWindowSize.X - 1), static_cast<SHORT>(previousWindowSize.Y - 1) };
+					SetConsoleWindowInfo(hConsole, TRUE, &windowSize);
+					//char buffer[100];
+					//sprintf_s(buffer, 100, "(%d,%d)",
+					//	//record.Event.WindowBufferSizeEvent.dwSize.X, record.Event.WindowBufferSizeEvent.dwSize.Y
+					//);
+
+					//MessageBoxA(nullptr, buffer, "Test", MB_OK);
+
+				}
+
+			} break;
+
+			case KEY_EVENT:
+				if (record.Event.KeyEvent.bKeyDown)
+				{
+					keyState[record.Event.KeyEvent.wVirtualKeyCode].isKeyDown = true;
+				}
+				else
+				{
+					keyState[record.Event.KeyEvent.wVirtualKeyCode].isKeyDown = false;
+				}
+				break;
+
+			case MOUSE_EVENT:
+				if (record.Event.MouseEvent.dwButtonState == 1)
+				{
+					mousePosition.SetX(record.Event.MouseEvent.dwMousePosition.X);
+					mousePosition.SetY(record.Event.MouseEvent.dwMousePosition.Y);
+				}
+
+				break;
+			}
 		}
 	}
 

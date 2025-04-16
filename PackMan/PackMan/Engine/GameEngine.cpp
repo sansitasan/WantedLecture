@@ -8,7 +8,7 @@ GameEngine::GameEngine(int screenSizeX, int screenSizeY, int fontSizeX, int font
 	: Engine(screenSizeX, screenSizeY, fontSizeX, fontSizeY)
 {
 	SetCursorType(ECursorType::NoCursor);
-	SetTargetFrameRate(60);
+	SetTargetFrameRate(240);
 	menuScene = TraceNew MenuScene();
 	showMenu = false;
 	dataManager = new DataManager();

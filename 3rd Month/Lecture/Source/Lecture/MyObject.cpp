@@ -20,5 +20,5 @@ void UMyObject::DoLesson()
 
 UAbilitySystemComponent* UMyObject::GetAbilitySystemComponent() const
 {
-	return nullptr;
+	return ASC;
 }
