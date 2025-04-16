@@ -1,6 +1,7 @@
 #include "DemoScene.h"
 
 #include "Entity/QuadEntity.h"
+#include "Entity/CameraEntity.h"
 
 #include "Render/QuadMesh.h"
 
@@ -21,7 +22,8 @@ namespace SanDX {
 		std::shared_ptr<QuadEntity> entity = std::make_shared<QuadEntity>();
 		AddEntity(entity);
 
-		std::shared_ptr<Entity> cameraEntity = std::make_shared<Entity>();
+		std::shared_ptr<CameraEntity> cameraEntity = std::make_shared<CameraEntity>();
+		cameraEntity->transform.position.z -= 2;
 		cameraEntity->AddComponent(std::make_shared<CameraComponent>());
 
 		AddEntity(cameraEntity);

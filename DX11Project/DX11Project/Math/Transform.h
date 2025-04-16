@@ -15,6 +15,18 @@ namespace SanDX {
 		void Update();
 		void Bind();
 
+		inline Vector3 Right() {
+			return Vector3::Right * Matrix4x4::Rotation(rotation);
+		}
+
+		inline Vector3 Up() {
+			return Vector3::Up * Matrix4x4::Rotation(rotation);
+		}
+
+		inline Vector3 Forward() {
+			return Vector3::Forward * Matrix4x4::Rotation(rotation);
+		}
+
 	public:
 		Vector3 position = Vector3::Zero;
 		Vector3 rotation = Vector3::Zero;

@@ -251,8 +251,8 @@ namespace SanDX {
 	{
 		Vector3 result;
 		result.x = matrix.m00 * vector.x + matrix.m10 * vector.y + matrix.m20 * vector.z;
-		result.x = matrix.m01 * vector.x + matrix.m11 * vector.y + matrix.m21 * vector.z;
-		result.x = matrix.m02 * vector.x + matrix.m12 * vector.y + matrix.m22 * vector.z;
+		result.y = matrix.m01 * vector.x + matrix.m11 * vector.y + matrix.m21 * vector.z;
+		result.z = matrix.m02 * vector.x + matrix.m12 * vector.y + matrix.m22 * vector.z;
 		return result;
 	}
 }

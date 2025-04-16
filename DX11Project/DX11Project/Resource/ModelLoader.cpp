@@ -65,9 +65,9 @@ namespace SanDX {
                 int t1, t2, t3;
                 int n1, n2, n3;
                 sscanf_s(line, "f %d/%d/%d %d/%d/%d %d/%d/%d", &v1, &t1, &n1, &v2, &t2, &n2, &v3, &t3, &n3);
-                vertices.emplace_back(positions[v1 - 1], Vector3::One, texCoords[t1 - 1], normals[n1 - 1]);
-                vertices.emplace_back(positions[v2 - 1], Vector3::One, texCoords[t2 - 1], normals[n2 - 1]);
-                vertices.emplace_back(positions[v3 - 1], Vector3::One, texCoords[t3 - 1], normals[n3 - 1]);
+                vertices.emplace_back(positions[v1 - 1], Vector3::One, normals[n1 - 1], texCoords[t1 - 1]);
+                vertices.emplace_back(positions[v2 - 1], Vector3::One, normals[n2 - 1], texCoords[t2 - 1]);
+                vertices.emplace_back(positions[v3 - 1], Vector3::One, normals[n3 - 1], texCoords[t3 - 1]);
             }
         }
 
@@ -78,6 +78,38 @@ namespace SanDX {
 
         for (uint32 i = 0; i < (uint32)vertices.size(); ++i) {
             indices.emplace_back(i);
+        }
+
+        for (uint32 i = 0; i < (uint32)vertices.size(); i += 3) {
+            Vertex& v0 = vertices[i];
+            Vertex& v1 = vertices[i + 1];
+            Vertex& v2 = vertices[i + 2];
+
+            Vector3 edge1 = v1.position - v0.position;
+            Vector3 edge2 = v2.position - v0.position;
+
+            Vector2 deltaUV1 = v1.texCoord - v0.texCoord;
+            Vector2 deltaUV2 = v2.texCoord - v0.texCoord;
+
+            float denominator = 1.0f / (deltaUV1.GetX() * deltaUV2.GetY() - deltaUV2.GetX() * deltaUV1.GetY());
+
+            Vector3 tangent = (edge1 * deltaUV2.GetY() - edge2 * deltaUV1.GetY()) * denominator;
+            Vector3 binormal = (edge2 * deltaUV1.GetX() - edge1 * deltaUV2.GetX()) * denominator;
+
+            v0.tangent += tangent;
+            v1.tangent += tangent;
+            v2.tangent += tangent;
+
+            v0.bitangent += binormal;
+            v1.bitangent += binormal;
+            v2.bitangent += binormal;
+        }
+
+        for (auto& vertex : vertices)
+        {
+            vertex.tangent = (vertex.tangent - vertex.normal * Dot(vertex.normal, vertex.tangent)).Normalized();
+            vertex.tangent = vertex.tangent.Normalized();
+            vertex.bitangent = Cross(vertex.normal, vertex.tangent);
         }
 
         std::shared_ptr<MeshData> newData = std::make_shared<MeshData>(vertices, indices);

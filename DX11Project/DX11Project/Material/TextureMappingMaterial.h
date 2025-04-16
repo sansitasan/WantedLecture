@@ -11,6 +11,7 @@ namespace SanDX {
 			const std::wstring& name = L"TextureMapping");
 
 		virtual void Bind() override;
+		void SetTexture(const std::weak_ptr<class Texture>& newTexture);
 
 	protected:
 		//std::unique_ptr<class Texture> texture;

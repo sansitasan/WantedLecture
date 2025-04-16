@@ -10,8 +10,8 @@ namespace SanDX {
 	public:
 		MaterialLoader();
 		~MaterialLoader() = default;
-		template<typename T, typename... Args, typename std::enable_if<std::is_base_of<Material, T>::value>::type* = nullptr>
-		bool Load(std::weak_ptr<T>& outMaterial, Args... args);
+		template<typename T, typename std::enable_if<std::is_base_of<Material, T>::value>::type* = nullptr>
+		bool Load(std::weak_ptr<T>& outMaterial);
 
 		static MaterialLoader& Get();
 

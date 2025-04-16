@@ -8,14 +8,13 @@ namespace SanDX {
 	CameraComponent::CameraComponent()
 	{
 		cameraBuffer.projectionMatrix = Matrix4x4::Perspective(
-			90.f,
+			60.f,
 			(float)Engine::Get().Width(),
 			(float)Engine::Get().Height(),
 			0.1f,
 			100.f
 		);
 		cameraBuffer.projectionMatrix.Transpose();
-
 
 		D3D11_BUFFER_DESC bufferDesc = {};
 		bufferDesc.ByteWidth = sizeof(CameraBuffer);
@@ -30,43 +29,6 @@ namespace SanDX {
 		RESULT(device.CreateBuffer(&bufferDesc, &bufferData, &buffer), TEXT("Failed to Create Camera Buffer"));
 	}
 
-	void CameraComponent::Update(float deltaTime)
-	{
-		static InputController& input = InputController::Get();
-		if (input.IsKeyDown(VK_ESCAPE)) {
-			if (MessageBox(nullptr, 
-				TEXT("Want to Quit?"), 
-				TEXT("Quit Engine"), 
-				MB_YESNO) == IDYES) {
-				Engine::Get().Quit();
-			}
-		}
-
-		if (input.IsKey('A') || input.IsKey(VK_LEFT)) {
-			owner->transform.position.x -= deltaTime;
-		}
-
-		if (input.IsKey('D') || input.IsKey(VK_RIGHT)){
-			owner->transform.position.x += deltaTime;
-		}
-
-		if (input.IsKey('W') || input.IsKey(VK_UP)) {
-			owner->transform.position.y += deltaTime;
-		}
-
-		if (input.IsKey('S') || input.IsKey(VK_DOWN)) {
-			owner->transform.position.y -= deltaTime;
-		}
-
-		if (input.IsKey('Q')) {
-			owner->transform.position.z += deltaTime;
-		}
-
-		if (input.IsKey('E')) {
-			owner->transform.position.z -= deltaTime;
-		}
-	}
-
 	void CameraComponent::Draw()
 	{
 		cameraBuffer.viewMatrix
@@ -77,7 +39,7 @@ namespace SanDX {
 		cameraBuffer.viewMatrix.Transpose();
 
 		cameraBuffer.projectionMatrix = Matrix4x4::Perspective(
-			90.f,
+			60.f,
 			(float)Engine::Get().Width(),
 			(float)Engine::Get().Height(),
 			0.1f,
@@ -85,6 +47,8 @@ namespace SanDX {
 		);
 		cameraBuffer.projectionMatrix.Transpose();
 
+		
+		cameraBuffer.cameraPosition = owner->transform.position;
 		static ID3D11DeviceContext& context = Engine::Get().Context();
 
 		D3D11_MAPPED_SUBRESOURCE resource = {};

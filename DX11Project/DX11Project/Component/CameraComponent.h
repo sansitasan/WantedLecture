@@ -5,10 +5,14 @@
 
 namespace SanDX {
 	//카메라 버퍼 (상수 버퍼) 뷰 행렬을 넘겨줘야 함
-	struct CameraBuffer {
+	struct alignas(16) CameraBuffer {
 		Matrix4x4 viewMatrix;
 
 		Matrix4x4 projectionMatrix;
+
+		Vector3 cameraPosition;
+
+		float padding;
 	};
 
 	class CameraComponent : public Component {
@@ -16,14 +20,13 @@ namespace SanDX {
 		CameraComponent();
 		~CameraComponent() = default;
 
-		virtual void Update(float deltaTime) override;
 		virtual void Draw() override;
 
 	private:
-		bool isPerspective = true;
-
 		CameraBuffer cameraBuffer;
 
 		ID3D11Buffer* buffer = nullptr;
+
+		bool isPerspective = true;
 	};
 }

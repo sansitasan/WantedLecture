@@ -1,6 +1,7 @@
 #pragma once
 #include "../Type.h"
 #include <string>
+#include <cassert>
 
 namespace SanDX {
 	class Vector3 {
@@ -22,14 +23,42 @@ namespace SanDX {
 
 		inline static uint32 Stride() { return sizeof(Vector3); }
 
-		inline Vector3& operator+=(const Vector3& other);
-		inline Vector3& operator-=(const Vector3& other);
+		inline Vector3& operator+=(const Vector3& other) {
+			x += other.x;
+			y += other.y;
+			z += other.z;
+			return *this;
+		}
 
-		inline Vector3& operator*=(float scale);
-		inline Vector3& operator/=(float scale);
+		inline Vector3& operator-=(const Vector3& other) {
+			x -= other.x;
+			y -= other.y;
+			z -= other.z;
+			return *this;
+		}
 
-		inline friend Vector3 operator+(const Vector3& left, const Vector3& right);
-		inline friend Vector3 operator-(const Vector3& left, const Vector3& right);
+		inline Vector3& operator*=(float scale) {
+			x *= scale;
+			y *= scale;
+			z *= scale;
+			return *this;
+		}
+
+		inline Vector3& operator/=(float scale) {
+			assert(scale != 0);
+			x /= scale;
+			y /= scale;
+			z /= scale;
+			return *this;
+		}
+
+		inline friend Vector3 operator+(const Vector3& left, const Vector3& right) {
+			return Vector3(left.x + right.x, left.y + right.y, left.z + right.z);
+		}
+
+		inline friend Vector3 operator-(const Vector3& left, const Vector3& right) {
+			return Vector3(left.x - right.x, left.y - right.y, left.z - right.z);
+		}
 
 		inline friend Vector3 operator*(const Vector3& vector, float scale){
 			return Vector3(vector.x * scale, vector.y * scale, vector.z * scale);
@@ -39,7 +68,11 @@ namespace SanDX {
 			return Vector3(vector.x * scale, vector.y * scale, vector.z * scale);
 		}
 
-		inline friend Vector3 operator/(const Vector3& vector, float scale);
+		inline friend Vector3 operator/(const Vector3& vector, float scale) {
+			assert(scale != 0);
+
+			return Vector3(vector.x / scale, vector.y / scale, vector.z / scale);
+		}
 
 		inline Vector3 operator-() const {
 			return Vector3(-x, -y, -z);
@@ -59,12 +92,39 @@ namespace SanDX {
 
 		std::wstring ToString();
 
-		inline float Length();
+		inline float Length() {
+			return sqrtf(x * x + y * y + z * z);
+		}
+
 		inline float LengthSquared();
-		inline friend float Dot(const Vector3& left, const Vector3& right);
-		inline friend Vector3 Cross(const Vector3& left, const Vector3& right);
+
+		inline friend float Dot(const Vector3& left, const Vector3& right) {
+			return left.x * right.x + left.y * right.y + left.z * right.z;
+		}
+
+		inline friend Vector3 Cross(const Vector3& left, const Vector3& right) {
+			//기저 벡터, left, right로 외적을 구한다
+			//기저 벡터가 각각 i, j, k일 때,
+			// |  i  j  k | i * (ly * rz - lz * ry)
+			// | lx ly lz | j * (lz * rx - lx * rz)
+			// | rx ry rz | k * (lx * ry - ly * rx)
+
+			return Vector3
+			(
+				left.y * right.z - left.z * right.y,
+				left.z * right.x - left.x * right.z,
+				left.x * right.y - left.y * right.x
+			);
+		}
+
 		inline friend Vector3 Lerp(const Vector3& from, const Vector3& to, float t);
-		inline Vector3 Normalized();
+
+		inline Vector3 Normalized() {
+			float len = Length();
+			assert(len != 0);
+			return Vector3(x / len, y / len, z / len);
+		}
+
 		inline void normalized();
 		inline bool Equals(const Vector3& other);
 	};

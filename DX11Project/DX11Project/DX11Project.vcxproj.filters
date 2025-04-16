@@ -90,6 +90,15 @@
     <ClCompile Include="Component\CameraComponent.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="InputController.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Render\SphereMesh.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity\CameraEntity.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Window.h">
@@ -179,16 +188,28 @@
     <ClInclude Include="Component\CameraComponent.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="InputController.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Render\SphereMesh.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity\CameraEntity.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="HLSLShader\DefaultVertexShader.hlsl" />
     <FxCompile Include="HLSLShader\DefaultFragmentShader.hlsl" />
     <FxCompile Include="HLSLShader\TextureMappingFragmentShader.hlsl" />
     <FxCompile Include="HLSLShader\TextureMappingVertexShader.hlsl" />
+    <FxCompile Include="HLSLShader\NormalMappingVertexShader.hlsl" />
+    <FxCompile Include="HLSLShader\NormalMappingFragmentShader.hlsl" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resource\MaterialLoader.inl">
       <Filter>헤더 파일</Filter>
     </None>
+    <None Include="HLSLShader\Common.hlsli" />
   </ItemGroup>
 </Project>

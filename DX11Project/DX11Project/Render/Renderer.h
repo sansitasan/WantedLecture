@@ -36,6 +36,12 @@ namespace SanDX {
 
 		//버퍼
 		ID3D11RenderTargetView* renderTargetView = nullptr;
+		//depth도 24비트를 사용하는 이유
+		//8비트만 사용해도 괜찮지만 세분화해서 저장하면 좋기 때문이다
+		//그래서 뎁스만 저장하지 않고 스텐실도 저장한다
+		//총 depth 24 + 스텐실 8 해서 픽셀 하나당 32비트를 사용한다
+		//스텐실은 0, 1만 저장한다
+		ID3D11DepthStencilView* depthStencilView = nullptr;
 		//뷰 포트
 		D3D11_VIEWPORT viewport;
 	};

@@ -1,9 +1,5 @@
 #include "QuadMesh.h"
-#include "Material/TextureMappingMaterial.h"
-#include "Resource/MaterialLoader.h"
 #include "Resource/ModelLoader.h"
-
-#include "Math/Matrix4x4.h"
 
 //텍스처 매핑의 이유
 //차원이 다르다(텍스처는 2D, 오브젝트는 3D)

@@ -150,8 +150,32 @@ namespace SanDX {
 		backBuffer->Release();
 		backBuffer = nullptr;
 
+		ID3D11Texture2D* depthStencilBuffer = nullptr;
+		D3D11_TEXTURE2D_DESC depthStencilDesc = {};
+		depthStencilDesc.Width = width;
+		depthStencilDesc.Height = height;
+		depthStencilDesc.MipLevels = 1;
+		depthStencilDesc.ArraySize = 1;
+		depthStencilDesc.Format = DXGI_FORMAT_D24_UNORM_S8_UINT;
+		depthStencilDesc.SampleDesc.Count = 1;
+		depthStencilDesc.SampleDesc.Quality = 0;
+		depthStencilDesc.BindFlags = D3D11_BIND_DEPTH_STENCIL;
+
+		RESULT(device->CreateTexture2D(&depthStencilDesc, nullptr, &depthStencilBuffer),
+			TEXT("Failed to create depth stencil buffer"));
+
+		D3D11_DEPTH_STENCIL_VIEW_DESC depthStencilViewDesc = {};
+		depthStencilViewDesc.Format = depthStencilDesc.Format;
+		depthStencilViewDesc.ViewDimension = D3D11_DSV_DIMENSION_TEXTURE2D;
+
+		RESULT(device->CreateDepthStencilView(depthStencilBuffer, &depthStencilViewDesc, &depthStencilView),
+			TEXT("Failed to create depth stencil buffer"));
+
+		depthStencilBuffer->Release();
+		depthStencilBuffer = nullptr;
+
 		//OM = Output Merger
-		context->OMSetRenderTargets(1, &renderTargetView, nullptr);
+		//context->OMSetRenderTargets(1, &renderTargetView, nullptr);
 
 		viewport.TopLeftX = 0;
 		viewport.TopLeftY = 0;
@@ -182,6 +206,12 @@ namespace SanDX {
 			renderTargetView = nullptr;
 		}
 
+		if (depthStencilView)
+		{
+			depthStencilView->Release();
+			depthStencilView = nullptr;
+		}
+
 		if (device)
 		{
 			device->Release();
@@ -193,11 +223,13 @@ namespace SanDX {
 	{
 		if (isResizing) return;
 		//렌더 콜을 하면 지우기 때문에 렌더 타겟을 사용하겠다고 명시해줘야 한다.
-		context->OMSetRenderTargets(1, &renderTargetView, nullptr);
+		context->OMSetRenderTargets(1, &renderTargetView, depthStencilView);
 		//그리기 전 (BeginScene)
 		//지우기 (Clear) = 한 색상으로 덮어쓰기 유사 memset
 		float color[] = { 1, 1, 1, 1 };
 		context->ClearRenderTargetView(renderTargetView, color);
+		//뒤의 인자는 각각 depth, stencil 값 설정
+		context->ClearDepthStencilView(depthStencilView, D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.f, 0);
 
 		if (scene->GetCamera()) scene->GetCamera()->Draw();
 
@@ -229,6 +261,11 @@ namespace SanDX {
 			renderTargetView = nullptr;
 		}
 
+		if (depthStencilView) {
+			depthStencilView->Release();
+			depthStencilView = nullptr;
+		}
+
 		//ResizeBuffers에 0을 넣으면 현재 가지고 있는 개수를 자동으로 해준다
 		RESULT(swapChain->ResizeBuffers(0, width, height, DXGI_FORMAT_R8G8B8A8_UNORM, 0),
 			TEXT("Failed to resize swapchain buffer"));
@@ -242,6 +279,30 @@ namespace SanDX {
 
 		backBuffer->Release();
 		backBuffer = nullptr;
+
+		ID3D11Texture2D* depthStencilBuffer = nullptr;
+		D3D11_TEXTURE2D_DESC depthStencilDesc = {};
+		depthStencilDesc.Width = width;
+		depthStencilDesc.Height = height;
+		depthStencilDesc.MipLevels = 1;
+		depthStencilDesc.ArraySize = 1;
+		depthStencilDesc.Format = DXGI_FORMAT_D24_UNORM_S8_UINT;
+		depthStencilDesc.SampleDesc.Count = 1;
+		depthStencilDesc.SampleDesc.Quality = 0;
+		depthStencilDesc.BindFlags = D3D11_BIND_DEPTH_STENCIL;
+
+		RESULT(device->CreateTexture2D(&depthStencilDesc, nullptr, &depthStencilBuffer),
+			TEXT("Failed to create depth stencil buffer"));
+
+		D3D11_DEPTH_STENCIL_VIEW_DESC depthStencilViewDesc = {};
+		depthStencilViewDesc.Format = depthStencilDesc.Format;
+		depthStencilViewDesc.ViewDimension = D3D11_DSV_DIMENSION_TEXTURE2D;
+
+		RESULT(device->CreateDepthStencilView(depthStencilBuffer, &depthStencilViewDesc, &depthStencilView),
+			TEXT("Failed to create depth stencil buffer"));
+
+		depthStencilBuffer->Release();
+		depthStencilBuffer = nullptr;
 
 		context->OMSetRenderTargets(1, &renderTargetView, nullptr);
 

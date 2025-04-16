@@ -26,4 +26,9 @@ namespace SanDX {
 			texture.lock()->Bind();
 		}
 	}
+
+	void TextureMappingMaterial::SetTexture(const std::weak_ptr<class Texture>& newTexture)
+	{
+		texture = newTexture;
+	}
 }

@@ -1,6 +1,3 @@
-//POSITION, SV_POSITION¿∫ Ω√∏‡∆Ω
-//SV = system value
-
 struct VertexInput
 {
     float3 position : POSITION;
@@ -36,7 +33,7 @@ struct VertexOutput
     float3 cameraDirection : TEXCOORD1;
 };
 
-VertexOutput main(VertexInput input)
+VertexOutput main(VertexInput input : POSITION)
 {
     VertexOutput output;
     output.position = mul(float4(input.position, 1), worldMatrix);

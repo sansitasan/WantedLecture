@@ -18,14 +18,16 @@ namespace SanDX {
 			float y;
 		};
 	public:
-		Vertex(const Vector3& position, const Vector3& color, const Vector2& texCoord, const Vector3& normal)
-			: position(position), color(color), texCoord(texCoord), normal(normal) { }
+		Vertex(const Vector3& position, const Vector3& color, const Vector3& normal, const Vector2& texCoord)
+			: position(position), color(color), normal(normal), texCoord(texCoord) { }
 
 		static unsigned int Stride() { return sizeof(Vertex); }
 	public:
 		Vector3 position;
 		Vector3 color;
 		Vector3 normal;
-		float2 texCoord;
+		Vector3 tangent;
+		Vector3 bitangent;
+		Vector2 texCoord;
 	};
 }
