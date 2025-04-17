@@ -2,6 +2,8 @@
 #include "../Type.h"
 #include <string>
 #include <cassert>
+#include <Windows.h>
+#include <cmath>
 
 namespace SanDX {
 	class Vector3 {
@@ -78,8 +80,13 @@ namespace SanDX {
 			return Vector3(-x, -y, -z);
 		}
 
-		inline bool operator==(const Vector3& other);
-		inline bool operator!=(const Vector3& other);
+		inline bool operator==(const Vector3& other) {
+			return x == other.x && y == other.y && z == other.z;
+		}
+
+		inline bool operator!=(const Vector3& other) {
+			return x != other.x || y != other.y || z != other.z;
+		}
 
 		static const Vector3 Zero;
 		static const Vector3 One;
@@ -90,13 +97,19 @@ namespace SanDX {
 		static const Vector3 Forward;
 		static const Vector3 Back;
 
-		std::wstring ToString();
+		std::wstring ToString() {
+			wchar_t buffer[256];
+			swprintf_s(buffer, 256, TEXT("(%f, %f, %f)"), x, y, z);
+			return buffer;
+		}
 
 		inline float Length() {
 			return sqrtf(x * x + y * y + z * z);
 		}
 
-		inline float LengthSquared();
+		inline float LengthSquared() {
+			return x * x + y * y + z * z;
+		}
 
 		inline friend float Dot(const Vector3& left, const Vector3& right) {
 			return left.x * right.x + left.y * right.y + left.z * right.z;
@@ -117,7 +130,10 @@ namespace SanDX {
 			);
 		}
 
-		inline friend Vector3 Lerp(const Vector3& from, const Vector3& to, float t);
+		inline friend Vector3 Lerp(const Vector3& from, const Vector3& to, float t) {
+			t = (t < 0 ? 0 : t) > 1 ? 1 : t;
+			return (1.f - t) * from + t * to;
+		}
 
 		inline Vector3 Normalized() {
 			float len = Length();
@@ -125,7 +141,16 @@ namespace SanDX {
 			return Vector3(x / len, y / len, z / len);
 		}
 
-		inline void normalized();
-		inline bool Equals(const Vector3& other);
+		inline void normalized() {
+			float len = Length();
+			assert(len != 0);
+			x /= len;
+			y /= len;
+			z /= len;
+		}
+
+		inline bool Equals(const Vector3& other) {
+			return x == other.x && y == other.y && z == other.z;
+		}
 	};
 }

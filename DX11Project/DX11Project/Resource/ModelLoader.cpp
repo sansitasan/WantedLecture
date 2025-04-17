@@ -108,6 +108,7 @@ namespace SanDX {
         for (auto& vertex : vertices)
         {
             vertex.tangent = (vertex.tangent - vertex.normal * Dot(vertex.normal, vertex.tangent)).Normalized();
+            vertex.tangent.normalized();
             vertex.bitangent = Cross(vertex.normal, vertex.tangent);
         }
 
