@@ -4,10 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "Interface/HAnimationAttackInterface.h"
 #include "CharacterBase.generated.h"
 
 UCLASS()
-class ARENABATTLEDEMO_API ACharacterBase : public ACharacter
+class ARENABATTLEDEMO_API ACharacterBase : public ACharacter, public IHAnimationAttackInterface
 {
 	GENERATED_BODY()
 
@@ -26,6 +27,10 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	virtual void AttackHitCheck() override;
+
+	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser) override;
+
 protected:
 	void ProcessComboCommand();
 
@@ -36,6 +41,11 @@ protected:
 	void SetComboCheckTimer();
 
 	void ComboCheck();
+
+protected:
+	virtual void SetDead();
+
+	void PlayDeadAnimation();
 
 protected:
 	//Attack Montage
@@ -55,4 +65,8 @@ protected:
 
 	//내부에서만 쓰므로 uint8대신 bool을 씀
 	bool HasNextComboCommand = false;
+
+protected:
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animation, meta = (AllowPrivateAccess = "true"))
+	TObjectPtr<class UAnimMontage> DeadMontage;
 };
