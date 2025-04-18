@@ -14,7 +14,29 @@ ACharacterBase::ACharacterBase()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	bUseControllerRotationPitch = false;
+	bUseControllerRotationYaw = false;
+	bUseControllerRotationRoll = false;
+
+	GetCharacterMovement()->bOrientRotationToMovement = true;
+	GetCharacterMovement()->RotationRate = FRotator(0.f, 10000.f, 0.f);
+	GetCharacterMovement()->JumpZVelocity = 800.f;
+
+	GetCapsuleComponent()->SetCapsuleHalfHeight(88.f);
 	GetCapsuleComponent()->SetCollisionProfileName(CPROFILE_HCAPSULE);
+	GetMesh()->SetRelativeLocationAndRotation(FVector(0.f, 0.f, -88.f), FRotator(0.f, -90.f, 0.f));
+
+	static ConstructorHelpers::FObjectFinder<USkeletalMesh> CharacterMesh(TEXT("/Game/InfinityBladeWarriors/Character/CompleteCharacters/SK_CharM_Barbarous.SK_CharM_Barbarous"));
+	if (CharacterMesh.Object) {
+		GetMesh()->SetSkeletalMesh(CharacterMesh.Object);
+	}
+
+	static ConstructorHelpers::FClassFinder<UAnimInstance> CharacterAnim(TEXT("/Game/ArenaBattle/Animation/ABP_Character.ABP_Character_C"));
+
+	if (CharacterAnim.Class) {
+		GetMesh()->SetAnimInstanceClass(CharacterAnim.Class);
+	}
+
 	//주로 랙돌에서 메시콜리전을 사용함
 	GetMesh()->SetCollisionProfileName(TEXT("NoCollision"));
 

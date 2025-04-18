@@ -13,28 +13,6 @@
 
 ACharacterPlayer::ACharacterPlayer()
 {
-	bUseControllerRotationPitch = false;
-	bUseControllerRotationYaw = false;
-	bUseControllerRotationRoll = false;
-
-	GetCharacterMovement()->bOrientRotationToMovement = true;
-	GetCharacterMovement()->RotationRate = FRotator(0.f, 10000.f, 0.f);
-	GetCharacterMovement()->JumpZVelocity = 800.f;
-
-	GetCapsuleComponent()->SetCapsuleHalfHeight(88.f);
-	GetMesh()->SetRelativeLocationAndRotation(FVector(0.f, 0.f, -88.f), FRotator(0.f, -90.f, 0.f));
-
-	static ConstructorHelpers::FObjectFinder<USkeletalMesh> CharacterMesh(TEXT("/Game/Characters/Mannequin_UE4/Meshes/SK_Mannequin.SK_Mannequin"));
-	if (CharacterMesh.Object) {
-		GetMesh()->SetSkeletalMesh(CharacterMesh.Object);
-	}
-
-	static ConstructorHelpers::FClassFinder<UAnimInstance> CharacterAnim(TEXT("/Game/Characters/Mannequins/Animations/ABP_Quinn.ABP_Quinn_C"));
-
-	if (CharacterAnim.Class) {
-		GetMesh()->SetAnimInstanceClass(CharacterAnim.Class);
-	}
-
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
 
