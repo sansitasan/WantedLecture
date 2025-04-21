@@ -3,7 +3,7 @@
 
 QuadTree::QuadTree(const Vector2& screenSize)
 {
-    root = new QuadNode(Bound(Vector2::Zero, screenSize));
+    root = TraceNew QuadNode(Bound(Vector2::Zero, screenSize));
 }
 
 QuadTree::~QuadTree()

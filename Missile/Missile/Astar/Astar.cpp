@@ -51,7 +51,7 @@ bool AStar::FindPath(Node* startNode, Node* goalNode, std::vector<Vector2>& path
             float hCost = CalculteHeuristic(&x, goalNode);
             if (hCost > currentNode->hCost) continue;
 
-            Node* neighborNode = new Node(newX, newY, currentNode);
+            Node* neighborNode = TraceNew Node(newX, newY, currentNode);
             neighborNode->gCost = direction.cost + currentNode->gCost;
             neighborNode->hCost = hCost;
             neighborNode->fCost = neighborNode->gCost + neighborNode->hCost;

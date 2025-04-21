@@ -11,7 +11,7 @@ public class ArenaBattleDemo : ModuleRules
 		//plugin path or other module search faster
 		PublicIncludePaths.Add("ArenaBattleDemo");
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput", "UMG" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 

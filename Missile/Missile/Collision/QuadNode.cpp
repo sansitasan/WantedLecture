@@ -138,10 +138,10 @@ inline bool QuadNode::SubDivide()
         const Vector2& rightBottom = bound.RightBottom();
         Vector2 halfVector = (bound.WidthAndHeight() * 0.5f) + leftUp;
 
-        child[(int)EDir::TopLeft] = new QuadNode(Bound(leftUp, halfVector), depth + 1);
-        child[(int)EDir::TopRight] = new QuadNode(Bound(Vector2(halfVector.GetX(), leftUp.GetY()), Vector2(rightBottom.GetX(), halfVector.GetY())), depth + 1);
-        child[(int)EDir::BottomLeft] = new QuadNode(Bound(Vector2(leftUp.GetX(), halfVector.GetY()), Vector2(halfVector.GetX(), rightBottom.GetY())), depth + 1);
-        child[(int)EDir::BottomRight] = new QuadNode(Bound(halfVector, rightBottom), depth + 1);
+        child[(int)EDir::TopLeft] = TraceNew QuadNode(Bound(leftUp, halfVector), depth + 1);
+        child[(int)EDir::TopRight] = TraceNew QuadNode(Bound(Vector2(halfVector.GetX(), leftUp.GetY()), Vector2(rightBottom.GetX(), halfVector.GetY())), depth + 1);
+        child[(int)EDir::BottomLeft] = TraceNew QuadNode(Bound(Vector2(leftUp.GetX(), halfVector.GetY()), Vector2(halfVector.GetX(), rightBottom.GetY())), depth + 1);
+        child[(int)EDir::BottomRight] = TraceNew QuadNode(Bound(halfVector, rightBottom), depth + 1);
     }
     return true;
 }

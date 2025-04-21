@@ -7,6 +7,14 @@
 #include "Physics/HCollision.h"
 #include "Components/CapsuleComponent.h"
 #include "Engine/DamageEvents.h"
+#include "Component/Data/HCharacterStatComponent.h"
+#include "Component/UI/HWidgetComponent.h"
+#include "UI/HUserWidget.h"
+#include "UI/HHpBarWidget.h"
+#include "Props/HWeaponItemData.h"
+#include "Components/SkeletalMeshComponent.h"
+
+DEFINE_LOG_CATEGORY(LogHCharacter);
 
 // Sets default values
 ACharacterBase::ACharacterBase()
@@ -40,7 +48,6 @@ ACharacterBase::ACharacterBase()
 	//주로 랙돌에서 메시콜리전을 사용함
 	GetMesh()->SetCollisionProfileName(TEXT("NoCollision"));
 
-
 	static ConstructorHelpers::FObjectFinder<UAnimMontage> ComboActionMontageRef(TEXT("/Game/ArenaBattle/Animation/AM_ComboAttack.AM_ComboAttack"));
 	if (ComboActionMontageRef.Object) {
 		ComboActionMontage = ComboActionMontageRef.Object;
@@ -56,6 +63,68 @@ ACharacterBase::ACharacterBase()
 	if (ComboActionDataRef.Object) {
 		ComboActionData = ComboActionDataRef.Object;
 	}
+
+	Stat = CreateDefaultSubobject<UHCharacterStatComponent>(TEXT("Stat"));
+	HpBar = CreateDefaultSubobject<UHWidgetComponent>(TEXT("Widget"));
+	HpBar->SetupAttachment(GetMesh());
+	HpBar->SetRelativeLocation(FVector(0.f, 0.f, 200.f));
+
+	static ConstructorHelpers::FClassFinder<UUserWidget> HPBarWidgetRef(TEXT("/Game/ArenaBattle/UI/WBP_HpBar.WBP_HpBar_C"));
+
+	if (HPBarWidgetRef.Class) {
+		HpBar->SetWidgetClass(HPBarWidgetRef.Class);
+		HpBar->SetWidgetSpace(EWidgetSpace::Screen);
+		HpBar->SetDrawSize(FVector2D(150.f, 15.f));
+
+		HpBar->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	}
+
+	TakeItemActions.Add(
+		FTakeItemDelegateWrapper(
+			FOnTakeItemDelegate::CreateUObject(
+				this, 
+				&ACharacterBase::EquipWeapon)
+		));
+
+	TakeItemActions.Add(
+		FTakeItemDelegateWrapper(
+			FOnTakeItemDelegate::CreateUObject(
+				this, 
+				&ACharacterBase::DrinkPortion)
+		));
+
+	TakeItemActions.Add(
+		FTakeItemDelegateWrapper(
+			FOnTakeItemDelegate::CreateUObject(
+				this, 
+				&ACharacterBase::ReadScroll)
+		));
+
+	Weapon = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Weapon"));
+	Weapon->SetupAttachment(GetMesh(), TEXT("hand_rSocket"));
+}
+
+void ACharacterBase::SetupCharacterWidget(UUserWidget* InUserWidget)
+{
+	UHHpBarWidget* HpBarWidget = Cast<UHHpBarWidget>(InUserWidget);
+	if (!HpBarWidget) return;
+
+	UE_LOG(LogTemp, Log, TEXT("ACharacterBase::SetupCharacterWidget %f"), Stat->GetMaxHP());
+
+	HpBarWidget->SetMaxHp(Stat->GetMaxHP());
+	HpBarWidget->UpdateHpBar(Stat->GetMaxHP());
+	Stat->OnHpChanged.AddUObject(HpBarWidget, &UHHpBarWidget::UpdateHpBar);
+}
+
+void ACharacterBase::PostInitializeComponents()
+{
+	Super::PostInitializeComponents();
+	Stat->OnHpZero.AddUObject(this, &ACharacterBase::SetDead);
+}
+
+void ACharacterBase::TakeItem(UHItemData* InItemData)
+{
+	TakeItemActions[static_cast<uint8>(InItemData->Type)].ItemDelegate.ExecuteIfBound(InItemData);
 }
 
 // Called when the game starts or when spawned
@@ -141,8 +210,7 @@ float ACharacterBase::TakeDamage(float DamageAmount, FDamageEvent const& DamageE
 {
 	Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
 
-	//San Todo
-	SetDead();
+	Stat->ApplyDamaage(DamageAmount);
 	return DamageAmount;
 }
 
@@ -236,6 +304,8 @@ void ACharacterBase::SetDead()
 	SetActorEnableCollision(false);
 
 	PlayDeadAnimation();
+
+	HpBar->SetHiddenInGame(true);
 }
 
 void ACharacterBase::PlayDeadAnimation()
@@ -246,5 +316,25 @@ void ACharacterBase::PlayDeadAnimation()
 
 	const float PlayRate = 1.f;
 	AnimInstance->Montage_Play(DeadMontage, PlayRate);
+}
+
+void ACharacterBase::DrinkPortion(UHItemData* InItemData)
+{
+	UE_LOG(LogHCharacter, Log, TEXT("DrinkPortion"));
+}
+
+void ACharacterBase::EquipWeapon(UHItemData* InItemData)
+{
+	UHWeaponItemData* WeaponItemData = Cast<UHWeaponItemData>(InItemData);
+	if (!WeaponItemData) return;
+	if (WeaponItemData->WeaponMesh.IsPending()) {
+		WeaponItemData->WeaponMesh.LoadSynchronous();
+	}
+	Weapon->SetSkeletalMesh(WeaponItemData->WeaponMesh.Get());
+}
+
+void ACharacterBase::ReadScroll(UHItemData* InItemData)
+{
+	UE_LOG(LogHCharacter, Log, TEXT("ReadScroll"));
 }
 

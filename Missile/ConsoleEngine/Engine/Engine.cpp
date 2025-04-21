@@ -36,7 +36,7 @@ Engine::Engine(int screenSizeX, int screenSizeY, int fontSizeX, int fontSizeY)
 
 	memset(renderTargets, 0, sizeof(ScreenBuffer*) * 2);
 
-	timerManager = new TimerManager();
+	timerManager = TraceNew TimerManager();
 	srand((unsigned int)time(nullptr));
 
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
