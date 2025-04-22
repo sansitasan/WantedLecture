@@ -8,12 +8,12 @@ public:
 };
 
 class ProtectedInterface : public ITest {
-
 public:
+	ProtectedInterface() { cout << "construct" << '\n'; }
+	ProtectedInterface(const ProtectedInterface& x) { cout << "copy" << '\n'; }
+	~ProtectedInterface() { cout << "delete" << '\n'; }
 	virtual void Test() override { cout << "Call protected" << '\n'; }
 };
-
-
 
 int main() {
 	//Solution* s = new Sol1976();
@@ -27,10 +27,12 @@ int main() {
 	//} obj;
 	//
 	//obj.Test();
-	ITest* t = new ProtectedInterface();
-	ProtectedInterface* p = new ProtectedInterface();
-	t->Test();
-	p->Test();
+	//ITest* t = new ProtectedInterface();
+	//ProtectedInterface* p = new ProtectedInterface();
+	//t->Test();
+	//p->Test();
+
+	//ProtectedInterface x = TestT();
 
 	cin.get();
 
