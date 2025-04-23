@@ -18,6 +18,9 @@ UCLASS()
 class ARENABATTLEDEMO_API UHItemData : public UPrimaryDataAsset
 {
 	GENERATED_BODY()
+
+public:
+	virtual FPrimaryAssetId GetPrimaryAssetId() const override;
 	
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Type)

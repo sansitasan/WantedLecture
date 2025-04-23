@@ -109,8 +109,6 @@ void ACharacterBase::SetupCharacterWidget(UUserWidget* InUserWidget)
 	UHHpBarWidget* HpBarWidget = Cast<UHHpBarWidget>(InUserWidget);
 	if (!HpBarWidget) return;
 
-	UE_LOG(LogTemp, Log, TEXT("ACharacterBase::SetupCharacterWidget %f"), Stat->GetMaxHP());
-
 	HpBarWidget->SetMaxHp(Stat->GetMaxHP());
 	HpBarWidget->UpdateHpBar(Stat->GetMaxHP());
 	Stat->OnHpChanged.AddUObject(HpBarWidget, &UHHpBarWidget::UpdateHpBar);

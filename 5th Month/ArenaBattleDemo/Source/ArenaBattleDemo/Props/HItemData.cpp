@@ -3,3 +3,7 @@
 
 #include "Props/HItemData.h"
 
+FPrimaryAssetId UHItemData::GetPrimaryAssetId() const
+{
+    return FPrimaryAssetId("HItemData", GetFName());
+}

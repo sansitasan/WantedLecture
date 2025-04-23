@@ -3,3 +3,7 @@
 
 #include "Props/HWeaponItemData.h"
 
+FPrimaryAssetId UHWeaponItemData::GetPrimaryAssetId() const
+{
+    return FPrimaryAssetId("HItemData", GetFName());
+}

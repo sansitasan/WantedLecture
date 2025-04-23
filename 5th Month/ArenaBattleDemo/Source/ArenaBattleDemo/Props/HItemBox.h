@@ -14,6 +14,8 @@ class ARENABATTLEDEMO_API AHItemBox : public AActor
 public:	
 	AHItemBox();
 
+	FORCEINLINE class UBoxComponent* GetTrigger() const { return Trigger; }
+
 protected:
 	UFUNCTION()
 	void OnOverlapBegin(
@@ -26,6 +28,8 @@ protected:
 
 	UFUNCTION()
 	void OnEffectFinished(class UParticleSystemComponent* PSystem);
+
+	virtual void PostInitializeComponents() override;
 
 protected:
 	UPROPERTY(VisibleAnywhere, Category = Box)

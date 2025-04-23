@@ -7,6 +7,8 @@
 #include "Particles/ParticleSystemComponent.h"
 #include "Interface/HCharacterItemInterface.h"
 #include "Physics/HCollision.h"
+#include "Engine/AssetManager.h"
+#include "HWeaponItemData.h"
 
 // Sets default values
 AHItemBox::AHItemBox()
@@ -61,4 +63,27 @@ void AHItemBox::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor*
 void AHItemBox::OnEffectFinished(UParticleSystemComponent* PSystem)
 {
 	Destroy();
+}
+
+void AHItemBox::PostInitializeComponents()
+{
+	Super::PostInitializeComponents();
+
+	UAssetManager& Manager = UAssetManager::Get();
+	TArray<FPrimaryAssetId> Assets;
+	Manager.GetPrimaryAssetIdList(TEXT("HItemData"), Assets);
+
+	ensure(Assets.Num() > 0);
+
+	int32 RandomIndex = FMath::RandRange(0, Assets.Num() - 1);
+
+	FSoftObjectPtr AssetPtr(Manager.GetPrimaryAssetPath(Assets[RandomIndex]));
+
+	if (AssetPtr.IsPending()) 
+	{
+		AssetPtr.LoadSynchronous();
+	}
+
+	Item = Cast<UHItemData>(AssetPtr.Get());
+	ensure(Item);
 }

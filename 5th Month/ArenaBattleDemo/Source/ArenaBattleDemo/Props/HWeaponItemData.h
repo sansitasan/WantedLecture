@@ -13,6 +13,8 @@ UCLASS()
 class ARENABATTLEDEMO_API UHWeaponItemData : public UHItemData
 {
 	GENERATED_BODY()
+public:
+	virtual FPrimaryAssetId GetPrimaryAssetId() const override;
 	
 public:
 	UPROPERTY(EditAnywhere, Category = Weapon)

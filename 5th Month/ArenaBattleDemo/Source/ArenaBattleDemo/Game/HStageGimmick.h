@@ -21,10 +21,10 @@ struct FOnStageChangedDelegateWrapper {
 
 UENUM(BlueprintType)
 enum class EStageState : uint8 {
-	Ready,
-	Fight,
-	Reward,
-	Next
+	Ready UMETA(DisplayName = "Ready"),
+	Fight UMETA(DisplayName = "Fight"),
+	Reward UMETA(DisplayName = "Reward"),
+	Next UMETA(DisplayName = "Next")
 };
 
 UCLASS()
@@ -101,4 +101,27 @@ protected:
 	FTimerHandle OpponentTimerHandle;
 
 	void OpponentSpawn();
+
+protected:
+	UPROPERTY(VisibleAnywhere, Category = Reward, meta = (AllowPrivateAccess = "true"))
+	TSubclassOf<class AHItemBox> RewardItemClass;
+
+	//보상 상자는 스테이지와 무관하기에 강참조보다는 약참조가 좋다.
+	UPROPERTY(VisibleAnywhere, Category = Reward, meta = (AllowPrivateAccess = "true"))
+	TArray<TWeakObjectPtr<class AHItemBox>> RewardBoxes;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Reward, meta = (AllowPrivateAccess = "true"))
+	TMap<FName, FVector> RewardBoxLocations;
+
+	UFUNCTION()
+	void OnReawrdTriggerBeginOverlap(
+		UPrimitiveComponent* OverlappedComponent,
+		AActor* OtherActor,
+		UPrimitiveComponent* OtherComp,
+		int32 OtherBodyIndex,
+		bool bFromSweep,
+		const FHitResult& SweepResult
+	);
+
+	void SpawnRewardBoxes();
 };
