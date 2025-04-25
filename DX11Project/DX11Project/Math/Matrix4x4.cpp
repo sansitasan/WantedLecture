@@ -181,6 +181,8 @@ namespace SanDX {
 		m.m31 = m30 * other.m01 + m31 * other.m11 + m32 * other.m21 + m33 * other.m31;
 		m.m32 = m30 * other.m02 + m31 * other.m12 + m32 * other.m22 + m33 * other.m32;
 		m.m33 = m30 * other.m03 + m31 * other.m13 + m32 * other.m23 + m33 * other.m33;
+
+		return m;
 	}
 
 	Matrix4x4& Matrix4x4::operator*=(const Matrix4x4& other)

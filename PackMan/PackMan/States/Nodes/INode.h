@@ -4,7 +4,7 @@
 
 class BlackBoard;
 
-class INode {
+class _declspec(novtable) INode {
 public:
 	enum class ENodeStates {
 		None,

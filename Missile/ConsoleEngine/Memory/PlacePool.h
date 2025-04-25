@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include "Core.h"
+#define malloc(s) _malloc_dbg(s, _NORMAL_BLOCK, __FILE__, __LINE__)
 
 template<typename T>
 class PlacePool {

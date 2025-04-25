@@ -6,7 +6,7 @@
 #include "Collision/QuadTree.h"
 
 GameScene::GameScene()
-    : entities(1000), aStar(new AStar), quadTree(new QuadTree(Engine::Get().GetScreenSize()))
+    : entities(1000), aStar(TraceNew AStar), quadTree(TraceNew QuadTree(Engine::Get().GetScreenSize()))
 {
     std::wstring x(TEXT("🚀"));
     for (int i = 0; i < 25; ++i) {
@@ -69,7 +69,7 @@ bool GameScene::GetPath(const Vector2& startPos, Vector2& goalPos, std::vector<V
     else goalPos = Engine::Get().GetMousePos();
 
     aStar->Clear();
-    aStar->FindPath(new Node((int)goalPos.GetX(), (int)goalPos.GetY()), new Node((int)startPos.GetX(), (int)startPos.GetY()), pathList);
+    aStar->FindPath(TraceNew Node((int)goalPos.GetX(), (int)goalPos.GetY()), TraceNew Node((int)startPos.GetX(), (int)startPos.GetY()), pathList);
     return !pathList.empty();
 }
 

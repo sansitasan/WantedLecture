@@ -182,8 +182,8 @@ namespace SanDX {
 		float color[] = { 1, 1, 1, 1 };
 		context->ClearRenderTargetView(renderTargetView, color);
 
-		mesh->Update(1.f / 60.f);
-		mesh2->Update(1.f / 60.f);
+		//mesh->Update(1.f / 60.f);
+		//mesh2->Update(1.f / 60.f);
 
 		//µå·Î¿ì (Draw, Render)
 		mesh->Draw();
