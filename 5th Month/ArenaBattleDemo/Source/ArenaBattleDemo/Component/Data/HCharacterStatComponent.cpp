@@ -2,18 +2,29 @@
 
 
 #include "Component/Data/HCharacterStatComponent.h"
+#include "Data/HGameSingleton.h"
 
 UHCharacterStatComponent::UHCharacterStatComponent()
 {
-	MaxHp = 200.f;
-	CurrentHp = MaxHp;
+	//CurrentHp = MaxHp;
+	CurrentLevel = 1.f;
 }
 
 void UHCharacterStatComponent::BeginPlay()
 {
 	Super::BeginPlay();
+	SetLevel(static_cast<int32>(CurrentLevel));
 
-	SetHp(MaxHp);
+	SetHp(BaseStat.MaxHp);
+}
+
+void UHCharacterStatComponent::SetLevel(int32 InNewLevel)
+{
+	CurrentLevel = FMath::Clamp(InNewLevel, 1, UHGameSingleton::Get().CharacterMaxLevel);
+
+	BaseStat = UHGameSingleton::Get().GetCharacterStat(CurrentLevel);
+
+	check(BaseStat.MaxHp > 0.f);
 }
 
 float UHCharacterStatComponent::ApplyDamaage(float InDamage)
@@ -31,6 +42,6 @@ float UHCharacterStatComponent::ApplyDamaage(float InDamage)
 
 void UHCharacterStatComponent::SetHp(float NewHp)
 {
-	CurrentHp = FMath::Clamp<float>(NewHp, 0.f, MaxHp);
+	CurrentHp = FMath::Clamp<float>(NewHp, 0.f, BaseStat.MaxHp);
 	OnHpChanged.Broadcast(CurrentHp);
 }

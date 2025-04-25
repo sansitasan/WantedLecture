@@ -37,6 +37,12 @@ public:
 
 	virtual void OnConstruction(const FTransform& Transform) override;
 
+	FORCEINLINE int32 GettageNum() const { return CurrentStageNum; }
+	FORCEINLINE void SetStageNum(int32 InNewStageNum) 
+	{
+		CurrentStageNum = InNewStageNum;
+	}
+
 protected:
 	
 	UPROPERTY(VisibleAnywhere, Category = Stage, meta = (AllowPrivateAccess = "true"))
@@ -124,4 +130,8 @@ protected:
 	);
 
 	void SpawnRewardBoxes();
+
+protected:
+	UPROPERTY(VisibleInstanceOnly, Category = Reward, meta = (AllowPrivateAccess = "true"))
+	int32 CurrentStageNum;
 };

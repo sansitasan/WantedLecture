@@ -109,8 +109,8 @@ void ACharacterBase::SetupCharacterWidget(UUserWidget* InUserWidget)
 	UHHpBarWidget* HpBarWidget = Cast<UHHpBarWidget>(InUserWidget);
 	if (!HpBarWidget) return;
 
-	HpBarWidget->SetMaxHp(Stat->GetMaxHP());
-	HpBarWidget->UpdateHpBar(Stat->GetMaxHP());
+	HpBarWidget->SetMaxHp(Stat->GetTotalStat().MaxHp);
+	HpBarWidget->UpdateHpBar(Stat->GetTotalStat().MaxHp);
 	Stat->OnHpChanged.AddUObject(HpBarWidget, &UHHpBarWidget::UpdateHpBar);
 }
 
@@ -153,9 +153,8 @@ void ACharacterBase::AttackHitCheck()
 	FVector Start 
 		= GetActorLocation() + GetActorForwardVector() * GetCapsuleComponent()->GetScaledCapsuleRadius();
 
-	const float AttackRange = 50.f;
 	FVector End
-		= Start + GetActorForwardVector() * AttackRange;
+		= Start + GetActorForwardVector() * Stat->GetTotalStat().AttackRange;
 
 	FCollisionQueryParams Params(
 	SCENE_QUERY_STAT(Attack),
@@ -176,7 +175,7 @@ void ACharacterBase::AttackHitCheck()
 
 #if ENABLE_DRAW_DEBUG
 	FVector CapsuleOrigin = Start + (End - Start) * .5f;
-	float CapsuleHalfHeight = AttackRange * .5f;
+	float CapsuleHalfHeight = Stat->GetTotalStat().AttackRange * .5f;
 
 	FColor DrawColor = HitDetected ? FColor::Green : FColor::Red;
 
@@ -194,10 +193,9 @@ void ACharacterBase::AttackHitCheck()
 
 	if (!HitDetected) return;
 
-	const float AttackDamage = 20.f;
 	FDamageEvent DamageEvent;
 	OutHitResult.GetActor()->TakeDamage(
-		AttackDamage,
+		Stat->GetTotalStat().Attack,
 		DamageEvent,
 		GetController(),
 		this
@@ -233,8 +231,7 @@ void ACharacterBase::ComboActionBegin()
 
 	if (!AnimInstance) return;
 
-	const float AttackSpeedRate = 1.f;
-	AnimInstance->Montage_Play(ComboActionMontage, AttackSpeedRate);
+	AnimInstance->Montage_Play(ComboActionMontage, Stat->GetTotalStat().AttackSpeed);
 
 	//if Play Montage, End Montage delegate subscribe
 	FOnMontageEnded EndDelegate;
@@ -260,9 +257,8 @@ void ACharacterBase::SetComboCheckTimer()
 
 	ensure(ComboActionData->EffectiveFrameCount.IsValidIndex(ComboIndex));
 
-	const float AttackSpeedRate = 1.f;
 	float ComboEffectiveTime = (ComboActionData->EffectiveFrameCount[ComboIndex] /
-		ComboActionData->FrameRate) / AttackSpeedRate;
+		ComboActionData->FrameRate) / Stat->GetTotalStat().AttackSpeed;
 
 	if (ComboEffectiveTime <= 0.f) return;
 
@@ -329,10 +325,22 @@ void ACharacterBase::EquipWeapon(UHItemData* InItemData)
 		WeaponItemData->WeaponMesh.LoadSynchronous();
 	}
 	Weapon->SetSkeletalMesh(WeaponItemData->WeaponMesh.Get());
+
+	Stat->SetModifierStat(WeaponItemData->BaseStat);
 }
 
 void ACharacterBase::ReadScroll(UHItemData* InItemData)
 {
 	UE_LOG(LogHCharacter, Log, TEXT("ReadScroll"));
+}
+
+int32 ACharacterBase::GetLevel() const
+{
+	return Stat->GetCurrentLevel();
+}
+
+void ACharacterBase::SetLevel(int32 InNewLevel)
+{
+	Stat->SetLevel(InNewLevel);
 }
 

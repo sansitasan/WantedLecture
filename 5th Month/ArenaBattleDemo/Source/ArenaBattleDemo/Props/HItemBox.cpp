@@ -23,7 +23,7 @@ AHItemBox::AHItemBox()
 
 	Trigger->SetCollisionProfileName(CPROFILE_HTRIGGER);
 	Trigger->SetBoxExtent(FVector(40.f, 42.f, 30.f));
-	Trigger->OnComponentBeginOverlap.AddDynamic(this, &AHItemBox::OnOverlapBegin);
+	//Trigger->OnComponentBeginOverlap.AddDynamic(this, &AHItemBox::OnOverlapBegin);
 
 	Mesh->SetCollisionProfileName(TEXT("NoCollision"));
 
@@ -86,4 +86,6 @@ void AHItemBox::PostInitializeComponents()
 
 	Item = Cast<UHItemData>(AssetPtr.Get());
 	ensure(Item);
+
+	Trigger->OnComponentBeginOverlap.AddDynamic(this, &AHItemBox::OnOverlapBegin);
 }

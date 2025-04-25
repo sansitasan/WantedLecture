@@ -133,8 +133,6 @@ void AHStageGimmick::SetReady()
 	for (const auto& GateTrigger : GateTriggers) {
 		GateTrigger->SetCollisionProfileName(TEXT("NoCollision"));
 	}
-
-	CloseAllGates();
 }
 
 void AHStageGimmick::SetFight()
@@ -179,14 +177,14 @@ void AHStageGimmick::SetChooseNext()
 
 void AHStageGimmick::OnGateTriggerBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	ensure(!(OverlappedComponent->ComponentTags.Num() == 1));
+	ensure(OverlappedComponent->ComponentTags.Num() == 1);
 
 	FName ComponentTag = OverlappedComponent->ComponentTags[0];
 	FName SocketName = FName(*ComponentTag.ToString().Left(2));
 
 	check(Stage->DoesSocketExist(SocketName));
 
-	FVector NewLocation = Stage->GetSocketLocation(SocketName);
+	FTransform SpawnTransform(Stage->GetSocketLocation(SocketName));
 
 	TArray<FOverlapResult> OverlapResults;
 
@@ -198,7 +196,7 @@ void AHStageGimmick::OnGateTriggerBeginOverlap(UPrimitiveComponent* OverlappedCo
 
 	bool Result = GetWorld()->OverlapMultiByObjectType(
 		OverlapResults,
-		NewLocation,
+		SpawnTransform.GetLocation(),
 		FQuat::Identity,
 		FCollisionObjectQueryParams::InitType::AllStaticObjects,
 		FCollisionShape::MakeSphere(775.f),
@@ -206,7 +204,10 @@ void AHStageGimmick::OnGateTriggerBeginOverlap(UPrimitiveComponent* OverlappedCo
 	);
 
 	if (Result) return;
-	GetWorld()->SpawnActor<AHStageGimmick>(NewLocation, FRotator::ZeroRotator);
+	AHStageGimmick* NewGimmick = GetWorld()->SpawnActorDeferred<AHStageGimmick>(AHStageGimmick::StaticClass(), SpawnTransform);
+	if (!NewGimmick) return;
+	NewGimmick->SetStageNum(CurrentStageNum + 1);
+	NewGimmick->FinishSpawning(SpawnTransform);
 }
 
 void AHStageGimmick::OpenAllGates()
@@ -230,12 +231,13 @@ void AHStageGimmick::OpponentDestroyed(AActor* DestroyedActor)
 
 void AHStageGimmick::OpponentSpawn()
 {
-	const FVector SpawnLocation = GetActorLocation() = FVector::UpVector * 88.f;
-	AActor* OpponentActor = GetWorld()->SpawnActor(OpponentClass, &SpawnLocation, &FRotator::ZeroRotator);
-	ACharacterNonPlayer* HOpponentCharacter = Cast<ACharacterNonPlayer>(OpponentActor);
+	const FTransform SpawnTransform = FTransform(GetActorLocation() + FVector::UpVector * 88.f);
+	
+	ACharacterNonPlayer* HOpponentCharacter = GetWorld()->SpawnActorDeferred<ACharacterNonPlayer>(OpponentClass, SpawnTransform);
 	if (!HOpponentCharacter) return;
+	HOpponentCharacter->SetLevel(CurrentStageNum);
 	HOpponentCharacter->OnDestroyed.AddDynamic(this, &AHStageGimmick::OpponentDestroyed);
-	SetState(EStageState::Fight);
+	HOpponentCharacter->FinishSpawning(SpawnTransform);
 }
 
 void AHStageGimmick::OnReawrdTriggerBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
@@ -259,11 +261,8 @@ void AHStageGimmick::SpawnRewardBoxes()
 {
 	for (const auto& RewardBoxLocation : RewardBoxLocations) 
 	{
-		FVector SpawnLocation
-			= GetActorLocation() + RewardBoxLocation.Value + FVector(0.f, 0.f, 30.f);
-		AActor* ItemActor = GetWorld()->SpawnActor(RewardItemClass, &SpawnLocation, &FRotator::ZeroRotator);
-		if (!ItemActor) return;
-		AHItemBox* RewardBoxActor = Cast<AHItemBox>(ItemActor);
+		FTransform SpawnTransform(GetActorLocation() + RewardBoxLocation.Value + FVector(0.f, 0.f, 30.f));
+		AHItemBox* RewardBoxActor = GetWorld()->SpawnActorDeferred<AHItemBox>(RewardItemClass, SpawnTransform);
 		if (!RewardBoxActor) return;
 		RewardBoxActor->Tags.Add(RewardBoxLocation.Key);
 		RewardBoxActor->GetTrigger()->OnComponentBeginOverlap.AddDynamic(
@@ -271,6 +270,11 @@ void AHStageGimmick::SpawnRewardBoxes()
 		);
 
 		RewardBoxes.Add(RewardBoxActor);
+	}
+
+	for (const auto& RewardBox : RewardBoxes) {
+		if (!RewardBox.IsValid()) continue;
+		RewardBox.Get()->FinishSpawning(RewardBox.Get()->GetActorTransform());
 	}
 }
 

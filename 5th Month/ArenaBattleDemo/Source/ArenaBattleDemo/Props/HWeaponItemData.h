@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Props/HItemData.h"
+#include "Data/HCharacterStat.h"
 #include "HWeaponItemData.generated.h"
 
 /**
@@ -19,4 +20,8 @@ public:
 public:
 	UPROPERTY(EditAnywhere, Category = Weapon)
 	TSoftObjectPtr<class USkeletalMesh> WeaponMesh;
+
+public:
+	UPROPERTY(EditAnywhere, Category = Stat)
+	FHCharacterStat BaseStat;
 };
