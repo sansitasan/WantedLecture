@@ -32,7 +32,7 @@ std::bind(&type::function, this)
 
 #define KEYUNBIND(function, type, key, keyType) \
 	if (!this->As<Entity>()) {\
-		std::cout << "You can't Bind if it`s not an Entity class\n";\
+		std::cout << "You can't UnBind if it`s not an Entity class\n";\
 		__debugbreak();\
 	}\
     if (keyType == 1) \
