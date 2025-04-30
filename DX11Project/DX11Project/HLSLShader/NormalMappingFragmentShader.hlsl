@@ -8,7 +8,7 @@ struct FragmentInput
     float3 tangent : TANGENT;
     float3 bitangent : BITANGENT;
     float2 uv : TEXCOORD;
-    float3 cameraDirection : TEXCOORD1;
+    float3 cameraDirection : COLOR1;
 };
 
 //Shader can get few Texture
@@ -24,6 +24,7 @@ SamplerState diffuseSampler : register(s0);
 float4 main(FragmentInput input) : SV_TARGET
 {
     //Sampling
+    //float2(1 - input.uv.x, 1 - input.uv.y)
     float4 texColor = diffuseMap.Sample(diffuseSampler, input.uv);
     
     float3 tangentNormal = normalMap.Sample(diffuseSampler, input.uv);
@@ -47,6 +48,6 @@ float4 main(FragmentInput input) : SV_TARGET
     
     float4 result = texColor * nDotl + specular;
     
-    return texColor;
+    return result;
     //return float4(input.uv, 0, 1);
 }

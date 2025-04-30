@@ -27,8 +27,12 @@ namespace SanDX {
 		void AddComponent(std::shared_ptr<class Component> newComponent);
 
 		template<typename T>
-		bool TryGetComponent() {
-			return true;
+		bool TryGetComponent(std::shared_ptr<T>& outComponent) {
+			for (auto& component : components) {
+				outComponent = std::dynamic_pointer_cast<T>(component);
+				if (outComponent) return true;
+			}
+			return false;
 		}
 
 	public:

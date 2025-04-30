@@ -165,6 +165,7 @@
     <ClCompile Include="Entity\CameraEntity.cpp" />
     <ClCompile Include="Entity\Entity.cpp" />
     <ClCompile Include="Entity\QuadEntity.cpp" />
+    <ClCompile Include="Entity\SphereEntity.cpp" />
     <ClCompile Include="InputController.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Engine.cpp" />
@@ -179,6 +180,7 @@
     <ClCompile Include="Render\Mesh.cpp" />
     <ClCompile Include="Render\QuadMesh.cpp" />
     <ClCompile Include="Render\Renderer.cpp" />
+    <ClCompile Include="Render\RenderTexture.cpp" />
     <ClCompile Include="Render\SphereMesh.cpp" />
     <ClCompile Include="Render\Texture.cpp" />
     <ClCompile Include="Render\TriangleMesh.cpp" />
@@ -198,6 +200,7 @@
     <ClInclude Include="Entity\CameraEntity.h" />
     <ClInclude Include="Entity\Entity.h" />
     <ClInclude Include="Entity\QuadEntity.h" />
+    <ClInclude Include="Entity\SphereEntity.h" />
     <ClInclude Include="InputController.h" />
     <ClInclude Include="Material\DefaultMaterial.h" />
     <ClInclude Include="Material\Material.h" />
@@ -211,6 +214,7 @@
     <ClInclude Include="Render\Mesh.h" />
     <ClInclude Include="Render\QuadMesh.h" />
     <ClInclude Include="Render\Renderer.h" />
+    <ClInclude Include="Render\RenderTexture.h" />
     <ClInclude Include="Render\SphereMesh.h" />
     <ClInclude Include="Render\TriangleMesh.h" />
     <ClInclude Include="Render\Vertex.h" />

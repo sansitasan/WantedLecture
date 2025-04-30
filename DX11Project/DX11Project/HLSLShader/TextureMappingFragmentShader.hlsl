@@ -3,6 +3,8 @@ struct FragmentInput
     float4 position : SV_Position;
     float3 color : COLOR;
     float3 normal : NORMAL;
+    float3 tangent : TANGENT;
+    float3 bitangent : BITANGENT;
     float2 uv : TEXCOORD;
 };
 

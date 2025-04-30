@@ -1,12 +1,11 @@
 #include "QuadEntity.h"
 #include "Component/StaticMeshComponent.h"
 #include "Render/QuadMesh.h"
-#include "Render/SphereMesh.h"
 #include "Material/TextureMappingMaterial.h"
 #include "Material/NormalMappingMaterial.h"
 #include "Resource/MaterialLoader.h"
 #include "Resource/TextureLoader.h"
-#include "Render/Texture.h"
+#include "Render/RenderTexture.h"
 
 namespace SanDX {
 	QuadEntity::QuadEntity()
@@ -15,22 +14,18 @@ namespace SanDX {
 
 		AddComponent(meshComponent);
 
-		meshComponent->SetMesh(std::make_shared<SphereMesh>());
-		std::weak_ptr<NormalMappingMaterial> material;
-		if (MaterialLoader::Get().Load<NormalMappingMaterial>(material)) {
-			using ETextureBindType = NormalMappingMaterial::ETextureBindType;
+		meshComponent->SetMesh(std::make_shared<QuadMesh>());
+		std::weak_ptr<TextureMappingMaterial> material;
+		if (MaterialLoader::Get().Load<TextureMappingMaterial>(material)) {
 			meshComponent->AddMaterial(material);
 
-			std::weak_ptr<Texture> texture;
-			TextureLoader::Get().Load("5k_earth_day_map.png", texture);
-			material.lock()->SetTexture(ETextureBindType::Diffuse, texture);
-			TextureLoader::Get().Load("8k_earth_normal_map.png", texture);
-			material.lock()->SetTexture(ETextureBindType::NormalMap, texture);
+			std::weak_ptr<RenderTexture> renderTexture;
+			TextureLoader::Get().MakeRenderTexture(renderTexture, 1280, 800);
+			material.lock()->SetTexture(renderTexture);
 		}
 	}
 	void QuadEntity::Update(float deltaTime)
 	{
 		Entity::Update(deltaTime);
-		transform.rotation.y += deltaTime * 10.f;
 	}
 }

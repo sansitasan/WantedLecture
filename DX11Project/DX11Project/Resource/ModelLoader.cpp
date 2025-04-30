@@ -108,7 +108,7 @@ namespace SanDX {
         for (auto& vertex : vertices)
         {
             vertex.tangent = (vertex.tangent - vertex.normal * Dot(vertex.normal, vertex.tangent)).Normalized();
-            vertex.bitangent = Cross(vertex.normal, vertex.tangent);
+            vertex.bitangent = Cross(vertex.normal, vertex.tangent).Normalized();
         }
 
         std::shared_ptr<MeshData> newData = std::make_shared<MeshData>(vertices, indices);

@@ -6,6 +6,8 @@ struct VertexInput
     float3 position : POSITION;
     float3 color : COLOR;
     float3 normal : NORMAL;
+    float3 tangent : TANGENT;
+    float3 bitangent : BITANGENT;
     float2 uv : TEXCOORD;
 };
 
@@ -25,6 +27,8 @@ struct VertexOutput
     float4 position : SV_Position;
     float3 color : COLOR;
     float3 normal : NORMAL;
+    float3 tangent : TANGENT;
+    float3 bitangent : BITANGENT;
     float2 uv : TEXCOORD;
 };
 
@@ -37,6 +41,8 @@ VertexOutput main(VertexInput input)
     output.color = input.color;
     //(float3x3)worldMatrix
     output.normal = normalize(mul(input.normal, (float3x3) worldMatrix));
+    output.tangent = normalize(mul(input.normal, (float3x3) worldMatrix));
+    output.bitangent = normalize(mul(input.normal, (float3x3) worldMatrix));
     output.uv = input.uv;
     return output;
 }

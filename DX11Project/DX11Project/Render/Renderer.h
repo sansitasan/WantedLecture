@@ -25,6 +25,9 @@ namespace SanDX {
 		void OnResize(uint32 width, uint32 height);
 
 	private:
+		void EmptyRTVsAndSRVs();
+
+	private:
 
 		bool isResizing = false;
 		//ÀåÄ¡·ù

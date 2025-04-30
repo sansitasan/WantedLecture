@@ -15,6 +15,8 @@ namespace SanDX {
 
 		void AddMaterial(std::weak_ptr<class Material> newMaterial);
 
+		bool UseRenderTexture();
+
 	private:
 		//메시(모델링) 데이터
 		std::shared_ptr<class Mesh> mesh;

@@ -9,8 +9,11 @@ namespace SanDX {
 	struct TextureData {
 		TextureData() = default;
 		~TextureData() {
-			free(data);
-			data = nullptr;
+			if (data) {
+				free(data);
+				data = nullptr;
+			}
+
 			if (shaderResourceView) {
 				shaderResourceView->Release();
 				shaderResourceView = nullptr;
@@ -58,6 +61,5 @@ namespace SanDX {
 		std::string name;
 		EBindType bindType;
 		std::unique_ptr<TextureData> textureData;
-	private:
 	};
 }

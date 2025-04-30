@@ -39,4 +39,12 @@ namespace SanDX {
 	{
 		materials.emplace_back(newMaterial);
 	}
+	bool StaticMeshComponent::UseRenderTexture()
+	{
+		for (auto const& material : materials) {
+			if (!material.lock()) continue;
+			if (material.lock()->UserRenderTexture()) return true;
+		}
+		return false;
+	}
 }

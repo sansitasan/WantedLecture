@@ -1,11 +1,11 @@
 #include "Renderer.h"
-#include <vector>
-#include <d3dcompiler.h>
-#include "Math/Vector3.h"
-#include "QuadMesh.h"
-#include "TriangleMesh.h"
+
 #include "Scene/Scene.h"
 #include "Entity/Entity.h"
+
+#include "RenderTexture.h"
+#include "Resource/TextureLoader.h"
+#include <Component/StaticMeshComponent.h>
 
 //버텍스는 정점을 받고
 //프래그먼트는 픽셀을 받는다
@@ -192,6 +192,44 @@ namespace SanDX {
 	void Renderer::Draw(std::shared_ptr<Scene> scene)
 	{
 		if (isResizing) return;
+
+		//Pass1
+		const auto& renderTextures = TextureLoader::Get().GetRenderTextures();
+		size_t size = renderTextures.size();
+		for (size_t i = 0; i < size; ++i) {
+			EmptyRTVsAndSRVs();
+
+			context->OMSetRenderTargets(
+				1, 
+				renderTextures[i]->GetRenderTargetAddress(), 
+				renderTextures[i]->GetDepthStencilView()
+			);
+
+			float color[] = { .5f, .5f, .5f, 1 };
+			context->ClearRenderTargetView(renderTextures[i]->GetRenderTarget(), color);
+			//뒤의 인자는 각각 depth, stencil 값 설정
+			context->ClearDepthStencilView(renderTextures[i]->GetDepthStencilView(), D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.f, 0);
+
+			if (scene->GetCamera()) scene->GetCamera()->Draw();
+
+			//드로우 (Draw, Render)
+			uint32 count = scene->EntityCount();
+			for (uint32 i = 0; i < count; ++i) {
+				auto& entity = scene->GetEntity(i);
+				if (!entity->IsActive()) continue;
+				std::shared_ptr<StaticMeshComponent> staticMeshComp;
+				if (entity->TryGetComponent<StaticMeshComponent>(staticMeshComp)) {
+					if (staticMeshComp->UseRenderTexture()) continue;
+				}
+
+				entity->Draw();
+				//원래는 컴포넌트를 다 가져와서 드로우 가능한 애들은 렌더 스레드에 넘긴다.
+			}
+
+		}
+
+		//Pass2
+		EmptyRTVsAndSRVs();
 		//렌더 콜을 하면 지우기 때문에 렌더 타겟을 사용하겠다고 명시해줘야 한다.
 		context->OMSetRenderTargets(1, &renderTargetView, nullptr);
 		//그리기 전 (BeginScene)
@@ -255,5 +293,14 @@ namespace SanDX {
 		context->RSSetViewports(1, &viewport);
 
 		isResizing = false;
+	}
+
+	void Renderer::EmptyRTVsAndSRVs()
+	{
+		static ID3D11RenderTargetView* nullRTV[8] = {};
+		context->OMSetRenderTargets(8, nullRTV, nullptr);
+
+		static ID3D11ShaderResourceView* nullSRVs[16] = {};
+		context->PSSetShaderResources(0, _countof(nullSRVs), nullSRVs);
 	}
 }

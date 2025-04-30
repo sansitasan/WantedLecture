@@ -17,6 +17,8 @@ namespace SanDX {
 
 		//GPU에 쉐이더 객체를 연결(바인딩)하는 함수
 		virtual void Bind();
+
+		FORCEINLINE bool UserRenderTexture() const { return useRenderTexture; }
 	protected:
 		//쉐이더 이름
 		std::wstring name;
@@ -28,6 +30,8 @@ namespace SanDX {
 
 		ID3D11PixelShader* fragmentShader = nullptr;
 		ID3DBlob* fragmentShaderBuffer = nullptr;
+
+		bool useRenderTexture = false;
 	};
 
 }
