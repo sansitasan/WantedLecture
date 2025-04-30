@@ -161,7 +161,7 @@ void ACharacterBase::AttackHitCheck()
 		false,
 		this);
 
-	const float AttackRadius = 50.f;
+	const float AttackRadius = Stat->GetAttackRadius();
 
 	bool HitDetected = GetWorld()->SweepSingleByChannel(
 		OutHitResult,
@@ -249,6 +249,12 @@ void ACharacterBase::ComboActionEnd(UAnimMontage* TargetMontage, bool IsProerlyE
 	CurrentCombo = 0;
 
 	GetCharacterMovement()->SetMovementMode(EMovementMode::MOVE_Walking);
+
+	NotifyComboActionEnd();
+}
+
+void ACharacterBase::NotifyComboActionEnd()
+{
 }
 
 void ACharacterBase::SetComboCheckTimer()

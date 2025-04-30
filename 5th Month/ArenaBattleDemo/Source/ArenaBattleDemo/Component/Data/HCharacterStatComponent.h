@@ -27,8 +27,10 @@ public:
 
 	FORCEINLINE float GetMaxHP() const { return BaseStat.MaxHp + ModifierStat.MaxHp; }
 	FORCEINLINE float GetCurrentHp() const { return CurrentHp; }
-
 	FORCEINLINE float GetCurrentLevel() const { return CurrentLevel; }
+	FORCEINLINE float GetAttackRadius() const { return AttackRadius; }
+	FORCEINLINE void SetAttackRadius(float InRadius) { AttackRadius = InRadius; }
+
 	void SetLevel(int32 InNewLevel);
 
 	FORCEINLINE void SetModifierStat(const FHCharacterStat& InModifierStat) 
@@ -59,6 +61,9 @@ protected:
 
 	UPROPERTY(Transient, VisibleInstanceOnly, Category = Stat, Meta = (AllowPrivateAccess = "true"))
 	float CurrentLevel;
+
+	UPROPERTY(VisibleInstanceOnly, Category = Stat, Meta = (AllowPrivateAccess = "true"))
+	float AttackRadius;
 
 	UPROPERTY(Transient, VisibleInstanceOnly, Category = Stat, Meta = (AllowPrivateAccess = "true"))
 	FHCharacterStat BaseStat;
