@@ -47,6 +47,6 @@ float4 main(FragmentInput input) : SV_TARGET
     
     float4 result = texColor * nDotl + specular;
     
-    return result;
+    return texColor;
     //return float4(input.uv, 0, 1);
 }

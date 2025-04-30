@@ -52,12 +52,11 @@ namespace SanDX {
 		Texture(const std::string& name, EBindType bindType = EBindType::FragmentShader, uint32 index = 0u);
 		virtual ~Texture();
 
-		void Bind();
+		void Bind(uint32 index = 0);
 	protected:
 		void LoadTexture(const std::string& name);
 		std::string name;
 		EBindType bindType;
-		uint32 index = 0u;
 		std::unique_ptr<TextureData> textureData;
 	private:
 	};

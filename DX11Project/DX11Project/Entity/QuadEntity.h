@@ -6,5 +6,7 @@ namespace SanDX {
 	public:
 		QuadEntity();
 		~QuadEntity() = default;
+
+		virtual void Update(float deltaTime) override;
 	};
 }

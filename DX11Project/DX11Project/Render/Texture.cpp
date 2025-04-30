@@ -6,7 +6,7 @@
 
 namespace SanDX {
 	Texture::Texture(const std::string& name, EBindType bindType, uint32 index)
-		:name(name), bindType(bindType), index(index)
+		:name(name), bindType(bindType)
 	{
 		LoadTexture(name);
 	}
@@ -16,7 +16,7 @@ namespace SanDX {
 
 	}
 
-	void Texture::Bind()
+	void Texture::Bind(uint32 index)
 	{
 		if (!textureData) return;
 

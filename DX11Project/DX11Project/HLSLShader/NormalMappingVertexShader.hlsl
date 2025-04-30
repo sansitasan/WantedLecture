@@ -33,7 +33,7 @@ struct VertexOutput
     float3 cameraDirection : TEXCOORD1;
 };
 
-VertexOutput main(VertexInput input : POSITION)
+VertexOutput main(VertexInput input)
 {
     VertexOutput output;
     output.position = mul(float4(input.position, 1), worldMatrix);
