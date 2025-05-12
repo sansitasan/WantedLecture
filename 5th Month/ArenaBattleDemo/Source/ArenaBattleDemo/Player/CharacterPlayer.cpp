@@ -11,6 +11,9 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include <EnhancedInputLibrary.h>
 
+#include "Interface/HGameInterface.h"
+#include "GameFramework/GameModeBase.h"
+
 ACharacterPlayer::ACharacterPlayer()
 {
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
@@ -97,4 +100,16 @@ void ACharacterPlayer::Look(const FInputActionValue& Value)
 void ACharacterPlayer::Attack()
 {
 	ProcessComboCommand();
+}
+
+void ACharacterPlayer::SetDead()
+{
+	Super::SetDead();
+
+	APlayerController* PlayerController = Cast<APlayerController>(GetController());
+	if (!PlayerController) return;
+	DisableInput(PlayerController);
+
+	IHGameInterface* GameInterface = Cast<IHGameInterface>(GetWorld()->GetAuthGameMode());
+	if (GameInterface) GameInterface->OnPlayerDead();
 }

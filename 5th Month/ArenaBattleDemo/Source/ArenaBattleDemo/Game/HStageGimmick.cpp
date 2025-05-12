@@ -7,6 +7,8 @@
 #include "Physics/HCollision.h"
 #include "Character/CharacterNonPlayer.h"
 #include "Props/HItemBox.h"
+#include "Interface/HGameInterface.h"
+#include "GameFramework/GameModeBase.h"
 
 // Sets default values
 AHStageGimmick::AHStageGimmick()
@@ -226,6 +228,16 @@ void AHStageGimmick::CloseAllGates()
 
 void AHStageGimmick::OpponentDestroyed(AActor* DestroyedActor)
 {
+	IHGameInterface* GameInterface = Cast<IHGameInterface>(GetWorld()->GetAuthGameMode());
+	check(GameInterface);
+
+	GameInterface->OnPlayerScoreChanged(CurrentStageNum);
+
+	if (GameInterface->IsGameCleared()) 
+	{
+		return;
+	}
+
 	SetState(EStageState::Reward);
 }
 
@@ -270,6 +282,7 @@ void AHStageGimmick::SpawnRewardBoxes()
 		);
 
 		RewardBoxes.Add(RewardBoxActor);
+		APawn*
 	}
 
 	for (const auto& RewardBox : RewardBoxes) {

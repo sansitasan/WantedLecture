@@ -21,6 +21,8 @@ protected:
 	void Look(const struct FInputActionValue& Value);
 	void Attack();
 
+	virtual void SetDead() override;
+
 protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<class USpringArmComponent> SpringArm;

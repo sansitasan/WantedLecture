@@ -5,10 +5,6 @@
 #include "CoreMinimal.h"
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "LMessageGameInstanceSubsystem.generated.h"
-UENUM()
-enum class ETest {
-
-};
 /**
  * 
  */
@@ -16,6 +12,7 @@ UCLASS()
 class ILGITO_API ULMessageGameInstanceSubsystem : public UGameInstanceSubsystem
 {
 	GENERATED_BODY()
+
 public:
 	template<typename T, typename std::enable_if<std::is_base_of<UObject, T>::value>::type*>
 	void Publish(T message) 
@@ -32,5 +29,5 @@ public:
 	}
 
 private:
-	TMap<UClass, TObjectPtr<UObject>> 
+	//TMap<UClass, TObjectPtr<UObject>> 
 };
