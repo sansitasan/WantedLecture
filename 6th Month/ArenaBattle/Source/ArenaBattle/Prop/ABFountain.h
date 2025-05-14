@@ -24,6 +24,8 @@ protected:
 	// 액터 채널이 열릴 때 호출되는 함수.
 	virtual void OnActorChannelOpen(class FInBunch& InBunch, class UNetConnection* Connection) override;
 
+	virtual bool IsNetRelevantFor(const AActor* RealViewer, const AActor* ViewTarget, const FVector& SrcLocation) const override;
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -40,8 +42,23 @@ public:
 	UFUNCTION()
 	void OnRep_ServerRotationYaw2();
 
+	UFUNCTION()
+	void OnRep_ServerLightColor();
+
 	UPROPERTY(ReplicatedUsing = OnRep_ServerRotationYaw2)
 	float ServerRotationYaw2;
 
+	//UPROPERTY(Replicated)
+	//TArray<float> BigData;
+	//
+	//float BigDataElement = 0.f;
+
+	UPROPERTY(ReplicatedUsing = OnRep_ServerLightColor)
+	FLinearColor ServerLightColor;
+
 	float RotationRate = 30.f;
+
+	float ClientTimeSinceUpdate = 0.f;
+
+	float ClientTimeBetweenLastUpdate = 0.f;
 };

@@ -19,7 +19,8 @@ public class Ilgito : ModuleRules
             "NavigationSystem",
             "AIModule",
             "GameplayTasks",
-            "GameplayAbilities"
+            "GameplayAbilities",
+			"Slate"
         });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
