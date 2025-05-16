@@ -30,6 +30,7 @@ void FLEditor::ShutdownModule()
 
 TSharedRef<SDockTab> FLEditor::OnProjectSettingsTabSpawned(const FSpawnTabArgs& SpawnArgs)
 {
+	//ProjectSettingEntry->OnSpawnTab.Execute(SpawnArgs);
 	TSharedPtr<SDockTab> Tab = FGlobalTabmanager::Get()->GetActiveTab();
 	UE_LOG(LogTemp, Log, TEXT("Hello Module"));
 	//Tab->SetOnTabClosed
@@ -42,17 +43,15 @@ void FLEditor::OnProjectSettingsTabClosed(TSharedRef<SDockTab> ClosedTab)
 
 void FLEditor::OnModuleLoad(FName InModuleName, EModuleChangeReason Reason)
 {
-	if (ModuleName != ModuleName) return;
-	int32 x = 10;
-	TSharedPtr<FTabSpawnerEntry> PrevEntry = FGlobalTabmanager::Get()->FindTabSpawnerFor("ProjectSettings");
-	//PrevEntry->OnSpawnTab.Execute(SpawnArgs);
-	FGlobalTabmanager::Get()->RegisterNomadTabSpawner(
-		"ProjectSettings",
-		FOnSpawnTab::CreateRaw(this, &FLEditor::OnProjectSettingsTabSpawned),
-		FCanSpawnTab::CreateLambda([](FSpawnTabArgs const&) { return true; })
-	)
-		.SetDisplayName(LOCTEXT("ProjectSettingsTabTitle", "Project Settings"))
-		.SetMenuType(ETabSpawnerMenuType::Hidden);
+	if (ModuleName != ModuleName || Reason != EModuleChangeReason::ModuleLoaded) return;
+	ProjectSettingEntry = FGlobalTabmanager::Get()->FindTabSpawnerFor("ProjectSettings");
+	//FGlobalTabmanager::Get()->RegisterNomadTabSpawner(
+	//	"ProjectSettings",
+	//	FOnSpawnTab::CreateRaw(this, &FLEditor::OnProjectSettingsTabSpawned),
+	//	FCanSpawnTab::CreateLambda([](FSpawnTabArgs const&) { return true; })
+	//)
+	//	.SetDisplayName(LOCTEXT("ProjectSettingsTabTitle", "Project Settings"))
+	//	.SetMenuType(ETabSpawnerMenuType::Hidden);
 }
 
 #undef LOCTEXT_NAMESPACE

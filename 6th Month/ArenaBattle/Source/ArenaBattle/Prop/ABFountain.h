@@ -26,6 +26,14 @@ protected:
 
 	virtual bool IsNetRelevantFor(const AActor* RealViewer, const AActor* ViewTarget, const FVector& SrcLocation) const override;
 
+	virtual void PreReplication(IRepChangedPropertyTracker& ChangedPropertyTracker) override;
+
+	UFUNCTION(NetMulticast, Unreliable)
+	void MulticastRPCChangeLightColor(FLinearColor NewLightColor);
+
+	UFUNCTION(Server, Unreliable)
+	void ServerRPCChangeLightColor();
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

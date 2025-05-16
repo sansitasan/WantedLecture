@@ -72,6 +72,47 @@ protected:
 
 	void Attack();
 
+	void PlayAttackAnimation();
+
+	virtual void AttackHitCheck() override;
+
+	void AttackHitConfirm(AActor* HitActor);
+
+	void DrawDebugAttackRange(const FColor& DrawColor, const FVector& TraceStart, const FVector& TraceEnd, const FVector& Forward);
+
+	UFUNCTION()
+	void OnRep_CanAttack();
+
+	UPROPERTY(ReplicatedUsing = OnRep_CanAttack)
+	uint8 bCanAttack : 1;
+
+	constexpr static float AttackTime = 1.4667f;
+
+	float LastAttackStartTime = 0.f;
+
+	float AttackTimeDifference = 0.f;
+
+	float AttackCheckDistance = 300.f;
+
+	float AcceptMinCheckTime = 0.15f;
+	
+	UFUNCTION(Server, UnReliable, WithValidation)
+	void ServerRPCAttack(float AttackStartTime);
+
+	UFUNCTION(NetMulticast, UnReliable)
+	void MulticastRPCAttack();
+
+	UFUNCTION(Client, Unreliable)
+	void ClientRPCPlayAnimation(AABCharacterPlayer* CharacterPlayer);
+
+	UFUNCTION(Server, Reliable, WithValidation)
+	void ServerRPCNotifyHit(const FHitResult& HitResult, float HitCheckTime);
+
+	UFUNCTION(Server, Reliable, WithValidation)
+	void ServerRPCNotifyMiss(const FVector& TraceStart, const FVector& TraceEnd, const FVector& TraceDir, float HitCheckTime);
+
+	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
 // UI Section
 protected:
 	virtual void SetupHUDWidget(class UABHUDWidget* InHUDWidget) override;

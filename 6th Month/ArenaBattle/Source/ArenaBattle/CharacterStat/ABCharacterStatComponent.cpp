@@ -3,6 +3,8 @@
 
 #include "CharacterStat/ABCharacterStatComponent.h"
 #include "GameData/ABGameSingleton.h"
+#include "Net/UnrealNetwork.h"
+#include "ArenaBattle.h"
 
 // Sets default values for this component's properties
 UABCharacterStatComponent::UABCharacterStatComponent()
@@ -11,6 +13,8 @@ UABCharacterStatComponent::UABCharacterStatComponent()
 	AttackRadius = 50.0f;
 
 	bWantsInitializeComponent = true;
+	//SetIsReplicated(true);
+	SetIsReplicatedByDefault(true);
 }
 
 void UABCharacterStatComponent::InitializeComponent()
@@ -19,6 +23,31 @@ void UABCharacterStatComponent::InitializeComponent()
 
 	SetLevelStat(CurrentLevel);
 	SetHp(BaseStat.MaxHp);
+}
+
+void UABCharacterStatComponent::BeginPlay()
+{
+	Super::BeginPlay();
+}
+
+void UABCharacterStatComponent::ReadyForReplication()
+{
+	Super::ReadyForReplication();
+}
+
+void UABCharacterStatComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+	DOREPLIFETIME(UABCharacterStatComponent, CurrentHp);
+}
+
+void UABCharacterStatComponent::OnRep_CurrentHp()
+{
+	OnHpChanged.Broadcast(CurrentHp);
+	if (CurrentHp <= KINDA_SMALL_NUMBER)
+	{
+		OnHpZero.Broadcast();
+	}
 }
 
 void UABCharacterStatComponent::SetLevelStat(int32 InNewLevel)

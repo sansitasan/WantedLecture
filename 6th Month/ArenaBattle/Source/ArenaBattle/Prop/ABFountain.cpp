@@ -38,7 +38,7 @@ AABFountain::AABFountain()
 
 	SetNetCullDistanceSquared(4000000.f);
 
-	SetNetDormancy(DORM_Initial);
+	//SetNetDormancy(DORM_Initial);
 }
 
 // Called when the game starts or when spawned
@@ -51,19 +51,48 @@ void AABFountain::BeginPlay()
 		FTimerHandle Handle;
 		GetWorld()->GetTimerManager().SetTimer(Handle, FTimerDelegate::CreateLambda([&]()
 			{
-				ServerLightColor = FLinearColor(FMath::RandRange(0.f, 1.f), FMath::RandRange(0.f, 1.f), FMath::RandRange(0.f, 1.f), 1.f);
-				OnRep_ServerLightColor();
+				//ServerLightColor = FLinearColor(FMath::RandRange(0.f, 1.f), FMath::RandRange(0.f, 1.f), FMath::RandRange(0.f, 1.f), 1.f);
+				//OnRep_ServerLightColor();
 				//BigData.Init(BigDataElement, 1000);
 				//BigDataElement += 1.f;
+				//FLinearColor NewLightColor = FLinearColor(
+				//	FMath::RandRange(0.f, 1.f), 
+				//	FMath::RandRange(0.f, 1.f), 
+				//	FMath::RandRange(0.f, 1.f), 
+				//	1.f
+				//);
+				//MulticastRPCChangeLightColor(NewLightColor);
 			}
 		), 1.f, true);
 
 		FTimerHandle Handle2;
 		GetWorld()->GetTimerManager().SetTimer(Handle2, FTimerDelegate::CreateLambda([&]()
 			{
-				FlushNetDormancy();
+				//FlushNetDormancy();
+				for (auto Iterator = GetWorld()->GetPlayerControllerIterator(); Iterator; ++Iterator)
+				{
+					APlayerController* PlayerController = Iterator->Get();
+					if (!PlayerController || !PlayerController->IsLocalPlayerController()) continue;
+				}
 			}
-		), 10.f, true);
+		), 10.f, false);
+	}
+
+	else 
+	{
+		FTimerHandle Handle;
+		GetWorld()->GetTimerManager().SetTimer(Handle, FTimerDelegate::CreateLambda([&]()
+			{
+				FLinearColor NewLightColor = FLinearColor(
+					FMath::RandRange(0.f, 1.f),
+					FMath::RandRange(0.f, 1.f),
+					FMath::RandRange(0.f, 1.f),
+					1.f
+				);
+				MulticastRPCChangeLightColor(NewLightColor);
+				ServerRPCChangeLightColor();
+			}
+		), 1.f, true);
 	}
 }
 
@@ -73,6 +102,7 @@ void AABFountain::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifet
 	DOREPLIFETIME(AABFountain, ServerRotationYaw);
 	DOREPLIFETIME(AABFountain, ServerRotationYaw2);
 	DOREPLIFETIME(AABFountain, ServerLightColor);
+	//DOREPLIFETIME_CONDITION(AABFountain, ServerLightColor, COND_InitialOnly);
 	//DOREPLIFETIME(AABFountain, BigData);
 }
 
@@ -91,6 +121,29 @@ bool AABFountain::IsNetRelevantFor(const AActor* RealViewer, const AActor* ViewT
 			TEXT("Not Relevant: [%s] %s"), *RealViewer->GetName(), *SrcLocation.ToCompactString());
 	}
 	return NetRelevantResult;
+}
+
+void AABFountain::PreReplication(IRepChangedPropertyTracker& ChangedPropertyTracker)
+{
+	AB_LOG(LogABNetwork, Log, TEXT("%s"), TEXT("Begin"));
+	Super::PreReplication(ChangedPropertyTracker);
+	AB_LOG(LogABNetwork, Log, TEXT("%s"), TEXT("End"));
+}
+
+void AABFountain::ServerRPCChangeLightColor_Implementation()
+{
+	AB_LOG(LogABNetwork, Log, TEXT("%s"), TEXT("Begin"));
+	AB_LOG(LogABNetwork, Log, TEXT("%s"), TEXT("End"));
+}
+
+void AABFountain::MulticastRPCChangeLightColor_Implementation(FLinearColor NewLightColor)
+{
+	AB_LOG(LogABNetwork, Log, TEXT("%s"), TEXT("Begin"));
+	auto* PointLight = Cast<UPointLightComponent>(GetComponentByClass(UPointLightComponent::StaticClass()));
+	if (PointLight) {
+		PointLight->SetLightColor(NewLightColor);
+	}
+	AB_LOG(LogABNetwork, Log, TEXT("%s"), TEXT("End"));
 }
 
 // Called every frame
@@ -135,10 +188,5 @@ void AABFountain::OnRep_ServerLightColor()
 {
 	if (!HasAuthority()) {
 		AB_LOG(LogABNetwork, Log, TEXT("LightColor: %s"), *ServerLightColor.ToString());
-	}
-
-	auto* PointLight = Cast<UPointLightComponent>(GetComponentByClass(UPointLightComponent::StaticClass()));
-	if (PointLight) {
-		PointLight->SetLightColor(ServerLightColor);
 	}
 }

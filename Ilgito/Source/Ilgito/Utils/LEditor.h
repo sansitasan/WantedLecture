@@ -26,6 +26,8 @@ private:
 
 	FDelegateHandle SpawnedHandle;
 
+	TSharedPtr<struct FTabSpawnerEntry> ProjectSettingEntry;
+
 private:
 	void OnModuleLoad(FName InModuleName, EModuleChangeReason Reason);
 };

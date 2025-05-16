@@ -12,6 +12,13 @@
 #include "CharacterStat/ABCharacterStatComponent.h"
 #include "Interface/ABGameInterface.h"
 #include "ArenaBattle.h"
+#include "Physics/ABCollision.h"
+#include "Components/CapsuleComponent.h"
+#include "GameFramework/CharacterMovementComponent.h"
+#include "Engine/DamageEvents.h"
+#include "Net/UnrealNetwork.h"
+#include "GameFramework/GameStateBase.h"
+#include "EngineUtils.h"
 
 AABCharacterPlayer::AABCharacterPlayer()
 {
@@ -63,6 +70,8 @@ AABCharacterPlayer::AABCharacterPlayer()
 	}
 
 	CurrentCharacterControlType = ECharacterControlType::Quater;
+
+	bCanAttack = true;
 }
 
 void AABCharacterPlayer::BeginPlay()
@@ -244,9 +253,256 @@ void AABCharacterPlayer::QuaterMove(const FInputActionValue& Value)
 	AddMovementInput(MoveDirection, MovementVectorSize);
 }
 
+void AABCharacterPlayer::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+	DOREPLIFETIME(AABCharacterPlayer, bCanAttack);
+}
+
 void AABCharacterPlayer::Attack()
 {
-	ProcessComboCommand();
+	//ProcessComboCommand();
+	if (!bCanAttack) return;
+
+	if (!HasAuthority()) 
+	{
+		bCanAttack = false;
+		GetCharacterMovement()->SetMovementMode(EMovementMode::MOVE_None);
+
+		FTimerHandle Handle;
+		GetWorldTimerManager().SetTimer(
+			Handle,
+			FTimerDelegate::CreateLambda([&]()
+				{
+					bCanAttack = true;
+					GetCharacterMovement()->SetMovementMode(EMovementMode::MOVE_Walking);
+				}),
+			AttackTime, false
+		);
+
+		PlayAttackAnimation();
+	}
+
+	ServerRPCAttack(GetWorld()->GetGameState()->GetServerWorldTimeSeconds());
+	//bCanAttack = false;
+	//GetCharacterMovement()->SetMovementMode(EMovementMode::MOVE_None);
+	//
+	//FTimerHandle Handle;
+	//GetWorld()->GetTimerManager().SetTimer(
+	//	Handle,
+	//	FTimerDelegate::CreateLambda([&]()
+	//		{
+	//			bCanAttack = true;
+	//			GetCharacterMovement()->SetMovementMode(EMovementMode::MOVE_Walking);
+	//		}), AttackTime, false
+	//);
+	//
+	//UAnimInstance* AnimInstance = GetMesh()->GetAnimInstance();
+	//AnimInstance->Montage_Play(ComboActionMontage);
+}
+
+void AABCharacterPlayer::PlayAttackAnimation()
+{
+	UAnimInstance* AnimInstance = GetMesh()->GetAnimInstance();
+	AnimInstance->StopAllMontages(0.f);
+	AnimInstance->Montage_Play(ComboActionMontage);
+}
+
+void AABCharacterPlayer::AttackHitCheck()
+{
+	if (!IsLocallyControlled()) return;
+	FHitResult OutHitResult;
+	FCollisionQueryParams Params(SCENE_QUERY_STAT(Attack), false, this);
+
+	const float AttackRange = Stat->GetTotalStat().AttackRange;
+	const float AttackRadius = Stat->GetAttackRadius();
+	const float AttackDamage = Stat->GetTotalStat().Attack;
+	const FVector Forward = GetActorForwardVector();
+	const FVector Start = GetActorLocation() + Forward * GetCapsuleComponent()->GetScaledCapsuleRadius();
+	const FVector End = Start + Forward * AttackRange;
+
+	bool HitDetected = GetWorld()->SweepSingleByChannel(OutHitResult, Start, End, FQuat::Identity, CCHANNEL_ABACTION, FCollisionShape::MakeSphere(AttackRadius), Params);
+	
+	float HitCheckTime = GetWorld()->GetGameState()->GetServerWorldTimeSeconds();
+
+	if (!HasAuthority()) {
+		if (HitDetected) {
+			ServerRPCNotifyHit(OutHitResult, HitCheckTime);
+		} else {
+			ServerRPCNotifyMiss(Start, End, Forward, HitCheckTime);
+		}
+
+	} else {
+		FColor DebugColor = HitDetected ? FColor::Green : FColor::Red;
+		DrawDebugAttackRange(DebugColor, Start, End, Forward);
+
+		if (HitDetected) {
+			AttackHitConfirm(OutHitResult.GetActor());
+		}
+	}
+
+	//if (HitDetected)
+	//{
+	//	FDamageEvent DamageEvent;
+	//	OutHitResult.GetActor()->TakeDamage(AttackDamage, DamageEvent, GetController(), this);
+	//}
+
+#if ENABLE_DRAW_DEBUG
+
+	FVector CapsuleOrigin = Start + (End - Start) * 0.5f;
+	float CapsuleHalfHeight = AttackRange * 0.5f;
+	FColor DrawColor = HitDetected ? FColor::Green : FColor::Red;
+
+	DrawDebugCapsule(GetWorld(), CapsuleOrigin, CapsuleHalfHeight, AttackRadius, FRotationMatrix::MakeFromZ(GetActorForwardVector()).ToQuat(), DrawColor, false, 5.0f);
+
+#endif
+}
+
+void AABCharacterPlayer::AttackHitConfirm(AActor* HitActor)
+{
+	if (HasAuthority())
+	{
+		const float AttackDamage = Stat->GetTotalStat().Attack;
+		FDamageEvent DamageEvent;
+		HitActor->TakeDamage(
+			AttackDamage,
+			DamageEvent,
+			GetController(),
+			this
+		);
+	}
+}
+
+void AABCharacterPlayer::DrawDebugAttackRange(const FColor& DrawColor, const FVector& TraceStart, const FVector& TraceEnd, const FVector& Forward)
+{
+#if ENABLE_DRAW_DEBUG
+
+	const float AttackRange = Stat->GetTotalStat().AttackRange;
+	const float AttackRadius = Stat->GetAttackRadius();
+
+	FVector CapsuleOrigin = TraceStart + (TraceEnd - TraceStart) * 0.5f;
+	float CapsuleHalfHeight = AttackRange * 0.5f;
+
+	DrawDebugCapsule(
+		GetWorld(),
+		CapsuleOrigin,
+		CapsuleHalfHeight,
+		AttackRadius,
+		FRotationMatrix::MakeFromZ(GetActorForwardVector()).ToQuat(),
+		DrawColor,
+		false,
+		5.0f
+	);
+#endif
+}
+
+bool AABCharacterPlayer::ServerRPCNotifyHit_Validate(const FHitResult& HitResult, float HitCheckTime) 
+{
+	if (LastAttackStartTime == 0.f) return true;
+
+	return (HitCheckTime - LastAttackStartTime) > AcceptMinCheckTime;
+}
+
+bool AABCharacterPlayer::ServerRPCNotifyMiss_Validate(const FVector& TraceStart, const FVector& TraceEnd, const FVector& TraceDir, float HitCheckTime)
+{
+	return true;
+}
+
+void AABCharacterPlayer::ServerRPCNotifyHit_Implementation(const FHitResult& HitResult, float HitCheckTime) 
+{
+	AActor* HitActor = HitResult.GetActor();
+
+	if (IsValid(HitActor)) 
+	{
+		const FVector HitLocation = HitResult.Location;
+
+		const FBox HitBox = HitActor->GetComponentsBoundingBox();
+
+		const FVector ActorBoxCenter = HitBox.GetCenter();
+
+		if (FVector::DistSquared(HitLocation, ActorBoxCenter) <= AttackCheckDistance * AttackCheckDistance) 
+		{
+
+		}
+		else 
+		{
+
+		}
+
+		DrawDebugPoint(GetWorld(), ActorBoxCenter, 30.f, FColor::Cyan, false, 5.f);
+		DrawDebugPoint(GetWorld(), HitLocation, 30.f, FColor::Magenta, false, 5.f);
+
+		DrawDebugAttackRange(FColor::Green, HitResult.TraceStart, HitResult.TraceEnd, HitActor->GetActorForwardVector());
+	}
+}
+
+void AABCharacterPlayer::ServerRPCNotifyMiss_Implementation(const FVector& TraceStart, const FVector& TraceEnd, const FVector& TraceDir, float HitCheckTime)
+{
+
+}
+
+void AABCharacterPlayer::OnRep_CanAttack()
+{
+	bCanAttack ? GetCharacterMovement()->SetMovementMode(EMovementMode::MOVE_Walking) : GetCharacterMovement()->SetMovementMode(EMovementMode::MOVE_None);
+}
+
+bool AABCharacterPlayer::ServerRPCAttack_Validate(float AttackStartTime)
+{
+	if (LastAttackStartTime == 0.f) return true;
+
+	return (AttackStartTime - LastAttackStartTime) >= AttackTime;
+}
+
+void AABCharacterPlayer::ServerRPCAttack_Implementation(float AttackStartTime)
+{
+	bCanAttack = false;
+	OnRep_CanAttack();
+
+	AttackTimeDifference = GetWorld()->GetTimeSeconds() - AttackStartTime;
+	AB_LOG(LogABNetwork, Log, TEXT("LagTime: %f"), AttackTimeDifference);
+
+	AttackTimeDifference = FMath::Clamp(
+		AttackTimeDifference,
+		0.f,
+		AttackTime - 0.01f
+	);
+
+	FTimerHandle Handle;
+	GetWorld()->GetTimerManager().SetTimer(
+		Handle,
+		FTimerDelegate::CreateLambda([&]()
+			{
+				bCanAttack = true;
+				OnRep_CanAttack();
+			}), AttackTime - AttackTimeDifference, false
+	);
+
+	LastAttackStartTime = AttackStartTime;
+
+	PlayAttackAnimation();
+
+	MulticastRPCAttack();
+
+	for (APlayerController* PlayerController : TActorRange<APlayerController>(GetWorld())) {
+		if (!PlayerController || GetController() == PlayerController) continue;
+		if (PlayerController->IsLocalController()) continue;
+		AABCharacterPlayer* OtherPlayer = Cast<AABCharacterPlayer>(PlayerController->GetPawn());
+		if (!OtherPlayer) continue;
+		OtherPlayer->ClientRPCPlayAnimation(this);
+	}
+}
+
+void AABCharacterPlayer::ClientRPCPlayAnimation_Implementation(AABCharacterPlayer* CharacterPlayer)
+{
+	if (!CharacterPlayer) return;
+	CharacterPlayer->PlayAttackAnimation();
+}
+
+void AABCharacterPlayer::MulticastRPCAttack_Implementation()
+{
+	if (!IsLocallyControlled()) {
+		PlayAttackAnimation();
+	}
 }
 
 void AABCharacterPlayer::SetupHUDWidget(UABHUDWidget* InHUDWidget)
