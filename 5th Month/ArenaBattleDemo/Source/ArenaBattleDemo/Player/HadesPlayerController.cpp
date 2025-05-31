@@ -3,6 +3,26 @@
 
 #include "Player/HadesPlayerController.h"
 
+AHadesPlayerController::AHadesPlayerController()
+{
+
+}
+
+void AHadesPlayerController::GameScoreChanged(int32 NewScore)
+{
+	K2_OnScoreChanged(NewScore);
+}
+
+void AHadesPlayerController::GameClear()
+{
+	K2_OnGameClear();
+}
+
+void AHadesPlayerController::GameOver()
+{
+	K2_OnGameOver();
+}
+
 void AHadesPlayerController::BeginPlay()
 {
 	Super::BeginPlay();

@@ -7,6 +7,8 @@
 #include "Physics/HCollision.h"
 #include "Character/CharacterNonPlayer.h"
 #include "Props/HItemBox.h"
+#include "Interface/HGameInterface.h"
+#include "GameFramework/GameModeBase.h"
 
 // Sets default values
 AHStageGimmick::AHStageGimmick()
@@ -98,7 +100,7 @@ AHStageGimmick::AHStageGimmick()
 	OpponentSpawnTime = 2.f;
 	OpponentClass = ACharacterNonPlayer::StaticClass();
 	RewardItemClass = AHItemBox::StaticClass();
-	OpponentClass = AHItemBox::StaticClass();
+	//OpponentClass = AHItemBox::StaticClass();
 
 	for (const FName& GateSocket : GateSockets) {
 		FVector BoxLocation = Stage->GetSocketLocation(GateSocket) * 0.5f;
@@ -226,6 +228,16 @@ void AHStageGimmick::CloseAllGates()
 
 void AHStageGimmick::OpponentDestroyed(AActor* DestroyedActor)
 {
+	IHGameInterface* GameInterface = Cast<IHGameInterface>(GetWorld()->GetAuthGameMode());
+	check(GameInterface);
+
+	GameInterface->OnPlayerScoreChanged(CurrentStageNum);
+
+	if (GameInterface->IsGameCleared()) 
+	{
+		return;
+	}
+
 	SetState(EStageState::Reward);
 }
 
@@ -270,6 +282,7 @@ void AHStageGimmick::SpawnRewardBoxes()
 		);
 
 		RewardBoxes.Add(RewardBoxActor);
+		APawn*
 	}
 
 	for (const auto& RewardBox : RewardBoxes) {

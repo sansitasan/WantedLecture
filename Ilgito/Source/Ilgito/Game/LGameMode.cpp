@@ -11,4 +11,5 @@ void ALGameMode::InitGame(const FString& MapName, const FString& Options, FStrin
 void ALGameMode::InitGameState()
 {
 	Super::InitGameState();
+	
 }

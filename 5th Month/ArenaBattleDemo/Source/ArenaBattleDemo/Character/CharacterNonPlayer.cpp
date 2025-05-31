@@ -4,6 +4,7 @@
 #include "Character/CharacterNonPlayer.h"
 #include "AI/HAIController.h"
 #include "Engine/AssetManager.h"
+#include "Component/Data/HCharacterStatComponent.h"
 
 ACharacterNonPlayer::ACharacterNonPlayer()
 {
@@ -62,4 +63,39 @@ void ACharacterNonPlayer::NPCMeshLoadCompleted()
 	if (!NPCMesh) return;
 	GetMesh()->SetSkeletalMesh(NPCMesh);
 	GetMesh()->SetHiddenInGame(false);
+}
+
+float ACharacterNonPlayer::GetAIPatrolRadius()
+{
+	return 800.0f;
+}
+
+float ACharacterNonPlayer::GetAIDetectRange()
+{
+	return 400.0f;
+}
+
+float ACharacterNonPlayer::GetAIAttackRange()
+{
+	return Stat->GetTotalStat().AttackRange + Stat->GetAttackRadius() * 2;
+}
+
+float ACharacterNonPlayer::GetAITurnSpeed()
+{
+	return 2.0f;
+}
+
+void ACharacterNonPlayer::AttackByAI()
+{
+	ProcessComboCommand();
+}
+
+void ACharacterNonPlayer::SetAIAttackDelegate(const FAICharacterAttackFinished& InOnAttackFinished)
+{
+	OnAttackFinished = InOnAttackFinished;
+}
+
+void ACharacterNonPlayer::NotifyComboActionEnd()
+{
+	OnAttackFinished.ExecuteIfBound();
 }

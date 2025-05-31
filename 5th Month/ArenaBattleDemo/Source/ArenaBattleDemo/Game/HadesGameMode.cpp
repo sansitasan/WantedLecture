@@ -2,6 +2,7 @@
 
 
 #include "HadesGameMode.h"
+#include "Player/HadesPlayerController.h"
 
 AHadesGameMode::AHadesGameMode()
 {
@@ -19,4 +20,39 @@ AHadesGameMode::AHadesGameMode()
 	if (PlayerControllerClassRef.Class) {
 		PlayerControllerClass = PlayerControllerClassRef.Class;
 	}
+
+	ClearScore = 3;
+	CurrentScore = 0;
+	bIsCleared = false;
+}
+
+void AHadesGameMode::OnPlayerScoreChanged(int32 NewPlayerScore)
+{
+	CurrentScore = NewPlayerScore;
+
+	AHadesPlayerController* PlayerController = Cast<AHadesPlayerController>(GetWorld()->GetFirstPlayerController());
+	if (!PlayerController) return;
+	PlayerController->GameScoreChanged(CurrentScore);
+
+	if (CurrentScore >= ClearScore)
+	{
+		bIsCleared = true;
+		PlayerController->GameClear();
+	}
+}
+
+void AHadesGameMode::OnPlayerDead()
+{
+	ResetLevel();
+
+	AHadesPlayerController* PlayerController = Cast<AHadesPlayerController>(GetWorld()->GetFirstPlayerController());
+
+	if (PlayerController) {
+		PlayerController->GameOver();
+	}
+}
+
+bool AHadesGameMode::IsGameCleared()
+{
+	return bIsCleared;
 }

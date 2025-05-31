@@ -8,6 +8,7 @@ UHCharacterStatComponent::UHCharacterStatComponent()
 {
 	//CurrentHp = MaxHp;
 	CurrentLevel = 1.f;
+	AttackRadius = 100.f;
 }
 
 void UHCharacterStatComponent::BeginPlay()
