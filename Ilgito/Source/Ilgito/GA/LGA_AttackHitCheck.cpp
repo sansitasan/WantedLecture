@@ -34,19 +34,26 @@ void ULGA_AttackHitCheck::OnTraceResultCallback(const FGameplayAbilityTargetData
 		FHitResult HitResult = UAbilitySystemBlueprintLibrary::GetHitResultFromTargetData(TargetDataHandle, 0);
 		
 		UAbilitySystemComponent* SourceASC = GetAbilitySystemComponentFromActorInfo_Checked();
-		UAbilitySystemComponent* TargetASC = UAbilitySystemBlueprintLibrary::GetAbilitySystemComponent(HitResult.GetActor());
-		if (!SourceASC || !TargetASC) return;
-
+		//UAbilitySystemComponent* TargetASC = UAbilitySystemBlueprintLibrary::GetAbilitySystemComponent(HitResult.GetActor());
+		//if (!SourceASC || !TargetASC) return;
+		//
 		const ULCharacterAttributeSet* SourceAttribute = SourceASC->GetSet<ULCharacterAttributeSet>();
-		ULCharacterAttributeSet* TargetAttribute =
-			const_cast<ULCharacterAttributeSet*>(
-				TargetASC->GetSet<ULCharacterAttributeSet>()
-				);
+		//ULCharacterAttributeSet* TargetAttribute =
+		//	const_cast<ULCharacterAttributeSet*>(
+		//		TargetASC->GetSet<ULCharacterAttributeSet>()
+		//		);
+		//
+		//if (!SourceAttribute || !TargetAttribute) return;
+		//
+		//const float AttackDamage = SourceAttribute->GetAttackRate();
+		//TargetAttribute->SetHealth(TargetAttribute->GetHealth() - AttackDamage);
 
-		if (!SourceAttribute || !TargetAttribute) return;
+		FGameplayEffectSpecHandle SpecHandle = MakeOutgoingGameplayEffectSpec(AttackDamageEffect);
+		if (SpecHandle.IsValid()) return;
 
-		const float AttackDamage = SourceAttribute->GetAttackRate();
-		TargetAttribute->SetHealth(TargetAttribute->GetHealth() - AttackDamage);
+		//SpecHandle.Data->SetSetByCallerMagnitude(Tag, SourceAttribute->GetAttackRate());
+
+		ApplyGameplayEffectSpecToTarget(CurrentSpecHandle, CurrentActorInfo, CurrentActivationInfo, SpecHandle, TargetDataHandle);
 	}
 
 	EndAbility(CurrentSpecHandle, CurrentActorInfo, CurrentActivationInfo, true, false);

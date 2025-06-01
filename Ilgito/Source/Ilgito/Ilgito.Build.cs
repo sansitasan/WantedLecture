@@ -21,8 +21,7 @@ public class Ilgito : ModuleRules
             "GameplayTasks",
             "GameplayAbilities",
             "GameplayTags",
-            "Slate",
-			"Ilgito"
+            "Slate"
         });
 
 		PublicIncludePaths.AddRange(new string[] { "Ilgito" });

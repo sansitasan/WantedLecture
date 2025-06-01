@@ -22,7 +22,7 @@ UCLASS()
 class ILGITO_API ULCharacterAttributeSet : public UAttributeSet
 {
 	GENERATED_BODY()
-
+	friend class ULGE_AttackDamage;
 public:
 	ULCharacterAttributeSet();
 
@@ -38,9 +38,15 @@ public:
 	ATTRIBUTE_ACCESSORS(ULCharacterAttributeSet, MaxHealth);
 	ATTRIBUTE_ACCESSORS(ULCharacterAttributeSet, Health);
 
+	ATTRIBUTE_ACCESSORS(ULCharacterAttributeSet, Damage);
+
 	virtual void PreAttributeChange(const FGameplayAttribute& Attribute, float& NewValue) override;
 
 	virtual void PostAttributeChange(const FGameplayAttribute& Attribute, float OldValue, float NewValue) override;
+
+	virtual bool PreGameplayEffectExecute(struct FGameplayEffectModCallbackData& Data) override;
+
+	virtual void PostGameplayEffectExecute(const struct FGameplayEffectModCallbackData& Data) override;
 
 protected:
 
@@ -67,4 +73,7 @@ protected:
 
 	UPROPERTY(BlueprintReadOnly, Category = "Health", Meta = (AllowPrivateAccess = true))
 	FGameplayAttributeData Health;
+
+	UPROPERTY(BlueprintReadOnly, Category = "Health", Meta = (AllowPrivateAccess = true))
+	FGameplayAttributeData Damage;
 };
