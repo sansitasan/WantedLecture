@@ -9,6 +9,13 @@
 /**
  * 
  */
+
+class UTextBlock;
+class UImage;
+class UButton;
+class UCanvasPanel;
+enum class EDialogState : uint8;
+
 UCLASS()
 class ILGITO_API UDialogUserWidget : public UUserWidget
 {
@@ -17,21 +24,35 @@ public:
 	UDialogUserWidget(const FObjectInitializer& ObjectInitializer);
 
 	virtual void NativeConstruct() override;
+    virtual void NativePreConstruct() override;
 
 protected:
-    UPROPERTY(meta = (BindWidget))
-    TObjectPtr<class UCanvasPanel> RootCanvas;
+    void SendState(EDialogState DialogState);
 
     UPROPERTY(meta = (BindWidget))
-    TObjectPtr<class UImage> Image;
+    TObjectPtr<UCanvasPanel> RootCanvas;
 
     UPROPERTY(meta = (BindWidget))
-    TObjectPtr<class UImage> Image2;
+    TObjectPtr<UImage> Image;
 
     UPROPERTY(meta = (BindWidget))
-    TObjectPtr<class UTextBlock> NameText;
+    TObjectPtr<UImage> Image2;
 
     UPROPERTY(meta = (BindWidget))
-    TObjectPtr<class UTextBlock> ScriptText;
+    TObjectPtr<UTextBlock> NameText;
 
+    UPROPERTY(meta = (BindWidget))
+    TObjectPtr<UTextBlock> ScriptText;
+
+    UPROPERTY(meta = (BindWidget))
+    TObjectPtr<UButton> LogButton;
+
+    UPROPERTY(meta = (BindWidget))
+    TObjectPtr<UButton> SkipButton;
+
+    UPROPERTY(meta = (BindWidget))
+    TObjectPtr<UButton> ViewButton;
+
+    UPROPERTY(meta = (BindWidget))
+    TObjectPtr<UButton> AutoButton;
 };

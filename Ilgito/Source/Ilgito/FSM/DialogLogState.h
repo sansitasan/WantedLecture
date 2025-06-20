@@ -9,7 +9,7 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(Blueprintable, BlueprintType)
 class ILGITO_API UDialogLogState : public UDialogState
 {
 	GENERATED_BODY()

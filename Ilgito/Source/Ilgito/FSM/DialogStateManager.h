@@ -14,7 +14,7 @@ enum class EDialogState : uint8;
 class UDialogState;
 class UDialogModel;
 
-UCLASS(Blueprintable)
+UCLASS(Blueprintable, BlueprintType)
 class ILGITO_API UDialogStateManager : public UObject
 {
 	GENERATED_BODY()
@@ -24,14 +24,12 @@ public:
 	bool SetState(EDialogState NewState);
 
 private:
-	UPROPERTY(BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<UDialogModel> DialogModel;
 
-	UPROPERTY(BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<UDialogState> CurrentState;
 
-	UPROPERTY(BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
 	TMap<EDialogState, TObjectPtr<UDialogState>> StateMap;
-
-	TSharedPtr<UDialogState> Test;
 };
