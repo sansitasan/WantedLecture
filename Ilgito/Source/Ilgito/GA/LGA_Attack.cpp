@@ -2,7 +2,7 @@
 
 
 #include "GA/LGA_Attack.h"
-#include "Character/LCharacterBase.h"
+#include "Character/LCharacter.h"
 #include "Abilities/Tasks/AbilityTask_PlayMontageAndWait.h"
 #include "GameFrameWork/CharacterMovementComponent.h"
 //#include "Animation/AnimMontage.h"
@@ -31,13 +31,12 @@ void ULGA_Attack::ActivateAbility(const FGameplayAbilitySpecHandle Handle, const
 		TriggerEventData
 	);
 
-	ALCharacterBase* LCharacter = CastChecked<ALCharacterBase>(ActorInfo->AvatarActor.Get());
-	LCharacter->GetCharacterMovement()->SetMovementMode(EMovementMode::MOVE_None);
-	UAnimMontage* Test = CreateDefaultSubobject<UAnimMontage>(TEXT(""));
-	UAbilityTask_PlayMontageAndWait* PlayAttackTask = UAbilityTask_PlayMontageAndWait::CreatePlayMontageAndWaitProxy(this, TEXT("PlayAttack"), Test);
-	PlayAttackTask->OnCompleted.AddDynamic(this, &ULGA_Attack::OnCompleteCallback);
-	PlayAttackTask->OnInterrupted.AddDynamic(this, &ULGA_Attack::OnInterruptedCallback);
-	PlayAttackTask->ReadyForActivation();
+	ALCharacter* LCharacter = CastChecked<ALCharacter>(ActorInfo->AvatarActor.Get());
+	//LCharacter->GetCharacterMovement()->SetMovementMode(EMovementMode::MOVE_None);
+	//UAbilityTask_PlayMontageAndWait* PlayAttackTask = UAbilityTask_PlayMontageAndWait::CreatePlayMontageAndWaitProxy(this, TEXT("PlayAttack"), Test);
+	//PlayAttackTask->OnCompleted.AddDynamic(this, &ULGA_Attack::OnCompleteCallback);
+	//PlayAttackTask->OnInterrupted.AddDynamic(this, &ULGA_Attack::OnInterruptedCallback);
+	//PlayAttackTask->ReadyForActivation();
 }
 
 void ULGA_Attack::EndAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, bool bReplicateEndAbility, bool bWasCancelled)
@@ -50,8 +49,8 @@ void ULGA_Attack::EndAbility(const FGameplayAbilitySpecHandle Handle, const FGam
 		bWasCancelled
 	);
 
-	ALCharacterBase* LCharacter = CastChecked<ALCharacterBase>(ActorInfo->AvatarActor.Get());
-	LCharacter->GetCharacterMovement()->SetMovementMode(EMovementMode::MOVE_Walking);
+	ALCharacter* LCharacter = CastChecked<ALCharacter>(ActorInfo->AvatarActor.Get());
+	//LCharacter->GetCharacterMovement()->SetMovementMode(EMovementMode::MOVE_Walking);
 }
 
 void ULGA_Attack::InputPressed(

@@ -7,25 +7,29 @@
 #include "Abilities/GameplayAbility.h"
 #include "Tag/LGameplayTag.h"
 #include "EnhancedInputComponent.h"
-
-void Test(AActor* Actor) 
-{
-
-}
+#include "EnhancedInputSubsystems.h"
+#include "InputMappingContext.h"
+#include "GameFramework/SpringArmComponent.h"
+#include "Camera/CameraComponent.h"
+#include "GameFramework/CharacterMovementComponent.h"
 
 // Sets default values
 ALCharacter::ALCharacter()
 {
 	ASC = nullptr;
- 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
-	TObjectPtr<AActor> s = this;
-	Test(s);
+
+	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
+	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
+	SpringArm->SetupAttachment(RootComponent);
+
+	Camera->SetupAttachment(SpringArm);
 }
 
 void ALCharacter::PossessedBy(AController* NewController)
 {
 	Super::PossessedBy(NewController);
+
+	if (!NewController) return;
 
 	ALPlayerState* LPS = GetPlayerState<ALPlayerState>();
 	if (!LPS) return;
@@ -50,13 +54,17 @@ void ALCharacter::PossessedBy(AController* NewController)
 
 	APlayerController* PlayerController = CastChecked<APlayerController>(NewController);
 	PlayerController->ConsoleCommand(TEXT("showdebug abilitysystem"));
+
+	auto SubSystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(PlayerController->GetLocalPlayer());
+	SubSystem->AddMappingContext(DefaultMappingContext, 0);
 }
 
 // Called when the game starts or when spawned
 void ALCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
+	GetCharacterMovement()->SetMovementMode(EMovementMode::MOVE_Walking);
 }
 
 void ALCharacter::SetupGASInputComponent()
@@ -64,8 +72,9 @@ void ALCharacter::SetupGASInputComponent()
 	if (!IsValid(ASC) || !IsValid(InputComponent)) return;
 	UEnhancedInputComponent* EnhancedInputComponent = CastChecked<UEnhancedInputComponent>(InputComponent);
 
-	//EnhancedInputComponent->BindAction(UInputAction, ETriggerEvent::Triggered, this, &ALCharacter::GASInputPressed, 0);
-	//EnhancedInputComponent->BindAction(UInputAction, ETriggerEvent::Completed, this, &ALCharacter::GASInputReleased, 0);
+	EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &ALCharacter::Move);
+	EnhancedInputComponent->BindAction(AttackAction, ETriggerEvent::Triggered, this, &ALCharacter::GASInputPressed, 1);
+	EnhancedInputComponent->BindAction(DashAction, ETriggerEvent::Triggered, this, &ALCharacter::GASInputPressed, 2);
 }
 
 void ALCharacter::GASInputPressed(int32 InputId)
@@ -85,18 +94,21 @@ void ALCharacter::GASInputReleased(int32 InputId)
 {
 	FGameplayAbilitySpec* Spec = ASC->FindAbilitySpecFromInputID(InputId);
 	if (!Spec) return;
-	if (!Spec->IsActive()) return;
 	ASC->AbilitySpecInputReleased(*Spec);
 }
 
-// Called every frame
-void ALCharacter::Tick(float DeltaTime)
+void ALCharacter::Move(const FInputActionValue& Value)
 {
-	Super::Tick(DeltaTime);
+	FVector Movement(Value.Get<FVector2D>(), 0.f);
 
-}
+	FRotator Rotator;
+	Rotator.Yaw = SpringArm ? -SpringArm->GetRelativeRotation().Yaw : 0.f;
+	Movement = Rotator.RotateVector(Movement);
 
-// Called to bind functionality to input
+	AddMovementInput(Movement);
+	SetActorRotation(Movement.ToOrientationRotator());
+} 
+
 void ALCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);

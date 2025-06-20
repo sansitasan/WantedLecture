@@ -47,6 +47,8 @@ protected:
 	UFUNCTION()
 	void OnInterruptedCallback();
 
+
+
 	//PrimaryDataAsset
 	//TObjectPtr<class >
 };
